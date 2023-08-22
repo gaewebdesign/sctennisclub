@@ -10,6 +10,7 @@
   </picture>
       <h2>Santa Clara Tennis Club Ice Cream Social </h2>
 
+      
     <h3 style="font-size: 1.2em ">
     Enjoy some  tennis and <b>ice cream</b>  on the courts with fellow members and Mountain View Tennis Club for
     social mixed doubles round robin play at Santa Clara Tennis Center on
