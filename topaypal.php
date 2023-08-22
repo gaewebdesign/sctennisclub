@@ -19,7 +19,7 @@ $paypal = new paypal();
 if($_POST["mixer"] == 'SCTC' ) {
 	$paid =  $_POST["_SCTC"];   // MEMBER
 	DEBUG( "adjusting to ".$paid);
-	echo '<script>alert("not a member")</script>';
+	
 }else if($_POST["mixer"] == 'GUEST'){
 	$paid =  $_POST["_GUEST"];   // GUEST
 	DEBUG( "adjusting to ".$paid);
