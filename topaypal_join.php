@@ -126,6 +126,7 @@ toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip
 
 // copy to paypal table
 // this done in return.php after Paypment payment
+TEXT("*** Ok ****");
 copyto(TABLE_PENDING,TABLE_PAYPAL,$custom);
 
 //$paypal->output_form();

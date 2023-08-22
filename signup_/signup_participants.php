@@ -32,6 +32,8 @@ tr {
 
           $query = "select * from ".TABLE_MIXER."  where custom>$epoch order by custom desc";
 
+          $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
+
           $con = Configure();
            
  //        echo( $query );           
