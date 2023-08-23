@@ -111,6 +111,16 @@ include "./library/emailer.php";
 
 </div>
 
+<div class="col-md-12">&nbsp; </div>
+
+<div class="col-md-8">
+
+<div class="input-group">
+<span class="input-group-text" id="inputGroupPrepend7">USTA Team/Captain</span>
+ <input type="text" class="form-control" id="validationDefault07" name="team" >
+</div>
+
+</div>
 
    <div class = "col-12" >
     <hr/>

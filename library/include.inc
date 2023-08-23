@@ -36,6 +36,7 @@ define("GENDER", "gender" );
 define("NTRP", "ntrp" );
 define("EMAIL", "email" );
 
+define("TEAM", "team" );
 define("MTYPE", "mtype" );
 
 define("ADDRESS", "address" );
@@ -100,7 +101,7 @@ function DEBUG($message){
 }
 
 
-function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year, $mtype,$date,$insignia,$payment,$custom,$opt)
+function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team, $mtype,$date,$insignia,$payment,$custom,$opt)
 {
   
  // compared to mixer.. these are the extra keys
@@ -109,11 +110,13 @@ function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city
    $con = DBMembership();
 
 
-   $query = 'insert into '.$theTABLE.'(_id,fname,lname,email,gender,ntrp,address,city,zip,year,mtype,date,insignia,payment,custom,opt) values';
+   $query = 'insert into '.$theTABLE.'(_id,fname,lname,email,gender,ntrp,address,city,zip,year,team,mtype,date,insignia,payment,custom,opt) values';
 
   $query .= '(NULL'.add($fname).add($lname).add($email).add($gender).add($ntrp).add($address);
-  $query .= add($city).add($zip).add($year).add($mtype).add($date).add($insignia).add($payment).add($custom).add($opt);
+  $query .= add($city).add($zip).add($year).add($team).add($mtype).add($date).add($insignia).add($payment).add($custom).add($opt);
   $query .= ")";
+
+  TEXT($query);
 
   //print("<br>".$query);
   LOGGER($query);

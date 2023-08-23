@@ -78,7 +78,7 @@ $address = $_POST[ADDRESS];
 $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
-
+$team = $_POST[TEAM];
 
 // ********************************
 // use this to identify person in database
@@ -120,7 +120,7 @@ $paypal->price = $paid;
 
 
 // if $opt != 911, then this person is either RF_ or NRF_  
-toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$mtype,$date,$insignia,$payment,$custom,$opt);
+toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
 
 //sendemail($fname." ".$lname, $email, "sctennisclub.net signup => $theTABLE ");
 
