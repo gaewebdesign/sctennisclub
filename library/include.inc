@@ -38,6 +38,7 @@ define("EMAIL", "email" );
 
 define("TEAM", "team" );
 define("MTYPE", "mtype" );
+define("PAYMENT", "payment" );
 
 define("ADDRESS", "address" );
 define("CITY", "city" );
@@ -116,7 +117,7 @@ function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city
   $query .= add($city).add($zip).add($year).add($team).add($mtype).add($date).add($insignia).add($payment).add($custom).add($opt);
   $query .= ")";
 
-  TEXT($query);
+  LOGGER($query);
 
   //print("<br>".$query);
   LOGGER($query);
@@ -139,7 +140,7 @@ function toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date
   $query .= ")";
 
 //  echo "<br>";
-  DEBUG( $query."<br>" );
+  LOGGER( $query );
   $query_results=mysqli_query($con, $query);
 
 }
@@ -193,8 +194,10 @@ function Configure()
   $query = "insert into $dest select * from $src where custom=\"$epoch\" "; 
   $query_results=mysqli_query($con,$query);
 
+  
   LOGGER( $src." -> ".$dest." or ".$epoch);
   LOGGER ($query);
+  LOGGER ($query_results);
 
   // Get all the data in the $src pending table 
   $query = "select * from $src where custom=\"$epoch\" "; 
@@ -208,7 +211,7 @@ function Configure()
   if ($_OPT != "911"){
   
     $query = "update $dest set insignia = insignia +1  where custom=\"$_OPT\" limit 1";
-    TEXT($query);
+    
     $query_results=mysqli_query($con,$query);
   
     // by changing the address, only one Adult associated 
@@ -217,7 +220,7 @@ function Configure()
       $_ADDRESS .= "*";
       $query = "update $dest set address=\"$_ADDRESS\" where custom=\"$_OPT\" limit 1";
       $query_results=mysqli_query($con,$query);
-      TEXT("$_MTYPE:  $_ADDRESS updated ");
+      LOGGER("$_MTYPE:  $_ADDRESS updated ");
     }
   }
 

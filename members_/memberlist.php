@@ -40,7 +40,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">Last Name </th>
 
     <th scope="col">Address </th>
+    <th scope="col">TEAM </th>
+    
     <th scope="col">MTYPE </th>
+    <th scope="col">PAID </th>
+
 
     <th scope="col">NTRP </th>
     <th scope="col">Date </th>
@@ -63,7 +67,6 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
          $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 30 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 
-         print( $query);
 
          $icon="";
          $qr=mysqli_query($con,$query);
@@ -94,11 +97,17 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row[ADDRESS]);
                     echo("</td>");
 
+                    echo("<td>");
+                    echo($row[TEAM]);
+                    echo("</td>");
 
                     echo("<td>");
                     echo($row[MTYPE]);
                     echo("</td>");
 
+                    echo("<td>");
+                    echo($row[PAYMENT]);
+                    echo("</td>");
 
                     echo("<td>");
                     echo($row[GENDER].$row[NTRP]);

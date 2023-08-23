@@ -107,8 +107,8 @@ $opt="911";
 // returns false if not found (also for NRF with 2)
 $epoch=0;
 if($epoch=FindAddress( $_POST[ADDRESS])){
-		print("setting: this is legit ");
-		$paid="0.99";         // discount
+		LOGGER("setting: this is legit ");
+		$payment="0.01";         // discount
         $mtype .= "_";        // append to RF_ or NRF_
         $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
 
