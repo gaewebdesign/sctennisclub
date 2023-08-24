@@ -227,18 +227,21 @@ function Configure()
 }
 
 
- function FindAddress($ADDRESS)
+ function FindAddress($ADDRESS,$CITY)
  {
  
-$YEAR=YEAR; 
- 
- //  LOOK into both the TABLE_PAYPAL
+        $YEAR=YEAR; 
+        $_city =  substr(trim($CITY),0,5);
+
+//  LOOK  TABLE_PAYPAL for address and similar city
          $query = "select * from ".TABLE_PAYPAL.' where address = "'.trim($ADDRESS).'"';
  
-         $query .= 'and ( mtype ="RF" or mtype = "NRF")';
+//         select * from paypal where city regexp('san');
+         $query.= " and (city regexp(\"$_city\" )    ) ";
+         $query .= ' and ( mtype ="RF" or mtype = "NRF")';
          $query .= ' and year = "'.$YEAR.'"';   
  
-//        print($query);
+         TEXT($query);
 
          $con = DBMembership();
          $query_results=mysqli_query($con, $query);

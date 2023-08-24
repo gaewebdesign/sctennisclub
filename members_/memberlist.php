@@ -55,8 +55,30 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 <tbody>
 <?php
-  
+ function ABBR($CITY){
+    $abbreviations = array( "jose" => "SJ", "sunnyvale" => "Su" ,"clara"=>"SC",
+    "campbell"=>"Cpb","saratoga"=>"Srt","milpitas"=>"Mlp","mountain"=>"MV",
+    "burl"=>"Blg","palo"=>"PA","fremont"=>"Fmt","soquel"=>"Soq",
+    "cupertino"=>"Cup","gatos"=>"LG","sereno"=>"MS","menlo"=>"MP",
+    "union"=>"UC","los altos"=>"LA","newark"=>"Nwk","menlo"=>"MP",
+    "capitola"=>"Cap","san carlos"=>"SanC","millbrae"=>"Milb","menlo"=>"MP",
+    "mtn"=>"MV","san carlos"=>"SanC","millbrae"=>"Milb","menlo"=>"MP",
+    "redwood"=>"RC","mateo"=>"SM","morgan"=>"MH","sunny" => "Su",
+    "san francisco"=>"SF","emerald hills"=> "EH", "hayward"=>"Hay",
+    "brisbane"=>"Bris","san ramon"=>"SR"
+    );
 
+    foreach ( $abbreviations as $key => $value){
+        if( preg_match( "/".$key."/i",$CITY)) {
+            $CITY = $value;
+            return $CITY;
+        }
+
+   }
+
+       return $CITY;
+
+}
     function memberlist($YEAR){
 
 
@@ -94,7 +116,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[ADDRESS]);
+                    echo($row[ADDRESS].", ".ABBR( $row[CITY])  );
                     echo("</td>");
 
                     echo("<td>");

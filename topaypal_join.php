@@ -36,6 +36,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
                  }, 100);
               </script>
                 ');
+		return;
 	}
 
 
@@ -106,14 +107,15 @@ $opt="911";
 // FindAddress only searches for RF and NRF (without appended _)
 // returns false if not found (also for NRF with 2)
 $epoch=0;
-if($epoch=FindAddress( $_POST[ADDRESS])){
-		LOGGER("setting: this is legit ");
-		$payment="0.01";         // discount
-        $mtype .= "_";        // append to RF_ or NRF_
-        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
-
+// only search for address of F(amily) type membership (RF or NRF)
+if(preg_match( "/F/i",$mtype)){
+			if($epoch=FindAddress( $_POST[ADDRESS], $_POST[CITY])){
+				LOGGER("FindAddress: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
+				$payment="0.01";         // discount
+        		$mtype .= "_";        // append to RF_ or NRF_
+		        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
+			}
 }
-
 
 $paypal->price = $paid;
 
