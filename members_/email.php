@@ -29,10 +29,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 <tbody>
 <?php
-    define("TABLE_PAYPAL","paypal");  
+   // define("TABLE_PAYPAL","paypal");  
 
-    $res=0;
-    $non=0;
     
     function Configure_()
     {
@@ -67,24 +65,27 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                    return $con;
              }
 
+   
 
-    function members($YEAR){
+    function memberlist($YEAR){
 
         global $res,$non;
+        $hashtable=[];
         //print( "configure");
         $con = Configure();
 
-        $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 30 ";
-//        print( $query."<br>");
+//       $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 30 ";
+        $_YEAR = $YEAR-1;
+        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname limit 30 ";
+        DEBUG( $query);
         
          $qr=mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($qr)) {  
 
-                    if( preg_match("/santa|clara/i",$row[CITY])) 
-                    $res +=1;
-                      else
-                    $non +=1;      
+                         
                     if($row['email'] == "" and $row['url']=="") continue;
+
+                    if( array_key_exists( $row['email'], $hashtable) ) continue;
 
                     echo("<tr> ");
                 
@@ -106,12 +107,12 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("</tr> ");
 
+                    $hashtable[$row[EMAIL]] =$row[FNAME]." ".$row[LNAME] ;
                     }
 
             }
 
-
-            members(2024);
+            memberlist(2024);
 
 
 //        print("\t\t\t RES: $res / NONRES: $non ");
