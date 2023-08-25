@@ -84,11 +84,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $con = Configure();
 
-         $YEAR = YEAR;   // defined in library/include.inc
-         
          $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 30 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
-
+         TEXT($query);
 
          $icon="";
          $qr=mysqli_query($con,$query);
@@ -143,7 +141,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     }
 
             }
-         memberlist(2021);
+
+            memberlist(YEAR);
+            memberlist(YEAR-1);
 
       
 ?>
