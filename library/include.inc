@@ -304,14 +304,24 @@ function Configure()
       preg_match("/santa/i",$city) ? $res +=1 : $res+=0;
       }
      
-     return $res;
+      return $res;
 
   }
 
   function NonResidents(){
-    return Members() - Residents();
+    $m = Members();
+    $res =  Residents();
+    $non = $m - $res;
+    
+//    TEXT("residents: $res/$non total$m ");
+
+    return $non;
+
+
+
   }
- function ResidentMajority(){
+ 
+  function ResidentMajority(){
   $res = Residents();
   $mem = Members();
   
