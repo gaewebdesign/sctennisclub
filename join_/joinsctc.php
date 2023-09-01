@@ -17,8 +17,8 @@ include "./library/emailer.php";
 
   <div class="col-md-6">
     <div class="input-group">
-    <span class="input-group-text" id="inputGroupPrepend1" name="fname">First Name</span>
-    <input type="text" class="form-control" id="validationDefault01"  name="fname" required>
+    <span class="input-group-text " id="inputGroupPrepend1" name="fname">First Name</span>
+    <input type="text" class="form-control BackInput" id="validationDefault01"  name="fname" required>
      </div>
   </div>
 
@@ -26,7 +26,7 @@ include "./library/emailer.php";
   <div class="col-md-6">
     <div class="input-group">
     <span class="input-group-text" id="inputGroupPrepend2" >Last Name</span>
-    <input type="text" class="form-control" id="validationDefault02" name="lname" required>
+    <input type="text" class="form-control BackInput" id="validationDefault02" name="lname" required>
     </div>
   </div>
 
@@ -36,7 +36,7 @@ include "./library/emailer.php";
 
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend2b">Address</span>
- <input type="text" class="form-control" id="validationDefault02ba" name="address" required>
+ <input type="text" class="form-control BackInput" id="validationDefault02ba" name="address" required>
 </div>
 
 </div>
@@ -46,7 +46,7 @@ include "./library/emailer.php";
 
     <div class="input-group">
     <span class="input-group-text" id="inputGroupPrepend3">City</span>
-     <input type="text" class="form-control" id="validationDefault03" name="city" required>
+     <input type="text" class="form-control BackInput" id="validationDefault03" name="city" required>
    </div>
 
 </div>
@@ -55,7 +55,7 @@ include "./library/emailer.php";
 
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend4">Zip</span>
- <input type="text" class="form-control" id="validationDefault04" name="zip" required>
+ <input type="text" class="form-control BackInput" id="validationDefault04" name="zip" required>
 </div>
 
 <p>
@@ -67,7 +67,7 @@ include "./library/emailer.php";
     <div class="input-group">
     <span class="input-group-text" id="inputGroupPrepend5">Gender</span>
 
-    <select class="form-select" id="validationDefault05" name="gender" notrequired>
+    <select class="form-select Back" id="validationDefault05" name="gender" required>
       <option selected enabled value="">Choose...</option>
 
       <option value="-">-</option>
@@ -84,7 +84,7 @@ include "./library/emailer.php";
   <div class="input-group">
 
     <span class="input-group-text" id="inputGroupPrepend6">NTRP</span>
-    <select class="form-select" id="validationDefault06" name="ntrp" notrequired>
+    <select class="form-select Back" id="validationDefault06" name="ntrp" notrequired>
       <option selected enabled value="">Choose...</option>
       <option value="-">-</option>
       <option value="3.0">3.0</option>
@@ -105,8 +105,8 @@ include "./library/emailer.php";
    <div class="col-md-8">
 
 <div class="input-group">
-<span class="input-group-text" id="inputGroupPrepend7">Email</span>
- <input type="email" class="form-control" id="validationDefault07" name="email" required>
+<span class="input-group-text " id="inputGroupPrepend7">Email</span>
+ <input type="email" class="form-control BackInput" id="validationDefault07" name="email" required>
 </div>
 
 </div>
@@ -117,7 +117,7 @@ include "./library/emailer.php";
 
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7">USTA Team/Captain</span>
- <input type="text" class="form-control" id="validationDefault07" name="team" >
+ <input type="text" class="form-control BackInput" id="validationDefault07" name="team" >
 </div>
 
 </div>
