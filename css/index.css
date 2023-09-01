@@ -1,4 +1,27 @@
+.Back{
 
+    background-color: rgb(224, 236, 245);
+    background-color: "CAE9F5";
+
+
+    background-color: rgb(202,233,245);
+
+}
+
+.BackInput{
+
+    background-color: rgb(210, 230, 210);
+    background-color: rgb(204, 204, 255);
+
+    background-color: rgb(240,248,255);
+
+
+}
+
+.BackEmail{
+
+    background-color: rgb(255, 253, 208);
+}
 
 .Title{
 
@@ -6,7 +29,7 @@
     font-size: 48px;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(15, 73, 207);
+    border-bottom: 1px solid rgb(189, 205, 243);
 }
 
 
@@ -15,7 +38,11 @@
     color: white;
     background-color: rgb(102, 102, 157);
     background-color: rgb(75, 9, 229);
+    background-color: rgb(224, 176, 255);
+    background-color: rgb(204, 204, 255);
 
+    background-color: rgb(99, 4, 48);
+      
 
     font-size: 15px;
     font-style: bold;
@@ -53,8 +80,9 @@
 }
 
 .Memb_Color{
-    color: rgb(66, 139, 223);
-    font-size: 1.1em;
+    color: rgb(121, 66, 223);
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 .col-sm-3half, .col-sm-8half {
