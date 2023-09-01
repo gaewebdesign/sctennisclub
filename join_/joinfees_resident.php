@@ -5,33 +5,34 @@
 
         </h4>
         <ul class="list-group mb-7">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
+          <li class="list-group-item d-flex justify-content-between lh-sm Back">
             <div>
              <h6 class="my-0"><?php echo(YEAR);?>  Membership Fees </h6> 
 
             </div>
           </li>
       
-          <li class="list-group-item d-flex justify-content-between">
+          <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RS" name="membership" required  >
                     <label> Santa Clara Resident Single &nbsp; $<?php echo(RES_FEE)?></label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between">
+          <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RF" name="membership" required  >
           <label> Santa Clara Resident Family &nbsp; $<?php echo(RES_FEE)?></label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between Memb_Color">
+          <li class="list-group-item d-flex justify-content-between Memb_Color  Back">
           <label> Santa Clara Tennis Club must maintain a resident majority. <br> 
                   Not accepting Non-Residents at this time <br>
-            Currently there are:
+            Currently there are: </b>
           <?php print("<b>".Residents()."</b> Residents") ?>  
           <?php print("<b>".NonResidents()."</b> Non-Residents") ?>  
           <br>
           When there are more residents, this page will open to non-residents.
+           
           </label>
           <br/>
           </li>
