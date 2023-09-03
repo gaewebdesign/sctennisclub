@@ -24,6 +24,13 @@
 
     </a></h1>
 
+    <h1>Follow the summer's action on the club's new instagram page! </h1>
+
+    <a href="https://www.instagram.com/santaclaratennisclub/"> 
+
+        <img src = "./images/instagram.png">
+
+    </a>
 
     <?php
   /*
@@ -48,6 +55,8 @@
        copyto( TABLE_MIXER_PENDING,  TABLE_MIXER, $CUSTOM);
 
      ?>
+
+
 
 </body>
 </html>
