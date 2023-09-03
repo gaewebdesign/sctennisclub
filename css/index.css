@@ -1,3 +1,10 @@
+
+.RESP_IMAGE{
+ max-width: 100%;
+ height: auto;
+}
+
+
 .Back{
 
     background-color: rgb(224, 236, 245);
