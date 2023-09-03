@@ -28,9 +28,17 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 */
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 
-define("RETURN_URL","http://www.sctennisclub.net/done");
-define("CANCEL_URL","http://www.sctennisclub.net/cancel");
-define("NOTIFY_URL","http://www.sctennisclub.net/notify");
+// URL for membership return
+// this requires .htaccess in each directory
+define("RETURN_URL","http://www.sctennisclub.net/membership/done");
+define("CANCEL_URL","http://www.sctennisclub.net/membership/cancel");
+define("NOTIFY_URL","http://www.sctennisclub.net/membership/notify");
+
+// URL for signup_ return  (May Social, Ice Cream , End of year Dinner)
+// this requires .htaccess in each directory
+define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done");
+define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel");
+define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
 
 
 define("FNAME", "fname" );
@@ -201,8 +209,9 @@ function Configure()
 
  function copyto( $src, $dest, $epoch){
   
-  TEXT("copyto $src -> $dest ");
   
+  //insert into paypal select * from pending where custom="1692196244" 
+  //insert into mixer_pending(_id,fname,lname,gender,ntrp,email,member,paid,date,custom,event) values(NULL,"Salmon","Ono","-","-","sally@gmail.com","-",".10","9/03/2023","1693708557","Salmon")
   $con = DBMembership();
 
   $query = "insert into $dest select * from $src where custom=\"$epoch\" "; 
