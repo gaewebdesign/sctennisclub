@@ -112,7 +112,7 @@
             <div>
              <h6 class="my-0">2023 October 19  Year-end dinner </h6> 
 
-              <small class="text-muted"><a href="https://athenagrill.com/">Athena Grill</a></small>
+              <large class="text-muted"><a href="https://athenagrill.com/">Athena Grill</a></large>
 
             </div>
           </li>
@@ -130,7 +130,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="topaypaldinner.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_dinner.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -150,7 +150,7 @@
 
             <div class="col-sm-8">
               <label for="email" class="form-label">Email Address</label>
-              <input type="text" class="form-control BackInput" id="email" placeholder="" value="" required name="email">
+              <input type="email" class="form-control BackInput" id="email" placeholder="" value="" required name="email">
               <div class="invalid-feedback">
                 Valid email address is required.
               </div>
@@ -159,32 +159,32 @@
             <div class="my-3">
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span> 
               <label >
-                All dinners come with  hummus pita bread and  house salad.
+                All dinners come with  hummus, pita bread and house salad.
                 <hr/>
               </label>
               <div class="form-check ">
-                <input class="form-check-input"  type="radio" id="member" value="chicken" name="mixer"    >
+                <input class="form-check-input"  type="radio" id="chicken" value="chicken" name="dinner"  required   ></input>
                 <label class="form-check-label" for="member"><b>Chicken Souvlaki Plate </b> &nbsp;
                    Marinated chicken thigh meat skewered and grilled, served with rice and Greek vegetable medley
 
                 </label>
 
                 <br/>
-                <input  class="form-check-input" type="radio" id="salmon" value= "salmon" name="mixer"  >
+                <input  class="form-check-input" type="radio" id="salmon" value= "salmon" name="dinner" required ></input>
                 <label class="form-check-label" for="member"><b>Salmon</b>&nbsp; fresh Atlantic salmon
                 marinated and grilled with rice and Greek vegetable medley</label>
 
                 <br/>
-                <input  class="form-check-input" type="radio" id="veg" value="veg" name="mixer">
+                <input  class="form-check-input" type="radio" id="veg" value="veg" name="dinner" required></input>
                 <label class="form-check-label" for="member"><b>Vegetarian Mousaka</b>
                 eggplant, mushrooms casserole with zucchini and potato topped with creamy bechamel, served
                 with garlic fries
                 </label>
                 
                 <br/>
-                <input  class="form-check-input" type="radio" id="gyro" value="gyro" name="mixer">
+                <input  class="form-check-input" type="radio" id="gyro" value="gyro" name="dinner" required></input>
                 <label class="form-check-label" for="member"><b>Gyro Plate</b>
-                thin slices of seasoned beef served over warm pita with tzatiki sauce, tomato, red onions
+                thin slices of seasoned beef served over warm pita bread with tzatiki sauce, tomato, red onions
                 and served with garlic fries
                 </label>
                <hr/>

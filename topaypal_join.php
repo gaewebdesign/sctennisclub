@@ -4,11 +4,12 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+/*
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
 define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
-
+*/
 
 //print_r($_POST);
 
@@ -22,10 +23,7 @@ $paid = RES_FEE;
 if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 	$paid =  RES_FEE;
 
-//	echo("preg_match: ".preg_match("/santa|clara/i",$_POST[CITY] ) );
-//	echo "<script>alert(\"Santa Clara Resident\")</script>";
-
-	if(preg_match("/santa|clara/i",$_POST[CITY])){
+    if( RESIDENT_MATCH( $_POST[CITY]) ){
 		 DEBUG("Santa Clara resident" );
 	}else{
 		echo "<script>alert(\"must have Santa Clara address for resident fee \")</script>";

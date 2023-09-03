@@ -23,16 +23,16 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2023-7-30');
-// Switch between tables here **************************
+          $epoch = strtotime('2023-9-1');
+          // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
-
-          $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
 
           $query = "select * from ".TABLE_MIXER."  where custom>$epoch order by custom desc";
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
+
+          $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
 
           $con = Configure();
            

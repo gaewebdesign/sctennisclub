@@ -4,11 +4,12 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+/*
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
 define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
-
+*/
 
 //print_r($_POST);
 

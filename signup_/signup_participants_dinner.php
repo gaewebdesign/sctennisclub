@@ -33,7 +33,7 @@ tr {
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
 
-          $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
           $con = Configure();
            
@@ -50,7 +50,7 @@ tr {
             echo $row['lname'];
 
             echo '<td style="width:33%">';
-            echo 'dinner';
+            echo $row['event'];
 
 
 //   ***************************
@@ -61,10 +61,11 @@ tr {
            echo '<td style="width:33%">';
            echo $row['date'];
 
+/*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
            else if( $row['paid'] == $GUEST_FEE) echo("🧢");
            else if( $row['paid'] == $ICECREAM_FEE) echo ("&#x1F49C");
-
+*/
             echo "</tr>";
           }      
 

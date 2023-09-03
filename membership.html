@@ -80,13 +80,14 @@
                   <p>
                   Refer to the <a href="./info.html">info</a> page for a summary of membership benefits: 
                   <p>
-                        2024 MEMBERSHIP FEES
+                   <?php
+                        include "./library/include.inc";
+                        echo(YEAR."  *MEMBERSHIP FEES*");
+                   ?>
+
                   </caption>
                     <p>
-                        <?php
-                          include "./library/include.inc";
-                         
-                        ?>
+                      
                     Single<br>
                     Santa Clara Residents    $<?php print(RES_FEE) ?> <br>
                     Non Residents            $<?php print(NONRES_SINGLE_FEE) ?>  <br>

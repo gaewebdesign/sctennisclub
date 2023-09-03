@@ -16,7 +16,7 @@ define("TABLE_MIXER", "mixer");
 define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
-define ("YEAR" , "2023");
+define ("YEAR" , "2024");
 define("RES_FEE" , "0.05" );
 define("NONRES_SINGLE_FEE" , "0.10" );
 define("NONRES_FAMILY_FEE" , "0.15" );
@@ -26,6 +26,8 @@ define("RETURN_URL","http://www.sctennisclub.org/signup/done");
 define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 */
+define("PAYPAL_MAIL","treasurer@sctennisclub.org");
+
 define("RETURN_URL","http://www.sctennisclub.net/done");
 define("CANCEL_URL","http://www.sctennisclub.net/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.net/notify");
@@ -69,6 +71,17 @@ function DEBUG($message){
     print( $message );
 
  }
+
+ function RESIDENT_MATCH( $_CITY){
+  
+    if(preg_match("/santa/i",$_CITY) and  preg_match("/clara/i",$_CITY )){
+    return true;
+  }
+
+  return false;
+
+}
+ 
 
  function LOGGER( $text )
  {
@@ -188,7 +201,7 @@ function Configure()
 
  function copyto( $src, $dest, $epoch){
   
-  LOGGER("copyto");
+  TEXT("copyto $src -> $dest ");
   
   $con = DBMembership();
 
@@ -302,8 +315,10 @@ function Configure()
     $res=0;
     while ($row = mysqli_fetch_assoc($qr)) {  
       $city = $row[CITY];
-      preg_match("/santa/i",$city) ? $res +=1 : $res+=0;
-      }
+      if(RESIDENT_MATCH ($city))
+        $res++;
+
+    }
      
       return $res;
 
