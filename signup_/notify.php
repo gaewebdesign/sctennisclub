@@ -1,7 +1,7 @@
 <?php
 
 
-include "includes.inc";
+include "../libarary/include.inc";
 
 //$_GET["custom"] = 1675506456;;
 

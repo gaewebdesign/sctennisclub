@@ -21,7 +21,7 @@
     <p> &nbsp;
     <p> &nbsp;
     <center>
-    <h3>Next time! </h3>
+    <h3> OK Next time! </h3>
     <p>
     <div class="col d-flex align-items-center justify-content-center">
 
@@ -31,7 +31,7 @@
    -->
 
 
-    <img src="./crying.gif" alt="crying">
+    <img src="./images/crying.gif" alt="crying">
     </div>
 
 </body>
