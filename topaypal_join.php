@@ -20,6 +20,8 @@ $paypal = new paypal();
 // echo "<script>alert(\"ZSanta Clara Resident\")</script>";
 
 $paid = RES_FEE;
+
+$mtype= $_POST["membership"];
 if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 	$paid =  RES_FEE;
 
@@ -52,11 +54,41 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 //DEBUG("paypal -> price = $paid   < ---");
 
 //$paypal->ipn = "http://www.sctennisclub.com/membership/pipn.php";
+// Look for address and override $paid to 0.99 if address found
+// FindAddress only searches for RF and NRF (without appended _)
+// returns false if not found (also for NRF with 2)
+$epoch=0;
+$underline="";
+$opt="911";
+// only search for address of F(amily) type membership (RF or NRF)
+// Override if address is detected
+if(preg_match( "/F/i",$mtype)){
+			if($epoch=FindAddress( $_POST[ADDRESS], $_POST[CITY])){
+				LOGGER("FindAddress: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
+				$paid="0.33";         // discount
+        		$mtype .="_";        // append to RF_ or NRF_
+		        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
+			}
+}
+
+
+$date = $custom;
+$payment = $paid;
+$insignia = "0";
+$year = YEAR ;      // defined in library/include.inc
+// opt (set above is the primary member found from FindAddress
+// opt gets used when this member is copied from pending to paypal
+// the primary member identified by opt has insignia incremented
+// and the address is changed if a non-resident primary membere
+
+$paypal->price = $paid;
+
+// The price has to be sete before enable_payment
 
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Mixer");
+$paypal->add("item_name","SCTC Membership");
 $paypal->add("quantity",1);
 
 $paypal->add("return",RETURN_URL);
@@ -90,32 +122,13 @@ $paypal->add("custom", $custom );
 
 $dt = new DateTime("@$custom");
 $date = ltrim($dt->format('m/d/Y'),0);
+$date = $custom;
 
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
-$date = $custom;
-$mtype = $member ;
-$payment = $paid;
-$insignia = "0";
-$year = YEAR ;      // defined in library/include.inc
-$opt="911";
 
-// Look for address and override $paid to 0.99 if address found
-// FindAddress only searches for RF and NRF (without appended _)
-// returns false if not found (also for NRF with 2)
-$epoch=0;
-// only search for address of F(amily) type membership (RF or NRF)
-if(preg_match( "/F/i",$mtype)){
-			if($epoch=FindAddress( $_POST[ADDRESS], $_POST[CITY])){
-				LOGGER("FindAddress: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
-				$payment="0.01";         // discount
-        		$mtype .= "_";        // append to RF_ or NRF_
-		        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
-			}
-}
 
-$paypal->price = $paid;
 
 
 
@@ -126,10 +139,12 @@ toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip
 
 // copy to paypal table
 // this done in return.php after Paypment payment
-TEXT("*** Ok ****");
-copyto(TABLE_PENDING,TABLE_PAYPAL,$custom);
 
-//$paypal->output_form();
+//copyto(TABLE_PENDING,TABLE_PAYPAL,$custom);
+
+//print_r($paypal);
+
+$paypal->output_form();
 
 
 ?>

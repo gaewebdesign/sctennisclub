@@ -75,7 +75,7 @@
     
   <?php 
    // include "includes.inc";
-    $MEMBER_FEE="25.00";    // "0.25";
+    $MEMBER_FEE=DINNER;
   ?>;
 
 <div class="container">
