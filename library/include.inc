@@ -21,24 +21,28 @@ define("RES_FEE" , "0.05" );
 define("NONRES_SINGLE_FEE" , "0.10" );
 define("NONRES_FAMILY_FEE" , "0.15" );
 
+define("DINNER" , ".10" );
+
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
 define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 */
-define("PAYPAL_MAIL","treasurer@sctennisclub.org");
+//define("PAYPAL_MAIL","treasurer@sctennisclub.org");
+define("PAYPAL_MAIL","treasurer@sctennisclub.net");
 
 // URL for membership return
 // this requires .htaccess in each directory
-define("RETURN_URL","http://www.sctennisclub.net/membership/done");
-define("CANCEL_URL","http://www.sctennisclub.net/membership/cancel");
-define("NOTIFY_URL","http://www.sctennisclub.net/membership/notify");
+define("RETURN_URL","http://www.sctennisclub.net/join_/done");
+define("CANCEL_URL","http://www.sctennisclub.net/join_/cancel");
+define("NOTIFY_URL","http://www.sctennisclub.net/join_/notify.php");
 
 // URL for signup_ return  (May Social, Ice Cream , End of year Dinner)
 // this requires .htaccess in each directory
 define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done");
 define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel");
-define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
+//define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify.php");
+define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
 
 define("FNAME", "fname" );
@@ -207,7 +211,32 @@ function Configure()
                 return $con;
           }
 
- function copyto( $src, $dest, $epoch){
+// will copy and increment _id  
+/*
+INSERT INTO table_name1 (columns) 
+SELECT columns FROM table_name2;
+*/
+function copyto( $src, $dest, $epoch){
+  
+  
+  
+  $query = "insert into $dest(fname,lname,email,url,gender,ntrp,code,phone,address,city,zip,";
+  $query .= "state,year,capt,team,mtype,help,other,date,insignia,payment, custom,opt,pwd)";
+  
+  $query .= "select fname,lname,email,url,gender,ntrp,code,phone,address,city,zip,";
+  $query .= "state,year,capt,team,mtype,help,other,date,insignia,payment, custom,opt,pwd ";
+
+  $query .= " from $src where custom=$epoch";
+
+  TEXT( $query);  
+  $con = DBMembership();
+  $query_results=mysqli_query($con,$query);
+
+
+}
+ 
+// this won't properly work if there are duplicate _ids because it is a direct copy of a row
+ function copyto2( $src, $dest, $epoch){
   
   
   //insert into paypal select * from pending where custom="1692196244" 
@@ -354,4 +383,48 @@ function Configure()
   return false;
 
  }
+
+
+
+
+function EMAILER($subject, $message, $verbose=false)
+{
+
+   //$to = "santaclarawebmaster@gmail.com";
+   $to = "notify@sctennisclub.org";
+   $to = "treasurer@sctennisclub.net";
+
+//   $to = "tennis.mutt@gmail.com";
+   
+
+// Put Paypal POST values into message
+/*
+     $message = "SCTC  Notification: <br>";
+     $message .= "Paypal Parameters <br>";
+
+   foreach ( $_POST as $key => $value)
+      $message .= $key." -> ".$_POST[$key]."<br>";
+*/
+
+   $headers = 'From: memb@sctennisclub.org' . "\r\n" .
+    'Reply-To: memb@sctennisclub.org' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+// Use this header
+   $headers  = 'MIME-Version: 1.0' . "\r\n";
+   $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+   $headers .= "From: membership@sctennisclub.org  \r\n";
+
+//   $subject .= $name;
+   //$subject .= "KEY = ".$_POST[CUSTOM];
+
+   TEXT("subject: $subject");
+   TEXT("to: $to");   
+   TEXT("message: $message");   
+
+
+   $r=mail($to,$subject,$message,$headers);
+   if($verbose) TEXT("mail return value = $r ");
+
+}
  ?>
