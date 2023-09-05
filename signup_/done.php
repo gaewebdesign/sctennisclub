@@ -26,7 +26,7 @@
 
     </a></h1>
 
-    <h1>Follow the summer's action on the club's Instagram page! </h1>
+    <h1>Follow the action on the club's Instagram page! </h1>
 
     <a href="https://www.instagram.com/santaclaratennisclub/"> 
 
@@ -48,13 +48,13 @@
  
 
        // copy over from the mixer_pending to the mixer directory
-       LOGGER("Sept log: $NAME $EMAIL $CUSTOM ") ;
-       LOGGER("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
+       LOGGER("done.php: values $NAME $EMAIL $CUSTOM ") ;
+       LOGGER("done.php: copyto".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
 
 //       TEXT("Sept log: $NAME $EMAIL $CUSTOM ") ;
 //       TEXT("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
 
-       copyto( TABLE_MIXER_PENDING,  TABLE_MIXER, $CUSTOM);
+//       copyto( TABLE_MIXER_PENDING,  TABLE_MIXER, $CUSTOM);
 
      ?>
 

@@ -293,7 +293,7 @@ function copyto( $src, $dest, $epoch){
          $query .= ' and ( mtype ="RF" or mtype = "NRF")';
          $query .= ' and year = "'.$YEAR.'"';   
  
-         TEXT($query);
+ //        TEXT($query);
 
          $con = DBMembership();
          $query_results=mysqli_query($con, $query);
