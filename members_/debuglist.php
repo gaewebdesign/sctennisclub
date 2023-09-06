@@ -24,8 +24,13 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 <div class="col-sm ">
 
-     RESIDENTS: <?php echo( Residents()) ?>
-     NON-RESIDENTS: <?php echo( NonResidents()) ?>
+<b><?php echo( YEAR); ?>  </b> &nbsp;
+    RESIDENTS: <?php echo( Residents(YEAR) ); ?>
+    NON-RESIDENTS: <?php echo( NonResidents(YEAR)) ?>
+    <br>
+    <b><?php echo( YEAR-1); ?>  </b> &nbsp;
+    RESIDENTS: <?php echo( Residents(YEAR-1) ); ?>
+    NON-RESIDENTS: <?php echo( NonResidents(YEAR-1)) ?>
 
 </div>
 
