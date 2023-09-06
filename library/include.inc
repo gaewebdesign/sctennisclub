@@ -335,9 +335,9 @@ function copyto( $src, $dest, $epoch){
  
  }
 
- function Members(){
+ function Members($_YEAR){
    $con = DBMembership();
-   $query = "select * from ".TABLE_PAYPAL." where year = ".YEAR;
+   $query = "select * from ".TABLE_PAYPAL." where year = ".$_YEAR;
    $query_results=mysqli_query($con,$query);
    $n = mysqli_num_rows($query_results);
 
@@ -346,9 +346,9 @@ function copyto( $src, $dest, $epoch){
   }
 
   
-  function Residents(){
+  function Residents($_YEAR){
     $con = DBMembership();
-    $query = "select * from ".TABLE_PAYPAL." where year = ".YEAR;
+    $query = "select * from ".TABLE_PAYPAL." where year = ".$_YEAR;
     $qr=mysqli_query($con,$query);
     $res=0;
     while ($row = mysqli_fetch_assoc($qr)) {  
@@ -362,9 +362,9 @@ function copyto( $src, $dest, $epoch){
 
   }
 
-  function NonResidents(){
-    $m = Members();
-    $res =  Residents();
+  function NonResidents($_YEAR){
+    $m = Members($_YEAR);
+    $res =  Residents($_YEAR);
     $non = $m - $res;
     
 //    TEXT("residents: $res/$non total$m ");
@@ -375,9 +375,9 @@ function copyto( $src, $dest, $epoch){
 
   }
  
-  function ResidentMajority(){
-  $res = Residents();
-  $mem = Members();
+  function ResidentMajority($_YEAR){
+  $res = Residents($_YEAR);
+  $mem = Members($_YEAR);
   
   if( $res>$mem-$res +1 ) return true;
   return false;
