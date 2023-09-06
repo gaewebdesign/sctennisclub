@@ -41,11 +41,11 @@
  
 
        // copy over from the mixer_pending to the mixer directory
-       LOGGER("Sept log: $NAME $EMAIL $CUSTOM ") ;
-       LOGGER("TABLES: ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+       LOGGER("join_/done.php _GET : $NAME $EMAIL $CUSTOM ") ;
+       LOGGER("join_/done.php: copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-//       TEXT("Sept log: $NAME $EMAIL $CUSTOM ") ;
-//       TEXT("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
+       TEXT("join_/done.php _GET : $NAME $EMAIL $CUSTOM ") ;
+       TEXT("join_/done.php: copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
        copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 

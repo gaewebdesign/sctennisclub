@@ -84,6 +84,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                          
                     if($row['email'] == "" and $row['url']=="") continue;
+                    if($row['url']!= "") $url="@".$row['url'];
 
                     if( array_key_exists( $row['email'], $hashtable) ) continue;
 
@@ -102,7 +103,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row['email']);
+                    echo($row['email'].$url);
                     echo("</td>");
 
                     echo("</tr> ");

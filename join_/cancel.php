@@ -7,14 +7,14 @@
     <title>SCTC</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
-
+    <link rel="stylesheet" href="../css/index.css" >
 
 
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 </head>
-<body>
+<body class="Back">
     <p>
 
     <p> &nbsp;<p> &nbsp;
@@ -28,10 +28,10 @@
     <!--<img src="./cinco.png"  alt="cinco"> -->
     <!--
     https://myanimelist.net/featured/2039/Anime_Girls_Crying__20_of_the_Saddest_Pictures___GIFs
-   -->
-
-
-    <img src="./images/crying.gif" alt="crying">
+<img src="./images/crying.gif" alt="crying">
+   <img src="./images/rafael-nadal-autograph.gif" alt="rafael nadal">
+-->
+     <img src = "./images/naomi-osaka-tennis.gif" > 
     </div>
 
 </body>

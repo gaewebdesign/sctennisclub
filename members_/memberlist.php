@@ -23,9 +23,13 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
 <div class="col-sm ">
-
-     RESIDENTS: <?php echo( Residents()) ?>
-     NON-RESIDENTS: <?php echo( NonResidents()) ?>
+    <b><?php echo( YEAR); ?>  </b> &nbsp;
+    RESIDENTS: <?php echo( Residents(YEAR) ); ?>
+    NON-RESIDENTS: <?php echo( NonResidents(YEAR)) ?>
+    <br>
+    <b><?php echo( YEAR-1); ?>  </b> &nbsp;
+    RESIDENTS: <?php echo( Residents(YEAR-1) ); ?>
+    NON-RESIDENTS: <?php echo( NonResidents(YEAR-1)) ?>
 
 </div>
 
@@ -38,14 +42,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col" >Year </th>
     <th scope="col" >First Name </th>
     <th scope="col">Last Name </th>
-
-    <th scope="col">Address </th>
-    <th scope="col">TEAM </th>
     
-    <th scope="col">MTYPE </th>
-    <th scope="col">PAID </th>
-
-
     <th scope="col">NTRP </th>
     <th scope="col">Date </th>
     
@@ -105,7 +102,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[FNAME]);
+                    $fname = strtoupper(substr($row[FNAME],0,1));
+                    echo($fname);
+                    //echo($row[FNAME][0]);
                     echo("</td>");
 
                     echo("<td>");
@@ -114,27 +113,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[ADDRESS].", ".ABBR( $row[CITY])  );
-                    echo("</td>");
-
-                    echo("<td>");
-                    echo($row[TEAM]);
-                    echo("</td>");
-
-                    echo("<td>");
-                    echo($row[MTYPE]);
-                    echo("</td>");
-
-                    echo("<td>");
-                    echo($row[PAYMENT]);
-                    echo("</td>");
-
-                    echo("<td>");
                     echo($row[GENDER].$row[NTRP]);
                     echo("</td>");
 
                     echo("<td>");
-                    echo( date(" m/d/y",$row[DATE]).$icon );
+                    echo( date(" m/d/y",$row[CUSTOM]).$icon );
                     echo("</td>");
                     echo("</tr> ");
 
