@@ -39,10 +39,10 @@ define("NOTIFY_URL","http://www.sctennisclub.net/join_/notify.php");
 
 // URL for signup_ return  (May Social, Ice Cream , End of year Dinner)
 // this requires .htaccess in each directory
-define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done");
-define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel");
-//define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify.php");
-define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
+define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done.php");
+define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel.php");
+define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify.php");
+//define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
 
 define("FNAME", "fname" );
@@ -235,6 +235,24 @@ function copyto( $src, $dest, $epoch){
 
 }
  
+// mixer has a different table structure than membership
+function copyto_mixer($src,$dest,$epoch){
+
+  
+  $query = "insert into $dest(fname,lname,gender,ntrp,email,member,paid,date,custom,division,event)";
+  
+  $query .= " select fname,lname,gender,ntrp,email,member,paid,date,custom,division,event ";
+  $query .= " from $src where custom=$epoch";
+
+  TEXT( $query);  
+  $con = DBMembership();
+  $query_results=mysqli_query($con,$query);
+
+
+
+}
+
+
 // this won't properly work if there are duplicate _ids because it is a direct copy of a row
  function copyto2( $src, $dest, $epoch){
   
