@@ -51,6 +51,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">PAID </th>
     
     <th scope="col">CUSTOM</th>
+
+    <th scope="col">INSIGNIA</th>
     <th scope="col">OPT</th>
     
 
@@ -95,7 +97,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by year,lname limit 300 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
-         TEXT($query);
+  //       TEXT($query);
 
          $icon="";
          $qr=mysqli_query($con,$query);
@@ -143,17 +145,19 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[OPT]);
+                    echo($row[INSIGNIA]);
                     echo("</td>");
 
-                    
+                    echo("<td>");
+                    echo($row[OPT]);
+                    echo("</td>");                    
 
                     echo("<td>");
                     echo($row[GENDER].$row[NTRP]);
                     echo("</td>");
 
                     echo("<td>");
-                    echo( date(" m/d/y",$row[CUSTOM]).$icon );
+                    echo( date(" m/d/y",$row[DATE]).$icon );
                     echo("</td>");
                     echo("</tr> ");
 
