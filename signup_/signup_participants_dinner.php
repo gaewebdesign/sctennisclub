@@ -32,7 +32,7 @@ tr {
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
-          $query = "select * from ".TABLE_MIXER."  where custom>$epoch order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by custom desc";
 
           $con = Configure();
            
@@ -55,10 +55,10 @@ tr {
 //   ***************************
             $e = $row['custom']; //-60*60*7;
             $dt = new DateTime("@$e");
-            $date = ltrim($dt->format('m/d/Y H:i:s '),0);
+            $date = ltrim($dt->format('m/d/Y '),0);
 //   echo $date;
            echo '<td style="width:33%">';
-           echo $row['date'];
+           echo $date;
 
 /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
