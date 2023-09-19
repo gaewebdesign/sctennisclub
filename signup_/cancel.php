@@ -21,22 +21,17 @@
     <p> &nbsp;
     <p> &nbsp;
     <center>
-    <h3> Next time! </h3>
+    <h3>Next time! </h3>
     <p>
     <div class="col d-flex align-items-center justify-content-center">
 
     <!--<img src="./cinco.png"  alt="cinco"> -->
     <!--
     https://myanimelist.net/featured/2039/Anime_Girls_Crying__20_of_the_Saddest_Pictures___GIFs
-
-    <img src="./images/crying.gif" alt="crying">
-   <img src = "./images/naomi-osaka-tennis.gif" >   
--->
-
-   <img src="./images/shiro-neko-project-tennis.gif" > 
+   -->
 
 
-    
+    <img src="./crying.gif" alt="crying">
     </div>
 
 </body>
