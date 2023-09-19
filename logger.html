@@ -12,14 +12,14 @@
 
 
 </head>
-<body class="Back" >
+<body class="BackDebug" >
 
  
 </p>
 <div class="container-sm ">
       <div class="row">
       <div class="col-sm-1">  </div>            
-       <div class="col-sm-10 "><center> <img src="images/banner_main2.png"></center> </div>
+       <div class="col-sm-10 "><center> <img src="images/banner_main.png"></center> </div>
       <div class="col-sm-1">
       </div>
       </div>  
@@ -43,7 +43,7 @@
       <div class="row">
             <div class="col-sm-2"> </div> 
             <div class="col-sm-8 NavLink"> 
-                  <?php include "./imports_/navlink.php" ?>
+                <?php include "./imports_/debug.php" ?>
              </div>
 
       <div class="col-sm-2"> </div> 
@@ -88,7 +88,7 @@
                   include "./library/paypal.inc";
                   include "./library/emailer.php"; 
  
-                  include "join_/joinsctc.php";
+                  include "members_/logger_debug.php";
             ?>
 
       </div>
@@ -100,7 +100,7 @@
 
       <div class="container-sm ">
             <?php
-            include "footer.php";
+            include "./imports_/footer.php";
           ?>
         
         
