@@ -103,8 +103,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("<td>");
                     $fname = strtoupper(substr($row[FNAME],0,1));
-                    echo($fname);
-                    //echo($row[FNAME][0]);
+ //                   echo($fname);
+                    echo($row[FNAME]);
                     echo("</td>");
 
                     echo("<td>");
