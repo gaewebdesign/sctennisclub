@@ -87,8 +87,6 @@ include "./library/emailer.php";
     <select class="form-select Back" id="validationDefault06" name="ntrp" notrequired>
       <option selected enabled value="">Choose...</option>
       <option value="-">-</option>
-      <option value="2.0">2.0</option>
-      <option value="2.5">2.5</option>
       <option value="3.0">3.0</option>
       <option value="3.5">3.5</option>
       <option value="4.0">4.0</option>
@@ -174,6 +172,6 @@ include "./library/emailer.php";
   </div>
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Go to Paypal</button>
+    <button class="btn btn-primary" disabled type="submit">Go to Paypal</button>
   </div>
 </form>

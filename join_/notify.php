@@ -118,7 +118,7 @@
 //         $query = "update $theTable set address = address + "."'_'"." where custom = $opt";
            $query = "update $theTable set address= concat( address, '*') where custom = $opt";
 
-           LOGTEXT($query);
+           LOGTEXT("update address query = $query");
            $query_results=mysqli_query($con, $query);
 
             }
