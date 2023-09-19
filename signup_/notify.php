@@ -10,12 +10,30 @@ include "../library/include.inc";
 
 
 
-LOGGER("notify.php: custom = " .$_GET["custom"]);
+LOGGER("notify.php: _POST custom = " .$_POST["custom"]);
+LOGGER("notify.php: _GET custom = " .$_GET["custom"]);
+
+LOGGER("notify.php: enumerate _POST array");
+TEXT("notify.php: enumerate _POST array");
+foreach ($_POST as $key => $value) {
+   LOGGER("notify.php $key -> $value ");
+   TEXT("notify.php $key -> $value ");
+}
+
+LOGGER("notify.php: enumerate _GET array");
+TEXT("notify.php: enumerate _GET array");
+foreach ($_GET as $key => $value) {
+   LOGGER("notify.php $key -> $value ");
+   TEXT("notify.php $key -> $value ");
+
+}
 
 
-$epoch = $_GET["custom"];
-if( !empty($_GET["custom"])){
 
+
+if( !empty($_POST["custom"])){
+
+   $epoch = $_GET["custom"];
    LOGGER("notify.php called  with GET custom: $epoch ");
    
    $dest = TABLE_MIXER;
@@ -23,7 +41,7 @@ if( !empty($_GET["custom"])){
 
    // copy over to mixer (paypal contents)
    LOGGER("notify.php copyto $src -> $dest : $epoch " );
-   copyto( $src, $dest, $epoch );
+   copyto_mixer( $src, $dest, $epoch );
  
 }
 

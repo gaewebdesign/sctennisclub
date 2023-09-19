@@ -4,11 +4,11 @@
 
 -->
 <?php
-
+/*
   include "./library/include.inc";
   include "./library/paypal.inc";
 include "./library/emailer.php";
-
+*/
 ?>
 <form class="row g-3" action="./topaypal_join.php", method="POST">
 
@@ -87,6 +87,8 @@ include "./library/emailer.php";
     <select class="form-select Back" id="validationDefault06" name="ntrp" notrequired>
       <option selected enabled value="">Choose...</option>
       <option value="-">-</option>
+      <option value="2.0">2.0</option>
+      <option value="2.5">2.5</option>
       <option value="3.0">3.0</option>
       <option value="3.5">3.5</option>
       <option value="4.0">4.0</option>
@@ -131,7 +133,7 @@ include "./library/emailer.php";
    <span><h4 style="color:rgb(25, 0, 255)">Select one: </h4></span> 
 
    <?php
-        $r_majority=ResidentMajority();
+        $r_majority=ResidentMajority(YEAR);
         if($r_majority){
           include "join_/joinfees.php";
         }else{

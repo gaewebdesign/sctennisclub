@@ -16,10 +16,12 @@ define("TABLE_MIXER", "mixer");
 define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
-define ("YEAR" , "2024");
+define ("YEAR" , "2023");
 define("RES_FEE" , "0.05" );
 define("NONRES_SINGLE_FEE" , "0.10" );
 define("NONRES_FAMILY_FEE" , "0.15" );
+
+define("ADDITIONAL_MEMBER_FEE" , "0.20" );
 
 define("DINNER" , ".10" );
 
@@ -29,19 +31,19 @@ define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
 define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 */
 //define("PAYPAL_MAIL","treasurer@sctennisclub.org");
-define("PAYPAL_MAIL","treasurer@sctennisclub.net");
+define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 
 // URL for membership return
 // this requires .htaccess in each directory
-define("RETURN_URL","http://www.sctennisclub.net/join_/done");
-define("CANCEL_URL","http://www.sctennisclub.net/join_/cancel");
-define("NOTIFY_URL","http://www.sctennisclub.net/join_/notify.php");
+define("RETURN_URL","http://www.sctennisclub.org/join_/done.php");
+define("CANCEL_URL","http://www.sctennisclub.org/join_/cancel.php");
+define("NOTIFY_URL","http://www.sctennisclub.org/join_/notify.php");
 
 // URL for signup_ return  (May Social, Ice Cream , End of year Dinner)
 // this requires .htaccess in each directory
-define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done.php");
-define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel.php");
-define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify.php");
+define("RETURN_URL_SIGNUP","http://www.sctennisclub.org/signup_/done.php");
+define("CANCEL_URL_SIGNUP","http://www.sctennisclub.org/signup_/cancel.php");
+define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup_/notify.php");
 //define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
 
@@ -94,6 +96,12 @@ function DEBUG($message){
 
 }
  
+function LOGTEXT($text){
+
+  TEXT($text);
+  LOGGER($text);
+
+}
 
  function LOGGER( $text )
  {
@@ -113,6 +121,8 @@ function DEBUG($message){
  
  
  }
+
+ 
 
  function add ($p)
  {
@@ -228,10 +238,15 @@ function copyto( $src, $dest, $epoch){
 
   $query .= " from $src where custom=$epoch";
 
-  TEXT( $query);  
+ 
   $con = DBMembership();
+
+  LOGGER( $query);  
   $query_results=mysqli_query($con,$query);
 
+  $query = "update $src set custom='done' where custom=$epoch";
+  LOGGER( $query); 
+  $query_results=mysqli_query($con,$query);
 
 }
  
@@ -257,42 +272,6 @@ function copyto_mixer($src,$dest,$epoch){
  function copyto2( $src, $dest, $epoch){
   
   
-  //insert into paypal select * from pending where custom="1692196244" 
-  //insert into mixer_pending(_id,fname,lname,gender,ntrp,email,member,paid,date,custom,event) values(NULL,"Salmon","Ono","-","-","sally@gmail.com","-",".10","9/03/2023","1693708557","Salmon")
-  $con = DBMembership();
-
-  $query = "insert into $dest select * from $src where custom=\"$epoch\" "; 
-  $query_results=mysqli_query($con,$query);
-
-  
-  LOGGER( $src." -> ".$dest." or ".$epoch);
-  LOGGER ($query);
-  LOGGER ($query_results);
-
-  // Get all the data in the $src pending table 
-  $query = "select * from $src where custom=\"$epoch\" "; 
-  $query_results=mysqli_query($con,$query);
-  $n = mysqli_num_rows($query_results);
-  $row = mysqli_fetch_assoc($query_results);
-  $_MTYPE= $row[MTYPE];
-  $_OPT = $row[OPT];
-  $_ADDRESS = $row[ADDRESS];
-
-  if ($_OPT != "911"){
-  
-    $query = "update $dest set insignia = insignia +1  where custom=\"$_OPT\" limit 1";
-    
-    $query_results=mysqli_query($con,$query);
-  
-    // by changing the address, only one Adult associated 
-    // if the person pays again, at full price, this same address will work once
-    if( $_MTYPE == NRF."_" ) {
-      $_ADDRESS .= "*";
-      $query = "update $dest set address=\"$_ADDRESS\" where custom=\"$_OPT\" limit 1";
-      $query_results=mysqli_query($con,$query);
-      LOGGER("$_MTYPE:  $_ADDRESS updated ");
-    }
-  }
 
 }
 
@@ -337,10 +316,13 @@ function copyto_mixer($src,$dest,$epoch){
               // this is done in transfering from pending to paypal
               // on the return from Paypal 
               $primary_member = "($fname $lname $epoch $mtype $insignia $opt )";
-              
+              LOGGER("include.inc FindAddress: $primary_member");
+
               if($mtype == "NRF" && $insignia > 1){
-                    TEXT("FOUND NRF with $insignia members  <br>");
-                    TEXT( $primary_member );
+                    LOGGER("include.inc: primary member:  $primary_member ");
+                    LOGGER("include.inc: returning false because $insignia>1 ");
+                    LOGGER("include.inc: no discount");
+
                     return false;
               }
 

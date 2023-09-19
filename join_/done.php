@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css" >
 
-    <title>Document</title>
+    <title>Santa Clara Tennis Club</title>
    
 
 </head>
@@ -14,7 +14,7 @@
     <center>
     <h1> Thanks <?php echo( $_GET["item_number"]);?> for joining Santa Clara Tennis Club!
     <p> View your name at <br>
-    <a href="http://www.sctennisclub.net/members">www.sctennisclub.net/members</a>
+    <a href="http://www.sctennisclub.org/members">www.sctennisclub.org/members</a>
     </h1>
 
     </a></h1>
@@ -42,12 +42,11 @@
 
        // copy over from the mixer_pending to the mixer directory
        LOGGER("join_/done.php _GET : $NAME $EMAIL $CUSTOM ") ;
-       LOGGER("join_/done.php: copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+       LOGGER("join_/done.php: is a _GET while notify.php is a _POST");
 
-       TEXT("join_/done.php _GET : $NAME $EMAIL $CUSTOM ") ;
-       TEXT("join_/done.php: copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-       copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+
+ //      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
      ?>
 

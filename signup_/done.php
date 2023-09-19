@@ -11,12 +11,12 @@
 
 </head>
 <body class="Back">
-    <center>
+    <center>x
     <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up to dinner !
     <p> View your name at <br>
-    <a href="http://www.sctennisclub.net/signup">www.sctennisclub.net/signup</a>
+    <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
     </h1>
-    <img  class="RESP_IMAGE" src="./images/athenat.png">
+    <img  class="RESP_IMAGE" src="./images/Athenat.png">
 
     <h1>
     <a href="https://www.google.com/maps/place/Athena+Grill+%26+Catering/@37.3764667,-121.9590693,17z/data=!3m1!4b1!4m6!3m5!1s0x808fca283052b81f:0x97b199e3951a5818!8m2!3d37.3764667!4d-121.9564944!16s%2Fg%2F1hbpwrv7r?entry=ttu"

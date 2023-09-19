@@ -164,7 +164,7 @@
               </label>
               <div class="form-check ">
                 <input class="form-check-input"  type="radio" id="chicken" value="chicken" name="dinner"  required   ></input>
-                <label class="form-check-label" for="member"><b>Chicken Souvlaki Plate </b> &nbsp;
+                <label class="form-check-label" for="member"><b>Chicken Souvlaki </b> &nbsp;
                    Marinated chicken thigh meat skewered and grilled, served with rice and Greek vegetable medley
 
                 </label>
@@ -216,7 +216,7 @@
           <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
 
 -->
-<button class="w-100 btn btn-primary btn-lg" >Goto Paypal </button>
+<button class="w-100 btn btn-primary btn-lg" disabled>Goto Paypal</button>
 
         </form>
       </div>

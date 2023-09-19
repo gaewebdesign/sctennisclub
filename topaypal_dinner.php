@@ -16,11 +16,11 @@ define("URL", "url" );
 define("DATE", "date" );
 define("CUSTOM", "custom" );
 */
-
+/*
 define("TABLE_MIXER", "mixer");
 define("TABLE_MIXER_PENDING", "mixer_pending");
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
-
+*/
 /*
 class paypal{
 
@@ -165,7 +165,7 @@ toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,
 sendemail($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER, $custom);
-print_r($paypal);
+//print_r($paypal);
 
 $paypal->output_form();
 // 

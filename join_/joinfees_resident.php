@@ -28,8 +28,8 @@
           <label> Santa Clara Tennis Club must maintain a resident majority. <br> 
                   Not accepting Non-Residents at this time <br>
             Currently there are: </b>
-          <?php print("<b>".Residents()."</b> Residents") ?>  
-          <?php print("<b>".NonResidents()."</b> Non-Residents") ?>  
+          <?php print("<b>".Residents(YEAR)."</b> Residents") ?>  
+          <?php print("<b>".NonResidents(YEAR)."</b> Non-Residents") ?>  
           <br>
           When there are more residents, this page will open to non-residents.
            

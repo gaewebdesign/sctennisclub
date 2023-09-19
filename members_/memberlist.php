@@ -117,12 +117,12 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    $custom = $row[CUSTOM];
+                    $custom = $row[DATE];
                     $dt = new DateTime("@$custom");
                     $date = ltrim($dt->format('m/d/Y'),0);
                     echo( $date.$icon );
 //                  echo( date(" m/d/Y",$row[CUSTOM]).$icon );
-                    echo("+</td>");
+                    echo("</td>");
                     echo("</tr> ");
 
                     }

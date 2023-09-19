@@ -64,10 +64,14 @@ $opt="911";
 // Override if address is detected
 if(preg_match( "/F/i",$mtype)){
 			if($epoch=FindAddress( $_POST[ADDRESS], $_POST[CITY])){
-				LOGGER("FindAddress: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
-				$paid="0.33";         // discount
+
+				$paid=ADDITIONAL_MEMBER_FEE;         // discount
         		$mtype .="_";        // append to RF_ or NRF_
 		        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
+				LOGGER("topaypal_join.php: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
+				LOGGER("topaypal_join.php: fee: $paid  $mtype $opt ");
+				LOGGER("topaypal_join.php: primary member opt: $opt ");
+
 			}
 }
 
