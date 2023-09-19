@@ -12,18 +12,18 @@ define("TABLE_PAYPAL","paypal");
 define("TABLE_PENDING","pending"); 
 
 // for mixers,
-define("TABLE_MIXER", "mixer");
+define("TABLE_MIXER_PAYPAL", "mixer_paypal");
 define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
-define ("YEAR" , "2023");
+define ("YEAR" , "2024");
 define("RES_FEE" , "0.05" );
 define("NONRES_SINGLE_FEE" , "0.10" );
 define("NONRES_FAMILY_FEE" , "0.15" );
 
 define("ADDITIONAL_MEMBER_FEE" , "0.20" );
 
-define("DINNER" , ".10" );
+define("DINNER" , ".05" );
 
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
@@ -166,17 +166,18 @@ function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city
 } 
 
 
-function toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event){
+function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
   $con = DBMembership();
 
-  $query = 'insert into '.$theTABLE.'(_id,fname,lname,gender,ntrp,email,member,paid,date,custom,event) values';
-  $query .= '(NULL'.add($fname).add($lname).add($gender).add($ntrp).add($email).add($member).add($paid);
-  $query .= add($date).add($custom).add($event) ;
-  $query .= ")";
+     $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) values';
+     $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($event).add($gender).add($ntrp).add($address).add($city).add($zip);
+    $query .= add($team).add($mtype).add($date).add($insignia).add($payment).add($custom).add($opt).add($pwd);
+    $query .= ")";
 
-//  echo "<br>";
+  
   LOGGER( $query );
+  
   $query_results=mysqli_query($con, $query);
 
 }
@@ -228,16 +229,14 @@ SELECT columns FROM table_name2;
 */
 function copyto( $src, $dest, $epoch){
   
-  
-  
-  $query = "insert into $dest(fname,lname,email,url,gender,ntrp,code,phone,address,city,zip,";
-  $query .= "state,year,capt,team,mtype,help,other,date,insignia,payment, custom,opt,pwd)";
-  
-  $query .= "select fname,lname,email,url,gender,ntrp,code,phone,address,city,zip,";
-  $query .= "state,year,capt,team,mtype,help,other,date,insignia,payment, custom,opt,pwd ";
+  //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
+  
+  $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) ";
+  $query .=            "select year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd ";
   $query .= " from $src where custom=$epoch";
 
+   TEXT($query);
  
   $con = DBMembership();
 
