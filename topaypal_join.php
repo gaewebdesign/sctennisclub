@@ -133,17 +133,21 @@ $date = $custom;
 
 
 
-
-
-
 // if $opt != 911, then this person is either RF_ or NRF_  
-toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
+//toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
+
+//function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd)
+// NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
+$pwd="*";
+toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+
 
 //sendemail($fname." ".$lname, $email, "sctennisclub.net signup => $theTABLE ");
 
 // copy to paypal table
 // this done in return.php after Paypment payment
-
+// comment out after testing
 //copyto(TABLE_PENDING,TABLE_PAYPAL,$custom);
 
 //print_r($paypal);
