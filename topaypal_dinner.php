@@ -161,10 +161,21 @@ $date = ltrim($dt->format('m/d/Y'),0);
 $theTABLE = "mixer_pending";
 
 //echo ("INSERT $fname $lname $paid $date $custom");
-toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+
+$year=2024;
+//unused fields
+$gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
+$mtype=$phone=$code="-";
+$payment=$paid;
+
+
+
+toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
 sendemail($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
-//copyto( TABLE_MIXER_PENDING,  TABLE_MIXER, $custom);
+//copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
 $paypal->output_form();
