@@ -4,7 +4,9 @@
 $months = array("J","January","February","March","April","May","June","July","August","September","October","November","December");
 
 function scanyear($year, $m)
-{
+{ 
+    chdir("./board_");
+
     $d = scandir("./"); 
     $g = "/".$year.'[_\d\w\.]*pdf/i';
     $p = array_values(preg_grep("/".$year.'[_\d\w\.]*pdf/i', $d ) );
@@ -43,12 +45,14 @@ function docs( $dir , $title){
       print("<p>");
   }
 
-          chdir("board_");
+ //         chdir("board_");
 //          print("CURRENT DIR is: ".getcwd() ."<br>" );
 
+            chdir("./board_");
+            echo ("dir = ".getcwd() ."<br>");
 
-           docs("./2022","2022"); 
-           docs("./2023","2023");
+            docs("./2022","2022"); 
+            docs("./2023","2023");
            
 ?>
-   
+           
