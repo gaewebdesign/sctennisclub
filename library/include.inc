@@ -230,7 +230,7 @@ SELECT columns FROM table_name2;
 function copyto( $src, $dest, $epoch){
   
   //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
-
+  LOGGER("copyto called with $src ----> $det $epoch");
   
   $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) ";
   $query .=            "select year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd ";

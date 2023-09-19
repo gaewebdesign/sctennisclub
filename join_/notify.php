@@ -4,8 +4,8 @@
 /*
       PAYPAL return information is a _POST
  */
-
-       LOGGER("./join_notify.php: make sure to use  _POST from paypal " );
+       LOGGER("join_/notify.php called ");
+       LOGGER("./join_/notify.php: make sure to use  _POST from paypal " );
       
       if( empty($_POST["custom"]) ){
 
