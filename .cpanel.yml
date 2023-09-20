@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/southb56/sctennisclub.org/
+ - bin/cp -R . $DEPLOYPATH
