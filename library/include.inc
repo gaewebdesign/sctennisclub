@@ -391,7 +391,7 @@ function EMAILER($subject, $message, $verbose=false)
 
    //$to = "santaclarawebmaster@gmail.com";
    $to = "notify@sctennisclub.org";
-   $to = "treasurer@sctennisclub.net";
+   
 
 //   $to = "tennis.mutt@gmail.com";
    
