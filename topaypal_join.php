@@ -78,7 +78,7 @@ if(preg_match( "/F/i",$mtype)){
 
 $date = $custom;
 $payment = $paid;
-$insignia = "0";
+$insignia = "1";
 $year = YEAR ;      // defined in library/include.inc
 // opt (set above is the primary member found from FindAddress
 // opt gets used when this member is copied from pending to paypal
