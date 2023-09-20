@@ -22,8 +22,29 @@ echo($headers);
 echo("<br>");
 
 $r=mail($to,$subject,$message,$headers);
-
 echo($r);
+echo("<br>");
+
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= "From: rogero.tennis@gmail.com  \r\n";
+
+echo("send another email <br>");
+$r=mail($to,$subject,$message,$headers);
+echo($r);
+echo("<br>");
+
+echo($to);
+echo("<br>");
+
+echo($subject);
+echo("<br>");
+
+echo($headers);
+echo("<br>");
+
+
+
 
 
 ?>
