@@ -417,13 +417,13 @@ function EMAILER($subject, $message, $verbose=false)
 //   $subject .= $name;
    //$subject .= "KEY = ".$_POST[CUSTOM];
 
-   TEXT("subject: $subject");
-   TEXT("to: $to");   
-   TEXT("message: $message");   
+   LOGGER("subject: $subject");
+   LOGGER("to: $to");   
+   LOGGERE("message: $message");   
 
 
    $r=mail($to,$subject,$message,$headers);
-   if($verbose) TEXT("mail return value = $r ");
+   if($verbose) LOGGER("mail return value = $r ");
 
 }
  ?>
