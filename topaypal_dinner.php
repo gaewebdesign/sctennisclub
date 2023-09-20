@@ -173,7 +173,7 @@ $payment=$paid;
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
-sendemail($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
+EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
