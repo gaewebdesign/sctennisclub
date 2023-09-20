@@ -1,6 +1,15 @@
 <?php
 
-include "../library/include.inc";
+require "vendor/autoload.php";
+
+$robo = 'robot@example.com';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+
+$developmentMode = false;
+$mailer = new PHPMailer($developmentMode);
 
 echo("test email<br>");
 
