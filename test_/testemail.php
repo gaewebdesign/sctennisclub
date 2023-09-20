@@ -30,6 +30,8 @@ $headers = 'From: membership@sctennisclub.org' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
 echo("send another email <br>");
+$to = "notify@sctennisclub.org";
+
 $r=mail($to,$subject,$message,$headers);
 echo($r);
 echo("<br>");
