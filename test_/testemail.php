@@ -2,7 +2,7 @@
 
 include "../library/include.inc";
 
-TEXT("test email");
+echo("test email<br>");
 
 $to = "tennis.mutt@gmail.com";
 $subject = "subject test email";
@@ -12,7 +12,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $headers .= "From: membership@sctennisclub.org  \r\n";
 
-echo($to);
+echo("to $to");
 echo("<br>");
 
 echo($subject);
@@ -25,9 +25,9 @@ $r=mail($to,$subject,$message,$headers);
 echo($r);
 echo("<br>");
 
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-$headers .= "From: rogero.tennis@gmail.com  \r\n";
+$headers = 'From: membership@sctennisclub.org' . "\r\n" .
+'Reply-To: membership@sctennisclub.org' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
 
 echo("send another email <br>");
 $r=mail($to,$subject,$message,$headers);
