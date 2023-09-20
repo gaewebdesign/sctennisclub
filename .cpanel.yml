@@ -3,4 +3,4 @@
   tasks:
     - export DEPLOYPATH=/home/southb56/sctennisclub.org
     - /bin/cp -r * $DEPLOYPATH
-    - /bin/cp -R * $DEPLOPATH
+    - /bin/cp -R * $DEPLOYPATH
