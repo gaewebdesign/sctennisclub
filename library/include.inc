@@ -419,7 +419,7 @@ function EMAILER($subject, $message, $verbose=false)
 
    LOGGER("subject: $subject");
    LOGGER("to: $to");   
-   LOGGERE("message: $message");   
+   LOGGER("message: $message");   
 
 
    $r=mail($to,$subject,$message,$headers);
