@@ -173,7 +173,33 @@ $payment=$paid;
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
-EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
+$data = array(
+	'year' => $year,
+	'fname' => $fname,
+    'lname' => $lname,
+	'email' => $email,
+	'event' => $event,
+	'gender' => $gender,
+	'ntrp' => $ntrp,
+	'address' => $address,
+	'city' => $city,
+	'zip' => $zip,
+	'team' => $team,
+	'mtype' => $mtype,
+	'date' => $date,
+	'insignia' => $insignia,
+	'payment' => $payment,
+	'custom' => $custom,
+    'opt' => $opt,
+    'pwd' => $pwd,
+    'subject' => "Athena signup: $fname $lname",
+    'message' => "Athena signup: $fname $lname"
+
+);
+
+SENDER( $data );
+
+//EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
