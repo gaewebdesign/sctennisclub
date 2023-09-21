@@ -192,8 +192,8 @@ $data = array(
 	'custom' => $custom,
     'opt' => $opt,
     'pwd' => $pwd,
-    'subject' => "Athena signup: $fname $lname",
-    'message' => "Athena signup: $fname $lname"
+    'subject' => "Athena signup: $fname $lname (pending)",
+    'message' => "Athena signup: $fname $lname (pending)"
 
 );
 
