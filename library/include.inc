@@ -383,7 +383,23 @@ function copyto_mixer($src,$dest,$epoch){
 
  }
 
+ function SENDER( $data ){
 
+
+  $url = "http://www.goldengatetennisclub.org/ggtc/email_/receive.php";
+  $ch = curl_init( $url );
+
+
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+//      curl_setopt( $ch  , CURLOPT_POSTFIELDS, $data );
+  curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($data));
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $response = curl_exec($ch);
+
+  curl_close($ch);
+  TEXT("sent to $url");
+
+}
 
 
 function EMAILER($subject, $message, $verbose=false)
@@ -391,6 +407,7 @@ function EMAILER($subject, $message, $verbose=false)
 
    //$to = "santaclarawebmaster@gmail.com";
    $to = "notify@sctennisclub.org";
+   $to = "santaclarawebmaster@gmail.com";
    LOGGER(" EMAILER: to $to ");
 
 //   $to = "tennis.mutt@gmail.com";
@@ -405,8 +422,8 @@ function EMAILER($subject, $message, $verbose=false)
       $message .= $key." -> ".$_POST[$key]."<br>";
 */
 
-   $headers = 'From: memb@sctennisclub.org' . "\r\n" .
-    'Reply-To: memb@sctennisclub.org' . "\r\n" .
+   $headers = 'From: membership@sctennisclub.org' . "\r\n" .
+    'Reply-To: membership@sctennisclub.org' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 // Use this header
@@ -421,8 +438,19 @@ function EMAILER($subject, $message, $verbose=false)
    LOGGER("to: $to");   
    LOGGER("message: $message");   
 
+   TEXT($to);
+   TEXT($subject);
+   TEXT($message);
+   TEXT($headers);
 
    $r=mail($to,$subject,$message,$headers);
+   $to = "tennis.mutt@gmail.com";
+   TEXT("return value");
+   TEXT($r);
+
+   TEXT("send again to different address $to ");
+   $r=mail($to,$subject,$message,$headers);
+
    if($verbose) LOGGER("mail return value = $r ");
 
 }
