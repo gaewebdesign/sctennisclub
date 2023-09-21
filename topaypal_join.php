@@ -142,7 +142,31 @@ $pwd="*";
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 
+$data = array(
+	'year' => $year,
+	'fname' => $fname,
+    'lname' => $lname,
+	'email' => $email,
+	'event' => $event,
+	'gender' => $gender,
+	'ntrp' => $ntrp,
+	'address' => $address,
+	'city' => $city,
+	'zip' => $zip,
+	'team' => $team,
+	'mtype' => $mtype,
+	'date' => $date,
+	'insignia' => $insignia,
+	'payment' => $payment,
+	'custom' => $custom,
+    'opt' => $opt,
+    'pwd' => $pwd,
+    'subject' => "Athena signup: $fname $lname (pending)",
+    'message' => "Athena signup: $fname $lname (pending)"
 
+);
+
+SENDER( $data );
 //sendemail($fname." ".$lname, $email, "sctennisclub.net signup => $theTABLE ");
 
 // copy to paypal table
