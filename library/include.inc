@@ -397,7 +397,7 @@ function copyto_mixer($src,$dest,$epoch){
   $response = curl_exec($ch);
 
   curl_close($ch);
-  TEXT("sent to $url");
+  //TEXT("sent to $url");
 
 }
 
