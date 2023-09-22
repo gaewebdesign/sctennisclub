@@ -110,7 +110,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2023 October 19  Year-end dinner </h6> 
+             <h6 class="my-0">2023 October 19  Year end dinner </h6> 
 
               <large class="text-muted"><a href="https://www.google.com/maps/place/Athena+Grill+%26+Catering/@37.3764667,-121.9590747,17z/data=!3m1!4b1!4m6!3m5!1s0x808fca283052b81f:0x97b199e3951a5818!8m2!3d37.3764667!4d-121.9564944!16s%2Fg%2F1hbpwrv7r?entry=ttu">
                   Athena Grill Directions</a></large>
