@@ -88,7 +88,7 @@
  */
  
         LOGGER("notify.php MTYPE = $mtype");
-       $adjust = "-"
+       $adjust = "-";
        if($mtype=="NRF_"){
           LOGTEXT("Non-resident adjustment");
           LOGTEXT("Primary member opt= $opt");
