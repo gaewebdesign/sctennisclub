@@ -53,8 +53,8 @@ if( !empty($_POST["custom"])){
       'custom' => $epoch,
       'src' => $src,
       'dest' => $dest,
-      'subject' => "signup/notify.php: $src to $dest (copyto paypal )",
-      'message' => "signup/notify.php: $src to $dest (copyto paypal )"
+      'subject' => "signup_/notify.php: $src to $dest (copyto paypal )",
+      'message' => "signup_/notify.php: $src to $dest (copyto paypal )"
    );
    
    SENDER( $data );

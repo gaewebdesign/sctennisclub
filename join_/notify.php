@@ -88,10 +88,11 @@
  */
  
         LOGGER("notify.php MTYPE = $mtype");
-
+       $adjust = "-"
        if($mtype=="NRF_"){
           LOGTEXT("Non-resident adjustment");
           LOGTEXT("Primary member opt= $opt");
+          $adjust = "Non-resident adjustment , primary member opt=$opt";
 
           $theTable = TABLE_PAYPAL;
           $query = "select * from $theTable where custom = ".$opt;
@@ -107,8 +108,6 @@
            $custom=$row[CUSTOM];
              
            LOGTEXT("Primary member $primary with opt=$opt custom=$custom");
-           
-         
            LOGTEXT("custom = $custom");
            
            $query = "update $theTable set insignia = insignia +1 where custom = $opt";
@@ -125,24 +124,23 @@
 
        }
 
-       $subject = "SCTC Membership: $name ";
-       $message = "$fname $lname \n";
-       $message .= "$address \n $city $zip\n";
-       $message .= "epoch: $epoch  \n";
-       $message .= "mtype: $mtype  \n";
-
-       TEXT($subject);
-       TEXT("-------<br>");
-       TEXT($message);
-
-       /*
-       if( isset($_GET["item_number"]) ){
-            $name = " (".$_POST["fname"]." ".$_POST["lname"]." )";
-       }
-*/
-
-       TEXT("EMAILER");
-       EMAILER( $subject, $message, $verbose=true);
+          // notify email
+      $data = array(
+      'year' => YEAR,
+      'fname' => "-",
+      'lname' => "-",
+      'custom' => $epoch,
+      'mtype'  => $mtype,
+      'adjust' => $adjust,
+      'query'  => $query,
+      'src' => $src,
+      'dest' => $dest,
+      'subject' => "join_/notify.php: $src to $dest (copyto paypal )",
+      'message' => "join_/notify.php: $src to $dest (copyto paypal )"
+   );
+   
+   SENDER( $data );
+      
 
 ?>
 

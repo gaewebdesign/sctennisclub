@@ -1,6 +1,7 @@
 # sctennisclub
 #GIT
 # cpanel added 
+# git reset HEAD^
 
 MYSQL
 update paypal set email=concat(email,"@");
