@@ -17,13 +17,13 @@ define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
 define ("YEAR" , "2024");
-define("RES_FEE" , "0.02" );
-define("NONRES_SINGLE_FEE" , "0.05" );
-define("NONRES_FAMILY_FEE" , "0.05" );
+define("RES_FEE" , "30" );
+define("NONRES_SINGLE_FEE" , "35" );
+define("NONRES_FAMILY_FEE" , "45" );
 
-define("ADDITIONAL_MEMBER_FEE" , "0.01" );
+define("ADDITIONAL_MEMBER_FEE" , ".99" );
 
-define("DINNER" , ".05" );
+define("DINNER" , "25" );
 
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
