@@ -44,6 +44,26 @@ if( !empty($_POST["custom"])){
    LOGGER("notify.php saving Mixer information from pending to mixer copyto $src -> $dest : $epoch " );
 // copyto_mixer( $src, $dest, $epoch );
    copyto( $src, $dest, $epoch);
+
+   // notify email
+   $data = array(
+      'year' => YEAR,
+      'fname' => "-",
+      'lname' => "-",
+      'custom' => $epoch,
+      'src' => $src,
+      'dest' => $dest,
+      'subject' => "signup/notify.php: $src to $dest (copyto paypal )",
+      'message' => "signup/notify.php: $src to $dest (copyto paypal )"
+   );
+   
+   SENDER( $data );
+
+
+
+
+
+
  
 }
 
