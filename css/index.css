@@ -102,6 +102,16 @@
     padding-left: 15px;
 }
 
+.ResponsiveImage {
+    object-fit: contain;
+    width: 100%;
+    height: auto
+
+
+}
+
+
+
 @media (min-width: 768px) {
     .col-sm-3half, .col-sm-8half {
         float: left;
