@@ -86,7 +86,7 @@
       <img class="mg-fluid img-thumbnail" src="cinco.png" alt="" >
     <img class="mg-fluid img-thumbnail" src="./images/Athenat.png" alt="" >
     -->
-   <img  src="./images/Athenat.png" alt="" >
+   <img  src="./images/Athenat.png" alt="" class="ResponsiveImage" >
 
   </picture>
       <h2>Santa Clara Tennis Club Year End Dinner </h2>
