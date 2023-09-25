@@ -116,7 +116,33 @@
 
 }
 
+sctitle{
+    font-size: 1.2em;
+}
 
+@media screen and (max-width:325px) {
+
+   sctitle{
+    font-size:  .20em;
+   }
+
+}
+@media screen and (max-width:667px) {
+
+    sctitle{
+     font-size:  .25em;
+    }
+ 
+ }
+
+@media screen and (max-width:736px) {
+
+    sctitle{
+     font-size:  .50em;
+    }
+ 
+ }
+  
 
 @media (min-width: 768px) {
     .col-sm-3half, .col-sm-8half {
