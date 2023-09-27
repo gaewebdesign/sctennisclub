@@ -14,7 +14,7 @@ include "../library/include.inc";
 
    $query = 'select * from '.TABLE_PAYPAL.' where year>= "'.$YEAR.'" ';
 
-  echo $query."<br>";
+  //echo $query."<br>";
 
    $qr=mysqli_query($con,$query);
 
