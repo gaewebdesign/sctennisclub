@@ -93,7 +93,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy dinner at <a href="https://athenagrill.com/">Athena Grill</a> in Santa Clara
-    on Thursday October 19 , 6:30-8 pm. Deadline to signup is Monday Oct 15, 2023.
+    on Thursday October 19 , 6:30-8 pm. Deadline to signup is Friday Oct 13, 2023.
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
