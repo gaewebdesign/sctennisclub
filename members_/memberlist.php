@@ -6,10 +6,12 @@ Your success is important to us and we value your business. If you have any furt
 You should have an option to leave feedback on this chat in the chat window or possibly receive an email, please fill that out, we would really appreciate it.
 
 Have a great rest of your day!
+<script language="JavaScript" src="members_/javascript/sorttable.js"> </script>
 
 Please Note: Starting May 1st, our phone availability will change from 24/7 to Monday through Friday 9AM to 9PM EST.
 -->
 
+<script language="JavaScript" src="library/sorttable.js"> </script>
 
 <style>
    tr {
@@ -36,7 +38,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
 
-<table class="table table-striped ">
+<table class="table table-striped sortable">
 <thead>
 <tr>
     <th scope="col" >Year </th>
