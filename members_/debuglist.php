@@ -14,7 +14,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 <style>
    tr {
-    line-height: 10px;
+    line-height: 14px;
     min-height: 8px;
     height: 4px;
     color: blue;
