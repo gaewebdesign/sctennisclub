@@ -10,6 +10,7 @@ Have a great rest of your day!
 Please Note: Starting May 1st, our phone availability will change from 24/7 to Monday through Friday 9AM to 9PM EST.
 -->
 
+<script language="JavaScript" src="library/sorttable.js"> </script>
 
 <style>
    tr {
@@ -37,7 +38,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
 
-<table class="table table-striped ">
+<table class="table table-striped sortable">
 <thead>
 <tr>
     <th scope="col" >Year </th>
