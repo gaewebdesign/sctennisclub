@@ -9,20 +9,28 @@ Have a great rest of your day!
 
 Please Note: Starting May 1st, our phone availability will change from 24/7 to Monday through Friday 9AM to 9PM EST.
 -->
+<script language="JavaScript" src="library/sorttable.js"> </script>
 
 <style>
    tr {
-    line-height: 5px;
-    min-height: 5px;
-    height: 5px;
+    line-height: 20px;
+    min-height: 17px;
+    height: 7px;
     color: blue;
-    font-size : small;
+    width: 85%
+    
  }
 </style>    
-<table class="table">
+<table class="table-striped sortable" >
 <thead>
 <tr>
-
+    <th scope="col" >Year </th>
+    <th scope="col" >First Name </th>
+    <th scope="col">Last Name </th>
+    
+    <th scope="col">Email </th>
+    
+    
 
 </tr>
 </thead>
@@ -118,7 +126,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     $hashtable[$row[EMAIL]] =$row[FNAME]." ".$row[LNAME] ;
                     }
                     echo("<tr>");
-                    echo("<td>---<td><td><td>");
+                    echo("<td>&nbsp;<td><td><td>");
                     echo("</tr>");
 
             }
