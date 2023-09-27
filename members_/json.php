@@ -61,5 +61,5 @@ include "../library/include.inc";
 
 //     print_r( $JSON );
        $j = json_encode( $JSON );
-
+       header('Content-type: application/json;  charset=utf-8');
        print $j;
