@@ -12,7 +12,7 @@ include "../library/include.inc";
 
    $con = DBMembership();
 
-   $query = 'select * from '.TABLE_PAYPAL.' where year>= "'.$YEAR.'" ';
+   $query = 'select * from '.TABLE_PAYPAL.'order by year desc where year>= "'.$YEAR.'" ';
 
 //   echo $query."<br>";
 
