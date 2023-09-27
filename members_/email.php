@@ -28,10 +28,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col" >Date </th>
 
     <th scope="col" >First Name </th>
+    
     <th scope="col">Last Name </th>
-    
     <th scope="col">Email </th>
-    
     
 
 </tr>
@@ -125,21 +124,22 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row['fname']);
                     echo("</td>");
 
+
                     echo("<td>");
                     echo($row['lname']);
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row['email'].$url);
+                    echo($row['email']);
                     echo("</td>");
 
                     echo("</tr> ");
 
                     $hashtable[$row[EMAIL]] =$row[FNAME]." ".$row[LNAME] ;
                     }
-                    echo("<tr>");
-                    echo("<td>&nbsp;<td><td><td>");
-                    echo("</tr>");
+//                    echo("<tr>");
+//                    echo("<td>&nbsp;<td><td><td>");
+//                    echo("</tr>");
 
             }
 
