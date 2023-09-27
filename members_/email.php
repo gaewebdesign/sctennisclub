@@ -25,6 +25,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <thead>
 <tr>
     <th scope="col" >Year </th>
+    <th scope="col" >Date </th>
+
     <th scope="col" >First Name </th>
     <th scope="col">Last Name </th>
     
@@ -110,6 +112,14 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("<td>");
                     echo($row['year']);
                     echo("</td>");
+
+                    echo("<td>");
+                    $custom=$row['date'];
+                    $dt = new DateTime("@$custom");
+                    $date = ltrim($dt->format('m/d/Y'),0);
+                    echo($date);
+                    echo("</td>");
+
 
                     echo("<td>");
                     echo($row['fname']);
