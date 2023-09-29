@@ -30,6 +30,15 @@
     background-color: rgb(255, 253, 208);
 }
 
+.BackGradient{
+
+    background-image: linear-gradient(to bottom right, red, yellow);
+    background-image: linear-gradient(to  bottom right, red,orange,yellow,green,blue,indigo,violet);
+    background-image: linear-gradient(to  bottom right, rgb(241, 92, 116),rgb(200, 214, 214),rgb(210, 210, 200),rgb(190, 216, 218),rgb(215,205,240),rgb(241,92,116)) ;
+
+
+}
+
 .Title{
 
     position: center;
