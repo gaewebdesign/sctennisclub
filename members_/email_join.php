@@ -84,7 +84,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     function memberlist($YEAR){
 
         global $res,$non;
-        $hashtable=[];
+//       $hashtable=[];
         //print( "configure");
         $con = Configure();
 
@@ -100,11 +100,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                   while ($row = mysqli_fetch_assoc($qr)) {  
 
                          
-                    if($row['email'] == "" and $row['url']=="") continue;
-                    if($row['url']!= "") $url="@".$row['url'];
+//                    if($row['email'] == "" and $row['url']=="") continue;
+//                    if($row['url']!= "") $url="@".$row['url'];
 
-                    if( array_key_exists( $row['email'], $hashtable) ) continue;
-                    if(strlen( $row['email']) < 3 ) continue;
+//                   if( array_key_exists( $row['email'], $hashtable) ) continue;
+//                    if(strlen( $row['email']) < 3 ) continue;
 
                     echo("<tr> ");
                 
