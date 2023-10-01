@@ -43,7 +43,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     $_y = YEAR-1;
     $m = MEMBERS($y);
     $_m = MEMBERS($_y);
-    echo ("Members for $y ($m) and $_y ($_m) " );
+//    echo ("Members for $y ($m) and $_y ($_m) " );
     
     
     function Configure_()
@@ -94,7 +94,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
         $query = "select * from ".TABLE_MIXER_PAYPAL." order by lname desc ";
 
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
-        TEXT( $query);
+ //       TEXT( $query);
         
          $qr=mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($qr)) {  
