@@ -91,7 +91,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //       $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 30 ";
         $_YEAR = $YEAR-1;
 //      $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname ";
-        $query = "select * from ".TABLE_MIXER_PAYPAL." order by date desc ";
+        $query = "select * from ".TABLE_MIXER_PAYPAL." order by lname desc ";
 
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
         TEXT( $query);
