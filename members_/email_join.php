@@ -94,7 +94,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
         $query = "select * from ".TABLE_MIXER_PAYPAL." where year=$YEAR order by date desc ";
 
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
-        DEBUG( $query);
+        TEXT( $query);
         
          $qr=mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($qr)) {  
