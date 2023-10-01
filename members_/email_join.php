@@ -113,7 +113,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    $custom=$row['date'];
+                    $custom=$row['custom'];
                     $dt = new DateTime("@$custom");
                     $date = ltrim($dt->format('m/d/Y'),0);
                     echo($date);
