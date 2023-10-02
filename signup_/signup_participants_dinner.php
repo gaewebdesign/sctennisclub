@@ -1,8 +1,8 @@
 <style>
 tr {
-    line-height: 10px;
-    min-height: 10px;
-    height: 10px;
+    line-height: 14px;
+    min-height: 14px;
+    height: 4px;
     color: blue;
  }
  </style>
