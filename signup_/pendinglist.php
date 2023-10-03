@@ -87,7 +87,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $con = Configure();
 
-         $query = "select * from ".TABLE_MIXER_PENDING." order by _id limit 30 ";
+         $query = "select * from ".TABLE_MIXER_PENDING." order by _id ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
         TEXT($query);
 
