@@ -45,7 +45,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     
     <th scope="col">EVENT</th>
     
-    <th scope="col">INSIGNIA</th>
+    <th scope="col">EPOCH</th>
 
     <th scope="col">CUSTOM</th>
 
@@ -118,7 +118,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[INSIGNIA]);
+                    echo($row[DATE]);
                     echo("</td>");
 
                     echo("<td>");
