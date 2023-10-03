@@ -157,7 +157,7 @@ $paypal->add("custom", $custom );
 
 $dt = new DateTime("@$custom");
 $date = ltrim($dt->format('m/d/Y'),0);
-
+$date = $custom;
 $theTABLE = "mixer_pending";
 
 //echo ("INSERT $fname $lname $paid $date $custom");
