@@ -102,7 +102,11 @@ $paypal->add("notify_url",NOTIFY_URL);
 DEBUG("notify:" . NOTIFY_URL);
 
 $fname = $_POST[FNAME];
+$fname = ucfirst($fname);
+
 $lname = $_POST[LNAME];
+$lname = ucfirst($lname);
+
 $email = $_POST[EMAIL]; //"rwokamoto@gmail.com";   ///$_POST["email"];
 $gender = $_POST[GENDER];
 $ntrp   =$_POST[NTRP]; 
