@@ -32,7 +32,7 @@ tr {
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by lname desc";
 
           $con = Configure();
            
