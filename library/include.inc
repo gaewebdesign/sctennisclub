@@ -380,9 +380,11 @@ function copyto_mixer($src,$dest,$epoch){
   $res = Residents($_YEAR);
   $mem = Members($_YEAR);
   
+  $junk = 23;
+
   // return false means non-residents not permitted 
   return false;      // no non-residents until 2024
-
+  
   
   if( $res>$mem-$res +1 ) return true;
   return false;
