@@ -31,7 +31,9 @@
           <?php print("<b>".Residents(YEAR)."</b> Residents") ?>  
           <?php print("<b>".NonResidents(YEAR)."</b> Non-Residents") ?>  
           <br>
-         <!-- When there are more residents, this page will open to non-residents.
+
+<!--  
+          When there are more residents, this page will open to non-residents.
 -->
           </label>
           <br/>
