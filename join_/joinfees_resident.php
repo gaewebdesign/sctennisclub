@@ -14,7 +14,7 @@
       
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RS" name="membership" required  >
-                    <label> Santa Clara Resident Single &nbsp; $<?php echo(RES_FEE)?></label>
+                    <label> Santa -Clara Resident Single &nbsp; $<?php echo(RES_FEE)?></label>
           <br/>
           </li>
 
