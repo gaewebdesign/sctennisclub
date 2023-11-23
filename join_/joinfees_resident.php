@@ -7,7 +7,7 @@
         <ul class="list-group mb-7">
           <li class="list-group-item d-flex justify-content-between lh-sm Back">
             <div>
-             <h6 class="my-0"><?php echo(YEAR);?>  Membership Fees </h6> 
+             <h6 class="my-0"><?php echo(YEAR);?>  Membership Fees - (early bird discount)</h6> 
 
             </div>
           </li>
