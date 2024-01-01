@@ -17,8 +17,8 @@ define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
 define ("YEAR" , "2024");
-//define("RES_FEE" , "30" );
-define("RES_FEE" , "25" );
+define("RES_FEE" , "30" );
+//define("RES_FEE" , "25" );
 
 define("NONRES_SINGLE_FEE" , "35" );
 define("NONRES_FAMILY_FEE" , "45" );
