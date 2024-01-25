@@ -1,4 +1,5 @@
 #changed 1/16/2024
+#changed 1/24/2024
 
 AddHandler application/x-httpd-php .html .htm
 
