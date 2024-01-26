@@ -31,7 +31,7 @@ RewriteRule ^members$ members.html  [NC,QSA,L]
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
 #RewriteRule ^done$ from_done.php  [NC,QSA,L]
 
-RewriteRule  ^debug$  debug.html  [NC,QSA,L]
+RewriteRule  ^debug$  debug.phtml  [NC,QSA,L]
 
 RewriteRule ^private$ private.html [NC,QSA,L]
 RewriteRule ^address$ address.php [NC,QSA,L]
