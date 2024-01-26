@@ -32,6 +32,11 @@
     background-color: rgb(255, 253, 208);
 }
 
+.pBackDebug{
+
+    background-color: rgb(38, 232, 215);
+}
+
 .BackGradient{
 
     background-image: linear-gradient(to bottom right, red, yellow);
