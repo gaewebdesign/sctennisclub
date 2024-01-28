@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/index.css" >
+
+      <title>Santa Clara Tennis Club</title>
+
+
+
+</head>
+<body class="Back">
+<p>
+
+</p>
+<div class="container-sm ">
+      <div class="row">
+      <div class="col-sm-1">  </div>            
+       <div class="col-sm-10 ">
+
+            <center> <img  class="ResponsiveImage"  src="images/banner_main2.png"></center> 
+
+      </div>
+      <div class="col-sm-1">
+      </div>
+      </div>  
+      
+      </div>
+
+<div class="container-sm Title">
+    <div class="row">
+      <div class="col-sm-12 "> 
+            <center>
+                  <?php include "./imports_/title.php" ?>
+            </center>
+
+      </center></div>
+    </div>
+
+
+</div>
+
+<div class="container-sm ">
+      <div class="row">
+            <div class="col-sm-2"> </div> 
+            <div class="col-sm-8 NavLink"> 
+
+              <?php include "./imports_/navlink.php" ?>
+
+             </div>
+      <div class="col-sm-2"> </div> 
+      </div>
+  
+  
+  </div>
+
+  <div class="container-sm ">
+      <div class="row">
+
+            <div class="col-sm-12"> &nbsp;</div> 
+      </div>
+  
+  
+  </div>
+  
+
+  <div class="container">
+      <div class="row align-items-start">
+        <div class="col-sm-1 ">
+            <p>
+     
+        </div>
+        <div class="col-sm ">
+            <h2>Join the Santa Clara Tennis Club</h2>
+            <p>The Santa Clara Tennis Club is a community tennis association sponsored by the city of Santa Clara for the purpose of fostering tennis participation in Santa Clara. 
+                  Club memberships run January  through December and may be renewed for the following year.
+                  <p>
+                  Refer to the <a href="./info.html">info</a> page for a summary of membership benefits: 
+                  <p>
+                   <?php
+                        include "./library/include.inc";
+                        echo(YEAR."  MEMBERSHIP FEES");
+                   ?>
+
+                  </caption>
+                    <p>
+                      
+                    Single<br>
+                    Santa Clara Residents    $<?php print(RES_FEE) ?> <br>
+                    Non Residents            $<?php print(NONRES_SINGLE_FEE) ?>  <br>
+                    <p>
+                   <p>
+                    Family<br>
+                    Santa Clara Residents    $<?php print(RES_FEE) ?> * <br>
+                    Non Residents            $<?php print(NONRES_FAMILY_FEE) ?> * <br>
+                  <p>
+                  * &nbsp;$0.99 for each additional family member <br>
+
+                  <span id="MEMBERSHIP" style="display:none">
+                        <p>Check your membership status <a href="./members" class="blueLink">here</a>.</p>
+                        <p>You may fill out an online version of the <a href="./join">Membership Form </a>
+                          </p>
+                  </span>
+                  <span style="display:show">
+                        <p><br><p>
+                  
+                        <p><img src="images/paypalt.png">  <b>PAY FOR MEMBERSHIP VIA PAYPAL:</b> <img src="images/paypalt.png">
+                           <p>
+                           <b>INSTRUCTIONS:</b>
+                           <p>
+                            Each membership type (single,family) may be paid via Paypal. Please completely fill out the membership form - including full name, address (street,city,zipcode), 
+                    email address, gender,etc.  Resident memberships (single or family) must have a Santa Clara home address.
+                   <p><b style="font-size:1.15em">In some cases, proof of Santa Clara residency may be required.</b>
+                    <p/>
+                    <u style="font-size: 1.5em"> A Santa Clara work address may not be used for Santa Clara residency. Another person's Santa Clara
+                    address cannot be used for residency. </u>
+  
+                    <p>
+                       Membershp are valid for the current year.  In some cases, those who sign up late in the year and do not actively
+                       participte in club activities, may have their memberships extended into the follow year.
+                            <p>
+  <!--
+                                <a href="images/rafaelnadal.pdf" style="font-size:1.3em"> Here is a sample completed application </a>
+  -->                
+                            <ul>
+                  
+                            <li>
+                            <b><u>Single</u></b><br>
+                            The Single membership is typically for one Adult - resident memberships must have a Santa Clara home address.<br><br>
+                            </li>
+                  
+                            <li>
+                            <b><u>Family</u></b><br>
+                            The primary member (Resident/Non-Resident) pays the family rate.  Each additional member at the same address pays
+                            $.99 (99 cents).  Please note that each additional family member must have the EXACT SAME address as the primary member. 
+                             For example, if the first family   member lists  19 Wimbledon Pl. (with the period) - each succeeding family member must have the exact same 
+                             (19 Wimbledon Pl.) address.
+                             For family memberships with two adults- each Adult should pay with their own credit card or Paypal account, as payment indicates your signing of the Waiver. Each family member receives the same club benefits. Resident family memberships must have a Santa Clara home address.
+                  <br><br>
+                            In order to get the $.99 rate for additional family members, you must sign up with the <b>Family</b> membership.
+                            <p><br>
+                              Non-resident family memberships are limited to two Adults per family membership.   
+                  <br><br>
+                  After you fill out and submit the form for the primary family member, each succeeding member must fill out another form 
+                  and follow the same process.  
+                  Your home address will be matched and you should only be charged
+                  $.99 (99 cents) at Paypal. If this does not occur, try again with the correct home address. For any questions, email memb@sctennisclub.org.
+                            <br><br>
+                            </li>
+                  
+   
+                           </ul>
+                  
+                           <p>
+                           <p><b><u>IMPORTANT!</u></b><br>
+                           The entire membership form must be filled out -- there are a few optional fields (NTRP, USTA/Captain).
+                           After the membership form is completely filled out, click the Waiver to go to Paypal.
+                           <p><b><u>QUESTIONS?</u></b><br>
+                              If you have any questions or need your exact home address to complete memberships for additional family members, email membership@sctennisclub.org
+                           <p>
+
+<!--                      <b>ONWARD TO THE MEMBERSHIP FORM </b><br>
+                  
+                           You may fill out an <a href="./join" class="_style4"><font color="red"><b>online version of the membership form HERE </font></b></a> and pay via Paypal.
+                           <a href="./members"></a> </p>
+-->     
+                        </span>
+                  
+
+       <!-- **************************** -->
+        </div>
+
+        <div class="col-sm-1 RightBar">
+
+        </div>
+
+
+      </div>
+
+      <div class="container-sm ">
+            <?php
+             include "./imports_/footer.php"
+             ?>
+        
+        
+        </div>
+
+
+
+      
+</body>
+</html>

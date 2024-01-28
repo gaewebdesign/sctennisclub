@@ -4,8 +4,8 @@
 AddHandler application/x-httpd-php .html .htm
 
 
-RewriteRule ^/membership$ membership.html  [NC,QSA,L]
-RewriteRule ^membership$  membership.html  [NC,QSA,L]
+RewriteRule ^/membership$ membership.phtml  [NC,QSA,L]
+RewriteRule ^membership$  membership.phtml  [NC,QSA,L]
 
 RewriteRule ^/usta$ usta.html  [NC,QSA,L]
 RewriteRule ^usta$  usta.html  [NC,QSA,L]
