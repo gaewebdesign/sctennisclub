@@ -5,8 +5,8 @@
        <a href="./pending.phtml">Pending</a>|
        <a href="./logger.phtml">Logger</a>|
 
-       <a href="./signup_debug.html" >Signup </a>|
-       <a href="./pending_mixer.html" >Pending </a>|
+       <a href="./signup_debug.phtml" >Signup </a>|
+       <a href="./pending_mixer.phtml" >Pending </a>|
 
        <a href="./email.phtml" >Email </a>
 
