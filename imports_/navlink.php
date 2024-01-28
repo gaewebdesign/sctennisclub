@@ -1,4 +1,4 @@
-                  <a href="./index.html"> Home </a> |   
+                  <a href="./index.phtml"> Home </a> |   
                   <a href="./info"> Info </a> |          
                   <a href="./membership" >Membership </a>|
                   <a href="./join" class="Link_Red" >Join </a>|                 
