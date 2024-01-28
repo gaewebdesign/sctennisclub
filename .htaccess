@@ -21,8 +21,8 @@ RewriteRule ^join$  join.phtml  [NC,QSA,L]
 RewriteRule ^mixers$  mixers.phtml  [NC,QSA,L]
 RewriteRule ^board$  board.phtml  [NC,QSA,L]
 
-RewriteRule ^usta$  usta.html  [NC,QSA,L]
-RewriteRule ^checker$ checker.html [NC,QSA,L]
+RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
+RewriteRule ^checker$ checker.phtml [NC,QSA,L]
 
 RewriteRule ^signup$ signup.html  [NC,QSA,L]
 RewriteRule ^members$ members.phtml  [NC,QSA,L]
