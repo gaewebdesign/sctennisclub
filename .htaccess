@@ -10,8 +10,8 @@ RewriteRule ^membership$  membership.phtml  [NC,QSA,L]
 RewriteRule ^/usta$ usta.phtml  [NC,QSA,L]
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
 
-RewriteRule ^/board$ board.html  [NC,QSA,L]
-RewriteRule ^board$  board.html  [NC,QSA,L]
+RewriteRule ^/board$ board.phtml  [NC,QSA,L]
+RewriteRule ^board$  board.phtml  [NC,QSA,L]
 
 RewriteRule ^/info$ info.phtml  [NC,QSA,L]
 RewriteRule ^info$  info.phtml  [NC,QSA,L]
