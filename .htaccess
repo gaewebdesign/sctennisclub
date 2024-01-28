@@ -16,7 +16,7 @@ RewriteRule ^board$  board.html  [NC,QSA,L]
 RewriteRule ^/info$ info.phtml  [NC,QSA,L]
 RewriteRule ^info$  info.phtml  [NC,QSA,L]
 
-RewriteRule ^join$  join.html  [NC,QSA,L]
+RewriteRule ^join$  join.phtml  [NC,QSA,L]
 
 RewriteRule ^mixers$  mixers.html  [NC,QSA,L]
 RewriteRule ^board$  board.html  [NC,QSA,L]
@@ -25,7 +25,7 @@ RewriteRule ^usta$  usta.html  [NC,QSA,L]
 RewriteRule ^checker$ checker.html [NC,QSA,L]
 
 RewriteRule ^signup$ signup.html  [NC,QSA,L]
-RewriteRule ^members$ members.html  [NC,QSA,L]
+RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
