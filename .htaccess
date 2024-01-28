@@ -35,7 +35,7 @@ RewriteRule  ^debug$  debug.phtml  [NC,QSA,L]
 
 RewriteRule ^private$ private.html [NC,QSA,L]
 RewriteRule ^address$ address.php [NC,QSA,L]
-RewriteRule ^email$ email.html [NC,QSA,L]
+RewriteRule ^email$ email.phtml [NC,QSA,L]
 #RewriteRule ^done return.php  [NC,QSA,L]
 #RewriteRule ^notify$ notify.php  [NC,QSA,L]
 #RewriteRule ^notify/([\d]*)$ notify.php?transaction=$1  [NC,QSA,L]
