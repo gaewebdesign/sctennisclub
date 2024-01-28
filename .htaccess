@@ -33,7 +33,7 @@ RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule  ^debug$  debug.phtml  [NC,QSA,L]
 
-RewriteRule ^private$ private.html [NC,QSA,L]
+RewriteRule ^private$ private.phtml [NC,QSA,L]
 RewriteRule ^address$ address.php [NC,QSA,L]
 RewriteRule ^email$ email.phtml [NC,QSA,L]
 #RewriteRule ^done return.php  [NC,QSA,L]
