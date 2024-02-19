@@ -30,6 +30,7 @@ include "./library/emailer.php";
     </div>
   </div>
 
+  <div class="col-md-12">&nbsp; </div>
 
   <div class="col-md-4">
    <div class = "input-group">
@@ -58,12 +59,10 @@ include "./library/emailer.php";
 
 </select>
 
-
-
-
-
   </div>
   </div>
+
+
 
 
   <div class="col-md-4">
@@ -114,9 +113,9 @@ include "./library/emailer.php";
   </div>
   </div>
 
+  
 
-
-   <div class="col-md-12">&nbsp; </div>
+  <div class="col-md-12">&nbsp; </div>
 
    <div class="col-md-8">
 
@@ -140,11 +139,12 @@ include "./library/emailer.php";
 
 </div>
 
-   <div class = "col-12" >
+<!--
+<div class = "col-12" >
     <hr/>
     <p>
    </div>
-
+-->
    <div class="col-md-9">
    
    <?php
