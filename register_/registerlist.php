@@ -104,6 +104,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo( $row['year']);
                     echo("&nbsp;");
                     echo($row[USTATEAM].$row[NTRP]);
+                    $r="&nbsp; (Daytime)";
+                    if($row[DAYTIME]=="n")  $r="";  
+                    echo($r);
                     echo("</td>");
 
                     echo("<td>");
@@ -119,7 +122,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("<td>");
                     $r="NR";
-                    if($row[RESCAPTAIN] = "y") $r="R";
+                    if($row[RESCAPTAIN] = "y") $r="Res";
                     echo($r);
                     
                     echo("</td>");
