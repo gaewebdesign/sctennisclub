@@ -32,12 +32,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <table class="table table-striped sortable">
 <thead>
 <tr>
-    <th scope="col" >Year </th>
+    
     <th scope="col">Team </th>
     
     <th scope="col" >Captain</th>
     
-
     <th scope="col">Captain </th>
     <th scope="col">Prev Year</th>
     <th scope="col">Residents </th>
@@ -103,9 +102,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                       echo("<tr> ");
                     echo("<td>");
                     echo( $row['year']);
-                    echo("</td>");
-
-                    echo("<td>");
+                    echo("&nbsp;");
                     echo($row[USTATEAM].$row[NTRP]);
                     echo("</td>");
 
@@ -121,7 +118,10 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
                     echo("<td>");
-                    echo($row[RESCAPTAIN]);
+                    $r="NR";
+                    if($row[RESCAPTAIN] = "y") $r="R";
+                    echo($r);
+                    
                     echo("</td>");
 
                     echo("<td>");
