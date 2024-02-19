@@ -33,10 +33,16 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <thead>
 <tr>
     <th scope="col" >Year </th>
-    <th scope="col" >First Name </th>
-    <th scope="col">Last Name </th>
+    <th scope="col">Team </th>
     
-    <th scope="col">NTRP </th>
+    <th scope="col" >Captain</th>
+    
+
+    <th scope="col">Captain </th>
+    <th scope="col">Prev Year</th>
+    <th scope="col">Residents </th>
+
+
     <th scope="col">Date </th>
     
 
@@ -76,6 +82,13 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
          define("TABLE_REGISTER", "register" );
          define("USTATEAM", "team" );
 
+         define("DAYTIME", "daytime" );
+
+         define("RESCAPTAIN", "rescaptain" );
+         define("RESPREV", "resprev" );
+         define("RESCOUNT", "rescount" );
+         
+
          $query = "select * from ".TABLE_REGISTER." where year=$YEAR order by lname limit 10 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 //         TEXT($query);
@@ -93,18 +106,30 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
+                    echo($row[USTATEAM].$row[NTRP]);
+                    echo("</td>");
+
+                    echo("<td>");
                     $fname = strtoupper(substr($row[FNAME],0,1));
  //                   echo($fname);
                     echo($row[FNAME]);
-                    echo("</td>");
-
-                    echo("<td>");
-//                  echo($row[LNAME]." ".$row[ADDRESS]." ".$row[CITY]." ".$row[ZIP]." ".$row[MTYPE]);
+                    echo("&nbsp;");
                     echo($row[LNAME]);
                     echo("</td>");
 
+               
+
+
                     echo("<td>");
-                    echo($row[USTATEAM].$row[NTRP]);
+                    echo($row[RESCAPTAIN]);
+                    echo("</td>");
+
+                    echo("<td>");
+                    echo($row[RESPREV]);
+                    echo("</td>");
+
+                    echo("<td>");
+                    echo($row[RESCOUNT]);
                     echo("</td>");
 
                     echo("<td>");
