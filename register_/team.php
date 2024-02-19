@@ -48,9 +48,9 @@
           </li>
 
           <li class="list-group-item d-flex justify-content-between  Back">
-          <input type="radio" id="member" value="NRF" name="membership" required  >
+          <input type="checkbox" id="anonymous" value="any" name="anonymous" required  >
           <input type="hidden" fee= "<php echo(NONRESIDENT_FAMILY_FEE?>" /> 
-          <label> Non-Resident Family &nbsp; $<?php echo(NONRES_FAMILY_FEE)?></label>
+          <label> * * * * &nbsp; * * * *</label>
           <br/>
           </li>
 
