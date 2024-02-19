@@ -131,10 +131,12 @@ include "./library/emailer.php";
 
 <div class="col-md-8">
 
+<!--
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7">USTA Team/Captain</span>
  <input type="text" class="form-control BackInput" id="validationDefault07" name="team" >
 </div>
+-->
 
 </div>
 
