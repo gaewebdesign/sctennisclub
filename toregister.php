@@ -39,6 +39,23 @@ $theTABLE = TABLE_REGISTER;
 
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+$fname = "Stacia";
+$lname = "Simmons";
+$team = "Mx";
+$ntrp = "8.0";
+$daytime = "n";
+$email = "s.simmons@gmail.com";
+$rescaptain = "y";
+$resprev="y";
+$rescount=2;
+$year=2024;
+$date=1705711820;
+$insignia="";
+$custom="";
+$pwd="4pigs";
+
+toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
+
 sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 
