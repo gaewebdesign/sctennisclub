@@ -31,6 +31,8 @@ if (  isset($_POST["resprev"]) ) $resprev="y";
 $rescount = $_POST["rescount"];
 
 
+$preference = $_POST[PREFERENCE] ;
+
 //$password = $_POST['password'];
 $password ="4pigs";
 
@@ -81,7 +83,7 @@ $theTABLE = TABLE_REGISTER;
 //$rescount=2;
 $year=YEAR;
 //$date=1705711820;
-$insignia="";
+$insignia=$preference;
 $custom="";
 $pwd="4pigs";
 

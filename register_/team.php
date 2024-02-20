@@ -51,7 +51,7 @@
           
 
           <select class="form-select Back" id="validationDefault06" name="preference" notrequired>
-            <option value="-">-</option>
+            <option value="None">None</option>
             <option value="Sat">Sat</option>
             <option value="Sun">Sun</option>
             <option value="week">M-F</option>
