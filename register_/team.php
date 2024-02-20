@@ -54,8 +54,8 @@
             <option value="None">None</option>
             <option value="Sat">Sat</option>
             <option value="Sun">Sun</option>
-            <option value="week">M-F</option>
-            <option value="day">Day</option>
+            <option value="M-F">M-F</option>
+            <option value="Day">Day</option>
           </select>
           <label>&nbsp;&nbsp; Home Match day Preference </label>
 
