@@ -68,7 +68,7 @@ include "./library/emailer.php";
    <div class = "input-group">
    <span class="input-group-text" id="inputTeam">NTRP</span> 
 
-   <select class="form-select Back" id="validationDefault06" name="ntrp" notrequired>
+   <select class="form-select Back" id="validationDefault06" name="ntrp" >
  <optgroup>
       <option value="2.5">2.5</option>
       <option value="3.0">3.0</option>
