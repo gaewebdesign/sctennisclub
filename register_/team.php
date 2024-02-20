@@ -16,7 +16,7 @@
       
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="checkbox" id="rescaptain" value="RS" name="rescaptain" notrequired  >
-                    <label> Captain is Santa Clara Resident &nbsp;</label>
+                    <label> Captain is Santa Clara Resident * &nbsp;</label>
           <br/>
           </li>
 
