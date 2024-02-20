@@ -212,7 +212,7 @@ function toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,
    LOGGER($query);
 // print("\r\n".$query."\r\n");
 
-
+ // insert into DB
   $query_results=mysqli_query($con, $query);
   
   //$query = "update $theTABLE set insignia = insignia +1 where date = $custom";
