@@ -216,7 +216,7 @@ function toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,
   $query_results=mysqli_query($con, $query);
   
   //$query = "update $theTABLE set insignia = insignia +1 where date = $custom";
-  $query_results=mysqli_query($con, $query);
+ // $query_results=mysqli_query($con, $query);
 
 } 
 

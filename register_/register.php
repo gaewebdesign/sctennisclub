@@ -35,11 +35,11 @@ include "./library/emailer.php";
    <div class = "input-group">
    <span class="input-group-text" id="inputTeam">Team</span>
 
-   <select class="form-select Back" id="validationDefault05" name="gender" required>
+   <select class="form-select Back" id="validationDefault05" name="team" required>
 
       
 <optgroup label="*">
-      <option value="18M" selected>18M</option>
+          <option value="18M" selected>18M</option>
       <option value="18W">18W</option>
       <option value="18Mx">18Mx</option>
       <option value="Combo">Combo</option>
@@ -68,12 +68,12 @@ include "./library/emailer.php";
    <div class = "input-group">
    <span class="input-group-text" id="inputTeam">NTRP</span> 
 
-   <select class="form-select Back" id="validationDefault06" name="ntrp" >
+   <select class="form-select Back" id="validationDefault06" name="ntrp" required >
  <optgroup>
       <option value="2.5">2.5</option>
       <option value="3.0">3.0</option>
-      <option value="3.5" selected>3.5</option>
-      <option value="4.0">4.0</option>
+      <option value="3.5" >3.5</option>
+      <option value="4.0" selected>4.0</option>
       <option value="4.5">4.5</option>
       <option value="5.0+">5.0+</option>
       </optgroup>       
@@ -159,9 +159,9 @@ include "./library/emailer.php";
 <!--
   <div class="col-12">
     <div class="form-check">
+      >
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required
   
-      >
 
       <label class="form-check-label" for="invalidCheck2">
         Agree to Waiver terms and conditions

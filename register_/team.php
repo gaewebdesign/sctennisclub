@@ -15,13 +15,13 @@
           </li>
       
           <li class="list-group-item d-flex justify-content-between Back">
-          <input type="checkbox" id="member" value="RS" name="membership" notrequired  >
-                    <label> Captain is Santa Clara Resident () &nbsp;</label>
+          <input type="checkbox" id="rescaptain" value="RS" name="rescaptain" notrequired  >
+                    <label> Captain is Santa Clara Resident &nbsp;</label>
           <br/>
           </li>
 
           <li class="list-group-item d-flex justify-content-between  Back">
-          <input type="checkbox" id="member" value="RF" name="membership" notrequired >
+          <input type="checkbox" id="resprev" value="RF" name="resprev" notrequired >
           <label> Captained for Santa Clara Tennis Club in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
           <br/>
           </li>
@@ -29,7 +29,7 @@
           <li class="list-group-item d-flex justify-content-between  Back">
           
 
-          <select class="form-select Back" id="validationDefault06" name="ntrp" notrequired>
+          <select class="form-select Back" id="validationDefault06" name="rescount" notrequired>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
