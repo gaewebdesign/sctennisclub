@@ -15,13 +15,13 @@
           </li>
       
           <li class="list-group-item d-flex justify-content-between Back">
-          <input type="checkbox" id="member" value="RS" name="membership" required  >
-                    <label> Captain is Santa Clara Resident &nbsp;</label>
+          <input type="checkbox" id="member" value="RS" name="membership" notrequired  >
+                    <label> Captain is Santa Clara Resident () &nbsp;</label>
           <br/>
           </li>
 
           <li class="list-group-item d-flex justify-content-between  Back">
-          <input type="checkbox" id="member" value="RF" name="membership" required  >
+          <input type="checkbox" id="member" value="RF" name="membership" notrequired >
           <label> Captained for Santa Clara Tennis Club in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
           <br/>
           </li>
