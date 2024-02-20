@@ -4,12 +4,21 @@
  height: auto;
 }
 
+:root {
+
+     --develop-color: rgb(204,204,255);
+
+
+}
 
 .Develop{
 
     background-color: rgb(186, 240, 155);
     background-color: rgb(204, 204, 255);
-/*  */
+    background-color: var(--develop-color);
+    
+
+    /*  */
 
 }
 
