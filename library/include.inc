@@ -79,7 +79,7 @@ define("DAYTIME", "daytime" );
 define("RESCAPTAIN", "rescaptain" );
 define("RESPREV", "resprev" );
 define("RESCOUNT", "rescount" );
-
+define("PREFERENCE","preference");
 
 function alert($v){
 	echo "<script>alert($v)</script>";

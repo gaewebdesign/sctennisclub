@@ -1,32 +1,32 @@
 
 
 
-<div class="row g-12">
+<div class="row g-12 Develop">
       <div class="col-md-12 col-lg-12 col-xl-12 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3 ">
 
         </h4>
         <ul class="list-group mb-7">
-          <li class="list-group-item d-flex justify-content-between lh-sm Back">
+          <li class="list-group-item d-flex justify-content-start lh-sm Develop">
             <div>
              <h6 class="my-0"><?php echo(YEAR);?>  USTA Team Composition</h6> 
 
             </div>
           </li>
       
-          <li class="list-group-item d-flex justify-content-between Back">
+          <li class="list-group-item d-flex justify-content-start Develop">
           <input type="checkbox" id="rescaptain" value="RS" name="rescaptain" notrequired  >
-                    <label> Captain is Santa Clara Resident &nbsp;</label>
+                    <label>&nbsp;&nbsp; Captain is Santa Clara Resident &nbsp;</label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between  Back">
+          <li class="list-group-item d-flex justify-content-start  Develop">
           <input type="checkbox" id="resprev" value="RF" name="resprev" notrequired >
-          <label> Santa Clara Tennis Club member in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
+          <label>&nbsp;&nbsp; Santa Clara Tennis Club member in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between  Back">
+          <li class="list-group-item d-flex justify-content-start  Develop">
           
 
           <select class="form-select Back" id="validationDefault06" name="rescount" notrequired>
@@ -41,10 +41,31 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <label> Number of Santa Clara residents on team  &nbsp; </label>
+          <label>&nbsp; &nbsp; Number of Santa Clara residents on team  &nbsp; </label>
 
 
           <br/>
+<!--   ************************ -->
+
+<li class="list-group-item d-flex justify-content-start  Develop">
+          
+
+          <select class="form-select Back" id="validationDefault06" name="preference" notrequired>
+            <option value="-">-</option>
+            <option value="Sat">Sat</option>
+            <option value="Sun">Sun</option>
+            <option value="week">M-F</option>
+            <option value="day">Day</option>
+          </select>
+          <label>&nbsp;&nbsp; Home Match day Preference </label>
+
+
+
+<!--   ************************ -->
+
+
+
+
 <!--
         </li>
 

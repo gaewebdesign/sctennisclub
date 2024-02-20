@@ -42,6 +42,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">Prev Year</th>
     <th scope="col">Residents </th>
 
+    <th scope="col">Home </th>
+
+
 
     <th scope="col">Date </th>
     
@@ -124,6 +127,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("<td>");
                     echo($row[RESCOUNT]);
                     echo("</td>");
+
+                    echo("<td>");
+                    echo($row[INSIGNIA]);
+                    echo("</td>");
+
 
                     echo("<td>");
                     $custom = $row[DATE];
