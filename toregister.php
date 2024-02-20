@@ -39,8 +39,8 @@ $theTABLE = TABLE_REGISTER;
 
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
-$fname = "Stacia";
-$lname = "Simmons";
+//$fname = "Stacia";
+//$lname = "Simmons";
 $team = "Mx";
 $ntrp = "8.0";
 $daytime = "n";
