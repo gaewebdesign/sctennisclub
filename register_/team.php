@@ -16,13 +16,13 @@
       
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="checkbox" id="rescaptain" value="RS" name="rescaptain" notrequired  >
-                    <label> Captain is Santa Clara Resident * &nbsp;</label>
+                    <label> Captain is Santa Clara Resident &nbsp;</label>
           <br/>
           </li>
 
           <li class="list-group-item d-flex justify-content-between  Back">
           <input type="checkbox" id="resprev" value="RF" name="resprev" notrequired >
-          <label> Captained for Santa Clara Tennis Club in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
+          <label> Santa Clara Tennis Club member in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
           <br/>
           </li>
 
