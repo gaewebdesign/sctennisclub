@@ -208,6 +208,7 @@ function toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,
    $query .= add($year).add($date).add($insignia).add($custom).add($pwd);
    $query .= ")";
 
+   LOGGER("testing REGISTER");
    LOGGER($query);
 // print("\r\n".$query."\r\n");
 
