@@ -10,8 +10,7 @@
 include "./library/emailer.php";
 */
 ?>
-<form class="row g-3" action="./topaypal_join.php", method="POST">
-
+<form class="row g-3" action="./toregister.php", method="POST">
 
 
 

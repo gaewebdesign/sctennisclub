@@ -78,19 +78,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
          $con = Configure();
-         define("TABLE_REGISTER", "register" );
-         define("USTATEAM", "team" );
-
-         define("DAYTIME", "daytime" );
-
-         define("RESCAPTAIN", "rescaptain" );
-         define("RESPREV", "resprev" );
-         define("RESCOUNT", "rescount" );
-         
 
          $query = "select * from ".TABLE_REGISTER." where year=$YEAR order by lname limit 10 ";
- //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
-//         TEXT($query);
 
          $icon="";
          $qr=mysqli_query($con,$query);
@@ -110,14 +99,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    $fname = strtoupper(substr($row[FNAME],0,1));
- //                   echo($fname);
-                    echo($row[FNAME]);
-                    echo("&nbsp;");
-                    echo($row[LNAME]);
-                    echo("</td>");
+//                    $fname = strtoupper(substr($row[FNAME],0,1));
+//                    $lname = strtoupper(substr($row[LNAME],0,1));
+                    echo($row[FNAME]."&nbsp;".$row[LNAME] );
 
-               
+                    echo("</td>");
 
 
                     echo("<td>");

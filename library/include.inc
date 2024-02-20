@@ -70,6 +70,17 @@ define("OPT", "opt" );
 
 define("NRF","NRF");
 
+// used for USTA Team registration register_/registerlist.php)
+define("TABLE_REGISTER", "register" );
+define("USTATEAM", "team" );
+
+define("DAYTIME", "daytime" );
+
+define("RESCAPTAIN", "rescaptain" );
+define("RESPREV", "resprev" );
+define("RESCOUNT", "rescount" );
+
+
 function alert($v){
 	echo "<script>alert($v)</script>";
 
