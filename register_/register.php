@@ -172,6 +172,6 @@ include "./library/emailer.php";
 -->
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
-    <button class="btn btn-primary"  type="submit">Submit Captain Request</button>
+    <button class="btn btn-primary"  type="submit">Submit USTA Team Captain Request</button>
   </div>
 </form>
