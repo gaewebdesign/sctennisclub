@@ -121,7 +121,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[RESPREV]);
+                    $c="";
+                    if($row[RESPREV] == "y") $c="&check;" ;
+                    echo( $c );
                     echo("</td>");
 
                     echo("<td>");
