@@ -17,9 +17,9 @@ $message .=  "<p>";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
 
-emailer($from_email , $from_name, $subject, $message);
+emailer( $subject, $message);
 
-function emailer($_FROMEMAIL,$_FROM_NAME, $_SUBJECT, $_MESSAGE ){
+function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL =false ){
 
     require 'vendor/autoload.php';
 
@@ -36,12 +36,14 @@ try {
       $mail->Port = 587;      
       $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
       
-      $mail->setFrom( "tennis.mutt@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
+ //   $mail->setFrom( "tennis.mutt@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 
-//      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
+//    $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
+
+      if (!$_CCEMAIL)
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
       
       $mail->isHTML( true);
