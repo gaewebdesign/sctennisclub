@@ -17,7 +17,7 @@ $message .=  "<p>";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
 
-emailer( $subject, $message);
+emailer( $subject, $message, "okamoto.roger@gmail.com");
 
 function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL =false ){
 
