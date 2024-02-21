@@ -29,8 +29,8 @@ try {
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
-//    $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
-      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
+      $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
+//      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
