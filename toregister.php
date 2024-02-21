@@ -98,7 +98,7 @@ toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescapta
 $_SUBJECT = "USTA Team Signup ($fname $lname) " ;
 $_MESSAGE = "messaging";
 
-emailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
+//emailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
 
 
 
