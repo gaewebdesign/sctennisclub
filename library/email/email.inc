@@ -14,11 +14,15 @@ $from_name = "R Okamoto";
 
 $message = "Thanks for registering your USTA team.<br/>  The board will meet and discuss the approval of teams.";
 $message .=  "<p>";
+$message .= "For more information, or questions contact the USTA Coordinator.<br/>";
+
+$message .= "at ustainfo@sctennisclub.org";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
 
-emailer( $subject, $message, "tcygang@gmail.com");
-emailer( $subject." ******* ", $message );
+
+emailer( $subject, $message );
+
 
 function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL ="mnscuo@gmail.com"){
 
