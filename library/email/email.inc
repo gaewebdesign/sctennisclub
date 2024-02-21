@@ -19,7 +19,7 @@ $message .=  "USTA Coordinator <br/>";
 $message .=  "Santa Clara Tennis Club";
 
 
-emailer( $subject, $message );
+//emailer( $subject, $message );
 
 
 function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
@@ -45,8 +45,8 @@ try {
 
       
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
-      $mail->addAddress( $_TOCEMAIL ) ; 
-      $mail->addAddress( $_TOCEMAIL2 ) ; 
+      $mail->addAddress( $_TOEMAIL ) ; 
+      $mail->addAddress( $_TOEMAIL2 ) ; 
 
       $mail->isHTML( true);
 

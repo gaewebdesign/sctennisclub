@@ -3,7 +3,10 @@
 include "email.inc";
 
 // calling from email.inc"
-emailer();
+$subject="testing phpemailer";
+$message = "test message";
+
+phpemailer($subject,$message);
 
 /*
 use PHPMailer\PHPMailer\PHPMailer;
