@@ -17,9 +17,9 @@ $message .=  "<p>";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
 
-emailer( $subject, $message, "okamoto.roger@gmail.com");
+emailer( $subject, $message, "rogero.tennis@gmail.com");
 
-function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL =false ){
+function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL ="mnscuo@gmail.com"){
 
     require 'vendor/autoload.php';
 
@@ -44,12 +44,10 @@ try {
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
       $mail->addAddress( $_CCEMAIL ) ; 
-     /*
-      if (!$_CCEMAIL){
-         echo("adding $_CCEMAIL");
-        $mail->addAddress( $_CCEMAIL ) ; 
-    }
-     */ 
+
+      $mail->addAddress( $_CCEMAIL ) ; 
+
+
       $mail->isHTML( true);
 
       $mail->Subject = $_SUBJECT;      
