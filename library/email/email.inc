@@ -9,9 +9,9 @@ $subject = "USTA Team/Captain Signup";
 
 $message = "Thanks for registering your USTA team.<br/>  The board will meet and discuss the approval of teams.";
 $message .=  "<p>";
-$message .= "For more information, or questions contact the USTA Coordinator.<br/>";
+$message .= "For more information, or questions contact the USTA Coordinator at <br/>";
 
-$message .= "at ustainfo@sctennisclub.org";
+$message .= "at ustarep@sctennisclub.org";
 $message .=  "<hr/>";
 
 $message .=  "Alice Isaacson <br/>";
