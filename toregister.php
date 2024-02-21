@@ -108,7 +108,7 @@ $message .=  "Alice Isaacson <br/>";
 $message .=  "USTA Coordinator <br/>";
 $message .=  "Santa Clara Tennis Club";
 
-//phpemailer($subject, $message , "okamoto.roger@gmail.com");
+phpemailer($subject, $message , "okamoto.roger@gmail.com");
 
 
 
