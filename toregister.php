@@ -55,7 +55,7 @@ echo('
 <script >
     window.setTimeout(function() {
         window.location.href="./register.phtml";
-    }, 100);
+    }, 20);
 </script>
 ');
 
