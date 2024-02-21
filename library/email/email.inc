@@ -12,7 +12,7 @@ $to = "tennis.mutt@gmail.com";
 $from_email = "mnscuo@gmail.com";
 $from_name = "R Okamoto";
 
-$message = "Thanks for registering you USTA team.  The board will meet and discuss the approval of teams.";
+$message = "Thanks for registering you USTA team.<br/>  The board will meet and discuss the approval of teams.";
 $message .=  "<p>";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
@@ -33,7 +33,7 @@ try {
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
-      $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
+      $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 //      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
