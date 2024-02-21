@@ -1,21 +1,15 @@
 <?php
 
-include "email.inc";
-
-emailer();
-
-/*
 use PHPMailer\PHPMailer\PHPMailer;
 
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer\Exception;
 
+emailer();
 
-//https://www.geeksforgeeks.org/how-to-send-an-email-using-phpmailer/
+function emailer(){
 
-
-
-require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
 
 echo "ok";
 
@@ -48,5 +42,18 @@ try {
 
 }
 
-*/
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 ?>
