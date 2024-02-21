@@ -15,7 +15,7 @@ $from_name = "R Okamoto";
 
 emailer($from_email , $from_name, $subject);
 
-function emailer($FROM_EMAIL,$FROM_NAME, $_SUBJECT){
+function emailer($_FROMEMAIL,$_FROM_NAME, $_SUBJECT){
 
     require 'vendor/autoload.php';
 
@@ -30,7 +30,7 @@ try {
 
       $mail->Port = 587;      
 //    $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
-      $mail->setFrom( $FROM_EMAIL , $FROM_NAME ) ; 
+      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
