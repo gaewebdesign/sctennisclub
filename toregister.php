@@ -4,7 +4,7 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
-//include "./library/email/email.inc";
+include "./library/email/email.inc";
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -98,7 +98,7 @@ toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescapta
 $_SUBJECT = "USTA Team Signup ($fname $lname) " ;
 $_MESSAGE = "messaging";
 
-//emailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
+phpemailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
 
 
 

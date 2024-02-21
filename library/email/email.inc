@@ -22,7 +22,7 @@ $message .=  "Santa Clara Tennis Club";
 emailer( $subject, $message );
 
 
-function emailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL ="mnscuo@gmail.com"){
+function phpemailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL ="mnscuo@gmail.com"){
 
     require 'vendor/autoload.php';
 
