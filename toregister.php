@@ -4,6 +4,8 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+include "./library/email/email.inc";
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
@@ -90,7 +92,13 @@ $pwd="4pigs";
 // change
 toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
 
-sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+//sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+
+
+$_SUBJECT = "USTA Team Signup ($fname $lname) " ;
+$_MESSAGE = "messaging";
+
+emailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
 
 
 
