@@ -95,10 +95,20 @@ toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescapta
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 
-$_SUBJECT = "USTA Team Signup ($fname $lname) " ;
-$_MESSAGE = "messaging";
+$subject = "USTA Team Signup ($fname $lname) " ;
 
-phpemailer($_SUBJECT, $_MESSAGE , "okamoto.roger@gmail.com");
+$message = "Thanks for registering your USTA team.<br/>  The board will meet and discuss the approval of teams.";
+$message .=  "<p>";
+$message .= "For more information, or questions contact the USTA Coordinator.<br/>";
+
+$message .= "at ustainfo@sctennisclub.org";
+$message .=  "<hr/>";
+
+$message .=  "Alice Isaacson <br/>";
+$message .=  "USTA Coordinator <br/>";
+$message .=  "Santa Clara Tennis Club";
+
+phpemailer($subject, $message , "okamoto.roger@gmail.com");
 
 
 
