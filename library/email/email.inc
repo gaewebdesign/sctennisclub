@@ -29,7 +29,7 @@ try {
 
       $mail->SMTPDebug = 2;
       $mail->Username = "webmasterea@sctennisclub.org";
-      $mail->Password = "webmaster.3722";
+      $mail->Password = "webmaster.37220";
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
@@ -37,8 +37,8 @@ try {
 //      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
+      $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
-      $mail->addAddress( "rogero.tennis@gmail.com" ) ; 
       
       $mail->isHTML( true);
 
