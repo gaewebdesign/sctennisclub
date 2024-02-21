@@ -35,6 +35,8 @@ try {
 
       $mail->Port = 587;      
       $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
+      
+      $mail->setFrom( "tennis.mutt@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 
 //      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
