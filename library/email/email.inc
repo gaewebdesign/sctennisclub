@@ -44,8 +44,8 @@ try {
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
 
       if (!$_CCEMAIL){
-         echo("adding tennis.mutt");
-        $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
+         echo("adding $_CCEMAIL");
+        $mail->addAddress( $_CCEMAIL ) ; 
 
     }
       
