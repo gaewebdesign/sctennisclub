@@ -12,7 +12,7 @@ $to = "tennis.mutt@gmail.com";
 $from_email = "mnscuo@gmail.com";
 $from_name = "R Okamoto";
 
-$message = "Thanks for registering you USTA team.<br/>  The board will meet and discuss the approval of teams.";
+$message = "Thanks for registering your USTA team.<br/>  The board will meet and discuss the approval of teams.";
 $message .=  "<p>";
 $message .=  "<hr/>";
 $message .=  "Santa Clara Tennis Club";
