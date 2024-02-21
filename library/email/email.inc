@@ -44,11 +44,12 @@ try {
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
 
+     /*
       if (!$_CCEMAIL){
          echo("adding $_CCEMAIL");
         $mail->addAddress( $_CCEMAIL ) ; 
     }
-      
+     */ 
       $mail->isHTML( true);
 
       $mail->Subject = $_SUBJECT;      
