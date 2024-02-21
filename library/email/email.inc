@@ -46,9 +46,6 @@ try {
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
       $mail->addAddress( $_CCEMAIL ) ; 
 
-      $mail->addAddress( $_CCEMAIL ) ; 
-
-
       $mail->isHTML( true);
 
       $mail->Subject = $_SUBJECT;      
