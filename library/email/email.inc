@@ -12,10 +12,11 @@ $to = "tennis.mutt@gmail.com";
 $from_email = "mnscuo@gmail.com";
 $from_name = "R Okamoto";
 
+$message = "Thanks for registering you USTA team.  The board will meet and discuss the approval of team.";
 
-emailer($from_email , $from_name, $subject);
+emailer($from_email , $from_name, $subject, $message);
 
-function emailer($_FROMEMAIL,$_FROM_NAME, $_SUBJECT){
+function emailer($_FROMEMAIL,$_FROM_NAME, $_SUBJECT, $_MESSAGE ){
 
     require 'vendor/autoload.php';
 
@@ -39,7 +40,7 @@ try {
       $mail->isHTML( true);
 
       $mail->Subject = $_SUBJECT;      
-      $mail->Body = "HTML message body in <b>BOLD </b>";
+      $mail->Body = $_MESSAGE;
 
       $mail->send() ;      
 
