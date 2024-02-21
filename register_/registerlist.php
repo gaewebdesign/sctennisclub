@@ -12,7 +12,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 -->
 
 <script language="JavaScript" src="library/sorttable.js"> </script>
-
+<?php
+    $_EMAIL = false;
+    if(isset( $_GET["email"] )) $_EMAIL = true;
+//  echo $_GET["email"];
+?>
 <style>
    tr {
     line-height: 10px;
@@ -36,15 +40,18 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">Team </th>
     
     <th scope="col" >Captain</th>
-    <th scope="col" >Email</th>
     
-    <th scope="col">Captain </th>
+    <?php 
+        if($_EMAIL){
+            echo(" <th scope=\"col\" >Email</th> ");        
+        }
+    ?>    
+    
+    
     <th scope="col">Prev Year</th>
     <th scope="col">Residents </th>
 
     <th scope="col">Home </th>
-
-
 
     <th scope="col">Date </th>
     
@@ -80,7 +87,6 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 }
     function memberlist($YEAR){
 
-
          $con = Configure();
 
          $query = "select * from ".TABLE_REGISTER." where year=$YEAR order by lname limit 10 ";
@@ -107,18 +113,22 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //                    $lname = strtoupper(substr($row[LNAME],0,1));
                     echo($row[FNAME]."&nbsp;".$row[LNAME] );
 
+                    $icon="";                                     
+                    if( $row[RESCAPTAIN] == "Res") {
+                        $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
+                    }
+                    echo($icon);
+
+
                     echo("</td>");
 
-                    echo("<td>");
-                    echo($row[EMAIL]);
-                    echo("</td>");
+                    global $_EMAIL;
+                    if($_EMAIL){
+                        echo("<td>");
+                        echo($row[EMAIL]);
+                        echo("</td>");
+                   }
 
-                    echo("<td>");
-                    $r="NR";
-                    if($row[RESCAPTAIN] == "Res") $r="Res";
-                    echo($r);
-                    
-                    echo("</td>");
 
                     echo("<td>");
                     $c="";
@@ -139,7 +149,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     $custom = $row[DATE];
                     $dt = new DateTime("@$custom");
                     $date = ltrim($dt->format('m/d/Y'),0);
-                    echo( $date.$icon );
+                    echo( $date );
 //                  echo( date(" m/d/Y",$row[CUSTOM]).$icon );
                     echo("</td>");
                     echo("</tr> ");
