@@ -31,7 +31,7 @@ $mail = new PHPMailer(exceptions: true);
 try {
 
  //     $mail->SMTPDebug = 2;
-      $mail->Username = "webmasterea@sctennisclub.org";
+      $mail->Username = "webmaster@sctennisclub.org";
 //      $mail->Username = "santaclarawebmaster@gmail.com";
       $mail->Password = "webmaster.3722";
       $mail->SMTPSecure = 'tls';
