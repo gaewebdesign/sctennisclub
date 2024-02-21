@@ -29,7 +29,7 @@ try {
       
       $mail->isHTML( true);
 
-      $mail->Subject = "Subject";      
+      $mail->Subject = $_SUBJECT;      
       $mail->Body = "HTML message body in <b>BOLD </b>";
 
       $mail->send() ;      
