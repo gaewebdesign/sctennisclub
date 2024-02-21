@@ -96,7 +96,7 @@ toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescapta
 
 
 $subject = "USTA Team Signup ($fname $lname) " ;
-
+$message =  "$fname<p>";
 $message = "Thanks for registering your USTA team.<br/>  The board will meet and discuss the approval of teams.";
 $message .=  "<p>";
 $message .= "For more information, or questions contact the USTA Coordinator.<br/>";
