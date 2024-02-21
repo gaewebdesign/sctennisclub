@@ -43,8 +43,11 @@ try {
       
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
 
-      if (!$_CCEMAIL)
-      $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
+      if (!$_CCEMAIL){
+         echo("adding tennis.mutt");
+        $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
+
+    }
       
       $mail->isHTML( true);
 
