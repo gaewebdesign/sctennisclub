@@ -12,7 +12,10 @@ $to = "tennis.mutt@gmail.com";
 $from_email = "mnscuo@gmail.com";
 $from_name = "R Okamoto";
 
-$message = "Thanks for registering you USTA team.  The board will meet and discuss the approval of team.";
+$message = "Thanks for registering you USTA team.  The board will meet and discuss the approval of teams.";
+$message .=  "<p>";
+$message .=  "<hr/>";
+$message .=  "Santa Clara Tennis Club";
 
 emailer($from_email , $from_name, $subject, $message);
 
@@ -35,7 +38,7 @@ try {
 
       
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
-      $mail->addAddress( "rogero.mutt@gmail.com" ) ; 
+      $mail->addAddress( "rogero.tennis@gmail.com" ) ; 
       
       $mail->isHTML( true);
 
