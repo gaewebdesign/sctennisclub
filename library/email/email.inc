@@ -6,11 +6,16 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer\Exception;
 
 $subject = "USTA Team/Captain Signup";
+$to = "tennis.mutt@gmail.com";
 
 
-emailer($subject);
+$from_email = "mnscuo@gmail.com";
+$from_name = "R Okamoto";
 
-function emailer($_SUBJECT){
+
+emailer($from_email , $from_name, $subject);
+
+function emailer($FROM_EMAIL,$FROM_NAME, $_SUBJECT){
 
     require 'vendor/autoload.php';
 
@@ -24,7 +29,10 @@ try {
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
-      $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
+//    $mail->setFrom( "webmaster@sctennisclub.org" , "Webmaster" ) ; 
+      $mail->setFrom( $FROM_EMAIL , $FROM_NAME ) ; 
+
+      
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
       
       $mail->isHTML( true);
