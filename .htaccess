@@ -38,7 +38,7 @@ RewriteRule ^private$ private.phtml [NC,QSA,L]
 RewriteRule ^address$ address.php [NC,QSA,L]
 RewriteRule ^email$ email.phtml [NC,QSA,L]
 
-RewriteRule ^register$ register.html [NC,QSA,L]
+RewriteRule ^register$ register.html?email=1 [NC,QSA,L]
 
 
 
