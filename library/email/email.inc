@@ -5,13 +5,14 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer\Exception;
 
-emailer();
+$subject = "USTA Team/Captain Signup";
 
-function emailer(){
+
+emailer($subject);
+
+function emailer($_SUBJECT){
 
     require 'vendor/autoload.php';
-
-echo "ok";
 
 $mail = new PHPMailer(exceptions: true);
 
