@@ -34,6 +34,7 @@ try {
 
       
       $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
+      $mail->addAddress( "rogero.mutt@gmail.com" ) ; 
       
       $mail->isHTML( true);
 
