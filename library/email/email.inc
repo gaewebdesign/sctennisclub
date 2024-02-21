@@ -22,7 +22,7 @@ $message .=  "Santa Clara Tennis Club";
 emailer( $subject, $message );
 
 
-function phpemailer($_SUBJECT, $_MESSAGE ,$_CCEMAIL ="mnscuo@gmail.com"){
+function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
 
     require 'vendor/autoload.php';
 
@@ -45,8 +45,8 @@ try {
 
       
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
-      $mail->addAddress( "tennis.mutt@gmail.com" ) ; 
-      $mail->addAddress( $_CCEMAIL ) ; 
+      $mail->addAddress( $_TOCEMAIL ) ; 
+      $mail->addAddress( $_TOCEMAIL2 ) ; 
 
       $mail->isHTML( true);
 
