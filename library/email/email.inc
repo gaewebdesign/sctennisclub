@@ -34,7 +34,8 @@ try {
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
-      $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
+//    $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
+      $mail->setFrom( "santaclarawebmaster@gmail.com" , "Santa Clara Tennis Club" ) ; 
 //      $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
