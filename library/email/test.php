@@ -42,8 +42,8 @@ $message = "
 </body>
 </html>
 ";
-echo $message;
-$message = "test message";
+echo "sent";
+//$message = "test message";
 
 phpemailer($subject,$message , "tennis.mutt@gmail.com" , "tcygang@gmail.com");
 
