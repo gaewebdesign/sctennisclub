@@ -18,11 +18,10 @@ $message = "
 <center>
 
 <p>
-    <h2>Santa Clara Tennis Club </>
-    <h2>How well did '$fname</h2>
-    <h4>'$fname'</h4>
+    <h2>Santa Clara Tennis Club </h2>
+    $fname
 
-</p>
+    </p>
 </center>
 <center>
     <table>
