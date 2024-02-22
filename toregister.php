@@ -128,7 +128,7 @@ $message2 = "
     <td><h3>Thanks for registering your USTA Team. The board will meet and discuss the approval of teams.</h3></td>
     </tr>
     <tr>
-    <td><h3>For for information or questions contact the USTA Coordinator at ustainfo@sctennisclub.org.</h3></td>
+    <td><h3>For more information or questions contact the USTA Coordinator at ustainfo@sctennisclub.org.</h3></td>
     </tr>
     <tr>
     <td><h3><hr/></h3></td>
