@@ -108,6 +108,42 @@ $message .=  "Alice Isaacson <br/>";
 $message .=  "USTA Coordinator <br/>";
 $message .=  "Santa Clara Tennis Club";
 
+
+$message = "
+<html>
+<head>
+<title>Rate Your Experience</title>
+</head>
+<body bgcolor = '#cae9f5'>
+<center>
+
+<p>
+    <h2>$fname </h2>
+
+    </p>
+</center>
+<center>
+    <table>
+    <tr>
+    <td><h3>Thanks for registering your USTA Team. The board will meet and discuss the approval of teams.</h3></td>
+    </tr>
+    <tr>
+    <td><h3>For for information or questions contact the USTA Coordinator at ustainfo@sctennisclub.org.</h3></td>
+    </tr>
+    <tr>
+    <td><h3><hr/></h3></td>
+    </tr>
+    <tr>
+    <td>
+    <h3>Alice Isaacson <br/> USTA Coordinator <br/> Santa Clara Tennis Club
+    </h3></td>
+    </tr>
+    </table>
+</center>
+</body>
+</html>
+";
+
 phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
 
 
