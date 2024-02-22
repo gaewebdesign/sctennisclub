@@ -18,8 +18,7 @@ $message = "
 <center>
 
 <p>
-    <h2>Santa Clara Tennis Club </h2>
-    $fname
+    <h2>$fname </h2>
 
     </p>
 </center>
