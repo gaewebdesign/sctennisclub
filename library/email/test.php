@@ -6,7 +6,7 @@ include "email.inc";
 $subject="testing phpemailer";
 
 $recipient = "R";
-$vac_title = "title";
+$fname = "Roger";
 $vac_id = "vac_id";
 
 $message = "
@@ -18,24 +18,27 @@ $message = "
 <center>
 
 <p>
-    <h2>How well did '$recipient' do?</h2>
-    <h4>Vacancy Title: '$vac_title'</h4>
-    <h4>Vacancy ID: '$vac_id'</h4>
-</P>
+    <h2>Santa Clara Tennis Club </>
+    <h2>How well did '$fname</h2>
+    <h4>'$fname'</h4>
+
+</p>
 </center>
 <center>
     <table>
     <tr>
-    <td><h3>we are built on sharing your review with other people who may also want to use this service.</h3></td>
+    <td><h3>Thanks for registering your USTA Team. The board will meet and discuss the approval of teams.</h3></td>
     </tr>
     <tr>
-    <td><h3>Please take a minute to reflect on the level of service youve received.</h3></td>
+    <td><h3>For for information or questions contact the USTA Coordinator at ustainfo@sctennisclub.org.</h3></td>
     </tr>
     <tr>
-    <td><h3>Your review is public - to other employers registered with Ahoy Employ.</h3></td>
+    <td><h3><hr/></h3></td>
     </tr>
     <tr>
-    <td><h3>Should you have any concerns that you would prefer to share in private, please email us at info@website.ca and quote the Vacancy ID shown above.</h3></td>
+    <td>
+    <h3>Alice Isaacson <br/> USTA Coordinator <br/> Santa Clara Tennis Club
+    </h3></td>
     </tr>
     </table>
 </center>
