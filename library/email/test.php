@@ -4,7 +4,7 @@ include "email.inc";
 
 // calling from email.inc"
 $subject="testing phpemailer";
-$message = "test message";
+
 $recipient = "R";
 $vac_title = "title";
 $vac_id = "vac_id";
@@ -14,7 +14,7 @@ $message = "
 <head>
 <title>Rate Your Experience</title>
 </head>
-<body bgcolor = '#0000FF'>
+<body bgcolor = '#BEFBF0'>
 <center>
 
 <p>
@@ -42,9 +42,10 @@ $message = "
 </body>
 </html>
 ";
+echo $message;
+$message = "test message";
 
-
-phpemailer($subject,$message);
+phpemailer($subject,$message , "tennis.mutt@gmail.com" , "tcygang@gmail.com");
 
 /*
 use PHPMailer\PHPMailer\PHPMailer;
