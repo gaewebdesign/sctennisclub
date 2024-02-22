@@ -14,7 +14,7 @@ $message = "
 <head>
 <title>Rate Your Experience</title>
 </head>
-<body bgcolor = '#BEFBF0'>
+<body bgcolor = '#cae9f5'>
 <center>
 
 <p>
