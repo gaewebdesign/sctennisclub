@@ -7,7 +7,7 @@
                   <a href="./mixers" >Mixers </a> |
                   <a href="./board" >Board</a>  |
                   <a href="./usta" >USTA  
-<!--                  <a href="./register.phtml" class="Link_Register">Register </a> |   -->
+<!--                  <a href="./register" class="Link_Register">Register </a> |   -->
                   ||
                   <a href="https://www.ustanorcal.com/organization.asp?id=20">SCTC Teams </a>
              
