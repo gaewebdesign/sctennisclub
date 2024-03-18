@@ -127,8 +127,14 @@
 
 }
 
+.Link_Register{
+    color: rgb(140, 5, 70);
+    font-size: 1.35em;
+
+}
+
 .Memb_Color{
-    color: rgb(121, 66, 223);
+    color: rgba(233, 118, 199, 0.147);
     font-size: 1.2em;
     font-weight: 500;
 }

@@ -1,32 +1,32 @@
 
 
 
-<div class="row g-12 Develop">
+<div class="row g-12 Back">
       <div class="col-md-12 col-lg-12 col-xl-12 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3 ">
 
         </h4>
         <ul class="list-group mb-7">
-          <li class="list-group-item d-flex justify-content-start lh-sm Develop">
+          <li class="list-group-item d-flex justify-content-start lh-sm Back">
             <div>
              <h6 class="my-0"><?php echo(YEAR);?>  USTA Team Composition</h6> 
 
             </div>
           </li>
       
-          <li class="list-group-item d-flex justify-content-start Develop">
+          <li class="list-group-item d-flex justify-content-start Back">
           <input type="checkbox" id="rescaptain" value="RS" name="rescaptain" notrequired  >
                     <label>&nbsp;&nbsp; Captain is Santa Clara Resident &nbsp;</label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-start  Develop">
+          <li class="list-group-item d-flex justify-content-start  Back">
           <input type="checkbox" id="resprev" value="RF" name="resprev" notrequired >
           <label>&nbsp;&nbsp; Santa Clara Tennis Club member in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-start  Develop">
+          <li class="list-group-item d-flex justify-content-start  Back">
           
 
           <select class="form-select Back" id="validationDefault06" name="rescount" notrequired>
@@ -47,7 +47,7 @@
           <br/>
 <!--   ************************ -->
 
-<li class="list-group-item d-flex justify-content-start  Develop">
+<li class="list-group-item d-flex justify-content-start  Back">
           
 
           <select class="form-select Back" id="validationDefault06" name="preference" notrequired>
