@@ -1,8 +1,8 @@
 <style>
 tr {
-    line-height: 8px;
-    min-height: 8px;
-    height: 8px;
+    line-height: 14px;
+    min-height: 14px;
+    height: 4px;
     color: blue;
  }
  </style>
@@ -14,6 +14,9 @@ tr {
         <tr>
         <th style="width:30%">First Name</th>
         <th style="width:30%">Last Name</th>
+<!--
+        <th style="width:30%">Dinner</th>
+-->
         <th style="width:25%">Date</th>
         </tr>
       </thead>
@@ -23,16 +26,15 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2024-4-16');
-// Switch between tables here **************************
+          $epoch = strtotime('2024-4-10');
+          // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
 
-          $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
-
-          $query = "select * from ".TABLE_MIXER."  where custom>$epoch order by custom desc";
-
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
+
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
 
           $con = Configure();
            
@@ -47,19 +49,24 @@ tr {
 
             echo '<td style="width:33%">';
             echo $row['lname'];
-            echo '<td style="width:33%">';
+
+//            echo '<td style="width:33%">';
+//            echo $row['event'];
+
 
 //   ***************************
             $e = $row['custom']; //-60*60*7;
             $dt = new DateTime("@$e");
-            $date = ltrim($dt->format('m/d/Y H:i:s '),0);
+            $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
+           echo '<td style="width:33%">';
+           echo $date;
 
-           echo $row['date'];
+/*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
            else if( $row['paid'] == $GUEST_FEE) echo("🧢");
            else if( $row['paid'] == $ICECREAM_FEE) echo ("&#x1F49C");
-
+*/
             echo "</tr>";
           }      
 
