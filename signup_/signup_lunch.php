@@ -74,9 +74,10 @@
   <body class="bg-light">
     
   <?php 
-   // include "includes.inc";
-    $MEMBER_FEE=10; //$MEMBER_FEE;
+    include "includes.inc";
     $MEMBER_FEE=0.01;
+    $MEMBER_FEE = MAY_MIXER_FEE; //$MEMBER_FEE;
+
   ?>;
 
 <div class="container">
@@ -140,7 +141,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="./topaypal_dinner.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_lunch.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -217,8 +218,8 @@
           <div class="my-3">
  
             <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" >
-              <label class="form-check-label" for="paypal">PayPal</label>
+              <input id="paypal" name="paymentMethod" type="radio" checked="checked"  class="form-check-input" >
+              <label class="form-check-label" for="paypal" value="" checked="checked" >PayPal</label>
             </div>
           </div>
 
