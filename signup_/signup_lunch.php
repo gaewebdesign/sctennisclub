@@ -76,6 +76,7 @@
   <?php 
    // include "includes.inc";
     $MEMBER_FEE=10; //$MEMBER_FEE;
+    $MEMBER_FEE=0.01;
   ?>;
 
 <div class="container">
@@ -224,9 +225,9 @@
 <!--
           <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
           <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
-
--->
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
+-->
+<button class="w-100 btn btn-primary btn-lg" enabled > Signup is Over! </button>
 
         </form>
       </div>
