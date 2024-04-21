@@ -74,7 +74,7 @@
   <body class="bg-light">
     
   <?php 
-    include "includes.inc";
+   // include "includes.inc";
     $MEMBER_FEE=0.01;
     $MEMBER_FEE = MAY_MIXER_FEE; //$MEMBER_FEE;
 
