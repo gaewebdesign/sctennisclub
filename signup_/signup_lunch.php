@@ -95,7 +95,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy Lunch and Tennis at  Santa Clara Tennis Club
-    on Saturday May 4, 9-12 pm. Deadline to signup is Monday April xx, 2024.
+    on Saturday May , 9-12 pm. Deadline to signup is Monday April xx, 2024.
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
@@ -113,7 +113,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 May Madness </h6> 
+             <h6 class="my-0">2024 May Mixer </h6> 
 
 
     <!--
