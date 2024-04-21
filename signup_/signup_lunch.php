@@ -89,7 +89,7 @@
     <img class="mg-fluid img-thumbnail" src="./images/Athenat.png" alt="" >
    https://fatimabazaar.com/ </a>
   -->
-    <img  src="./images/egypt.png" alt="" class="ResponsiveImage" > 
+    <img  src="./images/egypt2.png" alt="" class="ResponsiveImage" > 
 
 
   </picture>
