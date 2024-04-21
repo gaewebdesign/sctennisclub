@@ -217,7 +217,7 @@
           <div class="my-3">
  
             <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" >
               <label class="form-check-label" for="paypal">PayPal</label>
             </div>
           </div>
