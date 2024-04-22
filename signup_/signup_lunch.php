@@ -229,7 +229,7 @@
           <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
 -->
-<button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
+<button class="w-100 btn btn-primary btn-lg" disabled > Signup! </button>
 
         </form>
       </div>
