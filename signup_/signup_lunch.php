@@ -93,7 +93,7 @@
     <img  src="./images/egypt2.png" alt="" class="ResponsiveImage" > 
 
 
-  </picture> <p>
+  </picture> 
       <h2>May Lunch and Tennis Social </h2>
 
     <h3 style="font-size: 1.2em ">
