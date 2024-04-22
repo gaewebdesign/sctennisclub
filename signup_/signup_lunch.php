@@ -72,13 +72,14 @@
     <link href="form-validation.css" rel="stylesheet">
   </head>
   <body class="bg-light">
-    
+    <embed src="./images/bangles.mp3" autostart="true"> </embed>
+
   <?php 
    // include "includes.inc";
     $MEMBER_FEE=0.01;
     $MEMBER_FEE = MAY_MIXER_FEE; //$MEMBER_FEE;
 
-  ?>;
+  ?>
 
 <div class="container">
   <main>
@@ -92,7 +93,7 @@
     <img  src="./images/egypt2.png" alt="" class="ResponsiveImage" > 
 
 
-  </picture>
+  </picture> <p>
       <h2>May Lunch and Tennis Social </h2>
 
     <h3 style="font-size: 1.2em ">
