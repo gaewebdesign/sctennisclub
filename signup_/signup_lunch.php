@@ -97,7 +97,7 @@
       <h2>May Lunch and Tennis Social </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy Lunch and Tennis at  Santa Clara Tennis Club
+    Enjoy <a href="http://www.fatimabazaar.com">Lunch</a> and Tennis at  Santa Clara Tennis Club
     on Saturday May , 9-12 pm. Deadline to signup is Monday April xx, 2024.
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
