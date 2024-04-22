@@ -16,7 +16,7 @@
     <p> View your name at <br>
     <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
     </h1>
-    <img  class="RESP_IMAGE" src="./images/egypt_dance.gif">
+    <img  class="RESP_IMAGE" src="./images/egypt_dancer.gif">
 
 <!--
     <h1>
