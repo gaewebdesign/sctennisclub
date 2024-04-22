@@ -15,18 +15,10 @@
     <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up to lunch and tennis !
     <p> View your name at <br>
     <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
-    </h1>
-    <img  class="RESP_IMAGE" src="./images/egypt_dance.gif">
+    </h1>5"
+    <img  class="RESP_IMAGE" src="../images/egypt_dance.gif" width="25%">
 
-<!--
-    <h1>
-    <a href="https://www.google.com/maps/place/Athena+Grill+%26+Catering/@37.3764667,-121.9590693,17z/data=!3m1!4b1!4m6!3m5!1s0x808fca283052b81f:0x97b199e3951a5818!8m2!3d37.3764667!4d-121.9564944!16s%2Fg%2F1hbpwrv7r?entry=ttu"
-    >
-    
-    1505 Space Park Dr, Santa Clara 
 
-    </a></h1>
--->
     <h1>Follow the action on the club's Instagram page! </h1>
 
     <a href="https://www.instagram.com/santaclaratennisclub/"> 
