@@ -15,9 +15,8 @@
     <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up to lunch and tennis !
     <p> View your name at <br>
     <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
-    </h1>5"
-    <img  class="RESP_IMAGE" src="../images/egypt_dance.gif" width="25%">
-
+    </h1>
+    <img  class="RESP_IMAGE" src="./images/walklikeegyptian.gif" width="25%" >
 
     <h1>Follow the action on the club's Instagram page! </h1>
 
@@ -42,7 +41,7 @@
 
        // copy over from the mixer_pending to the mixer directory
        LOGGER("done.php: values $NAME $EMAIL $CUSTOM ") ;
-       LOGGER("done.php: copyto".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
+ //      LOGGER("done.php: copyto".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
 
 //       TEXT("Sept log: $NAME $EMAIL $CUSTOM ") ;
 //       TEXT("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
