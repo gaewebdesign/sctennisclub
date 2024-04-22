@@ -72,7 +72,7 @@
     <link href="form-validation.css" rel="stylesheet">
   </head>
   <body class="bg-light">
-    <embed src="./images/bangles.mp3" autostart="true"> </embed>
+    
 
   <?php 
    // include "includes.inc";
