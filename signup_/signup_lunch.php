@@ -97,8 +97,8 @@
       <h2>June Lunch and Tennis Social </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy <a href="http://www.fatimabazaar.com">Lunch</a> and Tennis at  Santa Clara Tennis Club
-    on Saturday June 15 , 9-12 pm. Deadline to signup is Monday June 10, 2024.
+    Enjoy <a href="http://www.fatimabazaar.com">Lunch</a> and Tennis with your  Santa Clara Tennis Club
+    friends on Saturday June 15 , 9-12 pm. Deadline to signup is Monday June 10, 2024.
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
@@ -116,7 +116,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 May Mixer </h6> 
+             <h6 class="my-0">2024 June Mixer </h6> 
 
 
     <!--
