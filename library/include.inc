@@ -26,7 +26,7 @@ define("NONRES_FAMILY_FEE" , "45" );
 define("ADDITIONAL_MEMBER_FEE" , ".99" );
 
 define("DINNER" , "25" );
-define("MAY_MIXER_FEE", "0.01" );
+define("MAY_MIXER_FEE", "10.00" );
 
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
