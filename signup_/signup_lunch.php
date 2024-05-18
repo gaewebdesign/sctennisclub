@@ -94,11 +94,16 @@
 
 
   </picture> 
+     <p>
       <h2>June Lunch and Tennis Social </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy <a href="http://www.fatimabazaar.com">Lunch</a> and Tennis with your  Santa Clara Tennis Club
-    friends on Saturday June 15 , 9-12 pm. Deadline to signup is Monday June 10, 2024.
+    Enjoy a special lunch from  <a href="http://www.fatimabazaar.com">Fatima Bazaar</a> and Tennis with your  Santa Clara Tennis Club
+    friends on Saturday June 15 , 9-12 pm. 
+    Deadline to signup is Monday June 10, 2024.
+    Early bird signup price is $10 by Thursday, June 6, 2024.  <?php echo("$".$MEMBER_FEE+5 )?> afterwards.
+    <p>
+    
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
@@ -116,7 +121,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 June Mixer </h6> 
+             <h6 class="my-0">2024 June Mixer  <img src="./images/bazaar.png"> </h6> 
 
 
     <!--
@@ -129,8 +134,9 @@
 
           <li class="list-group-item d-flex justify-content-between">
            
-            <div class="BackInput">  Lunch and Tennis <?php echo("$".$MEMBER_FEE )?>
-            <img src="./images/bazaar.png">
+          <div class="BackInput"> <?php echo("$".$MEMBER_FEE +0 )?> Lunch and Tennis <br/>
+           <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6
+           
 
             </div>
 
@@ -229,7 +235,7 @@
           <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
 -->
-<button class="w-100 btn btn-primary btn-lg" disabled > Signup! </button>
+<button class="w-100 btn btn-primary btn-lg" enabled > Signup! </button>
 
         </form>
       </div>
