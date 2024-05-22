@@ -92,10 +92,16 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
         $_YEAR = $YEAR-1;
 //      $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname ";
         $epoch = strtotime('2023-9-29');
-        $query = "select * from ".TABLE_MIXER_PAYPAL." where custom>$epoch order by lname asc ";
+        $final = strtotime('2023-12-29');
+
+//        $query = "select * from ".TABLE_MIXER_PAYPAL." where custom>$epoch order by lname asc ";
+        $query = "select * from ".TABLE_MIXER_PAYPAL." where custom>$epoch and custom<$final order by lname asc ";
+
+ //       $query = "select * from ".TABLE_MIXER_PAYPAL." where custom>$epoch order by lname asc ";
 
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
- //       TEXT( $query);
+//         TEXT( $query);
+
         
          $qr=mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($qr)) {  
