@@ -88,7 +88,7 @@ class paypal{
 //print_r($_POST);
 
 $paypal = new paypal();
-$event="2024 Walk like a Egyptian";
+$event="2024 Fatima";
 $insignia="-";
 
 /*
