@@ -135,7 +135,7 @@
           <li class="list-group-item d-flex justify-content-between">
            
           <div class="BackInput"> <?php echo("$".$MEMBER_FEE +0 )?> Lunch and Tennis <br/>
-           <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6
+<!--          <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6 -->
            
 
             </div>
