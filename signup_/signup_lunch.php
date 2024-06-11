@@ -100,9 +100,12 @@
     <h3 style="font-size: 1.2em ">
     Enjoy a special lunch from  <a href="http://www.fatimabazaar.com">Fatima Bazaar</a> and Tennis with your  Santa Clara Tennis Club
     friends on Saturday June 15 , 9-12 pm. 
+<!--
     Deadline to signup is Monday June 10, 2024.
-    Early bird signup price is $10 by Thursday, June 6, 2024.  <?php echo("$".$MEMBER_FEE+5 )?> afterwards.
-    <p>
+    Early bird signup price is $10 by Thursday, June 6, 2024.
+      <?php echo("$".$MEMBER_FEE+5 )?> afterwards.
+    -->
+      <p>
     
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
