@@ -7,14 +7,17 @@
       https://www.bbqmusicfest.com/vendors/bbq-vendors
 -->
 
-    <img class="mg-fluid img-thumbnail" src="./images/bbq_music.png" alt="-" >
+<!--   <img class="mg-fluid img-thumbnail" src="./images/bbq_music.png" alt="-" >
+-->
+<img class="mg-fluid img-thumbnail" src="./images/fire.png" alt="-" >
+
   </picture>
       <h3>Santa Clara Tennis Club Annual Pigout </h3>
 
     <h3 style="font-size: 1.2em ">
     Enjoy some <b>barbecue</b> and tennis on the courts with fellow members  for
     social mixed doubles round robin play at Santa Clara Tennis Center on
-    July 11, 2023 , 9-12 noon. Early bird signup for this event is Friday July 1, 2024.
+    July 13, 2024 , 9-12 noon Courts #6-8. Early bird signup for this event is Friday July 1, 2024.
     Thereafter late birds pay $5.  Don't delay! <br>
     
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
@@ -40,13 +43,14 @@
             </div>
           </li>
 
+<!--
           <li class="list-group-item d-flex justify-content-between">
 
             <span>🎾 SCTC Members</span>
             <strong><?php echo("FREE" )?></strong>
 
           </li>
-
+-->
         </ul>
 
       </div>
@@ -130,6 +134,12 @@
  -->
           </div>
 
+                  <!-- div to show reCAPTCHA -->
+        <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div> 
+        <br> 
+        
           <button class="w-100 btn btn-primary btn-lg" type="submit"> Signup! </button>
         </form>
 
