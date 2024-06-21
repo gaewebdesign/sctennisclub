@@ -9,7 +9,7 @@
 
 <!--   <img class="mg-fluid img-thumbnail" src="./images/bbq_music.png" alt="-" >
 -->
-<img class="mg-fluid img-thumbnail" src="./images/fire.png" alt="-" >
+<img class="mg-fluid img-thumbnail" src="./images/barbecue2.png" alt="-" >
 
   </picture>
       <h3>Santa Clara Tennis Club Annual Pigout </h3>
