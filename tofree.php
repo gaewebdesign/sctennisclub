@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $password = "" ;// $_POST['password'];
 $submitButton = $_POST['SubmitButton'];
 
-echo("Submit $submitButton");
+//echo("Submit $submitButton");
 
 
 $error=false;
