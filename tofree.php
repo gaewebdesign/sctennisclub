@@ -24,15 +24,15 @@ if($password=="4pigs"){
 */
 //if (isset($_POST['submit_btn'])) { 
 
-/*
+
 echo('
 <script >
     window.setTimeout(function() {
-        window.location.href="./signup_free.html";
+        window.location.href="./signup_free.phtml";
     }, 500);
 </script>
 ');
-*/
+
 if( $error == true) return;
 
 
@@ -98,8 +98,10 @@ if (isset($_POST['SubmitButton'])) {
 	// Checking, if response is true or not 
 	if ($response->success == true) { 
 		echo '<script>alert("Google reCAPTACHA verified")</script>'; 
+        return true;
 	} else { 
 		echo '<script>alert("Error in Google reCAPTACHA")</script>'; 
+        return false;
 	} 
 } 
 
