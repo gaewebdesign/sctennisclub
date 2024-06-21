@@ -97,7 +97,7 @@ if (isset($_POST['SubmitButton'])) {
 
 	// Checking, if response is true or not 
 	if ($response->success == true) { 
-		echo '<script>alert("CAPTACHA verified - <h1>$name<h1>  signed up!")</script>'; 
+		echo '<script>alert("CAPTACHA verified - $name  signed up!")</script>'; 
         return true;
 	} else { 
 		echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
