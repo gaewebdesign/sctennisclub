@@ -72,7 +72,7 @@ function checkCAPTCHA() {
 if (isset($_POST['SubmitButton'])) { 
 	
 	// Storing name in $name variable 
-//	$name = $_POST['name']; 
+	$name = $_POST["fname"]."  " .$_POST["lname"]; 
 	
 	// Storing google recaptcha response 
 	// in $recaptcha variable 
@@ -97,10 +97,10 @@ if (isset($_POST['SubmitButton'])) {
 
 	// Checking, if response is true or not 
 	if ($response->success == true) { 
-		echo '<script>alert("Google reCAPTACHA verified")</script>'; 
+		echo '<script>alert("CAPTACHA verified - <h1>$name<h1>  signed up!")</script>'; 
         return true;
 	} else { 
-		echo '<script>alert("Error in Google reCAPTACHA")</script>'; 
+		echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
         return false;
 	} 
 } 
