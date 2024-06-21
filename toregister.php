@@ -51,6 +51,7 @@ $custom = time()-60*60*7;
 $dt = new DateTime("@$custom");
 $date = ltrim($dt->format('m/d/Y'),0);
 $date = $custom;
+$year=2024;
 
 $theTABLE = TABLE_REGISTER;
 
@@ -61,7 +62,7 @@ $pwd="4pigs";
 
 
 $res = checkCAPTCHA() ;
-$res = true;
+//$res = true;
 if($res==true){
  //   toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 //    toRegisterDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
