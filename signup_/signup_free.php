@@ -82,6 +82,7 @@
               </div>
             </div>
 
+<!--
             <div class="col-sm-8">
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" placeholder="4pigs" value="" required name="password">
@@ -89,7 +90,7 @@
                 Password
               </div>
             </div>
-
+-->
 
             <div class="my-3">
 <!--
