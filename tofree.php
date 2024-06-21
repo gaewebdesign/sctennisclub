@@ -28,7 +28,7 @@ if($password=="4pigs"){
 echo('
 <script >
     window.setTimeout(function() {
-        window.location.href="./signup_free.phtml";
+        window.location.href="./pigout";
     }, 500);
 </script>
 ');
