@@ -38,7 +38,7 @@ $preference = $_POST[PREFERENCE] ;
 echo('
 <script >
     window.setTimeout(function() {
-        window.location.href="./register.phtml";
+        window.location.href="./register";
     }, 20);
 </script>
 ');
@@ -160,7 +160,7 @@ if (isset($_POST['SubmitButton'])) {
 	// Checking, if response is true or not 
 	if ($response->success == true) { 
         
-        echo '<script>alert("CAPTACHA verified - you\'re register - read your email for more information from \n Santa Clara Tennis Club")</script>'; 
+        echo '<script>alert("You\'re registered - read your email for more information from \n Santa Clara Tennis Club")</script>'; 
         return true;
 	} else { 
 		echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
