@@ -139,8 +139,8 @@
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
         </div> 
         <br> 
-        
-          <button class="w-100 btn btn-primary btn-lg" type="submit"> Signup! </button>
+
+          <button class="w-100 btn btn-primary btn-lg" name = "SubmitButton" type="submit"> Signup! </button>
         </form>
 
       </div>
