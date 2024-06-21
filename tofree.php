@@ -7,7 +7,7 @@ include "./library/emailer.php";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = "" ; $_POST['password'];
 $submitButton = $_POST['SubmitButton'];
 
 echo("Submit $submitButton");
