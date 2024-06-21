@@ -170,6 +170,14 @@ include "./library/emailer.php";
   </div>
 
 -->
+
+       <!-- div to show reCAPTCHA -->
+        <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div> 
+        <br> 
+
+
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
     <button class="btn btn-primary"  type="submit">Submit USTA Team Request</button>
