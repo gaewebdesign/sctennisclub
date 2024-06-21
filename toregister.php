@@ -32,23 +32,7 @@ if (  isset($_POST["resprev"]) ) $resprev="y";
 // Resident Count
 $rescount = $_POST["rescount"];
 
-
 $preference = $_POST[PREFERENCE] ;
-
-//$password = $_POST['password'];
-$password ="4pigs";
-
-
-
-
-$error=false;
-if($password=="4pigs"){
-    echo "<script>alert('Thanks $fname $lname for registering!') </script>";
-}else{
-    echo "<script>alert('PASSWORD ERROR  $password ') </script>";
-    $error = true;
-}
-
 
 
 echo('
@@ -59,7 +43,8 @@ echo('
 </script>
 ');
 
-if( $error == true) return;
+
+//if( $error == true) return;
 
 
 $custom = time()-60*60*7;
@@ -69,21 +54,6 @@ $date = $custom;
 
 $theTABLE = TABLE_REGISTER;
 
-//echo ("INSERT $fname $lname $paid $date $custom");
-//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
-//$fname = "Stacia";
-//$lname = "Simmons";
-//$team = "Mx";
-//$ntrp = "8.0";
-
-//$daytime="n";
-//if($_POST["daytime"] == "y") $daytime="y";
-//$lname .= $email;
-//$email = "s.simmons@gmail.com";
-//$rescaptain = "y";
-//$resprev="y";
-//$rescount=2;
-$year=YEAR;
 //$date=1705711820;
 $insignia=$preference;
 $custom="";
@@ -91,15 +61,16 @@ $pwd="4pigs";
 
 
 $res = checkCAPTCHA() ;
+$res = true;
+if($res==true){
+ //   toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+//    toRegisterDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+LOGGER( " toRegisterDB");
+toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
 
-if($res==true)
-toRegisterDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+}
 
-// change
-//toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
-
-//sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 
 $subject = "USTA Team Signup ($fname $lname) " ;
@@ -184,6 +155,7 @@ if (isset($_POST['SubmitButton'])) {
 	// that json 
 	$response = json_decode($response); 
 
+    
 	// Checking, if response is true or not 
 	if ($response->success == true) { 
         
