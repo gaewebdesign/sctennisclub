@@ -1,3 +1,6 @@
+<script language="JavaScript" src="library/sorttable.js"> </script>
+
+
 <style>
 tr {
     line-height: 14px;
@@ -8,7 +11,7 @@ tr {
  </style>
 
 <p>
-<table class="table table-bordered table-striped table-condensed">
+<table class="table table-bordered table-striped table-condensed sortable">
 
       <thead>
         <tr>
