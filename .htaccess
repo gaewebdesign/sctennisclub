@@ -29,6 +29,9 @@ RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule ^register$ register.phtml  [NC,QSA,L]
 
+RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
+
+
 
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
 #RewriteRule ^done$ from_done.php  [NC,QSA,L]
