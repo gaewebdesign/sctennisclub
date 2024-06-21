@@ -17,8 +17,8 @@
     <h3 style="font-size: 1.2em ">
     Enjoy some <b>barbecue</b> and tennis on the courts with fellow members  for
     social mixed doubles round robin play at Santa Clara Tennis Center on
-    July 13, 2024 , 9-12 noon Courts #6-8. Early bird signup for this event is Friday July 1, 2024.
-    Thereafter late birds pay $5.  Don't delay! <br>
+    July 13, 2024 , 9-12 noon Courts #6-8. Signup early for this event, as spaces are limited.
+    Don't delay! <br>
     
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
