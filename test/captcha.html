@@ -1,38 +1,64 @@
-<?php 
-	
-// Checking valid form is submitted or not 
-if (isset($_POST['submit_btn'])) { 
-	
-	// Storing name in $name variable 
-	$name = $_POST['name']; 
-	
-	// Storing google recaptcha response 
-	// in $recaptcha variable 
-	$recaptcha = $_POST['g-recaptcha-response']; 
 
-	// Put secret key here, which we get 
-	// from google console 
-	$secret_key = '6LdoCf4pAAAAAArgp6FUOA7Rn0j7_Jle-2dL-cUF'; 
+  <!--
+  V2
+  site key
+  6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F
 
-	// Hitting request to the URL, Google will 
-	// respond with success or error scenario 
-	$url = 'https://www.google.com/recaptcha/api/siteverify?secret='
-		. $secret_key . '&response=' . $recaptcha; 
+https://www.geeksforgeeks.org/google-recaptcha-integration-in-php/
+  secret key
 
-	// Making request to verify captcha 
-	$response = file_get_contents($url); 
+  6LdoCf4pAAAAAArgp6FUOA7Rn0j7_Jle-2dL-cUF
 
-	// Response return by google is in 
-	// JSON format, so we have to parse 
-	// that json 
-	$response = json_decode($response); 
+    
+  -->
+  <!--
+  site key 6LfzXvwpAAAAAIzkbZLoGM40WdaC23vHm9aUgf94
 
-	// Checking, if response is true or not 
-	if ($response->success == true) { 
-		echo '<script>alert("Google reCAPTACHA verified")</script>'; 
-	} else { 
-		echo '<script>alert("Error in Google reCAPTACHA")</script>'; 
-	} 
-} 
+  secret key 
+  6LfzXvwpAAAAAJ2Mtock4wkdGfai1E5NDJAjJqxT
+  -->
 
-?>
+
+  <!DOCTYPE html> 
+  <html lang="en"> 
+  
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content= 
+      "width=device-width, initial-scale=1.0"> 
+  
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+  
+    <!-- Google reCAPTCHA CDN -->
+    <script src= 
+      "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
+  </head> 
+  
+  <body> 
+    <div class="container"> 
+      <h1>Google reCAPTCHA</h1> 
+  
+      <!-- HTML Form -->
+      <form action="action.php" method="post"> 
+        <input type="text" name="name" id="name"
+          placeholder="Enter Name" required> 
+        <br> 
+  
+        <!-- div to show reCAPTCHA -->
+        <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div> 
+        <br> 
+  
+        <button type="submit" name="submit_btn"> 
+          Submit 
+        </button> 
+      </form> 
+    </div> 
+  </body> 
+  
+  </html>
+  
