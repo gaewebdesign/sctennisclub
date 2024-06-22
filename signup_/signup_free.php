@@ -58,7 +58,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="SubmitButton" action="tofree.php", method="post" >
+        <form class="needs-validation" novalidate name="xSubmitButton" action="tofree.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
