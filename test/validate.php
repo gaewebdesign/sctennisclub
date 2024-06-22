@@ -15,15 +15,20 @@
     </script> 
 
 </head>
+<div class="container">
 <h1> Validation </h1>
+</div>
+
+<div class="container">
+
 <form class="row g-3">
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+    <input type="text" class="form-control" id="validationDefault01" value="MV" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefault02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+    <input type="text" class="form-control" id="validationDefault02" value="Sakaura" required>
   </div>
   <div class="col-md-4">
     <label for="validationDefaultUsername" class="form-label">Username</label>
@@ -59,6 +64,8 @@
     <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
 </form>
+
+</div>
 
 
 </html>
