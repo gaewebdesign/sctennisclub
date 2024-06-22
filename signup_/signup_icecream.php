@@ -14,8 +14,8 @@
     <h3 style="font-size: 1.2em ">
     Enjoy some  tennis and <b>ice cream</b>  on the courts with fellow members for
     social mixed doubles round robin play at Santa Clara Tennis Center on
-    August 24, 2024 , 9-12 noon. Early bird signup for this event is Monday August 19, 2024.
-    Thereafter price goes up $5 for members and guests. IF you just &#x1F497; ice cream, you may
+    August 24, 2024 , 9-12 noon on courts #6-#8. Sign up early before entries close!
+    If you just &#x1F497; ice cream, you may
     sign up for the ice cream only option! <br/>
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
