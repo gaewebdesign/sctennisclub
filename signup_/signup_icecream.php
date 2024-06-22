@@ -62,7 +62,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="topaypal.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="topaypal_mixer.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -92,26 +92,23 @@
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span> 
 
               <div class="form-check ">
-                <input class="form-check-input"  type="radio" id="member" value="SCTC" name="mixer"    >
+                <input class="form-check-input"  type="radio" id="member" value=<?php echo($MEMBER_FEE); ?> name="mixer"    >
                 <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis</label>
-
-<!--
                 <br/>
-                <input  class="form-check-input" type="radio" id="guest" value= "GUEST" name="mixer"  >
-                <label class="form-check-label" for="member">🧢 &nbsp; MVTC (guest)</label>
--->
-                <br/>
-                <input  class="form-check-input" type="radio" id="icecream" value="ICECREAM" name="mixer">
+                <input  class="form-check-input" type="radio" id="icecream" value=<?php echo($ICECREAM_FEE); ?> name="mixer">
                 <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!</label>
 
               </div>
             </div>
 
             <div class="col-12" >
-              <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
+<!--
+             <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
               <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_SCTC">
+-->
               <input type="hidden" class="form-control" id="guest" value=<?php echo $GUEST_FEE ?> name="_GUEST">
-              <input type="hidden" class="form-control" id="icecream" value=<?php echo $ICECREAM_FEE ?> name="_ICECREAM">
+              <input type="hidden" class="form-control" id="icecream" value=<?php echo $ICECREAM_FEE ?> name="_FEE">
+              <input type="hidden" class="form-control" id="event" value=<?php echo($EVENT); ?> name="_EVENT">
 
               <div class="invalid-feedback">
                 Fee Error 
