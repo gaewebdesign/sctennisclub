@@ -145,8 +145,10 @@
                   <!-- div to show reCAPTCHA -->
         <div class="g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
-        </div> 
-        <p> 
+        </div>
+        <div>         
+        <br><br><p><br>
+        </div>         
 
           <button class="w-100 btn btn-primary btn-lg" name = "SubmitButton" type="submit"> Pigout Signup! </button>
         </form>
