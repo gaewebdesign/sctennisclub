@@ -21,7 +21,7 @@
 
 <div class="container">
 
-<form class="row g-3">
+<form class="row g-3" action="tovalidate.php">
   <div class="col-md-4">
     <label for="validationDefault01" class="form-label">First name</label>
     <input type="text" class="form-control" id="validationDefault01" value="MV" required>
