@@ -14,9 +14,9 @@
     <h3 style="font-size: 1.2em ">
     Enjoy some  tennis and <b>ice cream</b>  on the courts with fellow members and Mountain View Tennis Club for
     social mixed doubles round robin play at Santa Clara Tennis Center on
-    August 26, 2023 , 9-12 noon. Early bird signup for this event is Friday August 18, 2023.
+    August 24, 2024 , 9-12 noon. Early bird signup for this event is Monday August 19, 2024.
     Thereafter price goes up $5 for members and guests. IF you just &#x1F497; ice cream, you may
-    sign up for the ice cream only option!
+    sign up for the ice cream only option! <br/>
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
     </h3>
@@ -33,7 +33,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-             <h6 class="my-0">2023 August Ice Cream  Social </h6> 
+             <h6 class="my-0">2024 August Ice Cream  Social </h6> 
 
               <small class="text-muted"><a href="https://www.google.com/maps/search/santa+clara+tennis+center/@37.3463955,-121.9721728,14z/data=!3m1!4b1">Santa Clara Tennis Center</a></small>
 
@@ -42,13 +42,16 @@
 
           <li class="list-group-item d-flex justify-content-between">
 
-            <span>🎾 SCTC Members</span>
+            <span>🎾 Ice cream and Tennis</span>
             <strong>$<?php echo($MEMBER_FEE )?></strong>
           </li>
+<!--
           <li class="list-group-item d-flex justify-content-between">
-            <span>🧢 MVTC(guest)</span>
+            <span>🧢 Guest)</span>
             <strong>$<?php echo($GUEST_FEE )?></strong>
           </li>
+-->
+
           <li class="list-group-item d-flex justify-content-between">
             <span>&#x1F49C;Ice Cream only! </span>
             <strong>$<?php echo($ICECREAM_FEE)?></strong>
@@ -90,12 +93,13 @@
 
               <div class="form-check ">
                 <input class="form-check-input"  type="radio" id="member" value="SCTC" name="mixer"    >
-                <label class="form-check-label" for="member">🎾 &nbsp;SCTC Member</label>
+                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis</label>
 
+<!--
                 <br/>
                 <input  class="form-check-input" type="radio" id="guest" value= "GUEST" name="mixer"  >
                 <label class="form-check-label" for="member">🧢 &nbsp; MVTC (guest)</label>
-
+-->
                 <br/>
                 <input  class="form-check-input" type="radio" id="icecream" value="ICECREAM" name="mixer">
                 <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!</label>
