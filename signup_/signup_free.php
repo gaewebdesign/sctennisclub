@@ -52,6 +52,11 @@
             <strong><?php echo("FREE" )?></strong>
 
           </li>
+
+           <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationDefault01" value="MV" required>
+  </div>
 -->
         </ul>
 
@@ -62,7 +67,7 @@
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required name="fname">
+              <input type="text" class="form-control" id="firstName" required name="fname">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
