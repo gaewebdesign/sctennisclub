@@ -143,7 +143,7 @@
         </div> 
         <br> 
 
-          <button class="w-100 btn btn-primary btn-lg" name = "submit" type="submit"> Pigout Signup! </button>
+          <button class="w-100 btn btn-primary btn-lg" name = "SubmitButton" type="submit"> Pigout Signup! </button>
         </form>
 
       </div>
