@@ -26,15 +26,18 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2024-5-10');
+          $jurassic = strtotime('2023-10-5');
+          $cretaceous = strtotime('2023-10-7');
+          
           // Switch between tables here **************************
+/*
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
-
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
+*/
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
 
           $con = Configure();
            
