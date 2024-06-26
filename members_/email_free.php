@@ -92,7 +92,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
         $_YEAR = $YEAR-1;
 //      $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname ";
         $epoch = strtotime('2024-5-10');
-        $query = "select * from ".TABLE_MIXER_PAYPAL." where custom>$epoch order by lname asc ";
+        $query = "select * from ".TABLE_MIXER_FREE." where custom>$epoch order by lname asc ";
 
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
  //       TEXT( $query);
