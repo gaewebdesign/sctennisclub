@@ -24,13 +24,14 @@ RewriteRule ^board$  board.phtml  [NC,QSA,L]
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
 RewriteRule ^checker$ checker.phtml [NC,QSA,L]
 
-RewriteRule ^signup$ signup.phtml  [NC,QSA,L]
+#RewriteRule ^signup$ signup.phtml  [NC,QSA,L]
 RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule ^register$ register.phtml  [NC,QSA,L]
 
 RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
-
+RewriteRule ^icecream$ signup_icecream.phtml  [NC,QSA,L]
+RewriteRule ^june$ signup_lunch.phtml  [NC,QSA,L]
 
 
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
