@@ -45,7 +45,7 @@
              <h6 class="my-0">2024 July Pigout Social </h6> 
 
               <small class="text-muted"><a href="https://www.google.com/maps/search/santa+clara+tennis+center/@37.3463955,-121.9721728,14z/data=!3m1!4b1">Santa Clara Tennis Center</a></small>
-              Signup for <b>free</b>
+              <br> Signup for <b>free</b>
             </div>
           </li>
 
