@@ -107,7 +107,7 @@
     -->
       <p>
     
-    Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
+    Signup page is at <a href="./signup">www.sctennisclub.org/june</a>
   
     </h3>
   </div>
