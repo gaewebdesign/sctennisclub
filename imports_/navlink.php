@@ -3,8 +3,11 @@
                   <a href="./membership" >Membership </a>|
                   <a href="./join" class="Link_Red" >Join </a>|                 
                   <a href="./members" >Members </a>|
-                  <a href="./signup" class="Link_Purple">June Signup</a>|
+<!--                  <a href="./signup" class="Link_Purple">June Signup</a>| 
+-->
+
                   <a href="./mixers" >Mixers </a> |
+                  <a href="./signup" class="Link_Purple">June</a>|
                   <a href="./board" >Board</a>  |
                   <a href="./usta" >USTA  
 <!--                  <a href="./register" class="Link_Register">Register </a> |   -->
