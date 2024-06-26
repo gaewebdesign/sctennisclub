@@ -33,7 +33,7 @@ RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
 RewriteRule ^icecream$ signup_icecream.phtml  [NC,QSA,L]
 RewriteRule ^june$ signup_lunch.phtml  [NC,QSA,L]
 
-
+# ro
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
 #RewriteRule ^done$ from_done.php  [NC,QSA,L]
 
