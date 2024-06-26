@@ -21,7 +21,7 @@
     social mixed doubles round robin play at Santa Clara Tennis Center on Saturday
     July 13, 2024 , 9-12 noon Courts #6-#8.
     <p>
-      Menu:  Chicken, pork ribs, hot links, sweet beans, corn bread, and  watermelon.
+      on the menu:  Chicken, pork ribs, hot links, sweet beans, corn bread, and  watermelon.
     <p>
     Signup early for this event, as spaces are limited.
     Don't delay! <br>
