@@ -123,7 +123,7 @@ $message2 = "
 </html>
 ";
 
-
+// using Message 2
 phpemailer($subject, $message2 , "tennis.mutt@gmail.com",$email);
 
 
