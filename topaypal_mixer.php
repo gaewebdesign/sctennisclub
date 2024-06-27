@@ -194,9 +194,16 @@ $mtype=$phone=$code="-";
 $payment=$paid;
 
 
-
+$res = CAPTCHA_CHECK() ;
+if($res==true)
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+else{
 
+	echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+	return;
+
+
+}
 $data = array(
 	'year' => $year,
 	'fname' => $fname,
