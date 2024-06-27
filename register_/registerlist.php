@@ -89,7 +89,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $con = Configure();
 
-         $query = "select * from ".TABLE_REGISTER." where year=$YEAR order by lname ";
+         $query = "select * from ".TABLE_REGISTER." where year=$YEAR order by date ";
 
          LOGGER("from ".$query);
          $icon="";
