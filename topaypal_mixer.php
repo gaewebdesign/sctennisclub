@@ -194,7 +194,8 @@ $mtype=$phone=$code="-";
 $payment=$paid;
 
 
-$res = CAPTCHA_CHECK() ;
+//$res = CAPTCHA_CHECK() ;
+$res=true;
 if($res==true)
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 else{
