@@ -40,7 +40,7 @@ tr {
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where date>$jurassic and date<$cretaceous order by fname asc";
 
-          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic" ;
+          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic  order by lname";
 
           echo( "QUERY");
           echo $query;
