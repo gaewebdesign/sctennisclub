@@ -506,45 +506,7 @@ function EMAILER($subject, $message, $verbose=false)
 }
 
 
-// Completely Automated Public Turing Test to tell Computers and Humans Aparat
-// Completely Automated Public Turing Test to tell Computers and Humans Aparat
-function CAPTCHA_CHECK() {
 
-  // Checking valid form is submitted or not 
-if (isset($_POST['SubmitButton'])) { 
-
-// Storing google recaptcha response 
-// in $recaptcha variable 
-$recaptcha = $_POST['g-recaptcha-response']; 
-
-// Put secret key here, which we get 
-// from google console 
-$secret_key = '6LdoCf4pAAAAAArgp6FUOA7Rn0j7_Jle-2dL-cUF'; 
-
-// Hitting request to the URL, Google will 
-// respond with success or error scenario 
-$url = 'https://www.google.com/recaptcha/api/siteverify?secret='
-  . $secret_key . '&response=' . $recaptcha; 
-
-// Making request to verify captcha 
-$response = file_get_contents($url); 
-
-// Response return by google is in 
-// JSON format, so we have to parse 
-// that json 
-$response = json_decode($response); 
-
-// Checking, if response is true or not 
-if ($response->success == true) { 
-      
-//      echo '<script>alert("Summer 2024 \nSanta Clara Tennis Club \n Pigout  \nYou\'re signed up!")</script>'; 
-      return true;
-} else { 
-//  echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
-      return false;
-} 
-
-} 
 
 
 
