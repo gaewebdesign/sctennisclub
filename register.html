@@ -9,7 +9,10 @@
 
       <title>Santa Clara Tennis Club</title>
 
-
+    <!-- Google reCAPTCHA CDN -->
+    <script src= 
+      "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
 
 </head>
 <body class="Back" >
@@ -42,7 +45,7 @@
       <div class="row">
             <div class="col-sm-2"> </div> 
             <div class="col-sm-8 NavLink"> 
-                  <?php include "./imports_/dev.php" ?>
+                  <?php include "./imports_/navlink.php" ?>
              </div>
 
       <div class="col-sm-2"> </div> 
@@ -72,10 +75,20 @@
         <div class="col-sm-1 ">
         </div>
         <div class="col-sm-10">
+            <div class="display-6">
+            <b>USTA Captain:</b> Fill out this captain registration form at least 2 weeks prior to the USTA
+            deadline to register a team.  Note that filling out the form is only for Santa Clara Tennis Club.
+            and once your team is approved, you will need to register your team on the club's
+            <a href = "https://www.ustanorcal.com/organization.asp?id=20"> Norcal USTA</a> site.
+            <br>
+              Captains should read over the captain requirements on the club's <a href="./usta">usta </a>page and
+              send in the <a href = "./docs/agree.pdf "> USTA Captain's agreement</a>.
 
-            <h3>USTA Captain: Fill out captain registration form at least 3 weeks prior to the USTA
-            deadline to register a team.
-            </h3>
+            <br>
+              Expect an email from the club's USTA coordinator <b>ustarep@</b>
+
+            <p/>
+            </div>
 
             <p>
             <?php
@@ -89,11 +102,25 @@
 
         </div>
 
+        <div class="col-sm-12">
+         <p>
+        </div>
 
-    
+        <div class="col-sm-12">
+        <p>
+        <hr/>
+         <center>USTA Team Request List </center>
+         <hr/>
+      </div>
+
+        <?php
+        include "./register_/registerlist.php";
+        ?>
 
 
-        <div class="col-sm-1"></div>
+
+
+
       </div>
 
       <div class="container-sm ">
@@ -103,6 +130,7 @@
         
         
         </div>
+
 
 
 
