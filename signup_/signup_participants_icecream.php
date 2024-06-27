@@ -42,7 +42,8 @@ tr {
 
           $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic" ;
 
-echo $query;
+          echo( "QUERY");
+          echo $query;
 
           $con = Configure();
            
