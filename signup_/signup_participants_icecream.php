@@ -26,7 +26,7 @@ tr {
            <p>
        <?php
           
-          $jurassic = strtotime('2023-1-15');
+          $jurassic = strtotime('2024-6-15');
           $cretaceous = strtotime('2024-10-7');
           
           // Switch between tables here **************************
