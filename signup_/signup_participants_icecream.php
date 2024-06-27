@@ -64,7 +64,8 @@ tr {
 
 
 //   ***************************
-            $e = $row['custom']; //-60*60*7;
+//            $e = $row['custom']; //-60*60*7;
+            $e = $row['date']; //-60*60*7;
             $dt = new DateTime("@$e");
             $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
