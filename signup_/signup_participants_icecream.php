@@ -26,7 +26,7 @@ tr {
            <p>
        <?php
           
-          $jurassic = strtotime('2023-5-15');
+          $jurassic = strtotime('2020-5-15');
           $cretaceous = strtotime('2024-10-7');
           
           // Switch between tables here **************************
@@ -39,8 +39,8 @@ tr {
 */
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$jurassic and custom<$cretaceous order by fname asc";
-//          $query = "select * from ".TABLE_MIXER_PENDING;
-echo $query;
+
+
 echo $query;
 
           $con = Configure();
