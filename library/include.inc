@@ -515,8 +515,10 @@ function CAPTCHA_CHECKOUT() {
 
   // Checking valid form is submitted or not 
 if (isset($_POST['SubmitButton'])) { 
+   
+  LOGGER("ISSET _POST");
 
-// Storing name in $name variable 
+  // Storing name in $name variable 
 //$name = $_POST["fname"]."  " .$_POST["lname"]; 
 
 // Storing google recaptcha response 
