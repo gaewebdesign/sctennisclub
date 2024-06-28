@@ -4,6 +4,9 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+include "./library/email/email.inc";
+
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
