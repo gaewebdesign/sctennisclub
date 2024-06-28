@@ -124,7 +124,7 @@ $message2 = "
 ";
 
 // using Message 2
-phpemailer($subject, $message2 , "tennis.mutt@gmail.com",$email);
+phpemailer($subject, $message2 , "ustarep@sctennisclub.org",$email);
 
 
 function checkCAPTCHA() {
