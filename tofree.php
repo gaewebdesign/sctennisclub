@@ -67,13 +67,13 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
     //toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
 //sendemail($fname." ".$lname, $email, "sctennisclub.org => $theTABLE ");
-/*
+
 $subject = "Pigout Signup ($fname $lname)";
 $email = "santaclarawebmaster@gmail.com";
 $messsage = "PIGOUT 2024 $fname $lname signup";
 if($res==true)
-phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
-*/
+  phpemailer($subject, $message , "rogero.tennis@gmail.com",$email);
+
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat
 function checkCAPTCHA() {
 
