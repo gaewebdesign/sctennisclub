@@ -14,7 +14,7 @@
                   || &nbsp;
                   
 
-                  // nav
+                  
                   <a href="http://www.racquetstore.com"> 
                   <img src="./images/racquet_store_logo.png" width="25px" > Racquet Store </a>
                 
