@@ -196,7 +196,10 @@ $payment=$paid;
 
 
 //$res=true;
+
+
 $res = CAPTCHA_CHECK() ;
+LOGGER("toicecream captcha check = $res");
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
