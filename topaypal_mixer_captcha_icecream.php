@@ -137,6 +137,7 @@ if($_POST["dinner"] == "chicken" ) {
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
 
 
+LOGGER("topaypal_mixer_captcha_icecream.php");
 
 $paid= MAY_MIXER_FEE;
 $paid =  $_POST["mixer"];
@@ -200,8 +201,8 @@ $payment=$paid;
 
 $res = CAPTCHA_CHECK() ;
 LOGGER("toicecream captcha check = $res");
-LOGGER("toicecream captcha check = $res");
-echo("TO DATABASE $theTABLE");
+
+
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
