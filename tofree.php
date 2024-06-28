@@ -70,7 +70,7 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
 
 $subject = "Pigout Signup ($fname $lname)";
 $email = "santaclarawebmaster@gmail.com";
-$messsage = "PIGOUT 2024 $fname $lname signup";
+$message = "PIGOUT 2024 $fname $lname signup";
 if($res==true)
   phpemailer($subject, $message , "rogero.tennis@gmail.com",$email);
 
