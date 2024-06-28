@@ -72,7 +72,7 @@ $subject = "Pigout Signup ($fname $lname) ---";
 $email = "santaclarawebmaster@gmail.com";
 $message = "Pigout 2024 $fname $lname signup";
 if($res==true)
-  phpemailer($subject, $message , "rogero.tennis@gmail.com",$email);
+  phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
 
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat
 function checkCAPTCHA() {
