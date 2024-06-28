@@ -68,9 +68,9 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
 
 //sendemail($fname." ".$lname, $email, "sctennisclub.org => $theTABLE ");
 
-$subject = "Pigout Signup ($fname $lname)";
+$subject = "Pigout Signup ($fname $lname) ---";
 $email = "santaclarawebmaster@gmail.com";
-$message = "PIGOUT 2024 $fname $lname signup";
+$message = "Pigout 2024 $fname $lname signup";
 if($res==true)
   phpemailer($subject, $message , "rogero.tennis@gmail.com",$email);
 
