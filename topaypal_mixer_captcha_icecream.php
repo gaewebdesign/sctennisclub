@@ -200,6 +200,8 @@ $payment=$paid;
 
 $res = CAPTCHA_CHECK() ;
 LOGGER("toicecream captcha check = $res");
+LOGGER("toicecream captcha check = $res");
+echo("TO DATABASE $theTABLE");
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
