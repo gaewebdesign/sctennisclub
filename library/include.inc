@@ -516,7 +516,7 @@ function CAPTCHA_CHECKOUT() {
   // Checking valid form is submitted or not 
 if (isset($_POST['SubmitButton'])) { 
    
-  LOGGER("ISSET _POST");
+  LOGGER("INSIDE if _POST");
 
   // Storing name in $name variable 
 //$name = $_POST["fname"]."  " .$_POST["lname"]; 
@@ -545,10 +545,11 @@ $response = json_decode($response);
 // Checking, if response is true or not 
 if ($response->success == true) { 
       
-      echo '<script>alert("Summer 2024 \nSanta Clara Tennis Club \n Pigout  \nYou\'re signed up!")</script>'; 
+//      echo '<script>alert("Summer 2024 \nSanta Clara Tennis Club \n Pigout  \nYou\'re signed up!")</script>'; 
+
       return true;
 } else { 
-  echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+//    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
       return false;
 } 
 } 
