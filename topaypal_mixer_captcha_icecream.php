@@ -206,6 +206,13 @@ if($res == true) {
 }else{
 
     echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+	echo('
+      <script >
+      window.setTimeout(function() {
+        window.location.href="./icecream";
+    }, 500);
+       </script>
+');
     return;
 }
 
