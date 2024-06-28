@@ -88,7 +88,9 @@
               </div>
             </div>
 
-            <div class="my-3">
+<!--            <div class="my-3"> -->
+
+            <div class="col-sm-6">
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span> 
 
               <div class="form-check ">
