@@ -196,7 +196,7 @@ $payment=$paid;
 
 
 //$res=true;
-//$res = CAPTCHA_CHECK() ;
+$res = CAPTCHA_CHECK() ;
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
