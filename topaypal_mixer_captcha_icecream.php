@@ -238,7 +238,7 @@ SENDER( $data );
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-echo( "-----" );
+// echo( "-----" );
 //$paypal->output_form();
 // 
 // ***********************************************************************************
