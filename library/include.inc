@@ -510,6 +510,9 @@ function EMAILER($subject, $message, $verbose=false)
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat
 function CAPTCHA_CHECKOUT() {
 
+  
+  LOGGER("CAPTCHA_CHECKOUT");
+
   // Checking valid form is submitted or not 
 if (isset($_POST['SubmitButton'])) { 
 
