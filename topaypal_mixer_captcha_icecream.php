@@ -199,7 +199,7 @@ $payment=$paid;
 //$res=true;
 
 LOGGER("calling CAPTCHA_CHECK");
-$res = CAPTCHA_CHECK() ;
+$res = CAPTCHA_CHECKOUT() ;
 LOGGER("exit  CAPTCHA_CHECK");
 LOGGER("toicecream captcha check = $res");
 
