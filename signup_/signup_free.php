@@ -156,7 +156,8 @@
         <br><br><p><br>
         </div>         
 
-          <button class="w-100 btn btn-primary btn-lg" name = "SubmitButton" type="submit"> Pigout Signup! </button>
+<button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button>
+          <button class="w-100 btn btn-primary btn-lg" disabled name = "SubmitButton" type="submit"> Pigout Signups Closed! </button>
         </form>
 
       </div>
