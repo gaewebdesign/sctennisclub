@@ -38,7 +38,11 @@ tr {
           $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
-//          $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by custom desc";
+/*
+
+          $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by custom desc";
+*/
+
 
           $con = Configure();
            
