@@ -42,7 +42,7 @@ tr {
 
           $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by custom desc";
 */
-
+          $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by fname desc";
 
           $con = Configure();
            
