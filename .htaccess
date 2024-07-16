@@ -46,7 +46,7 @@ RewriteRule ^email$ email.phtml [NC,QSA,L]
 
 #RewriteRule ^register$ register.html?email=1 [NC,QSA,L]
 
-RewriteRule ^tournament$ /draw.phtml [NC,QSA,L]
+RewriteRule ^tournament$ /tournament.phtml [NC,QSA,L]
 
 #RewriteRule ^done return.php  [NC,QSA,L]
 #RewriteRule ^notify$ notify.php  [NC,QSA,L]
