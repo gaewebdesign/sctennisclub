@@ -108,7 +108,7 @@
              <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
               <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_SCTC">
 -->
-              <?php $EVENT="2024Icecream"; ?>
+              <?php $EVENT="2024 Ice Cream"; ?>
               <input type="hidden" class="form-control" id="guest" value=<?php echo $GUEST_FEE ?> name="_GUEST">
               <input type="hidden" class="form-control" id="icecream" value=<?php echo $ICECREAM_FEE ?> name="_FEE">
               <input type="hidden" class="form-control" id="event" value=<?php echo($EVENT); ?> name="_EVENT">
