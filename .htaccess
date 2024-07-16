@@ -30,7 +30,7 @@ RewriteRule ^members$ members.phtml  [NC,QSA,L]
 RewriteRule ^register$ register.phtml  [NC,QSA,L]
 
 RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
-RewriteRule ^august signup_icecream.phtml  [NC,QSA,L]
+RewriteRule ^august$ signup_icecream.phtml  [NC,QSA,L]
 RewriteRule ^june$ signup_lunch.phtml  [NC,QSA,L]
 
 # ro
