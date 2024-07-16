@@ -6,15 +6,15 @@
   <div class="row">
     <div class="col-sm">
       Quarter Finals<br>
-      <div class="small">Finish by 8/1/2024</div>
+      <div class="small">Finish by 8/4/2024</div>
     </div>
     <div class="col-sm">
       Semi Finals
-      <div class="small">Finish by 8/15/2024</div>
+      <div class="small">Finish by 8/18/2024</div>
     </div>
     <div class="col-sm">
       Finals
-      <div class="small">Finish by 8/22/2024</div>
+      <div class="small">Finish by 9/1/2024</div>
     </div>
   </div>
 </div>
