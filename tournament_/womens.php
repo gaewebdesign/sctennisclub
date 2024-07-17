@@ -6,24 +6,25 @@
 
 </p>
 
-<h1>Womens Singles Tournament</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      Quarter Finals
-      <div class="small">Finish by 8/4/2024</div>
-    </div>
-    <div class="col-sm">
-      Semi Finals
-      <div class="small">Finish by 8/18/2024</div>
+<div class="h3">2024 Womens Singles Tournament</div>
 
-    </div>
-    <div class="col-sm">
-      Finals
-    <div class="small">Finish by 9/1/2024</div>
-    </div>
-  </div>
-</div>
+<main id="headers">
+
+<ul class="round">
+  Quarter-Finals
+  <div class="small">Finish by 8/4/2024</div>
+ </ul>
+ <ul class="round">
+  Semi-Finals
+  <div class="small">Finish by 8/18/2024</div></ul>
+ <ul class="round">
+  Finals
+  <div class="small">Finish by 9/1/2024</div>
+ </ul>
+ 
+</main>
+
+
 <main>
 
 <ul class="round">
