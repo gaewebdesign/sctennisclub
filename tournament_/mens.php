@@ -1,6 +1,6 @@
 <html>
 
-   <h1>2024 Mens Singles Tournament</h1>
+   <div class="h3">2024 Mens Singles Tournament</div>
 
    <div class="container">
   <div class="row">
@@ -34,6 +34,15 @@ $q[] = "Taylor Fritz";
 $q[] = "Alex de Minaur";
 $q[] = "Novak Djokovic";
 
+$s1 = "7-6 ,6-1";
+$s2 = "6-1 ,6-4";
+$s3 = "6-3 ,6-4";
+$s4 = "6-4 ,4-6,6-2";
+
+$f1 = "6-4 ,7-6";
+$f2 = "6-3 ,4-0 (ret)";
+
+$w1 = "6-2,6-2";
 
 $q1 = "Carlos Alcarez";
 $q2 = "Tommy Paul";
@@ -80,28 +89,28 @@ $q8 = "Novak Djokovic";
 
 <!-- Semi-Finals  -->
 <ul class="round">
-<li class="game-top"> Alcaraz <span></span> </li>
+<li class="game-top"> Alcaraz <span class="small"><?php echo $s1 ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top"> Medvedev <span></span> </li>
+  <li class="game-top"> Medvedev <span class="small"><?php echo $s2 ?></span> </li>
   <li class="spacer"> 
   <li class="spacer"> 
-<li class="game-top">L Musetti <span></span> </li>
+<li class="game-top">L Musetti <span class="small"><?php echo $s3 ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top"> Djokovich <span></span> </li>
+  <li class="game-top"> Djokovich <span class="small"><?php echo $s4 ?></span> </li>
 </ul>
 
  <!-- Finals -->
   <ul class="round">
-  <li class="game-top"> Alcaraz <span></span> </li>
+  <li class="game-top"> Alcaraz <span class="small"><?php echo $f1 ?></span </li>
   <li class="draw draw3"></li>
-  <li class="game-top"> Djokovich <span></span> </li>
+  <li class="game-top"> Djokovich <span class="small"><?php echo $f2 ?></span </li>
 
 </ul>
 
  <!-- Winner -->
 <ul class="round">
 
-<li class="game-top"> Alcaraz <span></span> </li>
+<li class="game-top"> Alcaraz <span class="small"><?php echo $w1 ?></span> </li>
 </ul>
 
 </main>
