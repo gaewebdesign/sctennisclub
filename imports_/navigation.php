@@ -15,9 +15,20 @@
 #
 #    background-color: #fff; /* here */
 #    background: #fff;
-#    background-color: rgb(202,233,245);
-    
+     background-color: rgb(202,233,245);
+     background: rgb(202,233,245);    
  }
+
+   .dropdown{
+     color: blue;
+      font-size: smaller;
+
+   }
+
+   .colorfill{
+    background: rgb(202,233,245);
+  }
+      
 
 </style>
 
@@ -55,7 +66,23 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="./board">Board</a>
       <a class="navbar-brand" href="./usta">USTA</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+      <div class="dropdown" >
+          <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Tournament
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item 9active" href="#">Info</a></li>
+              <li><a class="dropdown-item dropdown-menu-dark colorfill" disabledhref="#">Signup</a></li>
+              <li><a class="dropdown-item" href="./tournament">Draws (Men's Singles)</a></li>
+              <li><a class="dropdown-item" href="./tournament">Draws (Women's Singles)</a></li>
+              <li><hr class="dropdown-divider" style="border-color:black;"></li>
+              <li><a class="dropdown-item" href="#">Enter Score</a></li>
+        </ul>
+        </div>
+
+<!--
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
@@ -80,6 +107,8 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       </div>
     </div>
   </nav>
+
+  -->
  </p>
       
 </body>
