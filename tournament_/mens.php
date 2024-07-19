@@ -42,41 +42,52 @@ $f2 = "6-3 ,4-0 (ret)";
 
 $w1 = "6-2,6-2";
 
-$q1 = "Carlos Alcarez";
-$q2 = "Tommy Paul";
-$q3 = "Danill Medvedev";
-$q4 = "Jannik Sinner";
+$q1 = "Dimitrov/Shelton";
+$q2 = "Tommy/Paul";
+$q3 = "Struff/Borges";
+$q4 = "Sinner/Medvedev";
+$q5 = "Machac/Navone";
+$q6 = "Fritz/Popyrin";
+$q7 = "Arnaldi/Thompson";
+$q8 = "Jarry/Griekspoor";
 
-$q5 = "Lorenzo Mussetti";
-$q6 = "Taylor Fritz";
-$q7 = "Alex de Minaur";
-$q8 = "Novak Djokovic";
+$s1 = $q1;  $_s1="6-2,6-1";
+$s2 = $q3;  $_s2 ="6-2,6-1";
+$s3 = $q5;  $_s3="6-2,6-1";
+$s4 = $q8;  $_s4 = "6-2,6-1";
+
+
+$f1 = $s1; $_f1 = "7-6,7-5";
+$f2 = $s3; $_f2 = "7-6,5-7,1-0";
+
+$w = $f2;  $_w= "7-6,7-5";
+
 
 ?>
 <ul class="round">
   <li class="spacer">
-  <li class="game-top"> <?php echo $q[0] ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q1 ?> <span></span> </li>
   <li class="draw"></li>
-  <li class="game-top"> <?php echo $q[1] ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q2 ?> <span></span> </li>
   <li class="spacer">  
 
 <!--   -->
-  <li class="game-top"> <?php echo $q[2] ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q3 ?> <span></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[3] ?><span></span> </li>
+  <li class="game-top"><?php echo $q4 ?><span></span> </li>
 
   <li class="spacer"> 
 <!--   -->
 
-<li class="game-top"><?php echo $q[4] ?> <span></span> </li>
+<li class="game-top"><?php echo $q5 ?> <span></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[5] ?> <span></span> </li>
+  <li class="game-top"><?php echo $q6 ?> <span></span> </li>
 
   <li class="spacer"> 
 <!--   -->
-<li class="game-top"> <?php echo $q[6] ?> <span></span> </li>
+<li class="game-top"> <?php echo $q7 ?> <span></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[7] ?>  <span></span> </li>
+  <li class="game-top"><?php echo $q8 ?>  <span></span> </li>
 
   <li class="spacer"> 
 <!--   -->
@@ -87,28 +98,28 @@ $q8 = "Novak Djokovic";
 
 <!-- Semi-Finals  -->
 <ul class="round">
-<li class="game-top"> Alcaraz <span class="small"><?php echo $s1 ?></span> </li>
+<li class="game-top"> <?php echo $s1 ?>  <span class="small"><?php echo $_s1 ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top"> Medvedev <span class="small"><?php echo $s2 ?></span> </li>
+  <li class="game-top">  <?php echo $s2 ?>   <span class="small"><?php echo $_s2 ?></span> </li>
   <li class="spacer"> 
   <li class="spacer"> 
-<li class="game-top">L Musetti <span class="small"><?php echo $s3 ?></span> </li>
+<li class="game-top">  <?php echo $s3 ?>   <span class="small"><?php echo $_s3 ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top"> Djokovich <span class="small"><?php echo $s4 ?></span> </li>
+  <li class="game-top">  <?php echo $s4 ?>   <span class="small"><?php echo $_s4 ?></span> </li>
 </ul>
 
  <!-- Finals -->
   <ul class="round">
-  <li class="game-top"> Alcaraz <span class="small"><?php echo $f1 ?></span </li>
+  <li class="game-top">  <?php echo $f1 ?>   <span class="small"><?php echo $_f1 ?></span </li>
   <li class="draw draw3"></li>
-  <li class="game-top"> Djokovich <span class="small"><?php echo $f2 ?></span </li>
+  <li class="game-top">  <?php echo $f2 ?>   <span class="small"><?php echo $_f2 ?></span </li>
 
 </ul>
 
  <!-- Winner -->
 <ul class="round">
 
-<li class="game-top"> Alcaraz <span class="small"><?php echo $w1 ?></span> </li>
+<li class="game-top">  <?php echo $f2 ?>   <span class="small"><?php echo $_w ?></span> </li>
 </ul>
 
 </main>
