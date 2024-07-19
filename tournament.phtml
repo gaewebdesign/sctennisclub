@@ -163,19 +163,32 @@ li.game-top{
 
 </style>
    <?php
-           
+           function TEXT($v){
+
+            echo("$v <br>");
+           }
+
            if( isset($_GET))
                 $v=$_GET["draw"];
             
 
            if($v == 0){
 
-                 echo("Info");
+                 TEXT("<h5>Summer Tournament (Mx 6.5/7.5)</h5>");
+                 TEXT("<h5>Rules</h5>");
+                 TEXT("All players must be Santa Clara Tennis Club members");
+                 TEXT("All matches must be played at Santa Clara Tennis Center");
+                 TEXT("May enter both divisions if eligible");
+
+                 echo ("<p>");
+                 TEXT("<h5>Suggested </h5>");
+                 TEXT("Finish matches in one 1-1/2 hour court reservation, so play 3rd set super-tie");
+                 TEXT("Split the court fees");
 
   
            }else if($v == 1) {
 
-                 echo("Signup ");
+                 include "./tournament_/tournament_participants.php";
 
            }else if($v == 2){
             include "./tournament_/mens.php";
