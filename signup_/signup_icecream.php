@@ -4,9 +4,13 @@
      <picture>
 <!--
       <img class="mg-fluid img-thumbnail" src="cinco.png" alt="" >
+    <img class="mg-fluid img-thumbnail" src="./images/icecream_trans.gif" alt="-" >
 -->
 
-    <img class="mg-fluid img-thumbnail" src="./images/icecreamsocial.png" alt="-" >
+<img class="mg-fluid img-thumbnail" src="./images/icecreamsocial.png" alt="-" >
+
+
+
   </picture>
       <h2>Santa Clara Tennis Club Ice Cream Social </h2>
 
@@ -66,7 +70,7 @@
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required name="fname">
+              <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -74,7 +78,7 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required name="lname">
+              <input type="text" class="form-control  BackInput" id="lastName" placeholder="" value="" required name="lname">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
@@ -82,7 +86,7 @@
 
             <div class="col-sm-8">
               <label for="email" class="form-label">Email Address</label>
-              <input type="text" class="form-control" id="email" placeholder="" value="" required name="email">
+              <input type="text" class="form-control  BackInput" id="email" placeholder="" value="" required name="email">
               <div class="invalid-feedback">
                 Valid email address is required.
               </div>
