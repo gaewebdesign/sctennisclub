@@ -96,12 +96,15 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //        $query = "select * from ".TABLE_PAYPAL." where ( year BETWEEN $_YEAR and $YEAR ) order by lname ";
         DEBUG( $query);
         
+        
          $qr=mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($qr)) {  
-
+                    
                          
-                    if($row['email'] == "" and $row['url']=="") continue;
-                    if($row['url']!= "") $url="@".$row['url'];
+                      if($row['email'] == "") continue;
+// RWO Fix (no more url in table)
+//                    if($row['email'] == "" and $row['url']=="") continue;
+//                    if($row['url']!= "") $url="@".$row['url'];
 
                     if( array_key_exists( $row['email'], $hashtable) ) continue;
                     if(strlen( $row['email']) < 3 ) continue;
