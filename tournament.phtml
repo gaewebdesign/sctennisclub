@@ -168,11 +168,10 @@ li.game-top{
             echo("$v <br>");
            }
 
+           $v = 0;
            if( isset($_GET))
                 $v=$_GET["draw"];
             
-           echo("v = $v");
-
            if($v == 0){
 
                  TEXT("<h5>Summer Tournament (Mx 6.5/7.5)</h5>");
@@ -180,8 +179,8 @@ li.game-top{
                  TEXT("All players must be Santa Clara Tennis Club members");
                  TEXT("All matches must be played at Santa Clara Tennis Center");
                  TEXT("May enter both divisions if eligible");
-                 TEXT("Mx 7.5 match due dates are 9/7 , 9/21 , 10/4");
-                 TEXT("Mx 6.5 match due dates are 8/31 , 9/14 , 9/28");
+                 TEXT("Mx 7.5 match due dates are 9/7 , 9/21 , 10/4 (quarters/semis/finals)");
+                 TEXT("Mx 6.5 match due dates are 8/31 , 9/14 , 9/28 (quarters/semis/finals)");
 
                  echo ("<p>");
                  TEXT("<h5>Suggested </h5>");
