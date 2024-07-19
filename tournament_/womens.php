@@ -16,10 +16,10 @@
  </ul>
  <ul class="round">
   Semi-Finals
-  <div class="small">Finish by 8/14/2024</div></ul>
+  <div class="small">Finish by 9/14/2024</div></ul>
  <ul class="round">
   Finals
-  <div class="small">Finish by 8/28/2024</div>
+  <div class="small">Finish by 9/28/2024</div>
  </ul>
  
 </main>
