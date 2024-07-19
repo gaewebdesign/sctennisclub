@@ -38,15 +38,15 @@ $q6 = "Taylor /Krejcikova";
 $q7 = "de Minaur/Collins";
 $q8 = "Yuan /Gauff";
 
-$s1 = $q1;
-$s2 = $q4;
-$s3 = $q5;
-$s4 = $q8;
+$s1 = $q1; $_s1 = "6-2,6-2";
+$s2 = $q4; $_s2 = "6-3,6-3";
+$s3 = $q5; $_s3 = "3-6,6-2,6-2";
+$s4 = $q8; $_s4 = "6-7,6-2,6-2";
 
-$f1 = $s2;
-$f2 = $s4;
+$f1 = $s2; $_f1 = "7-5,6-4";
+$f2 = $s4; $_f2 = "7-5,3-6,1-0";
 
-$w = $s2;
+$w = $s2; $_w = "6-2,6-2";
 
 ?>
 
@@ -83,28 +83,28 @@ $w = $s2;
 </ul>
 <!-- Semi-Finals  -->
 <ul class="round">
-<li class="game-top">  <?php echo($s1) ?><span></span> </li>
+<li class="game-top">  <?php echo($s1) ?><span class="small"><?php echo $_s1 ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top">  <?php echo($s2) ?> <span></span> </li>
+  <li class="game-top">  <?php echo($s2) ?> <span class="small"><?php echo $_s2 ?></span> </li>
   <li class="spacer"> 
   <li class="spacer"> 
-<li class="game-top"> <?php echo($s3) ?> <span></span> </li>
-  <li class="draw draw2"></li>
-  <li class="game-top">  <?php echo($s4) ?> <span></span> </li>
+<li class="game-top"> <?php echo($s3) ?> <span class="small"><?php echo $_s3 ?></span> </li>
+  <li class="draw draw2"></li> 
+  <li class="game-top">  <?php echo($s4) ?> <span class="small"><?php echo $_s4 ?></span> </li>
 </ul>
 
  <!-- Finals -->
   <ul class="round">
-  <li class="game-top">  <?php echo($f1) ?> <span></span> </li>
+  <li class="game-top">  <?php echo($f1) ?> <span class="small"><?php echo $_f1 ?></span> </li>
   <li class="draw draw3"></li>
-  <li class="game-top">  <?php echo($f2) ?> <span></span> </li>
+  <li class="game-top">  <?php echo($f2) ?> <span class="small"><?php echo $_f2 ?></span> </li>
 
 </ul>
 
  <!-- Winner -->
 <ul class="round">
 
-<li class="game-top">  <?php echo($w) ?> <span></span> </li>
+<li class="game-top">  <?php echo($w) ?> <span class="small" ><?php echo $_w ?></span> </li>
 </ul>
 
 </main>
