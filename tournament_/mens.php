@@ -1,6 +1,6 @@
 <html>
 
-   <div class="h3">2024 Mens Singles Tournament</div>
+   <div class="h3">2024 Mx 7.5 Tournament</div>
 
  <main id="headers">
 
@@ -43,7 +43,7 @@ $f2 = "6-3 ,4-0 (ret)";
 $w1 = "6-2,6-2";
 
 $q1 = "Dimitrov/Shelton";
-$q2 = "Tommy/Paul";
+$q2 = "Ru/Paul";
 $q3 = "Struff/Borges";
 $q4 = "Sinner/Medvedev";
 $q5 = "Machac/Navone";

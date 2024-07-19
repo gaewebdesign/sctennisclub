@@ -87,7 +87,9 @@
 
 </style>
    <?php
-           function TEXT($v){
+           include "./library/include.inc";
+
+           function TEXTER($v){
 
             echo("$v <br>");
            }
@@ -95,24 +97,27 @@
            $v = 0;
            if( isset($_GET))
                 $v=$_GET["draw"];
-           else{
+           else{   
                 return;
            }
             
            if($v == 0){
 
-                 TEXT("<h5>Summer Tournament (Mx 6.5/7.5)</h5>");
-                 TEXT("<h5>Rules</h5>");
-                 TEXT("All players must be Santa Clara Tennis Club members");
-                 TEXT("All matches must be played at Santa Clara Tennis Center");
-                 TEXT("May enter both divisions if eligible");
-                 TEXT("Mx 7.5 match due dates are 9/7 , 9/21 , 10/4 (quarters/semis/finals)");
-                 TEXT("Mx 6.5 match due dates are 8/31 , 9/14 , 9/28 (quarters/semis/finals)");
+            TEXTER("<h5>Summer Tournament (Mx 6.5/7.5)</h5>");
+                 TEXTER("<h5>Rules</h5>");
+                 TEXTER("All players must be Santa Clara Tennis Club members");
+                 TEXTER("All matches must be played at Santa Clara Tennis Center");
+                 TEXTER("Player may enter both divisions if eligible");
+                 TEXTER("Mx 7.5 - maximum player NTRP is 4.0");
+                 TEXTER("Mx 6.5 - maximum player NTRP is 3.5");
+                 TEXTER("Mx 7.5 match due dates are 9/7 , 9/21 , 10/4 (quarters/semis/finals)");
+                 TEXTER("Mx 6.5 match due dates are 8/31 , 9/14 , 9/28 (quarters/semis/finals)");
+                 echo ("<hr/>");
 
                  echo ("<p>");
-                 TEXT("<h5>Suggested </h5>");
-                 TEXT("Finish matches in one 1-1/2 hour court reservation, so play 3rd set super-tie");
-                 TEXT("Split the court fees");
+                 TEXTER("<h5>Suggested </h5>");
+                 TEXTER("Finish matches in one 1-1/2 hour court reservation, so play 3rd set super-tie");
+                 TEXTER("Split the court fees");
 
   
            }else if($v == 1) {
@@ -127,7 +132,9 @@
 
            }else if($v == 4 ){
 
-                 echo("Report Scores");
+            echo("Enter Tournament");
+            include "./tournament_/tournament_enter.php";
+
 
            } else{
 
