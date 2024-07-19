@@ -95,10 +95,9 @@
            }
 
            $v = 0;
-           if( isset($_GET))
+
+           if( !empty($_GET['draw']) ){
                 $v=$_GET["draw"];
-           else{   
-                return;
            }
             
            if($v == 0){
