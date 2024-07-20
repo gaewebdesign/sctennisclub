@@ -12,7 +12,7 @@ if ( isset($_POST['Button'])){
 		echo('
               <script >
                     window.setTimeout(function() {
-                    window.location.href="../tournament.phtml";
+                    window.location.href="../tournament.phtml?draw=4";
                  }, 100);
               </script>
                 ');
