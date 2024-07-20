@@ -73,7 +73,7 @@ tr {
       </tbody>
     </table>
 
-    <table class="table table-bordered table-striped table-condensed">
+    <table class="table table-bordered table-striped table-condensed sortable">
 
 <thead>
   <tr>
