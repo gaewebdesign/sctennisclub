@@ -6,6 +6,18 @@
 
 if ( isset($_POST['Button'])){
 
+    if($_POST["secretcode"] != "queenbee" ){
+
+        echo "<script>alert(\"Enter correct keyccode \")</script>";
+		echo('
+              <script >
+                    window.setTimeout(function() {
+                    window.location.href="../tournament.phtml";
+                 }, 100);
+              </script>
+                ');
+		return;
+    }
 //   echo "POST VALUES";
 //   print_r($_POST);
 //   print_r($_GET);
