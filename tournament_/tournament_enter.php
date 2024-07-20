@@ -9,9 +9,9 @@
 
 <div class="col-md-12">
     <label for="validationDefault04" class="form-label">Division</label>
-    <select class="form-select" id="validationDefault04" required>
-    <option selected value="">Mx 6.5</option>
-    <option  value="">Mx 7.5</option>
+    <select class="form-select" id="validationDefault05" required>
+    <option selected value="Mx6.5">Mx 6.5</option>
+    <option value="Mx7.5">Mx 7.5</option>
     </select>
   </div>
 
