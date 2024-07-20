@@ -6,8 +6,8 @@
 
 if ( isset($_POST['Button'])){
 
-   echo "POST VALUES";
-   print_r($_POST);
+//   echo "POST VALUES";
+//   print_r($_POST);
 //   print_r($_GET);
 
 }
@@ -60,6 +60,13 @@ $date = time()-60*60*7;
 
 toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+
+signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+
+
+
+
 function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
    $con = DBMembership();
@@ -72,14 +79,25 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
    $query .= add($insignia).add($payment).add($custom).add($opt).add($pwd);
    $query .= ")";
 
-   LOGGER( $query );
-   echo "<p>";
-   echo $query;
+//   LOGGER( $query );
+//   echo "<p>";
+//   echo $query;
 
    $query_results=mysqli_query($con, $query);
 
 }
 
+
+function signedUp($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+
+
+    echo("<h1>Signed Up </h1> " );
+    echo("<h3>");
+    echo("$fname1 $lname1   / $fname2 $lname2   $division");
+    echo("</h3>");
+
+
+}
 ?>
 
 <!--

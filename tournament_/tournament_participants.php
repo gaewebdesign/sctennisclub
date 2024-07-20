@@ -63,11 +63,6 @@ tr {
 
 
            ?>
-           <tr><td> W Chen <td>M4.0  <td>  P Lian  <td>W3.0 <td>7/9/24</tr>
-           <tr><td> L Ke <td>M4.0  <td>  X Meir  <td>W3.0 <td>7/13/24</tr>
-           <tr><td> D Yen <td>M4.0  <td>  Q Lin  <td>W3.0 <td>7/15/24</tr>
-           <tr><td> T Zheng <td>M3.5  <td>  CJ Liang  <td>W4.0 <td>7/17/24</tr>
-
 
 
       </tbody>
@@ -95,11 +90,6 @@ tr {
              tournylist("6.5");
 
       ?>
-
-     <tr><td> N Yea <td>W3.0  <td>  J White  <td>M3.5 <td> 7/23/24</tr>
-     <tr><td> S Qui <td>W3.0  <td>  H Seaver  <td>M3.5 <td> 7/21/24</tr>
-     <tr><td> L Yuhan<td>W3.0  <td>  TJ  Xhong  <td>M3.0 <td> 7/20/25</tr>
-
 
 </tbody>
 </table>
