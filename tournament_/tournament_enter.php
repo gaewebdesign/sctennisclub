@@ -1,7 +1,7 @@
 
 
 
-<form class="row g-3" action="" method="post">
+<form class="row g-3" action="./tournament_/tournament_signup.php" method="post">
 
 
 
@@ -9,7 +9,7 @@
 
 <div class="col-md-12">
     <label for="validationDefault04" class="form-label">Division</label>
-    <select class="form-select" id="validationDefault05" required>
+    <select class="form-select" id="validationDefault05" name="division" required>
     <option selected value="Mx6.5">Mx 6.5</option>
     <option value="Mx7.5">Mx 7.5</option>
     </select>
@@ -19,17 +19,17 @@
 
   <div class="col-sm-3">
     <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control fs-6" id="validationDefault01" value="" required>
+    <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
   </div>
   <div class="col-sm-3">
     <label for="validationDefault02" class="form-label">Last name</label>
-    <input type="text" class="form-control fs-6" id="validationDefault02" value="" required>
+    <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname1">
   </div>
   <div class="col-sm-3">
     <label for="validationDefaultUsername" class="form-label">Email</label>
     <div class="input-group">
 <!--      <span class="input-group-text" id="inputGroupPrepend2"></span> -->
-      <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
     </div>
   </div>
 
@@ -37,7 +37,7 @@
     <br/>
    <div class="input-group"> <p>
     <label for="validationDefault04" class="form-label">Gender</label> 
-    <select class="form-select" id="validationDefault04" required>
+    <select class="form-select" id="validationDefault04" name="gender1" required>
     <option selected value="M">M</option>
     <option  value="F">F</option>    
     
@@ -49,7 +49,7 @@
     <br/>
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
-    <select class="form-select" id="validationDefault04" required>
+    <select class="form-select" id="validationDefault04" name="ntrp1" required>
     <option value="3.0">3.0</option>
     <option selected value="3.5">3.5</option>    
     <option value="4.0">4.0</option>
@@ -63,17 +63,17 @@
   <hr/>
   <div class="col-sm-3">
     <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationDefault01" value="" required>
+    <input type="text" class="form-control" id="validationDefault01" value="" name="fname2" required>
   </div>
   <div class="col-sm-3">
     <label for="validationDefault02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationDefault02" value="" required>
+    <input type="text" class="form-control" id="validationDefault02" value="" name="lname2" required>
   </div>
   <div class="col-sm-3">
     <label for="validationDefaultUsername" class="form-label">Email</label>
     <div class="input-group">
 <!-- <span class="input-group-text" id="inputGroupPrepend2"></span> -->
-      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email2" required>
     </div>
   </div>
 
@@ -82,7 +82,7 @@
     <br/>
    <div class="input-group"> <p>
     <label for="validationDefault04" class="form-label">Gender</label> 
-    <select class="form-select" id="validationDefault04" required>
+    <select class="form-select" id="validationDefault04" name="gender2" required>
     <option  value="M">M</option>
     <option selected value="F">F</option>    
     
@@ -94,7 +94,7 @@
     <br/>
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
-    <select class="form-select" id="validationDefault04" required>
+    <select class="form-select" id="validationDefault04" name="ntrp2" required>
     <option value="3.0">3.0</option>
     <option selected value="3.5">3.5</option>    
     <option value="4.0">4.0</option>

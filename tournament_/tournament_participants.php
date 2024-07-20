@@ -7,8 +7,10 @@ tr {
  }
  </style>
 
+<script language="JavaScript" src="library/sorttable.js"> </script>
+
 <p>
-<table class="table table-bordered table-striped table-condensed">
+<table class="table table-bordered table-striped table-condensed sortable">
 
       <thead>
         <tr>
