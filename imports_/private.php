@@ -57,6 +57,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.phtml">Home</a> 
       <a class="navbar-brand" href="./email.phtml">Email</a>
+      <a class="navbar-brand" href="./email_tournament.phtml">Tournament</a>
       <a class="navbar-brand" href="./email_free.phtml">Pigout</a>
       <a class="navbar-brand" href="./email_lunch.phtml">Fatima Lunch</a>
       <a class="navbar-brand" href="./email_join.phtml">Athena Dinner</a>
