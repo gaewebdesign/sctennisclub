@@ -26,7 +26,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     
  }
 </style>    
-<table class="table table-bordered table-striped sortable" >
+<table class="table table-primary table-striped sortable" >
 <thead>
 <tr>
     <th scope="col">Team</th>
