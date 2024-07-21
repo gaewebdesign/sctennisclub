@@ -50,8 +50,8 @@
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
     <select class="form-select" id="validationDefault04" name="ntrp1" required>
-    <option value="3.0">3.0</option>
-    <option selected value="3.5">3.5</option>    
+    <option selected value="3.0">3.0</option>
+    <option value="3.5">3.5</option>    
     <option value="4.0">4.0</option>
     </select>
     </div>
@@ -95,8 +95,8 @@
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
     <select class="form-select" id="validationDefault04" name="ntrp2" required>
-    <option value="3.0">3.0</option>
-    <option selected value="3.5">3.5</option>    
+    <option selected value="3.0">3.0</option>
+    <option value="3.5">3.5</option>    
     <option value="4.0">4.0</option>
     </select>
     </div>
