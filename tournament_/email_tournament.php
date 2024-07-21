@@ -12,6 +12,10 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <script language="JavaScript" src="library/sorttable.js"> </script>
 
 <style>
+   .table{
+     width: 95%;
+
+   }
    tr {
     line-height: 20px;
     min-height: 17px;
@@ -22,13 +26,16 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     
  }
 </style>    
-<table class="table-striped sortable" >
+<table class="table table-bordered table-striped sortable" >
 <thead>
 <tr>
     <th scope="col">Team</th>
+    <th scope="col">NTRP </th>
     <th scope="col">Email </th>
+
     <th > </th>
     <th scope="col">Team</th>
+    <th scope="col">NTRP </th>
     <th scope="col">Email </th>
     <th scope="col">Date </th>
 
@@ -106,8 +113,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row['fname1']."  ".$row['lname1']);
                     echo("</td>");
                     echo("<td>");
+                    echo($row['gender1']."  ".$row['ntrp1']);
+                    echo("<td>");
                     echo( strtolower($row['email1']) );
                     echo("</td>");
+
 
                     echo("<td>");
                     echo("         ");
@@ -117,8 +127,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row['fname2']."  ".$row['lname2']);
                     echo("</td>");
                     echo("<td>");
+                    echo($row['gender2']."  ".$row['ntrp2']);
+                    echo("<td>");
                     echo( strtolower($row['email2']) );
                     echo("</td>");
+
 
 
 
