@@ -77,7 +77,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
             Tournament
           </a>
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item active" href="./tournament.phtml?draw=0">Info</a></li>
+              <li><a class="dropdown-item active" href="./tournament.phtml">Info</a></li>
               <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./tournament.phtml?draw=1">Players</a></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=2">Draws (Mx 7.5)</a></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws (Mx 6.5)</a></li>
