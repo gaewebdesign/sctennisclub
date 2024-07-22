@@ -66,7 +66,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
 
       <a class="navbar-brand" href="./board">Board</a>
-      <a class="navbar-brand" href="./board">USTA</a>
+      <a class="navbar-brand" href="./usta">USTA</a>
       <a class="navbar-brand" href="https://www.ustanorcal.com/organization.asp?id=20">SCTC Teams </a>
 <!--
       <a class="navbar-brand" href="http://www.racquetstore.com">  <img src="./images/racquet_store_logo.png" width="25px" > Racquet Store </a>
