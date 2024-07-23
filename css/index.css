@@ -8,6 +8,7 @@
 
      --develop-color: rgb(204,204,255);
      --COLORTHEME : rgb(202,233,245);
+     --COLORTHEME_EMAIL : rgb(240, 194, 213);
 
 
 }
@@ -44,9 +45,9 @@
 
 }
 
-.BackDebug{
+.BackEmail{
 
-    background-color: rgb(255, 253, 208);
+    background-color:  var(--COLORTHEME_EMAIL);
 }
 
 .pBackDebug{
