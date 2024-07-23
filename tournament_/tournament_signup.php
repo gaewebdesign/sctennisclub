@@ -1,7 +1,8 @@
 
 <?php
 
- include "../library/include.inc";
+include "../library/include.inc";
+include "../library/email/email.inc";
 
 
 if ( isset($_POST['Button'])){
@@ -64,6 +65,12 @@ signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$emai
 
 
 
+$subject = "Tournament Signup";
+$message = "$fname1  $lname1  $fname2 $lname2 Signup";
+$toemail1 = "tennis.mutt@gmail.com";
+$toemail2 = "santaclarawebmaster@gmail.com";
+
+phpemailer($subject, $message ,$toemail1 , $toemail2);
 
 
 function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
