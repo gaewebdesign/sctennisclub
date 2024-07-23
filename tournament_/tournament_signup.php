@@ -50,22 +50,9 @@ $ntrp1 =$_POST["ntrp1"];
 $ntrp2 =$_POST["ntrp2"];
 
 
-
 $year=2024;
 
 $theTABLE = "tourny";
-
-//$fname1="Tiger";
-//$lname1="Woods";
-//$email1="roy.molseee@gmail.com";
-$gender1="M";
-$ntrp1="4.0";
-
-//$fname2="Jeannette";
-//$lname2="Hoggart";
-//$email2="queenbee95051@@yahoo.com";
-$gender2="W";
-$ntrp2="3.5";
 
 
 $date = time()-60*60*7;
