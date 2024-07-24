@@ -9,7 +9,10 @@
 
       <title>Santa Clara Tennis Club</title>
 
-
+    <!-- Google reCAPTCHA CDN -->
+    <script src= 
+      "https://www.google.com/recaptcha/api.js" async defer> 
+    </script> 
 
 </head>
 <body class="Back">
@@ -58,7 +61,7 @@
     
   ?>
 
-
+<
   <div class="container-sm ">
       <div class="row">
 
@@ -67,23 +70,20 @@
              <hr/>     
             <main>
 
-            
+
+                      <!-- div to show reCAPTCHA -->
+
              <?php
 
                 $MEMBER_FEE="10.00";    // "5.00";
                 $ICECREAM_FEE="5.50";  //"5.50";
                 $GUEST_FEE = "10.00";  //"10.00" ;
-          
-
 
                 include "./library/include.inc";
                 include "./library/paypal.inc";
                 include "./library/emailer.php"; 
 
                 include "./library/free_paypal.inc";
- //               include "./signup_/pigout.php";
-
-//              include "./signup_/signup_icecream.php";
 
 
 // Change the images and verbiage (this for pigout)
@@ -94,7 +94,7 @@
 //             define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER);
 
 
-               include "./signup_/test.php";
+                include "./signup_/test.php";
 
                include "./signup_/signup_participants_lunch.php";
 
@@ -106,8 +106,10 @@
              <hr/>     
              </div> 
       
-      
-             <div class="col-sm-2"> &nbsp;</div> 
+ 
+
+
+           <div class="col-sm-2"> &nbsp;</div> 
 
 
             </div>
