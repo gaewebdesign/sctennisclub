@@ -25,14 +25,14 @@
     </h3>
   </div>
 
-<form class="row g-3" action="./signup_/signup_icecream.php" method="post">
+<form class="row g-3" action="./topaypal_mixer_captcha_icecream.php" method="post">
 
 
   <div class="container-fluid">
     <div class="row align-items-start">
-    <div class="col-sm-3">
-    <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
+        <div class="col-sm-3">
+        <label for="validationDefault01" class="form-label">First name</label>
+        <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
     </div>
     <div class="col-sm-3">
         <label for="validationDefault02" class="form-label">Last name</label>
@@ -43,58 +43,51 @@
         <div class="input-group">
         <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
     </div>
+<!--
   </div>
-  </div> <!-- row align-items-start -->  
+  </div>
+-->
 </div> <!-- container-fluid  -->
 
-  <div class="container-fluid">
+  <div class="container-fluid mt-4">
 
-  <div class="mt-4 col-sm-6">
-              <!--<span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  -->
-
+  <div class="col-sm-6">
+              <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
               <div class="form-check ">
                 <input class="form-check-input"  type="radio" id="member" checked="checked" value=<?php echo($MEMBER_FEE); ?> name="mixer"    >
                 <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis</label>
                 <br/>
                 <input  class="form-check-input" type="radio" id="icecream" value=<?php echo($ICECREAM_FEE); ?> name="mixer">
                 <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!</label>
-
               </div>
-            </div>
+    </div>
 
 
-</div>
-
-
-
-
-
-
-
-<div class="container-fluid mt-2">
-   <div class="col-md-4"> </div>
-
-   <div class="col-md-4">
-    <label for="validationDefault05" class="form-label">Enter Keycode</label>
-    <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
+<!--
+    <div class="container-fluid mt-2">
+     <div class="col-md-4">
+      <label for="validationDefault05" class="form-label">Enter Keycode</label>
+      <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
+    </div>
   </div>
-  
+-->
 
+  <div class="container-fluid mt-2">
+        <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div>
   </div>
-  <hr/>
-    
-
-    <div class="mt-5 col-12">
-    <button class="btn btn-primary" name="Button" type="submit">Go to Paypal</button>
-  </div  >
-</div>
-
-
-</div>
 
 
 
-  <hr/>
+    <div class="container-fluid mt-2">
+      <div class="mt-5 col-12">
+      <button class="btn btn-primary" name="Button" type="submit">Go to Paypal</button>
+      </div  >
+    </div>
+
+
+
 
 
 </form>
