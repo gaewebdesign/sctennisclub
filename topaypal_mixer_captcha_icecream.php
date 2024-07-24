@@ -148,13 +148,13 @@ if($_POST["dinner"] == "chicken" ) {
 LOGGER("topaypal_mixer_captcha_icecream.php");
 
 $paid= MAY_MIXER_FEE;
-$paid = $fee; // $_POST["mixer"];
+$paid =  "10"; //$_POST["_FEE"];
 $paypal->price = $paid;
 
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Mixer: ".$event);
+$paypal->add("item_name","2024 Ice Cream ".$event);
 $paypal->add("quantity",1);
 
 /*
