@@ -263,10 +263,11 @@ SENDER( $data );
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
-//print_r($paypal);
+print_r($paypal);
 
 // echo( "-----" );
-//$paypal->output_form();
+ return;
+$paypal->output_form();
 // 
 // ***********************************************************************************
 
