@@ -112,6 +112,7 @@ $insignia="-";
 
 
 $event=$_POST["_EVENT"];  // "2024 Fatima";
+$event="--";
 $paid = $_POST["_FEE"];
 $paid = "7.00";
 
@@ -155,7 +156,7 @@ $paypal->price = $paid;
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","2024 Ice Cream ".$event);
+$paypal->add("item_name","SCTC Ice Cream" );
 $paypal->add("quantity",1);
 
 /*
