@@ -114,6 +114,7 @@ $insignia="-";
 $event=$_POST["_EVENT"];  // "2024 Fatima";
 $fee = $_POST["_FEE"];
 
+// variables
 print_r( $_POST );
 
 /*
