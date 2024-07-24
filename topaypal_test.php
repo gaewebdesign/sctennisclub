@@ -139,11 +139,11 @@ if($_POST["dinner"] == "chicken" ) {
 
 
 $paid= MAY_MIXER_FEE;
-$paid =  $_POST["mixer"];
+$paid =  $_POST["_FEE"];
 $paid=7;
 $paypal->price = $paid;
 
-
+print_r($_POST);
 
 
 $paypal->enable_payment();
