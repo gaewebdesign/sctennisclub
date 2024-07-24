@@ -24,8 +24,10 @@
   
     </h3>
   </div>
-
-<form class="row g-3" action="./topaypal_mixer_captcha_icecream.php" method="post">
+<!--
+  <form class="row g-3" action="./topaypal_mixer_captcha_icecream.php" method="post">
+-->
+  <form class="row g-3" action="./topaypal_test.php" method="post">
 
 
   <div class="container-fluid">
