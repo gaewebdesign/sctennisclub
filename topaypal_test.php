@@ -109,8 +109,6 @@ $insignia="-";
 
 $event=$_POST["_EVENT"];  // "2024 Fatima";
 $fee = $_POST["_FEE"];
-
-
 /*
 if($_POST["dinner"] == "chicken" ) {
 	$event ="Chicken Souviaki Plate";
@@ -142,7 +140,6 @@ if($_POST["dinner"] == "chicken" ) {
 
 $paid= MAY_MIXER_FEE;
 $paid =  $_POST["mixer"];
-$paid = "7";
 $paypal->price = $paid;
 
 $paypal->enable_payment();
@@ -201,7 +198,7 @@ $payment=$paid;
 //$res=true;
 //$res = CAPTCHA_CHECK() ;
 
-toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+//toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 $data = array(
 	'year' => $year,
@@ -232,9 +229,9 @@ SENDER( $data );
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
-//print_r($paypal);
+print_r($paypal);
 
-$paypal->output_form();
+//$paypal->output_form();
 // 
 // ***********************************************************************************
 
