@@ -15,6 +15,8 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 
 $paypal = new paypal();
 
+print_r($_POST);
+return;
 
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
 if($_POST["mixer"] == 'SCTC' ) {
