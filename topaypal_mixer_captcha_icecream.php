@@ -148,7 +148,7 @@ if($_POST["dinner"] == "chicken" ) {
 LOGGER("topaypal_mixer_captcha_icecream.php");
 
 $paid= MAY_MIXER_FEE;
-$paid =  $_POST["mixer"];
+$paid = $fee; // $_POST["mixer"];
 $paypal->price = $paid;
 
 $paypal->enable_payment();
