@@ -70,24 +70,20 @@
              <hr/>     
             <main>
 
-            
+
+                      <!-- div to show reCAPTCHA -->
+
              <?php
 
-                $MEMBER_FEE="10.00";    
-                $ICECREAM_FEE="5.00";  
-                $GUEST_FEE = "10.00";  
-                $EVENT = "\"2024 Ice Cream\""; // used in topaypal_mixer.php
-          
-
+                $MEMBER_FEE="10.00";    // "5.00";
+                $ICECREAM_FEE="5.50";  //"5.50";
+                $GUEST_FEE = "10.00";  //"10.00" ;
 
                 include "./library/include.inc";
                 include "./library/paypal.inc";
                 include "./library/emailer.php"; 
 
                 include "./library/free_paypal.inc";
- //               include "./signup_/pigout.php";
-
-//              include "./signup_/signup_icecream.php";
 
 
 // Change the images and verbiage (this for pigout)
@@ -98,9 +94,10 @@
 //             define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER);
 
 
+//             include "./signup_/test.php";
                include "./signup_/signup_icecream.php";
 
-               include "./signup_/signup_participants_icecream.php";
+               include "./signup_/signup_participants_lunch.php";
 
 
 
@@ -110,8 +107,10 @@
              <hr/>     
              </div> 
       
-      
-             <div class="col-sm-2"> &nbsp;</div> 
+ 
+
+
+           <div class="col-sm-2"> &nbsp;</div> 
 
 
             </div>
