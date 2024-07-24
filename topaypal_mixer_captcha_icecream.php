@@ -113,7 +113,7 @@ $insignia="-";
 
 $event=$_POST["_EVENT"];  // "2024 Fatima";
 $paid = $_POST["_FEE"];
-$paid = "5.00";
+$paid = "7.00";
 
 // variables
 //print_r( $_POST );
