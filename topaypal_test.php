@@ -140,8 +140,11 @@ if($_POST["dinner"] == "chicken" ) {
 
 $paid= MAY_MIXER_FEE;
 $paid =  $_POST["mixer"];
-$paid=8;
+$paid=7;
 $paypal->price = $paid;
+
+
+
 
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
