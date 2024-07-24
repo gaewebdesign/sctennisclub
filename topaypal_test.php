@@ -18,24 +18,7 @@ $paypal = new paypal();
 print_r($_POST);
 return;
 
-//$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
-if($_POST["mixer"] == 'SCTC' ) {
-	$paid =  $_POST["_SCTC"];   // MEMBER
-	DEBUG( "adjusting to ".$paid);
-	
-}else if($_POST["mixer"] == 'GUEST'){
-	$paid =  $_POST["_GUEST"];   // GUEST
-	DEBUG( "adjusting to ".$paid);
-
-}else if($_POST["mixer"] == 'ICECREAM'){
-	$paid =  $_POST["_ICECREAM"];   //ICECREAM
-	DEBUG( "adjusting to ".$paid);
-
-}else{
-//	alert("select an option (SCTC,MVTC(guest) or Ice Cream only");
-	$paid = 10.01;     // DEFAULT
-
-}
+$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
 
 //echo(" paid = ".$paid );
 
@@ -61,11 +44,12 @@ DEBUG("notify:" . NOTIFY_URL);
 $fname = "Roger";       //$_POST["fname"];
 $lname = "Okamoto";     //$_POST["lname"];
 $email = "rwokamoto@gmail.com";   ///$_POST["email"];
+/*
 $gender = $_POST["gender"];
 $ntrp   =$_POST["ntrp"]; 
 $member =$_POST["member"];
 $event = $_POST["event"];
-
+*/
 
 // ********************************
 // use this to identify person in database
@@ -82,8 +66,8 @@ $date = ltrim($dt->format('m/d/Y'),0);
 $theTABLE = "mixer_pending";
 
 //echo ("INSERT $fname $lname $paid $date $custom");
-toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
-sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+//sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 $paypal->output_form();
 
