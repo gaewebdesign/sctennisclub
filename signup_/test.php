@@ -55,10 +55,10 @@
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
               <div class="form-check ">
                 <input class="form-check-input"  type="radio" id="member" checked="checked" value=<?php echo($MEMBER_FEE); ?> name="mixer"    >
-                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis</label>
+                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis<?php echo("&nbsp;".$MEMBER_FEE); ?></label>
                 <br/>
                 <input  class="form-check-input" type="radio" id="icecream" value=<?php echo($ICECREAM_FEE); ?> name="mixer">
-                <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!</label>
+                <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!<?php echo("&nbsp;".($MEMBER_FEE-5).".00"); ?></label>
               </div>
     </div>
 
@@ -70,21 +70,21 @@
       <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
     </div>
   </div>
+<div class="container-fluid mt-2">
+  </div>
 -->
 
-  <div class="container-fluid mt-2">
+        <div class="container-fluid mt-2">
         <div class="g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
         </div>
-  </div>
+        </div>
 
-
-
-    <div class="container-fluid mt-2">
-      <div class="mt-5 col-12">
+        <div class="container-fluid mt-2">
+      <div class="mb-5 col-12">
       <button class="btn btn-primary" name="Button" type="submit">Go to Paypal</button>
       </div  >
-    </div>
+      </div>
 
 
 
