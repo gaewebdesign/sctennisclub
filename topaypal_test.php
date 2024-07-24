@@ -140,6 +140,7 @@ if($_POST["dinner"] == "chicken" ) {
 
 $paid= MAY_MIXER_FEE;
 $paid =  $_POST["mixer"];
+$paid=8;
 $paypal->price = $paid;
 
 $paypal->enable_payment();
@@ -231,7 +232,7 @@ SENDER( $data );
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 print_r($paypal);
 
-//$paypal->output_form();
+$paypal->output_form();
 // 
 // ***********************************************************************************
 
