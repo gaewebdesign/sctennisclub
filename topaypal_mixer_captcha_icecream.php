@@ -112,10 +112,10 @@ $insignia="-";
 
 
 $event=$_POST["_EVENT"];  // "2024 Fatima";
-$fee = $_POST["_FEE"];
+$paid = $_POST["_FEE"];
 
 // variables
-print_r( $_POST );
+//print_r( $_POST );
 
 /*
 if($_POST["dinner"] == "chicken" ) {
@@ -147,8 +147,8 @@ if($_POST["dinner"] == "chicken" ) {
 
 LOGGER("topaypal_mixer_captcha_icecream.php");
 
-$paid= MAY_MIXER_FEE;
-$paid =  "10"; //$_POST["_FEE"];
+
+
 $paypal->price = $paid;
 
 $paypal->enable_payment();
@@ -169,6 +169,7 @@ $paypal->add("cancel_return",CANCEL_URL_SIGNUP);
 $paypal->add("notify_url",NOTIFY_URL_SIGNUP);
 
 DEBUG("notify:" . NOTIFY_URL);
+
 
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
