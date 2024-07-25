@@ -74,6 +74,23 @@ $year=2024;
 $date=$custom;
 //toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+//* data
+$data = array(
+	'year' => $year,
+	'fname' => $fname,
+    'lname' => $lname,
+	'email' => $email,
+/*
+	'event' => $event,
+	'insignia' => $insignia,
+	'payment' => $payment,
+	'custom' => $custom,
+*/
+	'subject' => "Ice cream signup: $fname $lname (pending)",
+    'message' => "Ice cream signup: $fname $lname (pending)"
+
+);
+
 $subject= "Ice Cream";
 $message = "$fname $lname ";
 $email = "rogero.tennis@gmail.com";
@@ -81,7 +98,7 @@ $email = "rogero.tennis@gmail.com";
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
-  	phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
+  	SENDER($data);
     toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
