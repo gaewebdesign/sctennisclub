@@ -29,7 +29,7 @@
 -->
 
 
-<form class="row g-3" action="./topaypal_test.php" method="post">
+<form class="row g-3" action="./topaypal_icecream.php" method="post">
 
 
   <div class="container-fluid">
