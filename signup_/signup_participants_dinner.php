@@ -24,15 +24,19 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2023-9-1');
+          $epoch = strtotime('2024-7-1');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
-          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
+
 
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
+
+          // switch back
+
+          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
           $con = Configure();
            
