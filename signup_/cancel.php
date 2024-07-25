@@ -33,12 +33,14 @@
    <img src = "./images/naomi-osaka-tennis.gif" >  
 
    <img src="./images/shiro-neko-project-tennis.gif" >    
--->
-
-
    <div class="tenor-gif-embed" data-postid="22493637" data-share-method="host" data-aspect-ratio="1" data-width="75%"><a href="https://tenor.com/view/carlos-alcaraz-tennis-fancy-footwork-espana-tenis-gif-22493637">Carlos Alcaraz Tennis GIF</a>from <a href="https://tenor.com/search/carlos+alcaraz-gifs">Carlos Alcaraz GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+<div class="tenor-gif-embed" data-postid="22493637" data-share-method="host" data-aspect-ratio="1" data-width="75%"><a href="https://tenor.com/view/carlos-alcaraz-tennis-fancy-footwork-espana-tenis-gif-22493637">Carlos Alcaraz Tennis GIF</a>from <a href="https://tenor.com/search/carlos+alcaraz-gifs">Carlos Alcaraz GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+    -->
+
 
     
+
+    <div class="tenor-gif-embed" data-postid="24648674" data-share-method="host" data-aspect-ratio="1.10345" data-width="70%"><a href="https://tenor.com/view/iga-swiatek-slide-backhand-tennis-polska-gif-24648674">Iga Swiatek Slide GIF</a>from <a href="https://tenor.com/search/iga+swiatek-gifs">Iga Swiatek GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>    
     </div>
 
 </body>
