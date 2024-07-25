@@ -63,9 +63,9 @@ $date = ltrim($dt->format('m/d/Y'),0);
 
 $theTABLE = "mixer_pending";
 
-//echo ("INSERT $fname $lname $paid $date $custom");
-//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
-//sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+echo ("INSERT $fname $lname $paid $date $custom");
+toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 $paypal->output_form();
 
