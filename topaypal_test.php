@@ -76,12 +76,12 @@ $date=$custom;
 
 $subject= "Ice Cream";
 $message = "$fname $lname ";
-$email = "";
+$email = "rogero.tennis@gmail.com";
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
-//  	phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
+  	phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
     toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
