@@ -36,16 +36,16 @@
     <div class="row align-items-start">
         <div class="col-sm-3">
         <label for="validationDefault01" class="form-label">First name</label>
-        <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
+        <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname">
     </div>
     <div class="col-sm-3">
         <label for="validationDefault02" class="form-label">Last name</label>
-        <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname1">
+        <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname">
     </div>
     <div class="col-sm-4">
         <label for="validationDefaultUsername" class="form-label">Email Address</label>
         <div class="input-group">
-        <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
+        <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email" required>
     </div>
 <!--
   </div>

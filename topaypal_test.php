@@ -29,7 +29,7 @@ $paypal->price = $paid;
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","2024 SCTC Ice Cream");
+$paypal->add("item_name","Ice cream");
 $paypal->add("quantity",1);
 
 $paypal->add("return",RETURN_URL);
