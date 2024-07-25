@@ -72,7 +72,7 @@ $payment=$paid;
 
 $year=2024;
 $date=$custom;
-toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+//toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 $subject= "Ice Cream";
 $message = "$fname $lname ";
@@ -82,7 +82,7 @@ $email = "";
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
 //  	phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
-//    toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+    toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
 
