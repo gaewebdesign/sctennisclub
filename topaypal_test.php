@@ -13,6 +13,9 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 
 //print_r($_POST);
 
+
+
+
 $paypal = new paypal();
 
 //print_r($_POST);
@@ -69,11 +72,37 @@ $payment=$paid;
 
 $year=2024;
 $date=$custom;
-toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+//toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
-
+$subject= "Ice Cream";
+$message = "$fname $lname ";
+$email = "";
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+$res = CAPTCHA_CHECKOUT() ;
+if($res == true) {
+  	phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
+    toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+}else{
+
+    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+	echo('
+      <script >
+      window.setTimeout(function() {
+        window.location.href="./icecream";
+    }, 500);
+       </script>
+');
+    return;
+}
+
+
+
+
+
+
+
 
 $paypal->output_form();
 
