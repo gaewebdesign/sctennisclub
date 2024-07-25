@@ -17,8 +17,9 @@ $paypal = new paypal();
 
 print_r($_POST);
 
-
 $paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
+$paid=$_POST["_FEE"];
+
 
 //echo(" paid = ".$paid );
 
