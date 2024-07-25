@@ -42,12 +42,12 @@ $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
 
-/*
-$gender = $_POST["gender"];
-$ntrp   =$_POST["ntrp"]; 
-$member =$_POST["member"];
-$event = $_POST["event"];
-*/
+
+$gender = ""; //$_POST["gender"];
+$ntrp   = ""; //$_POST["ntrp"]; 
+$member = "";// $_POST["member"];
+$event = "2024 Ice Cream"; //$_POST["event"];
+
 
 // ********************************
 // use this to identify person in database
