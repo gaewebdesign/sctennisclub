@@ -76,7 +76,7 @@
   <?php 
    // include "includes.inc";
     $MEMBER_FEE=DINNER;
-  ?>;
+  ?>
 
 <div class="container">
   <main>
@@ -202,6 +202,13 @@
 
           </div>
 
+        <div class="container-fluid mt-2">
+        <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div>
+        </div>
+
+
 
           <h4 class="mb-3">Payment</h4>
 
@@ -218,7 +225,7 @@
           <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
 
 -->
-<button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
+<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
 
         </form>
       </div>

@@ -5,7 +5,9 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
-define("PAYPAL_MAIL","treasurer@sctennisclub.org");
+include "./library/email/email.inc";
+
+//define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 
 /*
 define("FEE", "1");    // Resident Family
@@ -169,7 +171,7 @@ $gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
 $mtype=$phone=$code="-";
 $payment=$paid;
 
-
+$insignia="";
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
@@ -203,6 +205,30 @@ SENDER( $data );
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
+
+$subject= "2024 Dinner";
+$message = "$fname $lname signed up";
+$email = "tennis.mutt@gmail.com";
+
+
+$res = CAPTCHA_CHECKOUT() ;
+if($res == true) {
+
+    phpemailer($subject,$message , $email );
+    toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+}else{
+
+    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+	echo('
+      <script >
+      window.setTimeout(function() {
+        window.location.href="./icecream";
+    }, 500);
+       </script>
+');
+    return;
+}
 
 $paypal->output_form();
 // 
