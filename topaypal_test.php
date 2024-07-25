@@ -67,6 +67,8 @@ $gender = $ntrp  = $address = ""; //$_POST["ntrp"];
 $city=$zip=$team=$mtype = $member = $mtype=$phone=$code="-";
 $payment=$paid;
 
+$year=2024;
+$date=$custom;
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 
