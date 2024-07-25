@@ -58,11 +58,11 @@
   <div class="col-sm-6">
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
               <div class="form-check ">
-                <input class="form-check-input"  type="radio" id="member" checked="checked" value="10" name="_FEE"    >
-                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis<?php echo("&nbsp;".$MEMBER_FEE); ?></label>
+                <input class="form-check-input"  type="radio" id="member" checked="checked" value=<?php echo(TENNIS_ICECREAM_FEE); ?> name="_FEE"    >
+                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis $<?php echo(TENNIS_ICECREAM_FEE); ?></label>
                 <br/>
-                <input  class="form-check-input" type="radio" id="icecream" value="5" name="_FEE">
-                <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!<?php echo("&nbsp;".($MEMBER_FEE-5).".00"); ?></label>
+                <input  class="form-check-input" type="radio" id="icecream" value=<?php echo(ICECREAM_FEE); ?> name="_FEE">
+                <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only! $<?php echo(ICECREAM_FEE); ?></label>
               </div>
     </div>
 

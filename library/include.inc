@@ -28,6 +28,9 @@ define("ADDITIONAL_MEMBER_FEE" , ".99" );
 define("DINNER" , "25" );
 define("MAY_MIXER_FEE", "10.00" );
 
+define("TENNIS_ICECREAM_FEE" , "10.00");
+define("ICECREAM_FEE" , "5.00");
+
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
 define("CANCEL_URL","http://www.sctennisclub.org/signup/cancel");
