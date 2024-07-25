@@ -43,9 +43,7 @@ $lname = $_POST["lname"];
 $email = $_POST["email"];
 
 
-$gender = ""; //$_POST["gender"];
-$ntrp   = ""; //$_POST["ntrp"]; 
-$member = "";// $_POST["member"];
+
 $event = "2024 Ice Cream"; //$_POST["event"];
 
 
@@ -65,6 +63,12 @@ $theTABLE = "mixer_pending";
 
 // going to Paypal
 //echo ("DB INSERT $fname $lname $paid $date $custom");
+$gender = $ntrp  = $address = ""; //$_POST["ntrp"]; 
+$city=$zip=$team=$mtype = $member = $mtype=$phone=$code="-";
+$payment=$paid;
+
+toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
 
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
