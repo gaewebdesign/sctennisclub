@@ -1,78 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>SCTC Signup</title>
 
-<div class="py-5 text-center">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
+
+<link href="./Mixer.css" rel="stylesheet" />
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+  <?php 
+   // include "includes.inc";
+    $MEMBER_FEE=DINNER;
+  ?>;
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
      <picture>
 <!--
       <img class="mg-fluid img-thumbnail" src="cinco.png" alt="" >
-    <img class="mg-fluid img-thumbnail" src="./images/icecream_trans.gif" alt="-" >
--->
-
-<img class="mg-fluid img-thumbnail" src="./images/icecreamsocial.png" alt="-" >
-
-
+    <img class="mg-fluid img-thumbnail" src="./images/Athenat.png" alt="" >
+    -->
+   <img  src="./images/Athenat.png" alt="" class="ResponsiveImage" >
 
   </picture>
-      <h2>Santa Clara Tennis Club Ice Cream Social </h2>
+      <h2>Santa Clara Tennis Club Year End Dinner </h2>
 
-      
     <h3 style="font-size: 1.2em ">
-    Enjoy some  tennis and <b>ice cream</b>  on the courts with fellow members for
-    social mixed doubles round robin play at Santa Clara Tennis Center on
-    August 24, 2024 , 9-12 noon on courts #6-#8. Sign up early before entries close!
-    If you just &#x1F497; ice cream, you may
-    sign up for the ice cream only option! <br/>
-    Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
+    Enjoy dinner at <a href="https://athenagrill.com/">Athena Grill</a> in Santa Clara
+    on Thursday October 19 , 6:30-8 pm. Deadline to signup is Friday Oct 13, 2023.
+    Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
   </div>
 
-<form class="row g-3" action="./topaypal_mixer_captcha_icecream.php" method="post">
-
-
-  <div class="container-fluid">
-    <div class="row align-items-start">
-        <div class="col-sm-3">
-        <label for="validationDefault01" class="form-label">First name</label>
-        <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
-    </div>
-    <div class="col-sm-3">
-        <label for="validationDefault02" class="form-label">Last name</label>
-        <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname1">
-    </div>
-    <div class="col-sm-4">
-        <label for="validationDefaultUsername" class="form-label">Email Address</label>
-        <div class="input-group">
-        <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
-    </div>
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
 <!--
-  </div>
-  </div>
+          <span class="text-primary">--</span>
+          <span class="badge bg-primary rounded-pill">*</span>
 -->
-</div> <!-- container-fluid  -->
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
+            <div>
+             <h6 class="my-0">2023 October 19  Year end dinner </h6> 
 
-  <div class="container-fluid mt-4">
+              <large class="text-muted"><a href="https://www.google.com/maps/place/Athena+Grill+%26+Catering/@37.3764667,-121.9590747,17z/data=!3m1!4b1!4m6!3m5!1s0x808fca283052b81f:0x97b199e3951a5818!8m2!3d37.3764667!4d-121.9564944!16s%2Fg%2F1hbpwrv7r?entry=ttu">
+                  Athena Grill Directions</a></large>
 
-  <div class="col-sm-6">
-              <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
-              <div class="form-check ">
-                <input class="form-check-input"  type="radio" id="member" checked="checked" value=<?php echo($MEMBER_FEE); ?> name="mixer"    >
-                <label class="form-check-label" for="member">🎾 &nbsp;Ice cream and Tennis<?php echo("&nbsp;".$MEMBER_FEE); ?></label>
-                <br/>
-                <input  class="form-check-input" type="radio" id="icecream" value=<?php echo($ICECREAM_FEE); ?> name="mixer">
-                <label class="form-check-label" for="member">&#x1F49C;&nbsp;Ice Cream only!<?php echo("&nbsp;".($MEMBER_FEE-5).".00"); ?></label>
+            </div>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between">
+           
+            <div class="BackInput">  Dinner  $<?php echo($MEMBER_FEE )?>
+            </div>
+
+          </li>
+
+
+        </ul>
+
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Info (one person per entry)</h4>
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_test.php", method="post" >
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
+              <div class="invalid-feedback">
+                Valid first name is required.
               </div>
-    </div>
+            </div>
 
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control BackInput" id="lastName" placeholder="" value="" required name="lname">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
 
-<!--
-    <div class="container-fluid mt-2">
-     <div class="col-md-4">
-      <label for="validationDefault05" class="form-label">Enter Keycode</label>
-      <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
-    </div>
-  </div>
-<div class="container-fluid mt-2">
-  </div>
--->
+            <div class="col-sm-8">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control BackInput" id="email" placeholder="" value="" required name="email">
+              <div class="invalid-feedback">
+                Valid email address is required.
+              </div>
+            </div>
+
+            <div class="my-3">
+              <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span> 
+              <label >
+                All dinners come with  hummus, pita bread and house salad.
+                <hr/>
+              </label>
+              <div class="form-check ">
+                <input class="form-check-input"  type="radio" id="chicken" value="chicken" name="dinner"  required   ></input>
+                <label class="form-check-label" for="member"><b>Chicken Souvlaki </b> &nbsp;
+                   Marinated chicken thigh meat skewered and grilled, served with rice and Greek vegetable medley
+
+                </label>
+
+                <br/>
+                <input  class="form-check-input" type="radio" id="salmon" value= "salmon" name="dinner" required ></input>
+                <label class="form-check-label" for="member"><b>Salmon</b>&nbsp; fresh Atlantic salmon
+                marinated and grilled with rice and Greek vegetable medley</label>
+
+                <br/>
+                <input  class="form-check-input" type="radio" id="veg" value="veg" name="dinner" required></input>
+                <label class="form-check-label" for="member"><b>Vegetarian Mousaka</b>
+                eggplant, mushrooms casserole with zucchini and potato topped with creamy bechamel, served
+                with garlic fries
+                </label>
+                
+                <br/>
+                <input  class="form-check-input" type="radio" id="gyro" value="gyro" name="dinner" required></input>
+                <label class="form-check-label" for="member"><b>Gyro Plate</b>
+                thin slices of seasoned beef served over warm pita bread with tzatiki sauce, tomato, red onions
+                and served with garlic fries
+                </label>
+               <hr/>
+              </div>
+            </div>
+
+            <div class="col-12" >
+              <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
+              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_SCTC">
+              <div class="invalid-feedback">
+                Fee Error 
+              </div>
+            </div> 
+
+          </div>
 
         <div class="container-fluid mt-2">
         <div class="g-recaptcha"
@@ -80,18 +208,42 @@
         </div>
         </div>
 
-        <div class="container-fluid mt-2">
-      <div class="mb-5 col-12">
-      <button class="btn btn-primary" name="SubmitButton" type="submit">Go to Paypal</button>
-      </div  >
+
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="my-3">
+ 
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+<!--
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
+
+-->
+<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
+
+        </form>
       </div>
+    </div>
+  </main>
+
+  <p>
+
+
+ 
+</div>
+
+
+    
+
+    
+  </body>
 
 
 
-
-
-</form>
-
-
-
-
+</html>
