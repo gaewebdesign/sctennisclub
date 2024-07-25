@@ -15,15 +15,11 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 
 $paypal = new paypal();
 
-print_r($_POST);
+//print_r($_POST);
 
-$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
 $paid=$_POST["_FEE"];
 
 
-//echo(" paid = ".$paid );
-
-//alert($_POST["mixer"]." -> ".$paid);
 $paypal->price = $paid;
 
 //DEBUG("paypal -> price = $paid   < ---");
@@ -33,7 +29,7 @@ $paypal->price = $paid;
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Mixer");
+$paypal->add("item_name","2024 SCTC Ice Cream");
 $paypal->add("quantity",1);
 
 $paypal->add("return",RETURN_URL);
