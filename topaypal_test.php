@@ -38,9 +38,10 @@ $paypal->add("notify_url",NOTIFY_URL);
 
 DEBUG("notify:" . NOTIFY_URL);
 
-$fname = "Roger";       //$_POST["fname"];
-$lname = "Okamoto";     //$_POST["lname"];
-$email = "rwokamoto@gmail.com";   ///$_POST["email"];
+$fname = $_POST["fname"];
+$lname = $_POST["lname"];
+$email = $_POST["email"];
+
 /*
 $gender = $_POST["gender"];
 $ntrp   =$_POST["ntrp"]; 
@@ -62,9 +63,9 @@ $date = ltrim($dt->format('m/d/Y'),0);
 
 $theTABLE = "mixer_pending";
 
-//echo ("INSERT $fname $lname $paid $date $custom");
-//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
-//sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
+echo ("INSERT $fname $lname $paid $date $custom");
+toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
+sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 
 $paypal->output_form();
 
