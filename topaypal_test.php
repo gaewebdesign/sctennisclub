@@ -4,6 +4,8 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+include "./library/email/email.inc";
+
 /*
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
@@ -98,7 +100,8 @@ $email = "rogero.tennis@gmail.com";
 //sendemail($fname." ".$lname, $email, "SCTENNISCLUB.NET TEST => $theTABLE ");
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
-  	SENDER($data);
+
+    phpemailer($subject,$message , $email );
     toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
