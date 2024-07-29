@@ -5,6 +5,7 @@ include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
 
+include "./library/email/email.inc";
 //define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 
 /*
@@ -173,6 +174,12 @@ $gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
 $mtype=$phone=$code="-";
 $payment=$paid;
 
+$sub = "Fatima lunch signup";
+$mess = "Someone ($fname $lname) tried to signup";
+$to="tennis.mutt@gmail.com";
+phpemailer( $sub, $mess, $to );
+
+//function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
 
 
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
