@@ -55,23 +55,69 @@ $year=2024;
 
 $theTABLE = "tourny";
 
+$date = "".time()-60*60*7;
+$pwd = password($fname1,$fname2);
 
-$date = time()-60*60*7;
-
-toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+toTournyDB2($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
 
 signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 
 
-$subject = "Tournament Signup";
-$message = "$fname1  $lname1  $fname2 $lname2 Signup";
+$subject = "Tournament $division Signup ($lname1 $lname2)";
+$message = "$fname1  $lname1  $fname2 $lname2 Signup \n";
+$message .= "$division";
+
+
 $toemail1 = "tennis.mutt@gmail.com";
 $toemail2 = "santaclarawebmaster@gmail.com";
 
 phpemailer($subject, $message ,$toemail1 , $toemail2);
 
+function password($fname1,$fname2){
+    $date = "".time()-60*60*7;
+    $pass = substr($date,-3);
+
+    $i=0;
+    for($l='a' ; $l<='z' ; $l++)
+       $letters[$i++] = $l;
+    
+       $p =  $letters[rand(0,25)];
+       $p .=  $letters[rand(0,25)];
+       $p .=  $letters[rand(0,25)];
+    
+    // Override using first names
+       if( strlen($fname1>3 && strlen($fname2)>3 )){
+          $p = rand(25, 313)%2==0 ? $fname1 : $fname2;
+    }
+
+
+    return strtolower($p).$pass;
+
+}
+
+function toTournyDB2($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date){
+
+    $con = DBMembership();
+    $query = "select max(mtype) from tourny";
+    $query_results=mysqli_query($con, $query); 
+    print_r( $query_results );
+
+    $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,mtype,pwd,date)';
+   
+    $query .= ' values (NULL'.add($fname1).add($lname1).add($email1).add($gender1).add($ntrp1);
+    $query .= add($fname2).add($lname2).add($email2).add($gender2).add($ntrp2);
+    $query .= add($year).add($division).add($team).add($mtype).add($pwd).add($date);
+    $query .= ")";
+ 
+ //   LOGGER( $query );
+ //   echo "<p>";
+ //   echo $query;
+ 
+    $query_results=mysqli_query($con, $query);
+ 
+ }
 
 function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
