@@ -37,6 +37,7 @@ $draw="6.5";
 $TABLE_TOURNY = "tourny";
 $YEAR=2024;
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
+$query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
 //echo $query;
 $con = Configure();
  
@@ -67,6 +68,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 $s1=$s2=$s3=$s4=$s5=$s6=$s7=$s8=".";
 $_s1=$_s2=$_s3=$_s4=$_s5=$_s6=$_s7=$_s8=".";
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
+$query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
 $qr=mysqli_query($con,$query);
 $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
@@ -96,10 +98,13 @@ $s2 = "6-1 ,6-4";
 $s3 = "6-3 ,6-4";
 $s4 = "6-4 ,4-6,6-2";
 */
-$f1 = "6-4 ,7-6";
-$f2 = "6-3 ,4-0 (ret)";
+$f1 = $f2 = ".";
+$_f1 = $_f2 = ".";
 
-$w1 = "6-2,6-2";
+$f2 = $q7;
+
+$w = ".";
+$_w = ".";
 
 /* $q1 = "Dimitrov/Shelton";
 $q2 = "Ru/Paul";
@@ -116,18 +121,18 @@ $s1 = $q1;
 $s2 = $q3;
 $s3 = $q5;
 $s4 = $q8;
-
 $_s1="6-2,6-1";
 $_s2 ="6-2,6-1";
 $_s3="6-2,6-1";
 $_s4 = "6-2,6-1";
 */
 
+/*
 $f1 = $s1; $_f1 = "7-6,7-5";
 $f2 = $s3; $_f2 = "7-6,5-7,1-0";
 
 $w = $f2;  $_w= "7-6,7-5";
-
+*/
 
 ?>
 <ul class="round">
@@ -185,7 +190,7 @@ $w = $f2;  $_w= "7-6,7-5";
  <!-- Winner -->
 <ul class="round">
 
-<li class="game-top">  <?php echo $f2 ?>   <span class="small"><?php echo $_w ?></span> </li>
+<li class="game-top">  <?php echo $w ?>   <span class="small"><?php echo $_w ?></span> </li>
 </ul>
 
 </main>
