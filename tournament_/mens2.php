@@ -21,19 +21,8 @@
 <body>
 <main id="tournament2">
 <?php
-//$q = array( "Carlos Alcarez", "Tommy Paul", "Daniell Medvedev","Jannik Sinner");
-/*
-$q[] = ".";
-$q[] = "Carlos Alcarez";
-$q[] = "Tommy Paul";
-$q[] = "Danill Medvedev";
-$q[]= "Jannik Sinner";
-$q[] = "Lorenzo Mussetti";
-$q[] = "Taylor Fritz";
-$q[] = "Alex de Minaur";
-$q[] = "Novak Djokovic";
-*/
-$q = [".", ".", ".",".", ".", "." ];
+
+$q = [".", ".", ".",".", ".", "." ,".",".","."];
 $s = [".", ".", ".",".", ".", "." ];
 $_s = [".", ".", ".",".", ".", "." ];
 
@@ -42,8 +31,7 @@ $_f = [".", ".", ".",];
 
 
 
-
-$draw="6.5";
+$draw="7.5";
 $TABLE_TOURNY = "tourny";
 $YEAR=2024;
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
