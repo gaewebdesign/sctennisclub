@@ -48,8 +48,12 @@ $q1=$q2=$q3=$q4=$q5=$q6=$q7=$q8="";
 while ($row = mysqli_fetch_assoc($qr)) {
 
     $team =  $row["fname1"][0]." ".$row["lname1"]."/".$row["fname2"][0]." ".$row["lname2"];
-    $q[$index++] = $team;
- }
+//   $q[$index++] = $team;
+
+    $position= $row["mtype"];
+    $q[$position] = $team;
+ 
+  }
 
 // SEMI-FINALS 
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";

@@ -58,7 +58,12 @@ $theTABLE = "tourny";
 $date = "".time()-60*60*7;
 $pwd = password($fname1,$fname2);
 
-toTournyDB2($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
+
+$mtype= get_mtype($division);
+
+
+
+enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
 
 signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
@@ -74,6 +79,23 @@ $toemail1 = "tennis.mutt@gmail.com";
 $toemail2 = "santaclarawebmaster@gmail.com";
 
 phpemailer($subject, $message ,$toemail1 , $toemail2);
+
+function get_mtype($division ){
+
+   $con = DBMembership();
+   $query ="SELECT MAX(mtype) FROM tourny where division=\"$division\"";
+   
+   $qr = mysqli_query($con, $query);
+   $row = mysqli_fetch_array($qr);
+
+   $mtype =  0; 
+   if( is_array($row)) $mtype =  $row[0]; 
+
+   // return one higher than the current mtype
+   return $mtype+1;
+
+
+}
 
 function password($fname1,$fname2){
     $date = "".time()-60*60*7;
@@ -97,12 +119,9 @@ function password($fname1,$fname2){
 
 }
 
-function toTournyDB2($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date){
+function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date){
 
     $con = DBMembership();
-    $query = "select max(mtype) from tourny";
-    $query_results=mysqli_query($con, $query); 
-    print_r( $query_results );
 
     $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,mtype,pwd,date)';
    
@@ -111,9 +130,6 @@ function toTournyDB2($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$
     $query .= add($year).add($division).add($team).add($mtype).add($pwd).add($date);
     $query .= ")";
  
- //   LOGGER( $query );
- //   echo "<p>";
- //   echo $query;
  
     $query_results=mysqli_query($con, $query);
  
