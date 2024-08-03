@@ -110,6 +110,8 @@ function password($fname1,$fname2){
        $p .=  $letters[rand(0,25)];
     
     // Override using first names
+       $fname1 = str_replace(' ', '', $fname1);
+       $fname2 = str_replace(' ', '', $fname2);
        if( strlen($fname1>3 && strlen($fname2)>3 )){
           $p = rand(25, 313)%2==0 ? $fname1 : $fname2;
     }
