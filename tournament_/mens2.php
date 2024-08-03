@@ -22,6 +22,7 @@
 <main id="tournament2">
 <?php
 //$q = array( "Carlos Alcarez", "Tommy Paul", "Daniell Medvedev","Jannik Sinner");
+/*
 $q[] = ".";
 $q[] = "Carlos Alcarez";
 $q[] = "Tommy Paul";
@@ -31,7 +32,7 @@ $q[] = "Lorenzo Mussetti";
 $q[] = "Taylor Fritz";
 $q[] = "Alex de Minaur";
 $q[] = "Novak Djokovic";
-
+*/
 $q = [".", ".", ".",".", ".", "." ];
 $s = [".", ".", ".",".", ".", "." ];
 $_s = [".", ".", ".",".", ".", "." ];
