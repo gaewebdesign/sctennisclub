@@ -38,7 +38,11 @@ $gender2 = $ntrp2 = "-";
 
 $team=$mtype=$date=$insignia=$payment=$custom=$opt=$pwd="";
 
-$division = $_POST["division"];
+//$division = $_POST["division"];
+
+// RWO division isn't used
+$division = "Mx9.0";  //$_POST["division"];
+
 $winner_id = $_POST["winner"];
 $loser_id = $_POST["loser"];
 $score = $_POST["score"];
@@ -96,15 +100,18 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
          
 
      }
+
+     echo("custom = $custom <br>");
+     echo("$query1 <br>");
+     echo("$query2 <br> ");
+     echo("$query3  <br>");
+
      
           $query_results=mysqli_query($con, $query1);
           $query_results=mysqli_query($con, $query2);
           $query_results=mysqli_query($con, $query3);
          
-          echo("custom = $custom <br>");
-          echo("$query1 <br>");
-          echo("$query2 <br> ");
-          echo("$query3  <br>");
+
 
    // Update Opponent  ***********************************************
    // just need to put LOSS in

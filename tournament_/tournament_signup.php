@@ -123,15 +123,17 @@ function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fnam
 
     $con = DBMembership();
 
-    $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,mtype,pwd,date)';
+    $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,mtype,pwd,date,custom)';
    
     $query .= ' values (NULL'.add($fname1).add($lname1).add($email1).add($gender1).add($ntrp1);
     $query .= add($fname2).add($lname2).add($email2).add($gender2).add($ntrp2);
     $query .= add($year).add($division).add($team).add($mtype).add($pwd).add($date);
+    $query .= add(0);
     $query .= ")";
  
  
     $query_results=mysqli_query($con, $query);
+
  
  }
 

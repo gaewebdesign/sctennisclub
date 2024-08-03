@@ -127,19 +127,26 @@
             include "./tournament_/mens2.php";
 
            }else if($v == 3){  
-            include "./tournament_/womens.php";
+            include "./tournament_/womens2.php";
 
            }else if($v == 4 ){
             //include "./library/include.inc";
             include "./tournament_/tournament_enter.php";
       
            }else if($v==5){
-            include "./tournament_/tournament_report.php";
-           
-           } else{
 
-                echo ("?");
-           }
+            include "./tournament_/tournament_report_mens.php";           
+
+           } else if($v==6){
+
+            include "./tournament_/tournament_report_womens.php";
+
+          } else if($v==99){
+
+            
+            include "./tournament_/tournament_report.php";
+
+      }
 
 
 ?>

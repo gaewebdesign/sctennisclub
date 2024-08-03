@@ -6,7 +6,6 @@
  $TABLE_TOURNY="tourny";
  $YEAR=2024;
  $draw="Mx6.5";
-// $team=[".",".",".",".",".",".",".",".",".","."];
  $team= array(
 
     array(".",".","."),
@@ -21,17 +20,10 @@
     array(".",".","."),
 
 /*
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".","."),
-    array(".",".")
+
 */
- );
+
+);
 
   $con = DBMembership();
 
@@ -51,14 +43,6 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $index++;
 }
 
-/*
-    for($index=1 ; $index<9 ; $index++){
-        echo $team2[$index][0]."   ".$team2[$index][1];
-
-    }
-*/  
-
-
 
 ?>
 
@@ -67,11 +51,8 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 <div class="container">
         <div class="col-md-12">
-            <label for="validationDefault04" class="form-label">Division</label>
-            <select class="form-select" id="validationDefault05" name="division" required>
-            <option selected value="Mx6.5">Mx 6.5</option>
-            <option value="Mx7.5">Mx 7.5</option>
-            </select>
+
+         <h2>Mixed 6.5 </h1>
         </div>
 
 </div>
