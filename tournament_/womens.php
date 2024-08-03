@@ -100,7 +100,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
  $winner= $_winner=".";
  while ($row = mysqli_fetch_assoc($qr)) {
  
-      if(str_contains($row["winner"] ,"winners" )  ){
+      if(str_contains($row["winner"] ,"winner" )  ){
           $position =  $row[ "mtype"];
           $winner = $q[$position];
           $_winner = $row["score3"];
@@ -108,14 +108,6 @@ while ($row = mysqli_fetch_assoc($qr)) {
       }
  
   }
-
-$f1 = $f2 = ".";
-$_f1 = $_f2 = ".";
-
-$f2 = $q7;
-
-$w = ".";
-$_w = ".";
 
 
 ?>

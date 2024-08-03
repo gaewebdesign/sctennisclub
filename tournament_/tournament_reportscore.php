@@ -75,6 +75,8 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
  
      $query1 = "update $theTABLE set payment=\"ERR\" where _id=$_id";     
      $query2 = "update $theTABLE set payment=\"ERR\" where _id=$_id";     
+     $query3 = "update $theTABLE set custom=custom+1 where _id=$_id";     
+
      $_id = $winner_id;
      switch($custom){
          case 0:
@@ -94,14 +96,22 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
          
 
      }
+     
           $query_results=mysqli_query($con, $query1);
           $query_results=mysqli_query($con, $query2);
-
+          $query_results=mysqli_query($con, $query3);
+         
+          echo("custom = $custom <br>");
+          echo("$query1 <br>");
+          echo("$query2 <br> ");
+          echo("$query3  <br>");
 
    // Update Opponent  ***********************************************
    // just need to put LOSS in
     $_id = $loser_id;
+    $custom = get_custom($loser_id);
     $query = "update $theTABLE set payment=\"ERR\" where _id=$_id";     
+    $query=$query1=$query2="";
     switch($custom){
         case 0:
            $query1 = "update $theTABLE set semis=\"Loss\" where _id=$_id";
@@ -117,9 +127,13 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
         break;
 
         default:
+          echo("custom = $custom");
 
 
     }
+    echo "custom = $custom <br>";
+    echo $query1."<br>";
+    echo $query2."<br>";
 
     $query_results=mysqli_query($con, $query1);
     $query_results=mysqli_query($con, $query2);
@@ -151,7 +165,7 @@ function get_mtype($division ){
 function get_custom($_id){
 
     $con = DBMembership();
-    $query ="SELECT custom FROM tourny where division=\"$_id\"";
+    $query ="SELECT custom FROM tourny where _id=\"$_id\"";
     
     $qr = mysqli_query($con, $query);
     $row = mysqli_fetch_array($qr);

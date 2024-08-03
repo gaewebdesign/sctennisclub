@@ -6,10 +6,21 @@
  $TABLE_TOURNY="tourny";
  $YEAR=2024;
  $draw="Mx6.5";
- $team=[".",".",".",".",".",".",".",".",".","."];
- $team2= array(
+// $team=[".",".",".",".",".",".",".",".",".","."];
+ $team= array(
 
-    array(".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+    array(".",".","."),
+
+/*
     array(".","."),
     array(".","."),
     array(".","."),
@@ -19,7 +30,7 @@
     array(".","."),
     array(".","."),
     array(".",".")
-
+*/
  );
 
   $con = DBMembership();
@@ -29,13 +40,13 @@ $qr=mysqli_query($con,$query);
 $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
-    $team[$index] = $row["fname1"]." ".$row["lname1"]."/";
-    $team[$index] .= $row["fname2"]." ".$row["lname2"]."($_id)";
     $_team = $row["fname1"]." ".$row["lname1"]."/";
     $_team .= $row["fname2"]." ".$row["lname2"];
 
-    $team2[$index][0]=$_id;
-    $team2[$index][1]=$_team;
+
+    $team[$index][0]=$_id;
+    $team[$index][1]=$_team;
+    if($row["custom"]> 10)   $team[$index][2] = "disabled";
     
     $index++;
 }
@@ -51,7 +62,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 ?>
 
-<form class="row g-3" action="./tournament_/tournament_score.php" method="post">
+<form class="row g-3" action="./tournament_/tournament_reportscore.php" method="post">
 
 
 <div class="container">
@@ -80,10 +91,10 @@ while ($row = mysqli_fetch_assoc($qr)) {
         <select class="form-select" id="validationDefault04" name="winner" required>
         <?php
             for($index=1 ; $index<9 ; $index++){
-                $_id = $team2[$index][0];
-                $_team =  $team2[$index][1];
-                echo("<option");
-                echo(" value= \"$_id\" >");
+                $_id = $team[$index][0];
+                $_team =  $team[$index][1];
+                $_disabled = $team[$index][2];
+                echo("<option $_disabled value= \"$_id\" > ");
                 echo("$_team ($_id)");
                 echo("</option>");
 
@@ -101,12 +112,14 @@ while ($row = mysqli_fetch_assoc($qr)) {
   <div class="col-md-5">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Opponent</label>&nbsp; &nbsp;
-        <select class="form-select" id="validationDefault04" name="winner" required>
+        <select class="form-select" id="validationDefault04" name="loser" required>
         <?php
             for($index=1 ; $index<9 ; $index++){
-                $_id = $team2[$index][0];
-                $_team =  $team2[$index][1];
-                echo("<option");
+                $_id = $team[$index][0];
+                $_team =  $team[$index][1];
+                $_disabled =  $team[$index][2];
+                
+                echo("<option $_disabled");
                 echo(" value= \"$_id\" >");
                 echo("$_team ($_id)");
                 echo("</option>");
@@ -121,7 +134,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Score</label>
-    <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
+    <input type="text" class="form-control" id="validationDefault05" name="score" required>
   </div>
 
 
