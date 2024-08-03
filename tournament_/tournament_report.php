@@ -7,6 +7,20 @@
  $YEAR=2024;
  $draw="Mx6.5";
  $team=[".",".",".",".",".",".",".",".",".","."];
+ $team2= array(
+
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".","."),
+    array(".",".")
+
+ );
 
   $con = DBMembership();
 
@@ -14,13 +28,26 @@ $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\
 $qr=mysqli_query($con,$query);
 $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
-      
+    $_id = $row["_id"];
     $team[$index] = $row["fname1"]." ".$row["lname1"]."/";
-    $team[$index] .= $row["fname2"]." ".$row["lname2"];
-      echo $team[$index];
-      $index++;
+    $team[$index] .= $row["fname2"]." ".$row["lname2"]."($_id)";
+    $_team = $row["fname1"]." ".$row["lname1"]."/";
+    $_team .= $row["fname2"]." ".$row["lname2"];
 
+    $team2[$index][0]=$_id;
+    $team2[$index][1]=$_team;
+    
+    $index++;
 }
+
+/*
+    for($index=1 ; $index<9 ; $index++){
+        echo $team2[$index][0]."   ".$team2[$index][1];
+
+    }
+*/  
+
+
 
 ?>
 
@@ -43,20 +70,21 @@ while ($row = mysqli_fetch_assoc($qr)) {
  <div class="col-md-12">
  <hr/>
 </div> 
-<?php
-   echo("$team[3]");
-?>
+
+
   <div class="container">
 
-    <div class="col-md-6">
+    <div class="col-md-5">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Winning Team</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="winner" required>
         <?php
             for($index=1 ; $index<9 ; $index++){
+                $_id = $team2[$index][0];
+                $_team =  $team2[$index][1];
                 echo("<option");
-                echo(" value= \"$index\" >");
-                echo("$team[$index] ($index)");
+                echo(" value= \"$_id\" >");
+                echo("$_team ($_id)");
                 echo("</option>");
 
 
@@ -66,23 +94,32 @@ while ($row = mysqli_fetch_assoc($qr)) {
         ?>
         </select>
     </div>
+
   </div>
 
 
-<div class="col-md-5 mt-2">
-
+  <div class="col-md-5">
         <div class="input-group ">
-        <label for="validationDefault04" class="form-label">Opponents</label> &nbsp;&nbsp;
-        <select class="form-select" id="validationDefault04" name="opponent" required>
-        <option selected value="3.0"> ****************</option>
-        <option value="3.5">!!!!!!!!!!!!!!!!!!!!!!!!!</option>    
-        <option value="4.0">-------------------------</option>
+        <label for="validationDefault04" class="form-label">Opponent</label>&nbsp; &nbsp;
+        <select class="form-select" id="validationDefault04" name="winner" required>
+        <?php
+            for($index=1 ; $index<9 ; $index++){
+                $_id = $team2[$index][0];
+                $_team =  $team2[$index][1];
+                echo("<option");
+                echo(" value= \"$_id\" >");
+                echo("$_team ($_id)");
+                echo("</option>");
+
+            }
+
+        ?>
         </select>
-        </div>
-</div>
+    </div>
 
 
-<div class="col-md-3">
+
+<div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Score</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
@@ -96,7 +133,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 
 
-  <div class="col-md-3">
+  <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
