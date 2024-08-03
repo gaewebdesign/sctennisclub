@@ -91,9 +91,7 @@ function alert($v){
 }
 
 function DEBUG($message){
-  // echo( $message );
-  // echo("<br>");
-  // echo("\n");
+   echo( $message );
 
  }
 
