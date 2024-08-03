@@ -11,6 +11,7 @@ $_s = [".", ".", ".",".", ".", "." ];
 $f = [".", ".", "." ];
 $_f = [".", ".", ".",];
 
+$mtype = [ 0,0,0,0,0,0,0,0 ];
 
 
 //$draw="6.5";
@@ -26,14 +27,16 @@ $con = Configure();
 
 $qr=mysqli_query($con,$query);
 $index=1;
-//$q1=$q2=$q3=$q4=$q5=$q6=$q7=$q8="";
+
 
 // QUARTER-FINALS
 while ($row = mysqli_fetch_assoc($qr)) {
 
     $team =  $row["fname1"][0]." ".$row["lname1"]."/".$row["fname2"][0]." ".$row["lname2"];
+    $mtype[$index] = $row["mtype"];
     $q[$index++] = $team;
- }
+
+  }
 
 // SEMI-FINALS 
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
@@ -97,28 +100,28 @@ while ($row = mysqli_fetch_assoc($qr)) {
 ?>
 <ul class="round">
   <li class="spacer">
-  <li class="game-top"> <?php echo $q[1]   ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q[1];  ?> <span class="small"><?php DEBUG( $mtype[1])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top"> <?php echo $q[2] ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q[2] ?> <span class="small"> <?php DEBUG( $mtype[2]) ?></span> </li>
   <li class="spacer">  
 
 <!--   -->
-  <li class="game-top"> <?php echo $q[3] ?> <span></span> </li>
+  <li class="game-top"> <?php echo $q[3] ?> <span class="small"> <?php DEBUG( $mtype[3])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[4] ?><span></span> </li>
+  <li class="game-top"><?php echo $q[4] ?><span class="small"> <?php DEBUG( $mtype[4])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
 
-<li class="game-top"><?php echo $q[5] ?> <span></span> </li>
+<li class="game-top"><?php echo $q[5] ?> <span class="small"><?php DEBUG( $mtype[5])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[6] ?> <span></span> </li>
+  <li class="game-top"><?php echo $q[6] ?> <span class="small"><?php DEBUG( $mtype[6])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
-<li class="game-top"> <?php echo $q[7] ?> <span></span> </li>
+<li class="game-top"> <?php echo $q[7] ?> <span class="small"><?php DEBUG( $mtype[7])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top"><?php echo $q[8] ?>  <span></span> </li>
+  <li class="game-top"><?php echo $q[8] ?>  <span class="small"><?php DEBUG( $mtype[8])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
