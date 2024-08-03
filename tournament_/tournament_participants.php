@@ -31,7 +31,7 @@ tr {
              function tournylist($draw){
               $TABLE_TOURNY = "tourny";
               $YEAR = 2024;
-              $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
+              $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype  ";
 //              echo $query;
 
               $con = Configure();
