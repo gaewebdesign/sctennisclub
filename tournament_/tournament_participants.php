@@ -40,6 +40,7 @@ tr {
               while ($row = mysqli_fetch_assoc($qr)) {
                echo "<tr><td>";
                echo $row["fname1"]." ".$row["lname1"];
+               DEBUG($row["mtype"]);
                echo "<td>";
                echo $row["gender1"].$row["ntrp1"];
  
