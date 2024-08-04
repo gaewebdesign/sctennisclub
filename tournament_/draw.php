@@ -21,7 +21,8 @@ $mtype = [ 0,0,0,0,0,0,0,0 ];
 
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype limit 8";
-//echo $query;
+//DEBUG( $query );
+
 $con = Configure();
  
 
@@ -43,11 +44,13 @@ $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
 $qr=mysqli_query($con,$query);
 $index=1;
+$position=0;
 while ($row = mysqli_fetch_assoc($qr)) {
 
       $score = $row["score1"];
-     if(str_contains($row["semis"] ,"semis" )  ){
-         $position =  $row[ "mtype"];
+      $position ++;
+      if(str_contains($row["semis"] ,"semis" )  ){
+//      $position =  $row[ "mtype"];
          $score = $row["score1"];
     
          $team = $q[$position];
@@ -64,11 +67,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by date ";
 $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
 $qr=mysqli_query($con,$query);
-
+$position=0;
 while ($row = mysqli_fetch_assoc($qr)) {
-
+     $position++;
      if(str_contains($row["finals"] ,"finals" )  ){
-         $position =  $row[ "mtype"];
+//         $position =  $row[ "mtype"];
          $score = $row["score2"];
              
          $team = $q[$position];
@@ -81,20 +84,21 @@ while ($row = mysqli_fetch_assoc($qr)) {
  }
 
 
- $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
+ $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") and winner = \"winner\" ";
+ //DEBUG($query);
  $qr=mysqli_query($con,$query);
 
  $winner= $_winner=".";
  while ($row = mysqli_fetch_assoc($qr)) {
  
-      if(str_contains($row["winner"] ,"winner" )  ){
-          $position =  $row[ "mtype"];
-          $winner = $q[$position];
+          $team = $row["fname1"]." ".$row["lname1"];
+          $team .= "/".$row["fname2"]." ".$row["lname2"];
+          $winner = $team;  //$q[$position];
           $_winner = $row["score3"];
           break;              
-      }
+ }
  
-  }
+ 
 
 
 ?>
