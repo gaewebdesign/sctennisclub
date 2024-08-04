@@ -18,7 +18,7 @@ CREATE TABLE `tourny` (
   `year` varchar(5) DEFAULT NULL,
   `division` varchar(50) DEFAULT NULL,
   `team` varchar(50) DEFAULT NULL,
-  `mtype` varchar(50) DEFAULT NULL,
+  `mtype` int DEFAULT 0,
   `pwd` varchar(50) DEFAULT '.',
   `date` int DEFAULT NULL,
   `semis` varchar(16) DEFAULT '.',
@@ -28,7 +28,7 @@ CREATE TABLE `tourny` (
   `winner` varchar(50) DEFAULT '.',
   `score3` varchar(50) DEFAULT '.',
   `payment` varchar(16) DEFAULT '0',
-  `custom` varchar(50) DEFAULT '0',
+  `custom` int DEFAULT 0,
   `opt` varchar(50) DEFAULT '.',
   PRIMARY KEY (`_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=371 DEFAULT CHARSET=latin1;

@@ -54,8 +54,23 @@ $year=2024;
 $theTABLE = "tourny";
 
 //$mtype= get_mtype($division);
-
+if ($winner_id != $loser_id) {
 reportScore($theTABLE,$division,$winner_id,$loser_id,$score);
+}else{
+   $con = DBMembership();
+   $query = "select * from tourny where _id=$winner_id";
+   $qr= mysqli_query($con, $query);
+   $row = mysqli_fetch_assoc($qr);
+   $team = $row["fname1"]." ".$row["lname1"]."/";
+   $team .= $row["fname2"]." ".$row["lname2"];
+
+   echo("<center>");
+   echo("<h1>ERROR: same teams</h1>");
+   echo("<h1>$team</h1>");
+   echo("</center>");
+}
+
+
 //enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
 //signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);

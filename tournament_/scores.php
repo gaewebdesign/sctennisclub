@@ -37,6 +37,7 @@ $qr=mysqli_query($con,$query);
 $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
+    $_mtype = $row["mtype"];
     $_team = $row["fname1"]." ".$row["lname1"]."/";
     $_team .= $row["fname2"]." ".$row["lname2"];
 
@@ -44,7 +45,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
     if($row["custom"]> 10)   $team[$index][2] = "disabled";
-    
+ //   DEBUG("custom = ".$row["custom"]);
     $index++;
 }
 
