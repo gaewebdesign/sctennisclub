@@ -47,10 +47,12 @@
 
 
 //reorder( "Mx7.5");
+setToDefaults( "Mx7.5");
 //lister( "Mx7.5");
 
-reorder( "Mx6.5");
-lister( "Mx6.5");
+//reorder( "Mx6.5");
+setToDefaults( "Mx6.5");
+//lister( "Mx6.5");
 
 function reorder($division){
 
@@ -81,15 +83,75 @@ function reorder($division){
         $query = "update tourny set mtype = $__mtype where _id =$__id";
         echo $query."<br>";
         $qr=mysqli_query($con,$query);
+    }
+}
 
-//        $query = "update tourny set custom = 0 where _id =$__id";
-//        echo $query."<br>";
-//        $qr=mysqli_query($con,$query);
+function setToDefaults($division){
+// semis, score1
+// finals score2
+// winner , score3
+
+
+       $con=DBMembership();
+       $query = "update tourny set semis =default(semis) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set score1 =default(score1) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set finals =default(finals) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set score2 =default(score2) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set winner =default(winner) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set score3 =default(score3) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+       $query = "update tourny set custom = default(custom) where division =\"$division\" ";
+       $qr=mysqli_query($con,$query);
+
+
+       /* 
+       
+       
+       
+       */
 
     }
 
-    
-}
+
+    // custom
+/*
+
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+
+        $query = "update tourny set score2 = \".\" where _id =$__id";
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+
+        $query = "update tourny set finals = \".\" where _id =$__id";
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+
+        $query = "update tourny set score2 = \".\" where _id =$__id";
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+
+        $query = "update tourny set winner = \".\" where _id =$__id";
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+
+        $query = "update tourny set score3 = \".\" where _id =$__id";
+        echo $query."<br>";
+        $qr=mysqli_query($con,$query);
+*/
+
+
 
     function lister($division){
 
