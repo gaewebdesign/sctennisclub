@@ -48,11 +48,11 @@
 
 //reorder( "Mx7.5");
 setToDefaults( "Mx7.5");
-//lister( "Mx7.5");
+lister( "Mx7.5");
 
 //reorder( "Mx6.5");
 setToDefaults( "Mx6.5");
-//lister( "Mx6.5");
+lister( "Mx6.5");
 
 function reorder($division){
 
@@ -162,6 +162,46 @@ function setToDefaults($division){
     $con = DBMembership();
     $qr=mysqli_query($con,$query);
     
+    echo "<tr>";
+    echo "<td>";
+    echo "$division";
+    echo "</td>";
+
+    echo "<td>";
+    echo "</td>";
+
+    echo "<td>";
+    echo "</td>";
+
+    echo "<td>";
+    echo "$division";
+    echo "</td>";
+
+    echo "<td>";
+    echo "</td>";
+    echo "<td>";
+    echo "</td>";
+
+
+    echo "<td>";
+    echo "$division";    
+    echo "</td>";
+
+
+    echo "<td>";
+    echo "</td>";
+    echo "<td>";
+    echo "</td>";
+
+
+    echo "<td>";
+    echo "$division";    
+    echo "</td>";
+
+    echo "<td>";
+    echo "</td>";
+
+    echo "</tr>";
 
     while ($row = mysqli_fetch_assoc($qr)) {
     
@@ -197,7 +237,7 @@ function setToDefaults($division){
     echo $row["custom"];
 
   }
-
+  
 }
 
 
