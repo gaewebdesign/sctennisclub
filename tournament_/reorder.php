@@ -37,22 +37,59 @@
         </tr>
       </thead>
       <tbody>
-           <p>
-           <h4>Mx 7.5 </h4> 
-           <p>
+
 
 <?php
 
+/*
+if ( !empty($_POST) )
+if($_POST["draw"] == "mens"){
+
+    if($_POST["mode"] == "reorder")   echo(" Reorder");
+    if($_POST["mode"] == "default")   echo(" Default");
+
+}
+
+*/
+$mode=0;
+if( !empty($_GET['mode']) ){
+    $mode=$_GET["mode"];
+}
+
+// print_r($_POST);
+// print_r($_GET);
+
+
+if($mode == 0){
+
+    echo("reorder MX7.5 ");
+    reorder( "Mx7.5");
+
+}else if($mode==1){
+
+    echo("reorder Mx6.5");
+    reorder( "Mx6.5");
+
+}else if($mode==2){
+
+
+    setToDefaults( "Mx7.5");
+    lister( "Mx7.5");
+
+
+}else if($mode==3){
+
+
+    setToDefaults( "Mx6.5");
+    lister( "Mx6.5");
+
+}else if($mode==4){
+
+
+}
 
 
 
-//reorder( "Mx7.5");
-setToDefaults( "Mx7.5");
-lister( "Mx7.5");
-
-//reorder( "Mx6.5");
-setToDefaults( "Mx6.5");
-lister( "Mx6.5");
 
 function reorder($division){
 
@@ -192,14 +229,14 @@ function setToDefaults($division){
     echo "</td>";
     echo "<td>";
     echo "</td>";
-
+    echo "<td>";
+    echo "</td>";
 
     echo "<td>";
     echo "$division";    
     echo "</td>";
 
-    echo "<td>";
-    echo "</td>";
+
 
     echo "</tr>";
 
