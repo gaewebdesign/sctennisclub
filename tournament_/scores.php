@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_disabled = $team[$index][2];
                 $_mtype =  $team[$index][3]; 
                 echo("<option $_disabled value= \"$_id $_mtype\" > ");
-                echo("$_team ($_id)-($_mtype)");
+                echo("$_team ($_id) ($_mtype)");
                 echo("</option>");
 
 
