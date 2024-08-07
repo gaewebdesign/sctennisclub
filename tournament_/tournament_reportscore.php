@@ -49,6 +49,10 @@ $score = $_POST["score"];
 
 //print_r($_POST);
 
+/*$r = explode(" ",$winner_id);
+echo ("_id = $r[1]");
+echo ("_mtype = $r[0]");
+*/
 $year=2024;
 
 $theTABLE = "tourny";

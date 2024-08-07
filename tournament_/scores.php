@@ -45,6 +45,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
     if($row["custom"]> 10)   $team[$index][2] = "disabled";
+    $team[$index][3]=$_mtype;
  //   DEBUG("custom = ".$row["custom"]);
     $index++;
 }
@@ -69,7 +70,6 @@ while ($row = mysqli_fetch_assoc($qr)) {
  <hr/>
 </div> 
 
-
   <div class="container">
 
     <div class="col-md-5">
@@ -81,8 +81,9 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_id = $team[$index][0];
                 $_team =  $team[$index][1];
                 $_disabled = $team[$index][2];
-                echo("<option $_disabled value= \"$_id\" > ");
-                echo("$_team ($_id)");
+                $_mtype =  $team[$index][3]; 
+                echo("<option $_disabled value= \"$_id $_mtype\" > ");
+                echo("$_team ($_id) ($_mtype)");
                 echo("</option>");
 
 
@@ -105,10 +106,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_id = $team[$index][0];
                 $_team =  $team[$index][1];
                 $_disabled =  $team[$index][2];
+                $_mtype =  $team[$index][3];
                 
                 echo("<option $_disabled");
-                echo(" value= \"$_id\" >");
-                echo("$_team ($_id)");
+                echo(" value= \"$_id $_mtype \" >");
+                echo("$_team ($_id) ($_mtype) ");
                 echo("</option>");
 
             }
