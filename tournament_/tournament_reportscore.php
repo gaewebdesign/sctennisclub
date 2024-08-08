@@ -15,7 +15,7 @@ if ( isset($_POST['Button'])){
 		echo('
               <script >
                     window.setTimeout(function() {
-                    window.location.href="../tournament.phtml?draw=4";
+                    window.location.href="../tournament.phtml?draw=6";
                  }, 100);
               </script>
                 ');
@@ -45,35 +45,89 @@ $division = "Mx9.0";  //$_POST["division"];
 
 $winner_id = $_POST["winner"];
 $loser_id = $_POST["loser"];
+
+// the $_POST values are from  multi-valued pulldown
+// echo(" value= \"$_id $_mtype  $_disabled \" >");
+$_w = explode(" ",$winner_id );
+//print_r( $_w);
+$winner_id=$_w[0];
+$winner_mtype=$_w[1];
+$winner_custom=$_w[2];
+
+$_l = explode(" ", $loser_id);
+$loser_id = $_l[0];
+$loser_mtype = $_l[1];
+$loser_custom = $_l[2];
+//print_r( $_l);
+
 $score = $_POST["score"];
 
-//print_r($_POST);
 
-/*$r = explode(" ",$winner_id);
-echo ("_id = $r[1]");
-echo ("_mtype = $r[0]");
-*/
 $year=2024;
 
 $theTABLE = "tourny";
 
+
+$con = DBMembership();
+$query = "select * from tourny where _id=$winner_id";
+$qr= mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($qr);
+$winner_team = $row["fname1"]." ".$row["lname1"]." / ". $row["fname2"]." ".$row["lname2"];
+$query = "select * from tourny where _id=$loser_id";
+$qr= mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($qr);
+$loser_team = $row["fname1"]." ".$row["lname1"]." / ". $row["fname2"]." ".$row["lname2"];
+
+
+
 //$mtype= get_mtype($division);
-if ($winner_id != $loser_id) {
-reportScore($theTABLE,$division,$winner_id,$loser_id,$score);
-}else{
-   $con = DBMembership();
-   $query = "select * from tourny where _id=$winner_id";
-   $qr= mysqli_query($con, $query);
-   $row = mysqli_fetch_assoc($qr);
-   $team = $row["fname1"]." ".$row["lname1"]."/";
-   $team .= $row["fname2"]." ".$row["lname2"];
+// ERROR CHECK if same team
+if ($winner_id == $loser_id) {
 
    echo("<center>");
    echo("<h1>ERROR: same teams</h1>");
-   echo("<h1>$team</h1>");
+   echo("<h1>$winner_team</h1>");
    echo("</center>");
+   return;
 }
 
+// quarterfinal match means custom=0 .. no wins yet
+//echo(" $winner_custom  vs  $loser_custom" );
+if( $winner_custom ==0 || $loser_custom==0){
+
+    $x=0;
+    
+   if($winner_mtype <=2 &&  $loser_mtype <= 2) $x=0;
+   else if( ($winner_mtype>=3 && $winner_mtype<=4) && ( $loser_mtype >= 3 && $loser_mtype<=4 )  ) $x=0;
+
+   else if( ($winner_mtype>=5 && $winner_mtype<=6) && ( $loser_mtype >= 6 && $loser_mtype<=6 )  ) $x=0;
+
+   else if($winner_mtype >=6 &&   $loser_mtype >= 6) $x=0;
+   else{
+      echo("<center>");
+      echo("<h3>ERROR:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($lower_mtype)<p>in the quarterfinals </h3>");
+      echo("</center>");
+         
+      return;
+   }
+
+}
+
+if( $winner_custom ==1 || $loser_custom==1){
+
+  if($winner_mtype <=4 && $loser_mtype > 4){
+  
+     echo("<center>");
+     echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
+     echo("</center>");
+        
+     return;
+  }
+
+}
+
+
+reportScore($theTABLE,$division,$winner_id,$loser_id,$score);
 
 //enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
