@@ -54,6 +54,8 @@ $winner_id=$_w[0];
 $winner_mtype=$_w[1];
 $winner_custom=$_w[2];
 
+echo("winner custom = $winner_custom " );
+
 $_l = explode(" ", $loser_id);
 $loser_id = $_l[0];
 $loser_mtype = $_l[1];
@@ -61,6 +63,11 @@ $loser_custom = $_l[2];
 //print_r( $_l);
 
 $score = $_POST["score"];
+
+$winner_custom = (int)$winner_custom;
+$loser_custom  = (int)$loser_custom;
+
+echo("******** $winner_custom <------> ($loser_custom) ************ ");
 
 
 $year=2024;
@@ -91,28 +98,52 @@ if ($winner_id == $loser_id) {
    return;
 }
 
-// quarterfinal match means custom=0 .. no wins yet
-//echo(" $winner_custom  vs  $loser_custom" );
-if( $winner_custom ==0 || $loser_custom==0){
 
-    $x=0;
-    
-   if($winner_mtype <=2 &&  $loser_mtype <= 2) $x=0;
-   else if( ($winner_mtype>=3 && $winner_mtype<=4) && ( $loser_mtype >= 3 && $loser_mtype<=4 )  ) $x=0;
 
-   else if( ($winner_mtype>=5 && $winner_mtype<=6) && ( $loser_mtype >= 6 && $loser_mtype<=6 )  ) $x=0;
+if( $winner_custom != $loser_custom){
 
-   else if($winner_mtype >=6 &&   $loser_mtype >= 6) $x=0;
-   else{
-      echo("<center>");
-      echo("<h3>ERROR:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($lower_mtype)<p>in the quarterfinals </h3>");
+   echo("<center>");
+   echo("<h3>WRONG ROUND:<p> $winner_team ($winner_mtype)<p>can\'t play <p>$loser_team ($loser_mtype) </h3>");
       echo("</center>");
-         
+      
+      LOGGER("TOURNY: ROUND      : winner_custom ($winner_custom)  loser_custom ($loser_custom) ");   
+      LOGGER( "TOURNY: WRONG ROUND: $winner_team ($winner_mtype) cant play $loser_team ($loser_mtype)   ");
       return;
-   }
+
 
 }
 
+// quarterfinal match means custom=0 .. no wins yet
+if( $winner_custom ==0 || $loser_custom==0){
+
+   DEBUG("QF: $winner_custom  vs  $loser_custom" );
+   $x=0;
+    
+   if(      between($winner_mtype,1,2) &&  between($loser_mtype,1,2) ){
+      
+   }else if( between($winner_mtype,3,4) &&  between($loser_mtype,3,4 )  ){
+
+   }else if( between($winner_mtype,5,6) &&  between( $loser_mtype, 5,6)  ){
+
+   }else if( between($winner_mtype,7,8) &&  between($loser_mtype, 7,8) ){
+
+   }else{
+      echo("<center>");
+      echo("<h3>ERROR:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($loser_mtype)<p>in the quarterfinals </h3>");
+      echo("</center>");
+
+      LOGGER("TOURNY: ERROR $winner_team ($winner_id , $winner_mtype) cant play $loser_team ($loser_id,$loser_mtype) in the quarterfinals ");         
+      LOGGER("TOURNY: ---");
+      return;
+   }
+
+   LOGGER("TOURNY:  $winner_team ($winner_id,$winner_mtype) VS $loser_team ($winner_id,$loser_mtype) in the quarterfinals </h3>");         
+   LOGGER("TOURNY: ---");
+
+}
+
+
+// semi-final matches
 if( $winner_custom ==1 || $loser_custom==1){
 
   if($winner_mtype <=4 && $loser_mtype > 4){
@@ -120,7 +151,9 @@ if( $winner_custom ==1 || $loser_custom==1){
      echo("<center>");
      echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
      echo("</center>");
-        
+
+     LOGGER("TOURNY $winner_team($winner_id, $winner_custom) cant play $loser_team($winner_id, $winner_custom) in the semi-finals");
+     LOGGER("TOURNY ---");   
      return;
   }
 
@@ -142,6 +175,11 @@ $toemail1 = "tennis.mutt@gmail.com";
 $toemail2 = "santaclarawebmaster@gmail.com";
 */
 //phpemailer($subject, $message ,$toemail1 , $toemail2);
+function between($x , $min,$max){
+   if( $x>=$min && $x<=$max) return true;
+   return false;
+
+}
 
 function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
 
@@ -178,6 +216,9 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
      echo("$query1 <br>");
      echo("$query2 <br> ");
      echo("$query3  <br>");
+     LOGGER("TOURNY: $query1 ");
+     LOGGER("TOURNY: $query2 ");
+     LOGGER("TOURNY: $query3 ");
 
      
           $query_results=mysqli_query($con, $query1);
@@ -217,6 +258,9 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
 
     $query_results=mysqli_query($con, $query1);
     $query_results=mysqli_query($con, $query2);
+    LOGGER("TOURNY: $query1 (UPDATE LOSER round to Loss");
+    LOGGER("TOURNY: $query2 (UPDATE LOSER custom to 99");
+    LOGGER("TOURNY: ---");
 
 //    echo $query;
  

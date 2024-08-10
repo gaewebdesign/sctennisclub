@@ -129,7 +129,7 @@ function LOGTEXT($text){
  $query .= "'";
  $query.= ')';
  
- //print("<br>".$query."<br>");
+ ///print("<br>".$query."<br>");
  
  $con = DBMembership();
  $qr = mysqli_query($con, $query );

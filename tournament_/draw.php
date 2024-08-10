@@ -34,6 +34,10 @@ $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
 
     $team =  $row["fname1"][0]." ".$row["lname1"]."/".$row["fname2"][0]." ".$row["lname2"];
+    
+//    echo ($team."->".strlen($team) ."<br> " );
+//    if ( strlen($team) < 5 ) $team = "    ddd     ";    
+
     $mtype[$index] = $row["mtype"];
     $q[$index++] = $team;
 

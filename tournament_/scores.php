@@ -38,15 +38,20 @@ $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
     $_mtype = $row["mtype"];
+    $_custom = $row["custom"];
     $_team = $row["fname1"]." ".$row["lname1"]."/";
     $_team .= $row["fname2"]." ".$row["lname2"];
 
 
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
-    if($row["custom"]> 10)   $team[$index][2] = "disabled";
+    $team[$index][2] = "";
+    if($_custom> 10)   $team[$index][2] = "disabled";
     $team[$index][3]=$_mtype;
- //   DEBUG("custom = ".$row["custom"]);
+    $team[$index][4]=$_custom;
+
+ //   DEBUG("_custom = $_custom");
+
     $index++;
 }
 
@@ -78,12 +83,13 @@ while ($row = mysqli_fetch_assoc($qr)) {
         <select class="form-select" id="validationDefault04" name="winner" required>
         <?php
             for($index=1 ; $index<9 ; $index++){
-                $_id = $team[$index][0];
-                $_team =  $team[$index][1];
-                $_disabled = $team[$index][2];
-                $_mtype =  $team[$index][3]; 
-                echo("<option $_disabled value= \"$_id $_mtype\" > ");
-                echo("$_team ($_id) ($_mtype)");
+                $_id = $team[$index][0];          // _id       use to determine team
+                $_team =  $team[$index][1];       // team name
+                $_disabled = $team[$index][2];    // either blank or disabledd
+                $_mtype =  $team[$index][3];      // mtype    1-8  position in draw
+                $_custom = $team[$index][4];      // custom    determine round 0,1,2,99 (99 means to disable item)
+                echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
+                echo("$_team ($_id) ($_mtype) ($_custom) ");
                 echo("</option>");
 
 
@@ -107,10 +113,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_team =  $team[$index][1];
                 $_disabled =  $team[$index][2];
                 $_mtype =  $team[$index][3];
+                $_custom =  $team[$index][4];
                 
                 echo("<option $_disabled");
-                echo(" value= \"$_id $_mtype \" >");
-                echo("$_team ($_id) ($_mtype) ");
+                echo(" value= \"$_id $_mtype  $_custom \" >");
+                echo("$_team ($_id) ($_mtype) ($_custom)");
                 echo("</option>");
 
             }

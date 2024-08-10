@@ -69,6 +69,8 @@
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default (Mx 7.5)</a></li>
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (Mx 6.5)</a></li>              
 
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Tournament LOGGER</a></li>              
+
 <!--
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=4">Enter Tournament</a></li>
