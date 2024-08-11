@@ -69,8 +69,8 @@
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default (Mx 7.5)</a></li>
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (Mx 6.5)</a></li>              
                <hr/>
-               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=5">Database</a></li>              
-               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Logger</a></li>              
+               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Database</a></li>              
+               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=5">Logger</a></li>              
 
 
 <!--
