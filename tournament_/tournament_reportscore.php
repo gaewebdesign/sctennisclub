@@ -54,25 +54,26 @@ $winner_id=$_w[0];
 $winner_mtype=$_w[1];
 $winner_custom=$_w[2];
 
-echo("winner custom = $winner_custom " );
+//echo("winner custom = $winner_custom " );
 
 $_l = explode(" ", $loser_id);
 $loser_id = $_l[0];
 $loser_mtype = $_l[1];
 $loser_custom = $_l[2];
 
+/*
 echo("EXPLODE: <br>");
 print_r( $_w);
 echo( "<br>");
 print_r( $_l);
 echo( "<br>");
-
+*/
 $score = $_POST["score"];
 
 $winner_custom = (int)$winner_custom;
 $loser_custom  = (int)$loser_custom;
 
-echo("winner_custom($winner_custom) <------> loser_custom($loser_custom) <br>");
+//echo("winner_custom($winner_custom) <------> loser_custom($loser_custom) <br>");
 
 
 $year=2024;
@@ -121,7 +122,7 @@ if( $winner_custom != $loser_custom){
 // quarterfinal match means custom=0 .. no wins yet
 if( $winner_custom ==0 || $loser_custom==0){
 
-   DEBUG("QF: $winner_custom  vs  $loser_custom" );
+   //DEBUG("QF: $winner_custom  vs  $loser_custom" );
    $x=0;
     
    if(      between($winner_mtype,1,2) &&  between($loser_mtype,1,2) ){
@@ -166,7 +167,7 @@ if( $winner_custom ==1 || $loser_custom==1){
 
 
 reportScore($theTABLE,$division,$winner_id,$loser_id,$score);
-
+announceScore($winner_team , $loser_team,$score);
 //enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
 //signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
@@ -186,6 +187,26 @@ function between($x , $min,$max){
 
 }
 
+function announceScore($_w , $_l , $_s){
+
+   echo("<center>");
+   echo("<h1>Score Report </h1>");
+   echo("<h3>");
+   echo("$_w");
+   echo("</h3>");
+
+   echo("<h3>vs</h3>");
+
+   echo("<h3>");
+   echo("$_l");
+   echo("</h3>");
+   
+   echo("<h3>");
+   echo("$_s");
+   echo("</h3>");
+   echo("</center>");
+
+}
 function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
 
     $con = DBMembership();
@@ -217,10 +238,12 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
 
      }
 
+/*
      echo("custom = $custom <br>");
      echo("$query1 <br>");
      echo("$query2 <br> ");
      echo("$query3  <br>");
+*/
      LOGGER("TOURNY: $query1 ");
      LOGGER("TOURNY: $query2 ");
      LOGGER("TOURNY: $query3 ");
@@ -253,14 +276,15 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
         break;
 
         default:
-          echo("custom = $custom");
+//          echo("custom = $custom");
 
 
     }
+/*
     echo "custom = $custom <br>";
     echo $query1."<br>";
     echo $query2."<br>";
-
+*/
     $query_results=mysqli_query($con, $query1);
     $query_results=mysqli_query($con, $query2);
     LOGGER("TOURNY: $query1 (UPDATE LOSER round to Loss");
