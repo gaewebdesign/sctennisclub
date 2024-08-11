@@ -60,14 +60,19 @@ $_l = explode(" ", $loser_id);
 $loser_id = $_l[0];
 $loser_mtype = $_l[1];
 $loser_custom = $_l[2];
-//print_r( $_l);
+
+echo("EXPLODE: <br>");
+print_r( $_w);
+echo( "<br>");
+print_r( $_l);
+echo( "<br>");
 
 $score = $_POST["score"];
 
 $winner_custom = (int)$winner_custom;
 $loser_custom  = (int)$loser_custom;
 
-echo("******** $winner_custom <------> ($loser_custom) ************ ");
+echo("winner_custom($winner_custom) <------> loser_custom($loser_custom) <br>");
 
 
 $year=2024;
@@ -101,7 +106,7 @@ if ($winner_id == $loser_id) {
 
 
 if( $winner_custom != $loser_custom){
-
+   echo ("winner_custom($winner_custom)  != loser_custom($loser_custom)    ");
    echo("<center>");
    echo("<h3>WRONG ROUND:<p> $winner_team ($winner_mtype)<p>can\'t play <p>$loser_team ($loser_mtype) </h3>");
       echo("</center>");
@@ -146,7 +151,7 @@ if( $winner_custom ==0 || $loser_custom==0){
 // semi-final matches
 if( $winner_custom ==1 || $loser_custom==1){
 
-  if($winner_mtype <=4 && $loser_mtype > 4){
+  if( ($winner_mtype <=4 && $loser_mtype > 4) || ($winner_mtype>=4 && $loser_mtype<4) ){
   
      echo("<center>");
      echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");

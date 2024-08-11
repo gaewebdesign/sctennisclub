@@ -115,10 +115,12 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_mtype =  $team[$index][3];
                 $_custom =  $team[$index][4];
                 
-                echo("<option $_disabled");
-                echo(" value= \"$_id $_mtype  $_custom \" >");
+                echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
                 echo("$_team ($_id) ($_mtype) ($_custom)");
                 echo("</option>");
+//                echo("<option $_disabled");
+//                echo(" value= \"$_id $_mtype  $_custom \" >");
+
 
             }
 
