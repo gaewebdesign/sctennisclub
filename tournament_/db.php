@@ -11,7 +11,9 @@
     tr{
         font-size:12px;
     }
+
 </style>
+
 
 
 <table class="table table-bordered table-striped table-condensed sortable">
