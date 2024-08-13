@@ -38,7 +38,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 //    echo ($team."->".strlen($team) ."<br> " );
 //    if ( strlen($team) < 5 ) $team = "    ddd     ";    
 
-    $mtype[$index] = $row["mtype"];
+    $mtype[$index] = "(".$row["_id"]." ".$row["mtype"]." ".$row["custom"].")";
     $q[$index++] = $team;
 
   }
