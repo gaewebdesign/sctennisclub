@@ -91,7 +91,7 @@ class paypal{
 
 $paypal = new paypal();
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
-$event= "Chinz Stics";
+$event= "China Stixs";
 
 $paid= DINNER;
 $paypal->price = $paid;
@@ -113,7 +113,7 @@ $paypal->add("return",RETURN_URL_SIGNUP);
 $paypal->add("cancel_return",CANCEL_URL_SIGNUP);
 $paypal->add("notify_url",NOTIFY_URL_SIGNUP);
 
-DEBUG("notify:" . NOTIFY_URL);
+//DEBUG("notify:" . NOTIFY_URL);
 
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
@@ -189,7 +189,7 @@ $email = "tennis.mutt@gmail.com";
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
 
-    phpemailer($subject,$message , $email );
+//    phpemailer($subject,$message , $email );
     toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
