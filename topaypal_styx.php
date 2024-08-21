@@ -148,7 +148,7 @@ $payment=$paid;
 
 $insignia="";
 $event="Styx";
-toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+//toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 $data = array(
 	'year' => $year,
@@ -169,8 +169,8 @@ $data = array(
 	'custom' => $custom,
     'opt' => $opt,
     'pwd' => $pwd,
-    'subject' => "Athena signup: $fname $lname (pending)",
-    'message' => "Athena signup: $fname $lname (pending)"
+    'subject' => "China Stix Signup: $fname $lname (pending)",
+    'message' => "China Stix signup: $fname $lname (pending)"
 
 );
 
