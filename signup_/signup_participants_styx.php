@@ -21,11 +21,11 @@ tr {
       </thead>
       <tbody>
            <p>
-           <h4>Participants *** </h4> 
+           <h4>Participants  </h4> 
            <p>
        <?php
           
-          $epoch = strtotime('2024-8-1');
+          $epoch = strtotime('2024-8-11');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
