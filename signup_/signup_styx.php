@@ -122,7 +122,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 October z  Year end dinner </h6> 
+             <h6 class="my-0">2024 November Year end dinner </h6> 
 
               <large class="text-muted"><a href="https://www.waze.com/live-map/directions/china-stix-restaurant-el-camino-real-2110-santa-clara?to=place.w.155976054.1560022679.1217845">
               China Stix Directions</a></large>
