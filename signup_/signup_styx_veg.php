@@ -54,14 +54,10 @@
     $MEMBER_FEE=DINNER;
   ?>
 
-<div class="container">
+<div >
   <main>
     <div class="py-5 text-center">
      <picture>
-<!--
-      <img class="mg-fluid img-thumbnail" src="cinco.png" alt="" >
-    <img class="mg-fluid img-thumbnail" src="./images/Athenat.png" alt="" >
-    -->
    <img  src="./images/chinastix.jpg" alt="" class="ResponsiveImage china" >
 
   </picture>
@@ -77,7 +73,7 @@
     </h3>
   </div>
 
-    <div class="container">
+  <div >
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
@@ -91,11 +87,11 @@
 
     </div>
 
-    <div class="container">
-        <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="./topaypal_styx_veg.php", method="post" >
-          <div class="row g-3">
-            <div class="col-sm-6">
+        
+      <form class="needs-validation" novalidate name="signup" action="./topaypal_styx_veg.php", method="post" >
+
+      <div class="row md-12">
+            <div class="col-sm-5">
               <label for="firstName" class="form-label">First name</label>
               <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
               <div class="invalid-feedback">
@@ -103,7 +99,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-5">
               <label for="lastName" class="form-label">Last name</label>
               <input type="text" class="form-control BackInput" id="lastName" placeholder="" value="" required name="lname">
               <div class="invalid-feedback">
@@ -118,103 +114,55 @@
                 Valid email address is required.
               </div>
             </div>
-            <div class="class-sm-12">
-
-            </div>
-            <div class="col-md-12">
-              <span><h2 style="color:rgb(25, 0, 255)">Menu: </h2></span> 
-            </div>
 
 
-
-
-            <hr/>
-             <div class="container">
-
-              <table class="table table-striped ">
-                <thead>
-                    <tr >
-                    <th style="width:45%">
-                    <input class="form-control-input"  checked type="radio" id="dinner" value="10main" name="dinner"  required   ></input>
-                        <label class="form-check-label" for="member"><b>10 Course Dinner </b> &nbsp;
-                       </label>
-                    </th>
-
-                    <th style="width:45%" >
-                    <input class="form-control-input"  type="radio" id="dinner" value="veg" name="dinner"  required   ></input>
-                        <label class="form-check-label" for="member"><b>Vegetarian</b> &nbsp;
-                       </label>
-                    </th>
-                </thead>
-              
-              <tr><td> Pot stickers  <td>Sweet Corn w Tofu Soup 
-              <tr><td> Chinese Chicken Salad  <td> Lettuce Wrapped w/Shredded Mushrooms 
-              <tr> <td>Honey Pecan Prawns  <td>  Mixed Mushroom, Pumpkin & String Beans 
-              <tr> <td>Garlic Fish <td>  Lotus Root, Fungus, Peas & Ginko Nuts 
-              <tr> <td>Shanghai Spareribs <td> Fried Tofu w/Brown sauce and Pea Sprouts 
-              <tr> <td>Broccoli Beef  <td>  Chinese Broccoli Stir Fry
-              <tr><td> Orange Chicken   <td> General Tso's Cauliflower 
-              <tr><td> String Beams <td>  Money Bag Dumplings 
-              <tr> <td>Combination Chow Mein <td> Vegetables Chow Mein 
-              <tr> <td>BBQ Pork Fried Rice <td> Spinach & Pine Nuts Fried Rice 
-               </tr>
-            </table>
-    </div> <!-- class="container">-->
-
-</hr>               
-
-
-
-            </div>
-
-            <div class="col-12" >
-              <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
-              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_SCTC">
-              <div class="invalid-feedback">
-                Fee Error 
-              </div>
-            </div> 
-
-          </div>
-
-        <div class="container-fluid mt-2">
-        <div class="g-recaptcha"
+    </div> <!-- outer most div for name,email input data -->
+      <!--- ************************************** -->
+        <div class="row md-12 mt-2 g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
         </div>
-        </div>
+      <!--- ************************************** -->        
 
 
+      <div class="row md-12">
+      <table class="table table-bordered table-sm">
+                <thead>
 
-          <h4 class="mb-3">Payment</h4>
+                <th style="width:45%">
+                   <label class="mt-2 form-check-label" for="member"><b>Select One</b> &nbsp;
 
-          <div class="my-3">
- 
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label class="form-check-label" for="paypal">PayPal</label>
-            </div>
-          </div>
+                  </thead>
+              
+              <tr>
+                <td> <input class="form-control-input"  checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
+                        <label class="form-check-label" for="member"><b>10 Course Dinner </b> &nbsp;
+                       </label> 
+                <td> Chinese Chicken Salad, Honey Pecan Prawns, Garlic Fish, Shanghai Spareribs
+                     Broccoli Beef, Orange Chicken, String Beans, Combinaton Chow Mein, BBQ Pork Fried Rice
+              
+                <tr> 
+                <td> <input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
+                        <label class="form-check-label" for="member"><b>Vegetarian </b> &nbsp;
+                       </label> 
+                  
+                <td> Lettuce Wrapped w/Shredded Mushrooms, Mixed Mushroom Pumpkin & String Beams, Lotus Root Fungus Peas & Ginko Nuts
+                       Fried Tofu w/Brown Sauce and Pea Sprouts , Chinese Broccoli Stir Fry , General Tso's Cauliflower,
+                       Money Bag Dumplings, Vegetable Chow Mein, Spinach and Pine Nuts Fried Rice
+               </tr>
 
-<!--
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
-          <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
+              </table>
 
--->
-<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
 
-        </form>
-      </div>
     </div>
-  </main>
-
-  <p>
 
 
- 
-</div>
 
 
-    
+     <button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
+
+
+      </form>
+
 
     
   </body>
