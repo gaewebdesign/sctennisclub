@@ -125,23 +125,28 @@
 
 
       <div class="row md-12">
-      <table class="table table-bordered table-sm">
+      <table class="table table-bordered table-md ms-10">
                 <thead>
 
-                <th style="width:45%">
-                   <label class="mt-2 form-check-label" for="member"><b>Select One</b> &nbsp;
+                  <th style="width: 1%"> </th>
+
+                 <th style="width:45%">
+                  &nbsp; <label class="mt-10 form-check-label" for="member"><b>Select One</b> &nbsp;
 
                   </thead>
               
               <tr>
-                <td> <input class="form-control-input"  checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
+              <td> </td>
+
+                 <td>&nbsp; &nbsp;<input class="form-control-input"  checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
                         <label class="form-check-label" for="member"><b>10 Course Dinner </b> &nbsp;
                        </label> 
                 <td> Chinese Chicken Salad, Honey Pecan Prawns, Garlic Fish, Shanghai Spareribs
                      Broccoli Beef, Orange Chicken, String Beans, Combinaton Chow Mein, BBQ Pork Fried Rice
               
                 <tr> 
-                <td> <input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
+                <td> </td>
+                <td> &nbsp; &nbsp;<input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
                         <label class="form-check-label" for="member"><b>Vegetarian </b> &nbsp;
                        </label> 
                   
