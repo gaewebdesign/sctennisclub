@@ -152,8 +152,11 @@ if( $winner_custom ==0 || $loser_custom==0){
 // semi-final matches
 if( $winner_custom ==1 || $loser_custom==1){
 
-  if( ($winner_mtype <=4 && $loser_mtype > 4) || ($winner_mtype>=4 && $loser_mtype<4) ){
-  
+//   if( ($winner_mtype <=4 && $loser_mtype > 4) || ($winner_mtype>=4 && $loser_mtype<4) ){
+    if( ($winner_mtype <=4 && $loser_mtype <= 4) || ($winner_mtype>=4 && $loser_mtype>=4) ){
+      LOGGER("TOURNY $winner_team($winner_id, $winner_custom) vs $loser_team($winner_id, $winner_custom) in the semi-finals");
+
+     }else{
      echo("<center>");
      echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
      echo("</center>");
@@ -162,6 +165,7 @@ if( $winner_custom ==1 || $loser_custom==1){
      LOGGER("TOURNY ---");   
      return;
   }
+
 
 }
 
