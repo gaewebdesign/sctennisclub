@@ -24,7 +24,7 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2024-7-1');
+          $epoch = strtotime('2024-8-19');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
