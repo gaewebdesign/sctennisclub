@@ -71,44 +71,29 @@
     <h3 style="font-size: 1.2em ">
     Enjoy dinner at <b>China Stix</b> in Santa Clara
     on Thursday November 14 , 6:30-8 pm. Deadline to signup is November 1, 2024.
+    Dinner is $<?php echo($MEMBER_FEE )?> <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
   </div>
 
-    <div class="row g-5">
-      <div class="col-md-5 col-lg-4 order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-<!--
-          <span class="text-primary">--</span>
-          <span class="badge bg-primary rounded-pill">*</span>
--->
-        </h4>
+    <div class="container">
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 November Year end dinner </h6> 
-
               <large class="text-muted"><a href="https://www.waze.com/live-map/directions/china-stix-restaurant-el-camino-real-2110-santa-clara?to=place.w.155976054.1560022679.1217845">
-              China Stix Directions</a></large>
-
+              China Stix Directions</a>
+              </large>
             </div>
           </li>
-
-          <li class="list-group-item d-flex justify-content-between">
-           
-            <div class="BackInput">  Dinner  $<?php echo($MEMBER_FEE )?>
-            </div>
-
-          </li>
-
 
         </ul>
 
-      </div>
-      <div class="col-md-7 col-lg-8">
+    </div>
+
+    <div class="container">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="./topaypal_styx.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_styx_veg.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -138,38 +123,48 @@
             </div>
             <div class="col-md-12">
               <span><h2 style="color:rgb(25, 0, 255)">Menu: </h2></span> 
+            </div>
+
+
+
+
+            <hr/>
+             <div class="container">
+
               <table class="table table-striped ">
                 <thead>
-                    <tr>
-                    <th scope="col" >
-                    <input class="form-check-input"  type="radio" id="10main" value="10main" name="dinner"  required   ></input>
+                    <tr >
+                    <th style="width:45%">
+                    <input class="form-control-input"  checked type="radio" id="dinner" value="10main" name="dinner"  required   ></input>
                         <label class="form-check-label" for="member"><b>10 Course Dinner </b> &nbsp;
                        </label>
                     </th>
-                    <th scope="col" >
-                    <input class="form-check-input"  type="radio" id="veg" value="veg" name="dinner"  required   ></input>
+
+                    <th style="width:45%" >
+                    <input class="form-control-input"  type="radio" id="dinner" value="veg" name="dinner"  required   ></input>
                         <label class="form-check-label" for="member"><b>Vegetarian</b> &nbsp;
                        </label>
-                    </tr>
+                    </th>
                 </thead>
               
-              <tr><td> Pot stickers  <td> - </td>
-              <tr><td> Chinese Chicken Salad <td> - </td>
-              <tr> <td>Honey Pecan Prawns  <td> - </td>
-              <tr> <td>Garlic Fish  <td> - </td>
-              <tr> <td>Shanghai Spareribs  <td> - </td>
-              <tr> <td>Broccoli Beef  <td> - </td>
-              <tr><td> Orange Chicken  <td> - </td>
-              <tr><td> String Beams <td> - </td>
-              <tr> <td>Combination Chow Mein  <td> - </td>
-              <tr> <td>BBQ Pork Fried Rice  <td> - </td>
+              <tr><td> Pot stickers  <td>Sweet Corn w Tofu Soup 
+              <tr><td> Chinese Chicken Salad  <td> Lettuce Wrapped w/Shredded Mushrooms 
+              <tr> <td>Honey Pecan Prawns  <td>  Mixed Mushroom, Pumpkin & String Beans 
+              <tr> <td>Garlic Fish <td>  Lotus Root, Fungus, Peas & Ginko Nuts 
+              <tr> <td>Shanghai Spareribs <td> Fried Tofu w/Brown sauce and Pea Sprouts 
+              <tr> <td>Broccoli Beef  <td>  Chinese Broccoli Stir Fry
+              <tr><td> Orange Chicken   <td> General Tso's Cauliflower 
+              <tr><td> String Beams <td>  Money Bag Dumplings 
+              <tr> <td>Combination Chow Mein <td> Vegetables Chow Mein 
+              <tr> <td>BBQ Pork Fried Rice <td> Spinach & Pine Nuts Fried Rice 
                </tr>
             </table>
+    </div> <!-- class="container">-->
 
-               </ul>
-<!--
+</hr>               
 
--->
+
+
             </div>
 
             <div class="col-12" >
