@@ -12,7 +12,7 @@
 </head>
 <body class="Back">
     <center>
-    <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up to lunch and tennis !
+    <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up!
     <p> View your name at <br>
     <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
     </h1>
