@@ -24,6 +24,7 @@ if($_POST["dinner"] == "10Course" ) {
 }
 
 $paid= DINNER;
+$paid = $_POST["_STYX_FEE"];
 $paypal->price = $paid;
 
 $paypal->enable_payment();

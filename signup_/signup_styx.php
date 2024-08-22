@@ -52,7 +52,7 @@
   <?php 
    // include "includes.inc";
    $MEMBER_FEE=DINNER;
-   $MEMBER_FEE=".02";
+   $MEMBER_FEE=".01";
   
   ?>
 
@@ -114,6 +114,15 @@
                 Valid email address is required.
               </div>
             </div>
+<!--- ******** HIDDEN FEE ****************************** -->
+    <div class="col-12" >
+              <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
+              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_STYX_FEE">
+              <div class="invalid-feedback">
+                Fee Error 
+              </div>
+    </div> 
+
 
 <!--- ******** CAPTCTHA ****************************** -->
 
