@@ -87,10 +87,9 @@
 
     </div>
 
-        
-      <form class="needs-validation" novalidate name="signup" action="./topaypal_styx.php", method="post" >
 
-      <div class="row md-12">
+     <form class="row g-3" action="./topaypal_styx.php" method="POST">
+
             <div class="col-sm-5">
               <label for="firstName" class="form-label">First name</label>
               <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
@@ -98,10 +97,9 @@
                 Valid first name is required.
               </div>
             </div>
-
             <div class="col-sm-5">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control BackInput" id="lastName" placeholder="" value="" required name="lname">
+              <input type="text" class="form-control BackInput" id="LastName" placeholder="" value="" required name="lname">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
@@ -116,15 +114,40 @@
             </div>
 
 
-    </div> <!-- outer most div for name,email input data -->
-      <!--- ************************************** -->
-        <div class="row md-12 mt-2 g-recaptcha"
+
+<!--- ******** CAPTCTHA ****************************** -->
+I went with:
+
+
+<style>
+    /* already defined in bootstrap4 */
+    .text-xs-center {
+        text-align: center;
+    }
+
+    .g-recaptcha {
+        display: inline-block;
+    }
+
+    .captchacenter{
+          justify: center;
+          align: center; 
+    }
+</style>
+
+<div class="text-xs-center">
+<div class="row md-12 mt-5 g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
-        </div>
-      <!--- ************************************** -->        
+ </div>
+<div>
 
 
-      <div class="row md-12">
+
+<!--- ************************************************* -->        
+
+
+<!--    Menu Table   ************************          -->
+<div class="row md-12 text-start">
       <table class="table table-bordered table-md ms-10">
                 <thead>
 
@@ -138,19 +161,21 @@
               <tr>
               <td> </td>
 
-                 <td>&nbsp; &nbsp;<input class="form-control-input"  checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
-                        <label class="form-check-label" for="member"><b>10 Course Dinner </b> &nbsp;
+
+
+                 <td style="text-align:left">&nbsp; &nbsp;<input class="form-control-input" checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
+                        <label class="form-check-label" for="member" style="text-align:left"><b>10 Course Dinner </b> &nbsp;
                        </label> 
-                <td> Chinese Chicken Salad, Honey Pecan Prawns, Garlic Fish, Shanghai Spareribs
+                <td style="text-align:left"> Chinese Chicken Salad, Honey Pecan Prawns, Garlic Fish, Shanghai Spareribs
                      Broccoli Beef, Orange Chicken, String Beans, Combinaton Chow Mein, BBQ Pork Fried Rice
               
                 <tr> 
                 <td> </td>
-                <td> &nbsp; &nbsp;<input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
+                <td style="text-align:left"> &nbsp; &nbsp;<input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
                         <label class="form-check-label" for="member"><b>Vegetarian </b> &nbsp;
                        </label> 
                   
-                <td> Lettuce Wrapped w/Shredded Mushrooms, Mixed Mushroom Pumpkin & String Beams, Lotus Root Fungus Peas & Ginko Nuts
+                <td style="text-align:left"> Lettuce Wrapped w/Shredded Mushrooms, Mixed Mushroom Pumpkin & String Beams, Lotus Root Fungus Peas & Ginko Nuts
                        Fried Tofu w/Brown Sauce and Pea Sprouts , Chinese Broccoli Stir Fry , General Tso's Cauliflower,
                        Money Bag Dumplings, Vegetable Chow Mein, Spinach and Pine Nuts Fried Rice
                </tr>
@@ -160,13 +185,15 @@
 
     </div>
 
+<!--- ************************************************* -->        
 
 
 
-     <button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
+
+<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
 
 
-      </form>
+</form>
 
 
     
