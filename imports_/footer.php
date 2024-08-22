@@ -4,7 +4,7 @@
 
                      <a href="./board" >About Us</a> | 
                      <a href="./membership">Membership</a>  | 
-                     <a href="mailto: info@sctennisclub.org" >Contact Us</a> |
+                     <a href="mailto: scinformation@sctennisclub.org" >Contact Us</a> |
                      <a href="https://www.facebook.com/santaclaratennisclub" ><img src="./images/fb.png"></a> | 
                      <a href="https://www.instagram.com/santaclaratennisclub" ><img src="./images/instagram.png"></a> | 
 
