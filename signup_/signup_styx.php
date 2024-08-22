@@ -52,7 +52,7 @@
   <?php 
    // include "includes.inc";
    $MEMBER_FEE=DINNER;
-   $MEMBER_FEE=".01";
+   $MEMBER_FEE=".02";
   
   ?>
 
