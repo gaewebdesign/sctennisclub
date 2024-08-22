@@ -18,9 +18,14 @@
     </h1>
 <!--
     <img  class="RESP_IMAGE" src="./images/walklikeegyptian.gif" width="25%" >
--->
 <img  class="RESP_IMAGE" src="./images/swifti.gif" width="50%" >
-  <h1>Follow the action on the club's Instagram page! </h1>
+<iframe src="https://giphy.com/embed/HxE2bm0SZWqhW" width="480" height="365" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/food-anime-HxE2bm0SZWqhW"></a></p>
+-->
+
+
+    <iframe src="https://giphy.com/embed/YSsqduWPo7528" width="466" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rice-YSsqduWPo7528"></a></p>    
+
+    <h1>Follow the action on the club's Instagram page! </h1>
 
     <a href="https://www.instagram.com/santaclaratennisclub/"> 
 
