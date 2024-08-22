@@ -113,13 +113,13 @@ SENDER( $data );
 
 $subject= "2024 Dinner";
 $message = "$fname $lname signed up";
-$email = "tennis.mutt@gmail.com";
+$recipient = "tennis.mutt@gmail.com";
 
 
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
 
-  phpemailer($subject,$message , $email );
+  phpemailer($subject,$message , $recipient );
 //  print_r( $data );
 
   toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
