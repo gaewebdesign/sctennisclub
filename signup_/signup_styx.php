@@ -41,7 +41,13 @@
         border: 2px solid #efdecd;
 
       }
-    </style>
+
+      .tab {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+</style>
 
     
     <!-- Custom styles for this template -->
@@ -79,8 +85,16 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-              <large class="text-muted"><a href="https://www.waze.com/live-map/directions/china-stix-restaurant-el-camino-real-2110-santa-clara?to=place.w.155976054.1560022679.1217845">
-              China Stix Directions</a>
+              <b>China Stix Directions</b>
+
+              <large class="tab text-muted"><a href="https://www.waze.com/live-map/directions/china-stix-restaurant-el-camino-real-2110-santa-clara?to=place.w.155976054.1560022679.1217845">
+              via Waze</a>
+
+              &nbsp;
+              <large class="tab text-muted"><a href="https://www.yelp.com/map/china-stix-restaurant-santa-clara">
+              via Yelp </a>
+
+
               </large>
             </div>
           </li>
