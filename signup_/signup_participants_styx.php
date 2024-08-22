@@ -68,6 +68,7 @@ tr {
 //   echo $date;
            echo '<td style="width:33%">';
            echo $date;
+           echo "-".$row['email'];
 
 /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
