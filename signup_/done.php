@@ -16,9 +16,11 @@
     <p> View your name at <br>
     <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
     </h1>
+<!--
     <img  class="RESP_IMAGE" src="./images/walklikeegyptian.gif" width="25%" >
-
-    <h1>Follow the action on the club's Instagram page! </h1>
+-->
+<img  class="RESP_IMAGE" src="./images/swifti.gif" width="50%" >
+  <h1>Follow the action on the club's Instagram page! </h1>
 
     <a href="https://www.instagram.com/santaclaratennisclub/"> 
 
