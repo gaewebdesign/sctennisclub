@@ -113,11 +113,7 @@
               </div>
             </div>
 
-
-
 <!--- ******** CAPTCTHA ****************************** -->
-I went with:
-
 
 <style>
     /* already defined in bootstrap4 */
