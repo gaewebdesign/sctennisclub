@@ -29,8 +29,8 @@ tr {
            <p>
        <?php
           
-          $jurassic = strtotime('2024-7-23');
-          $cretaceous = strtotime('2024-10-7');
+          $jurassic = strtotime('2025-7-23');
+          $cretaceous = strtotime('2025-10-7');
           
           // Switch between tables here **************************
 /*
@@ -40,8 +40,9 @@ tr {
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
 
 */
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where date>$jurassic and date<$cretaceous order by fname asc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
+
 
 //          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic  order by lname";
 
