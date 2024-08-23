@@ -7,7 +7,7 @@
 
 <style>
  .navbar-brand{
-   font-size: smaller;
+   font-size: medium;
  }
 
  .dropdown-item{
@@ -62,6 +62,25 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="./members">Members</a>
 <!--      <a class="navbar-brand" href="./signup">Pigout Signup</a>  -->
       <a class="navbar-brand" href="./mixers">Mixers</a>  
+
+
+      <div class="dropdown" >
+          <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Past Events
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
+<!--              <li><a class="dropdown-item active" href="./event_past.phtml">Info</a></li>  -->
+<!--          <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./event_past.phtml?draw=1">Players</a></li> -->
+
+              <li><a class="dropdown-item" href="./signup_lunch.phtml">June - Walk like an Egyptian</a></li>
+              <li><a class="dropdown-item" href="./signup_free.phtml">July - Annual Pigout</a></li>
+              <li><hr class="dropdown-divider" style="border-color:black;"></li>
+              <li><a class="dropdown-item" href="./signup_icecream.phtml">August - Ice Cream Social</a></li>
+
+              <li><a class="dropdown-item" href="./signup_styx.phtml">November - Annual Dinner</a></li>
+              <li><a class="dropdown-item" href="./signup_styx.phtml">December - Team Tennis</a></li>
+        </ul>
+        </div>
 
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
 
