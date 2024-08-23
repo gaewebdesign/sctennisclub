@@ -1,6 +1,6 @@
 <html>
 
-   <div class="h3">2024 Summer Mx 6.5 Tournament</div>
+   <div class="h3">2024 Mx 6.5 Tournament</div>
 
  <main id="headers">
 
