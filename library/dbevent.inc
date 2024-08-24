@@ -23,14 +23,14 @@ insert into teamtennis(_id,fname1,lname1,email1,gender1,ntrp1,year,division,team
 values (NULL,"Roger","Okamoto","southbayntrp@gmail.com","M","3.0","2024","","15","","1724452148","1724452148","15")
 */
 
-function dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$custom,$opt){
+function dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$payment,$custom,$opt){
 
   $con = DBMembership();
   
-  $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,year,division,team,date,custom,opt)';
+  $query = 'insert into '.$theTABLE.'(_id,fname1,lname1,email1,gender1,ntrp1,year,division,team,date,payment,custom,opt)';
   
   $query .= ' values (NULL'.adder($fname1).adder($lname1).adder($email1).adder($gender1).adder($ntrp1);
-  $query .= adder($year).adder($division).adder($team).adder($date).adder($date).adder($opt);
+  $query .= adder($year).adder($division).adder($team).adder($date).adder($payment).adder($custom).adder($opt);
   $query .= ")";
   
   echo  $query;
