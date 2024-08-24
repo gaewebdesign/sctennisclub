@@ -120,6 +120,8 @@ if($res == true) {
 
    phpemailer($subject,$message , $recipient );
    $theTABLE="teamtennis_pending";
+   $theTABLE="teamtennis";
+
    $division=$team="";
 
    dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$date,$payment);
