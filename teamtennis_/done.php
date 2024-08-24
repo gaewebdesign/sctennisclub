@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css" >
 
-    <title>Document</title>
+    <title>Santa Clara Tennis Club Team Tennis</title>
    
 
 </head>
@@ -20,10 +20,14 @@
     <img  class="RESP_IMAGE" src="./images/walklikeegyptian.gif" width="25%" >
 <img  class="RESP_IMAGE" src="./images/swifti.gif" width="50%" >
 <iframe src="https://giphy.com/embed/HxE2bm0SZWqhW" width="480" height="365" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/food-anime-HxE2bm0SZWqhW"></a></p>
--->
-
-
     <iframe src="https://giphy.com/embed/YSsqduWPo7528" width="466" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rice-YSsqduWPo7528"></a></p>    
+
+ -->
+
+
+
+ <div class="tenor-gif-embed" data-postid="14156435" data-share-method="host" data-aspect-ratio="1.78571" data-width="75%"><a href="https://tenor.com/view/anime-bamboo-japan-gif-14156435">Anime Bamboo GIF</a>from <a href="https://tenor.com/search/anime-gifs">Anime GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 
     <h1>Follow the action on the club's Instagram page! </h1>
 
@@ -46,12 +50,8 @@
       $CUSTOM = $_GET["custom"];
  
 
-       // copy over from the mixer_pending to the mixer directory
+      // copy over from the teamtennis_pending to teamtennis table
        LOGGER("done.php: values $NAME $EMAIL $CUSTOM ") ;
- //      LOGGER("done.php: copyto".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
-
-//       TEXT("Sept log: $NAME $EMAIL $CUSTOM ") ;
-//       TEXT("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
 
 //      LOGGER("done.php: calling copyto_teamtennis") ;       
       copyto_teamtennis( TABLE_TEAMTENNIS_PENDING,  TABLE_TEAMTENNIS, $CUSTOM);
