@@ -43,6 +43,14 @@ define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
 */
 
 
+$r = RETURN_URL_TEAMTENNIS;
+$c = CANCEL_URL_TEAMTENNIS;
+$n = NOTIFY_URL_TEAMTENNIS;
+
+LOGGER(" return: $r");
+LOGGER(" return: $c");
+LOGGER(" return: $n");
+
 $paypal->add("return",RETURN_URL_TEAMTENNIS);
 $paypal->add("cancel_return",CANCEL_URL_TEAMTENNIS);
 $paypal->add("notify_url",NOTIFY_URL_TEAMTENNIS);

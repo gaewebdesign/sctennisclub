@@ -53,7 +53,8 @@
 //       TEXT("Sept log: $NAME $EMAIL $CUSTOM ") ;
 //       TEXT("TABLES: ".TABLE_MIXER_PENDING." to  ".TABLE_MIXER." $CUSTOM  ") ;
 
-       copyto_teamtennis( TABLE_TEAMTENNIS_PENDING,  TABLE_TEAMTENNIS, $CUSTOM);
+//      LOGGER("done.php: calling copyto_teamtennis") ;       
+      copyto_teamtennis( TABLE_TEAMTENNIS_PENDING,  TABLE_TEAMTENNIS, $CUSTOM);
 
      ?>
 
