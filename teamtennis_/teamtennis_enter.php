@@ -57,11 +57,8 @@
     
   <?php 
    // include "includes.inc";
-   $MEMBER_FEE="10";
-   $GUEST_FEE="15";
-
-   //$MEMBER_FEE=".01";
-   //$GUEST_FEE=".02";
+   $MEMBER_FEE = TEAMTENNIS_MEMBER_FEE; // "10";
+   $GUEST_FEE  = TEAMTENNIS_GUEST_FEE;   // "15";
   
   ?>
 
