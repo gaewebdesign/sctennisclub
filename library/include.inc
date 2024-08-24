@@ -52,6 +52,12 @@ define("CANCEL_URL_SIGNUP","http://www.sctennisclub.org/signup_/cancel.php");
 define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup_/notify.php");
 //define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
+// Use for teamtennis
+define("RETURN_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/done.php");
+define("CANCEL_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/cancel.php");
+define("NOTIFY_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/notify.php");
+
+
 
 define("FNAME", "fname" );
 define("LNAME", "lname" );
@@ -543,14 +549,17 @@ $response = file_get_contents($url);
 // that json 
 $response = json_decode($response); 
 
+
 // Checking, if response is true or not 
 if ($response->success == true) { 
-      
+
+  LOGGER("captcha response-> sucess is true ");
 //      echo '<script>alert("Summer 2024 \nSanta Clara Tennis Club \n Pigout  \nYou\'re signed up!")</script>'; 
 
       return true;
 } else { 
 //    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+      LOGGER("captcha response-> sucess is false ");
       return false;
 } 
 } 
