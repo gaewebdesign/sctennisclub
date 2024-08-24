@@ -16,6 +16,12 @@ define("TABLE_MIXER_PAYPAL", "mixer_paypal");
 define("TABLE_MIXER_PENDING", "mixer_pending");
 define("TABLE_MIXER_FREE", "mixer_free");
 
+
+define("TABLE_TEAMTENNIS", "teamtennis");
+define("TABLE_TEAMTENNIS_PENDING", "teamtennis_pending");
+
+
+
 define ("YEAR" , "2024");
 define("RES_FEE" , "30" );
 //define("RES_FEE" , "25" );
@@ -317,8 +323,10 @@ function copyto_mixer($src,$dest,$epoch){
 }
 
 
+// this woud also work if tournament ever becomes paid service
 function copyto_teamtennis( $src, $dest, $epoch){
   
+  LOGGER("copyto_teamtennis");
   
   $query = "insert into $dest (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt) ";
   $query .=            "select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt ";
@@ -326,11 +334,11 @@ function copyto_teamtennis( $src, $dest, $epoch){
 
   $con = DBMembership();
 
-  LOGGER( $query);  
+  //LOGGER( $query);  
   $query_results=mysqli_query($con,$query);
 
   $query = "update $src set custom='done' where custom=$epoch";
-  LOGGER( $query); 
+  //LOGGER( $query);  this causes error
   $query_results=mysqli_query($con,$query);
 
 
