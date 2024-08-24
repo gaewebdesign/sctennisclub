@@ -57,8 +57,8 @@
     
   <?php 
    // include "includes.inc";
-   $MEMBER_FEE=DINNER;
-   $MEMBER_FEE=".01";
+   $MEMBER_FEE="10";
+   $GUEST_FEE="15";
   
   ?>
 
@@ -75,19 +75,21 @@
 
 
     <h3 style="font-size: 1.2em ">
-    Enjoy dinner at <b>China Stix</b> in Santa Clara
-    on Thursday November 14 , 6:30-8 pm. Deadline to signup is November 1, 2024.
-    Dinner is $<?php echo($MEMBER_FEE )?> <br/>
+    Enjoy team tennis  at <b>Santa Clara Tennis Center</b> 
+    on Saturday December 14 , 9am - 2pm. Deadline to signup is December 1, 2024.
+    Cost  is $<?php echo($MEMBER_FEE )?> for members , $ <?php echo($GUEST_FEE) ?> for guests <br/>
+    Team Tennis includes tennis and lunch. Just need to show up. <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
   </div>
 
+<!--
   <div >
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-              <b>China Stix Directions</b>
+              <b>Santa Clara Tennis Center Directions</b>
 
               <large class="tab text-muted"><a href="https://www.waze.com/live-map/directions/china-stix-restaurant-el-camino-real-2110-santa-clara?to=place.w.155976054.1560022679.1217845">
               via Waze</a>
@@ -100,11 +102,10 @@
               </large>
             </div>
           </li>
-
         </ul>
 
     </div>
-
+-->
 
      <form class="row g-3" action="./topaypal_styx.php" method="POST">
 
@@ -130,6 +131,51 @@
                 Valid email address is required.
               </div>
             </div>
+
+   
+
+        <div class="col-sm-1">
+        <br/>
+        <div class="input-group"> <p>
+            <label for="validationDefault04" class="form-label">Gender</label> 
+            <select class="form-select" id="validationDefault04" name="gender1" required>
+            <option selected value="M">M</option>
+            <option  value="F">F</option>    
+            </select>
+          </div>
+        </div>
+
+         <div class="col-sm-1">
+          <br/>
+            <div class="input-group">
+            <label for="validationDefault04" class="form-label">NTRP</label> <p>
+            <select class="form-select" id="validationDefault04" name="ntrp1" required>
+            <option selected value="3.0">3.0</option>
+            <option value="3.5">3.5</option>    
+            <option value="4.0">4.0</option>
+            </select>
+        </div>
+       </div>
+
+<!--- ******** MEMBER OR NON-MEMBER  ****************************** -->
+       <div class="container-fluid mt-4">
+
+          <div class="col-sm-6">
+            <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
+            <div class="form-check ">
+              <input class="form-check-input"  type="radio" id="member" checked="checked" value=<?php echo($MEMBER_FEE); ?> name="_FEE"    >
+              <label class="form-check-label" for="member">🎾 &nbsp;SCTC Member: $<?php echo($MEMBER_FEE); ?></label>
+              <br/>
+              <input  class="form-check-input" type="radio" id="icecream" value=<?php echo($GUEST_FEE); ?> name="_FEE">
+              <label class="form-check-label" for="member">&#x1F49C;&nbsp;Guest: $<?php echo($GUEST_FEE); ?></label>
+            </div>
+
+          </div>
+      </div>
+
+
+
+
 <!--- ******** HIDDEN FEE ****************************** -->
     <div class="col-12" >
               <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
@@ -162,58 +208,13 @@
 <div class="row md-12 mt-5 g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
  </div>
-<div>
+ </div>
+
+  </div>
+<hr/>
 
 
-
-<!--- ************************************************* -->        
-
-
-<!--    Menu Table   ************************          -->
-<div class="row md-12 text-start">
-      <table class="table table-bordered table-md ms-10">
-                <thead>
-
-                  <th style="width: 1%"> </th>
-
-                 <th style="width:45%">
-                  &nbsp; <label class="mt-10 form-check-label" for="member"><b>Select One</b> &nbsp;
-
-                  </thead>
-              
-              <tr>
-              <td> </td>
-
-
-
-                 <td style="text-align:left">&nbsp; &nbsp;<input class="form-control-input" checked type="radio" id="dinner" value="10Course" name="dinner"  required   ></input>
-                        <label class="form-check-label" for="member" style="text-align:left"><b>10 Course Dinner </b> &nbsp;
-                       </label> 
-                <td style="text-align:left"> Chinese Chicken Salad, Honey Pecan Prawns, Garlic Fish, Shanghai Spareribs
-                     Broccoli Beef, Orange Chicken, String Beans, Combinaton Chow Mein, BBQ Pork Fried Rice
-              
-                <tr> 
-                <td> </td>
-                <td style="text-align:left"> &nbsp; &nbsp;<input class="form-control-input" type="radio" id="dinner" value="Vegetarian" name="dinner"  required   ></input>
-                        <label class="form-check-label" for="member"><b>Vegetarian </b> &nbsp;
-                       </label> 
-                  
-                <td style="text-align:left"> Lettuce Wrapped w/Shredded Mushrooms, Mixed Mushroom Pumpkin & String Beams, Lotus Root Fungus Peas & Ginko Nuts
-                       Fried Tofu w/Brown Sauce and Pea Sprouts , Chinese Broccoli Stir Fry , General Tso's Cauliflower,
-                       Money Bag Dumplings, Vegetable Chow Mein, Spinach and Pine Nuts Fried Rice
-               </tr>
-
-              </table>
-
-
-    </div>
-
-<!--- ************************************************* -->        
-
-
-
-
-<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
+<button class="w-500 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Team Tennis! </button>
 
 
 </form>
