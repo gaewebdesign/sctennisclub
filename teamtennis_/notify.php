@@ -37,13 +37,13 @@ if( !empty($_POST["custom"])){
    $epoch = $_POST["custom"];
    LOGGER("notify.php called  with POST custom: $epoch ");
    
-   $dest = TABLE_MIXER_PAYPAL;
-   $src = TABLE_MIXER_PENDING;
+   $dest = TABLE_TEAMTENNIS;
+   $src = TABLE_TEAMTENNIS_PENDING;
 
    // copy over to mixer (paypal contents)
-   LOGGER("notify.php saving Mixer information from pending to mixer copyto $src -> $dest : $epoch " );
+   LOGGER("notify.php saving TeamTennisr information from pending to teamtennis copyto_teamtennis $src -> $dest : $epoch " );
 // copyto_mixer( $src, $dest, $epoch );
-   copyto( $src, $dest, $epoch);
+   copyto_teamtennis( $src, $dest, $epoch);
 
    // notify email
    $data = array(
