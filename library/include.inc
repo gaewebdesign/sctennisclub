@@ -328,8 +328,8 @@ function copyto_teamtennis( $src, $dest, $epoch){
   
   LOGGER("copyto_teamtennis");
   
-  $query = "insert into $dest (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt) ";
-  $query .=            "select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt ";
+  $query = "insert into $dest (fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,date,payment,custom,opt) ";
+  $query .=            "select fname1,lname1,email1,gender1,ntrp1,fname2,lname2,email2,gender2,ntrp2,year,division,team,date,payment,custom,opt ";
   $query .= " from $src where custom=$epoch";
 
   $con = DBMembership();
