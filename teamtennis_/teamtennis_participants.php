@@ -38,6 +38,8 @@ tr {
              function teamtennislist( ){
 
               $TABLE_TOURNY = "teamtennis_pending";
+
+              
               $TABLE_TOURNY = "teamtennis";
 
               $YEAR = 2024;
