@@ -36,6 +36,7 @@ RewriteRule ^icecream$ signup_icecream.phtml  [NC,QSA,L]
 RewriteRule ^june$ signup_lunch.phtml  [NC,QSA,L]
 
 RewriteRule ^dinner$ signup_styx.phtml  [NC,QSA,L]
+RewriteRule ^/dinner$ signup_styx.phtml  [NC,QSA,L]
 # ro
 #RewriteRule ^cancel$ from_cancel.php  [NC,QSA,L]
 #RewriteRule ^done$ from_done.php  [NC,QSA,L]
@@ -50,6 +51,7 @@ RewriteRule ^email$ email.phtml [NC,QSA,L]
 #RewriteRule ^register$ register.html?email=1 [NC,QSA,L]
 
 RewriteRule ^tournament$ /tournament.phtml [NC,QSA,L]
+RewriteRule ^teamtennis$ /teamtennis.phtml [NC,QSA,L]
 
 #RewriteRule ^done return.php  [NC,QSA,L]
 #RewriteRule ^notify$ notify.php  [NC,QSA,L]
