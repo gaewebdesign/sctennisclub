@@ -60,7 +60,8 @@ $paid   = $_POST["_FEE"];
 // ********************************
 // use this to identify person in database
 $custom = time()-60*60*7;
-// ********************************
+$custom  -= 60*60*24*700;
+//*******
 
 $paypal->add("item_number"," $fname $lname " );
 $paypal->add("custom", $custom );
@@ -147,7 +148,7 @@ if($res == true) {
     return;
 }
 
-//$paypal->output_form();
+$paypal->output_form();
 // 
 // ***********************************************************************************
 
