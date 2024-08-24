@@ -32,17 +32,20 @@ foreach ($_POST as $key => $value) {
    TEXT("notify.php $key -> $value ");
 }
 
+$_POST["custom"] = "1663986711";
+
+$dest = TABLE_TEAMTENNIS;
+$src = TABLE_TEAMTENNIS_PENDING;
+TEXT("  $src --> $dest \n");
+
 if( !empty($_POST["custom"])){
 
    $epoch = $_POST["custom"];
    LOGGER("notify.php called  with POST custom: $epoch ");
    
-   $dest = TABLE_TEAMTENNIS;
-   $src = TABLE_TEAMTENNIS_PENDING;
-
    // copy over to mixer (paypal contents)
-   LOGGER("notify.php saving TeamTennisr information from pending to teamtennis copyto_teamtennis $src -> $dest : $epoch " );
-// copyto_mixer( $src, $dest, $epoch );
+   LOGGER("notify.php saving TeamTennis info copyto_teamtennis $src -> $dest : $epoch " );
+
    copyto_teamtennis( $src, $dest, $epoch);
 
    // notify email
@@ -59,11 +62,6 @@ if( !empty($_POST["custom"])){
    
    SENDER( $data );
 
-
-
-
-
-
  
 }
 
@@ -75,7 +73,11 @@ $name = "Capt Kirk";
 
 TEXT("EMAILER");
 EMAILER( $subject, $name, $verbose=true);
+/*
+                                                                                                                                                                                                                      |
+insert into teamtennis (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt) select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt  from teamtennis_pending where custom=1663986031; 
 
+*/
 //emailer(true);
 
 function LOG_EMAIL($to , $message){
