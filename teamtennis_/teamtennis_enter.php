@@ -76,7 +76,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy team tennis  at <b>Santa Clara Tennis Center</b> 
-    on Saturday December 14 , 9am - 2pm. Deadline to signup is December 1, 2024.
+    on Saturday December 14 , 9am - 2pm. Deadline to signup is December 8, 2024.
     Cost  is $<?php echo($MEMBER_FEE )?> for members , $ <?php echo($GUEST_FEE) ?> for guests <br/>
     Team Tennis includes tennis and lunch. Just need to show up. <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
@@ -107,7 +107,7 @@
     </div>
 -->
 
-     <form class="row g-3" action="./topaypal_styx.php" method="POST">
+     <form class="row g-3" action="./topaypal_teamtennis.php" method="POST">
 
             <div class="col-sm-5">
               <label for="firstName" class="form-label">First name</label>
@@ -138,7 +138,7 @@
         <br/>
         <div class="input-group"> <p>
             <label for="validationDefault04" class="form-label">Gender</label> 
-            <select class="form-select" id="validationDefault04" name="gender1" required>
+            <select class="form-select" id="validationDefault04" name="gender" required>
             <option selected value="M">M</option>
             <option  value="F">F</option>    
             </select>
@@ -149,7 +149,7 @@
           <br/>
             <div class="input-group">
             <label for="validationDefault04" class="form-label">NTRP</label> <p>
-            <select class="form-select" id="validationDefault04" name="ntrp1" required>
+            <select class="form-select" id="validationDefault04" name="ntrp" required>
             <option selected value="3.0">3.0</option>
             <option value="3.5">3.5</option>    
             <option value="4.0">4.0</option>
@@ -179,7 +179,8 @@
 <!--- ******** HIDDEN FEE ****************************** -->
     <div class="col-12" >
               <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
-              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_STYX_FEE">
+              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_TEAMTENNIS_MEMBER_FEE">
+              <input type="hidden" class="form-control" id="paid" value=<?php echo $GUEST_FEE ?> name="_TEAMTENNIS_GUEST_FEE">
               <div class="invalid-feedback">
                 Fee Error 
               </div>
