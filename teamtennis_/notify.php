@@ -2,6 +2,7 @@
 
 
 include "../library/include.inc";
+include "../library/email/email.inc";
 
 //$_GET["custom"] = 1675506456;;
 
@@ -32,7 +33,7 @@ foreach ($_POST as $key => $value) {
    TEXT("notify.php $key -> $value ");
 }
 
-$_POST["custom"] = "1663986711";
+$_POST["custom"] = "1663987958";
 
 $dest = TABLE_TEAMTENNIS;
 $src = TABLE_TEAMTENNIS_PENDING;
@@ -68,11 +69,14 @@ if( !empty($_POST["custom"])){
 // using the 'custom' number (i.e. time() generated)
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
-$subject = "Mixer";
-$name = "Capt Kirk";
+$subject = "Team Tennis Signup";
+$message = "notify.php: get names ";
 
-TEXT("EMAILER");
-EMAILER( $subject, $name, $verbose=true);
+//TEXT("EMAILER");
+
+phpemailer($subject, $message);
+
+//EMAILER( $subject, $name, $verbose=true);
 /*
                                                                                                                                                                                                                       |
 insert into teamtennis (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt) select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt  from teamtennis_pending where custom=1663986031; 
