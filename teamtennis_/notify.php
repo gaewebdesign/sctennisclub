@@ -33,11 +33,11 @@ foreach ($_POST as $key => $value) {
    TEXT("notify.php $key -> $value ");
 }
 
-$_POST["custom"] = "1663988683";
+//$_POST["custom"] = "1663988683";
 
 $dest = TABLE_TEAMTENNIS;
 $src = TABLE_TEAMTENNIS_PENDING;
-TEXT("  $src --> $dest \n");
+
 
 if( !empty($_POST["custom"])){
 
