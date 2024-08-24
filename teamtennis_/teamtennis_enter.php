@@ -59,6 +59,9 @@
    // include "includes.inc";
    $MEMBER_FEE="10";
    $GUEST_FEE="15";
+
+   $MEMBER_FEE=".01";
+   $GUEST_FEE=".02";
   
   ?>
 
@@ -215,7 +218,7 @@
 <hr/>
 
 
-<button class="w-500 btn btn-primary btn-lg" disabled  name="SubmitButton" > Signup for Team Tennis! </button>
+<button class="w-500 btn btn-primary btn-lg"   name="SubmitButton" > Signup for Team Tennis! </button>
 
 
 </form>

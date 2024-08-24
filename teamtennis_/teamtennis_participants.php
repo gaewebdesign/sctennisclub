@@ -35,8 +35,10 @@ tr {
            <p>
 
            <?php
-             function tournylist($draw){
+             function teamtennislist( ){
               $TABLE_TOURNY = "teamtennis";
+              $TABLE_TOURNY = "teamtennis_pending";
+
               $YEAR = 2024;
               $query = "select * from ".$TABLE_TOURNY." where year=$YEAR order by date";
 
@@ -68,7 +70,7 @@ tr {
               }
              }
 
-             tournylist("7.5");
+             teamtennislist( );
 
 
            ?>

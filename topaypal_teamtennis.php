@@ -70,43 +70,28 @@ $paypal->add("custom", $custom );
 $dt = new DateTime("@$custom");
 $date = ltrim($dt->format('m/d/Y'),0);
 $date = $custom;
-$theTABLE = "teamtennis";
-
-//echo ("INSERT $fname $lname $paid $date $custom");
-//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
 $year=2024;
-//unused fields
-//$gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
-//$mtype=$phone=$code="-";
+
 $team="";
 $payment=$paid;
 
-$insignia="";
-
-//toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+$opt=$payment;
 
 $data = array(
 	'year' => $year,
 	'fname' => $fname,
-    'lname' => $lname,
+  'lname' => $lname,
 	'email' => $email,
 	'event' => $event,
 	'gender' => $gender,
 	'ntrp' => $ntrp,
-	//'address' => $address,
-	//'city' => $city,
-	//'zip' => $zip,
-	'team' => $team,
-	//'mtype' => $mtype,
+  'team' => $team,
 	'date' => $custom, // $date,
-	//'insignia' => $insignia,
 	'payment' => $payment,
 	'custom' => $custom,
-//    'opt' => $opt,
-//    'pwd' => $pwd,
-    'subject' => "Team Tennis Signup: $fname $lname (pending)",
-    'message' => "Team Tennis Signup: $fname $lname (pending)"
+  'subject' => "Team Tennis Signup: $fname $lname (pending)",
+  'message' => "Team Tennis Signup: $fname $lname (pending)"
 
 );
 
@@ -125,15 +110,11 @@ $recipient = "tennis.mutt@gmail.com";
 $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
 
-  phpemailer($subject,$message , $recipient );
-//  print_r( $data );
-  $theTABLE="teamtennis";
-// dbevent ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-   $fname2=$lname2=$ntrp2=$gender2=$email2="";
-   $division=$team=$pwd="";
-   $mtype=0;
+   phpemailer($subject,$message , $recipient );
+   $theTABLE="teamtennis_pending";
+   $division=$team="";
+
    dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$date,$payment);
-//function dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$custom){
 
 }else{
 

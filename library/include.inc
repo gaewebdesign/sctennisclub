@@ -317,13 +317,49 @@ function copyto_mixer($src,$dest,$epoch){
 }
 
 
-// this won't properly work if there are duplicate _ids because it is a direct copy of a row
- function copyto2( $src, $dest, $epoch){
+function copyto_teamtennis( $src, $dest, $epoch){
   
   
+  $query = "insert into $dest (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt) ";
+  $query .=            "select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2,year,division,team,date,payment,custom,opt ";
+  $query .= " from $src where custom=$epoch";
+
+  $con = DBMembership();
+
+  LOGGER( $query);  
+  $query_results=mysqli_query($con,$query);
+
+  $query = "update $src set custom='done' where custom=$epoch";
+  LOGGER( $query); 
+  $query_results=mysqli_query($con,$query);
+
+
+ }
+
+
+
+// copies from teamtennis_pending to teamtennis
+function copyto_teamtennis__deletethis( $src, $dest, $epoch){
+  
+  //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+  LOGGER("copyto called with $src ----> $dest  for $epoch");
+  
+  $query = "insert into $dest (fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2) ";
+  $query .=            "select fname1,lname1,email1,ntrp1,fname2,lname2,email2,ntrp2 ";
+  $query .= " from $src where custom=$epoch";
+
+   TEXT($query);
+ 
+  $con = DBMembership();
+
+  LOGGER( $query);  
+  $query_results=mysqli_query($con,$query);
+
+  $query = "update $src set custom='done' where custom=$epoch";
+  LOGGER( $query); 
+  $query_results=mysqli_query($con,$query);
 
 }
-
 
  function FindAddress($ADDRESS,$CITY)
  {
