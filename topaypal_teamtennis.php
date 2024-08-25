@@ -105,8 +105,9 @@ $res = CAPTCHA_CHECKOUT() ;
 if($res == true) {
 
    phpemailer($subject,$message , $recipient );
-   $theTABLE="teamtennis_pending";
    $theTABLE="teamtennis";
+   $theTABLE="teamtennis_pending";
+   
 
    $division=$team="";
 
