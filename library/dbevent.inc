@@ -33,7 +33,7 @@ function dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$d
   $query .= adder($year).adder($division).adder($team).adder($date).adder($payment).adder($custom).adder($opt);
   $query .= ")";
   
-  echo  $query;
+  //echo  $query;
   $query_results=mysqli_query($con, $query);
   
   
