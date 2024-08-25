@@ -26,7 +26,7 @@ if($_POST["dinner"] == "10Course" ) {
 }
 */
 
-$paid= DINNER;
+
 $paid = $_POST["_FEE"];
 $paypal->price = $paid;
 
@@ -36,20 +36,6 @@ $paypal->add("business",PAYPAL_MAIL);
 $paypal->add("item_name","SCTC Team Tennis: ".$event);
 $paypal->add("quantity",1);
 
-/*
-define("RETURN_URL_SIGNUP","http://www.sctennisclub.net/signup_/done");
-define("CANCEL_URL_SIGNUP","http://www.sctennisclub.net/signup_/cancel");
-define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
-*/
-
-
-$r = RETURN_URL_TEAMTENNIS;
-$c = CANCEL_URL_TEAMTENNIS;
-$n = NOTIFY_URL_TEAMTENNIS;
-
-LOGGER(" return: $r");
-LOGGER(" return: $c");
-LOGGER(" return: $n");
 
 $paypal->add("return",RETURN_URL_TEAMTENNIS);
 $paypal->add("cancel_return",CANCEL_URL_TEAMTENNIS);
@@ -124,7 +110,11 @@ if($res == true) {
 
    $division=$team="";
 
-   dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$date,$payment);
+   $opt = "member";
+   if($payment != TEAMTENNIS_MEMBER_FEE) $opt="guest";
+
+   dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$payment,$date,$opt);
+// dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$payment,$custom,$opt){
 
 }else{
 

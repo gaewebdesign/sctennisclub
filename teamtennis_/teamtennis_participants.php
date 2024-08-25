@@ -51,7 +51,7 @@ tr {
               while ($row = mysqli_fetch_assoc($qr)) {
 
                 $member  = "&#x1F49C";
-                if($row["opt"]== 10) $member ="🎾";
+                if($row["opt"]== "member") $member ="🎾";
 
                  echo "<tr><td>";
                  echo $row["fname1"]." ".$row["lname1"];
