@@ -4,10 +4,15 @@
 <!--
       <img class="mg-fluid img-thumbnail" src="cinco.png" alt="" >
     <img class="mg-fluid img-thumbnail" src="./images/icecream_trans.gif" alt="-" >
--->
 
 <img class="mg-fluid img-thumbnail" src="./images/icecreamsocial.png" alt="-" >
+<img class="mg-fluid img-thumbnail" src="./images/animated_chicken-bro-eat.gif" alt="-" >
 
+
+    -->
+
+
+<img class="mg-fluid img-thumbnail" src="./images/animated_mochi-cat-peach-and-goma.gif" alt="-" >
 
 
   </picture>
