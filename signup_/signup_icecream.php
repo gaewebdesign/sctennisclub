@@ -7,12 +7,11 @@
 
 <img class="mg-fluid img-thumbnail" src="./images/icecreamsocial.png" alt="-" >
 <img class="mg-fluid img-thumbnail" src="./images/animated_chicken-bro-eat.gif" alt="-" >
-
+<img class="mg-fluid img-thumbnail" src="./images/animated_mochi-cat-peach-and-goma.gif" alt="-" >
 
     -->
-
-
-<img class="mg-fluid img-thumbnail" src="./images/animated_mochi-cat-peach-and-goma.gif" alt="-" >
+  
+    <img class="mg-fluid img-thumbnail"  src="./images/animated_cat-pusheen.gif" width="55%" alt="-" >
 
 
   </picture>
