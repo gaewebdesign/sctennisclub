@@ -103,7 +103,7 @@ $paypal->add("return",RETURN_URL);
 $paypal->add("cancel_return",CANCEL_URL);
 $paypal->add("notify_url",NOTIFY_URL);
 
-DEBUG("notify:" . NOTIFY_URL);
+//DEBUG("notify:" . NOTIFY_URL);
 
 $fname = $_POST[FNAME];
 $fname = ucfirst($fname);
