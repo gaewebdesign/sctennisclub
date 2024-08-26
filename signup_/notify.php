@@ -16,20 +16,20 @@ LOGGER("notify.php  Use _POST !!!! ******************");
 
 
 LOGGER("notify.php: enumerate _GET array");
-TEXT("notify.php: enumerate _GET array");
+//TEXT("notify.php: enumerate _GET array");
 foreach ($_GET as $key => $value) {
    LOGGER("notify.php $key -> $value ");
-   TEXT("notify.php $key -> $value ");
+//   TEXT("notify.php $key -> $value ");
 
 }
 
 
 
-TEXT("notify.php: enumerate _POST array");
+/TEXT("notify.php: enumerate _POST array");
 LOGGER("notify.php: enumerate _POST array");
 foreach ($_POST as $key => $value) {
    LOGGER("notify.php $key -> $value ");
-   TEXT("notify.php $key -> $value ");
+//   TEXT("notify.php $key -> $value ");
 }
 
 if( !empty($_POST["custom"])){
