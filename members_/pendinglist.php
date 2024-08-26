@@ -9,6 +9,7 @@ Have a great rest of your day!
 
 Please Note: Starting May 1st, our phone availability will change from 24/7 to Monday through Friday 9AM to 9PM EST.
 -->
+<script language="JavaScript" src="library/sorttable.js"> </script>
 
 
 <style>
@@ -36,12 +37,14 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
 
-<table class="table table-striped ">
+<table class="table table-striped sortable">
 <thead>
 <tr>
     <th scope="col" >Year </th>
     <th scope="col" >First Name </th>
     <th scope="col">Last Name </th>
+    
+    <th scope="col">Address </th>
     
     <th scope="col">NTRP </th>
     <th scope="col">MTYPE </th>
@@ -50,6 +53,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">CUSTOM</th>
     <th scope="col">OPT</th>
 
+    <th scope="col">Epoch</th>
     <th scope="col">Date </th>
     
 
@@ -87,7 +91,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $con = Configure();
 
-         $query = "select * from ".TABLE_PENDING." where year=$YEAR order by year,lname limit 300 ";
+         $query = "select * from ".TABLE_PENDING." where year>$YEAR order by year,lname limit 1000 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 //         TEXT($query);
 
@@ -117,6 +121,10 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
+                    echo($row[ADDRESS]);
+                    echo("</td>");
+
+                    echo("<td>");
                     echo($row[GENDER].$row[NTRP]);
                     echo("</td>");
 
@@ -137,6 +145,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
+                    echo $row[DATE];
+
+                    echo("<td>");
                     $custom = $row[DATE];
                     $dt = new DateTime("@$custom");
                     $date = ltrim($dt->format('m/d/y'),0);
@@ -149,8 +160,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
             }
 
-            memberlist(YEAR);
-            memberlist(YEAR-1);
+            memberlist(YEAR-3);
+//            memberlist(YEAR-1);
 
       
 ?>
