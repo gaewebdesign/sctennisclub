@@ -25,6 +25,12 @@ if ( isset($_POST['Button'])){
 
 }
 
+
+if( !isset($_POST['fname1'] )) {
+   echo ("spammer");
+   return;
+}
+
 $theTABLE = "tourny";
 
 
