@@ -16,7 +16,11 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 $paypal = new paypal();
 
 
-
+if( !isset($_POST[FNAME] )) {
+	echo ("spam guard: contact webmaster if this pops up");
+	return;
+ }
+ 
 // echo "<script>alert(\"ZSanta Clara Resident\")</script>";
 
 $paid = RES_FEE;
