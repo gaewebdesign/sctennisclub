@@ -25,7 +25,7 @@ foreach ($_GET as $key => $value) {
 
 
 
-/TEXT("notify.php: enumerate _POST array");
+//TEXT("notify.php: enumerate _POST array");
 LOGGER("notify.php: enumerate _POST array");
 foreach ($_POST as $key => $value) {
    LOGGER("notify.php $key -> $value ");
