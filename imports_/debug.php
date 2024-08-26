@@ -46,7 +46,7 @@
       <a class="navbar-brand" href="./pending.phtml">Pending</a>
       <a class="navbar-brand" href="./logger.phtml">Logger</a>
       <a class="navbar-brand" href="./members_debug.phtml">Members</a>
-<!--      <a class="navbar-brand" href="./signup">Pigout Signup</a>  -->
+      <a class="navbar-brand" href="./debug_sctccheck.phtml">USTACheck</a>  
 <!--     <a class="navbar-brand" href="./signup_lunch.phtml">Lunch</a>   -->
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
       <a class="navbar-brand" href="./signup_debug.phtml">Signup</a>
@@ -68,7 +68,10 @@
 
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default (Mx 7.5)</a></li>
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (Mx 6.5)</a></li>              
-               <hr/>
+
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=10">Draw 7.5</a></li>              
+
+              <hr/>
                <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Database</a></li>              
                <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=5">Logger</a></li>              
 
