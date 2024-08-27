@@ -1,4 +1,4 @@
-<html>
+
 <div align="center">
 <h1>SCTC - USTA Membership Check </h1>
 </div>
@@ -14,64 +14,40 @@
 
 <?php
 
-/*
-
-define("COLORMEN","D2D2FF");
-define("COLORRED" , "FFFFFF");
-define("COLORYELLOW","FFFF33");
-define("COLORGREEN","77ff77");
-define("TABLE","sctc12");
-define("YEAR","2013");
-
-*/
-
 define("COLORBLUE" , "DCEAFC");
 define("COLORHEADER","99ccff");
 define("COLORMEMBER","a9a9f5");
 define("COLORWHITE" , "FFFFFF");
 
-define("HOME" , "www.sctennisclub.org/membership/json23");
-
-
 define("SKIP","1");
 define("FINISH","2");
 
-
 date_default_timezone_set('America/Los_Angeles');
 
-global $MEMBERS;
-$YEAR=2024;
-
-$MEMBERS = array();
 
    echo "<center><b>".date("F d, Y ", time())."</b></center><br>" ;
 
-// One time - get members and store in global array
 
    GetMembers();
-
+//   ListMembers();
    GetTeams( );
 
-?>
 
+?>
 </table>
 <html>
 
-
 <?php
 
-/*
-function DEBUG($t)
-{
+// One time - get members and store in global array
 
-//      echo( $t );
+$MEMBERS = array();
+$YEAR=2024;
 
-}
-*/
 function ListMembers()
 {
-   global $MEMBERS;
-
+   global $MEMBERS,$YEAR;
+   
    foreach( $MEMBERS as $key => $val){
         echo $key." ".$val." ";
 
@@ -79,51 +55,54 @@ function ListMembers()
 }
 
 function GetMembers(){
-
-
-  $con = Configure();
+  global$MEMBERS;
+  global $YEAR;
+ 
+ $con = Configure();
   $TABLE = "paypal";
   $YEAR =2024;
   $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
 
   $qr=mysqli_query($con,$query);
+  $u=1;
   while ($row = mysqli_fetch_assoc($qr)) {  
 
-    $fname = trim($row['fname']);
+    $fname = trim($row['fname'].$u);
     $lname = trim($row['lname']);
     $MEMBERS[$fname] = $lname;
-//    echo "$fname $lname";
+    $u++;
+//   echo(" $fname -> $MEMBERS[$fname] <br> ");
     
   }
 
 
 }
 
-function GetMembers_(){
+function GetMembersCURL(){
 
-global $MEMBERS;
-global $KOTOSHI;
-
-$ch = curl_init( HOME );
-curl_setopt( $ch  , CURLOPT_POSTFIELDS, $payload );
-curl_setopt( $ch  , CURLOPT_RETURNTRANSFER, true );
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-$obj = json_decode($response, $assoc= TRUE);
-
-$u=1;
-foreach( $obj as $row){
-
-       // need  unique first name (append u) for hash table
-       // trim white spaces and add $u (counter) to make first name unique
-
-       $fname = trim($row['fname']).$u;
-       $lname = trim($row['lname']);
-       $MEMBERS[$fname] = $lname;
-
-       $u++;
+  global $MEMBERS;
+  global $KOTOSHI;
+  
+  $ch = curl_init( HOME );
+  curl_setopt( $ch  , CURLOPT_POSTFIELDS, $payload );
+  curl_setopt( $ch  , CURLOPT_RETURNTRANSFER, true );
+  
+  $response = curl_exec($ch);
+  curl_close($ch);
+  
+  $obj = json_decode($response, $assoc= TRUE);
+  
+  $u=1;
+  foreach( $obj as $row){
+  
+         // need  unique first name (append u) for hash table
+         // trim white spaces and add $u (counter) to make first name unique
+  
+         $fname = trim($row['fname']).$u;
+         $lname = trim($row['lname']);
+         $MEMBERS[$fname] = $lname;
+  
+         $u++;
 
 } 
 
@@ -144,7 +123,7 @@ function findMember($fname,$lname)
    $fname =  trim($fname);
    $lname = trim($lname);
 //   $lname = str_replace("'","",$lname);   // apostrophe
-
+ //  echo($fname." ".$lname."<br>");
 
 
 // HARD CODED for Jackie Davidson-Fenton
@@ -158,20 +137,26 @@ function findMember($fname,$lname)
 
    $search=1;    
 
+   $lname = strtolower($lname);
+
    $pattern=  "/".$lname."/i";
    $pattern=  "/^".$lname."/i";
 
+   //echo("<br/> searching for $pattern in ". count($MEMBERS)." array <br>");
 
    $found = preg_grep( $pattern , $MEMBERS) ;
+  // showfound( $found );
+         
 
    if(empty($found)){
               $retval=0;       // Didn't find last name
-          //    DEBUG( "didnt find ".$lname);
+              LOGGER( "didnt find ".$lname." < ---");
 
    }else{
+              LOGGER("found $pattern");
               if($search){
 
-                DEBUG( "found ".$lname." now looking for ".$fname."<br>");
+                LOGGER( "found ".$lname." now looking for ".$fname."<br>");
               }
 
               // Look for first name (first 3 characters)
@@ -182,15 +167,15 @@ function findMember($fname,$lname)
 
 //                 if($search==1)  echo "looking for ".$pattern."<br>";
                    if($search){
-                     DEBUG( "now looking for ".$pattern." in ".$first."<br>");
+                     LOGGER( "now looking for ".$pattern." in ".$first."<br>");
                    }
 
 
                   if( preg_match( $pattern, $first,$matches)) {
                             $retval= 1;
                             if($search){
-                             DEBUG( "found ".$pattern." in ".$first."<-------------<br>");
-                             DEBUG( "return ".$retval."<br>");
+                             LOGGER( "found ".$pattern." in ".$first."<-------------<br>");
+                             LOGGER( "return ".$retval."<br>");
                              return $retval;
                              }                     
 
@@ -203,6 +188,18 @@ function findMember($fname,$lname)
 
    return $retval;
 
+
+}
+
+function showfound($found){
+
+  $keys = array_keys($found);
+  rsort($keys);
+  
+  while (!empty($keys)) {
+      $key = array_pop($keys);
+      LOGGER( $key . ' = ' . $assocArray[$key] . '<br />');
+  };
 
 }
 
@@ -272,6 +269,8 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
 //      Cut off parsing
         $find=0;
+
+  //      if( $teamid == 100261) $find=FINISH;
 
         if( $teamid == 100261) $find=FINISH;
         if( $teamid == 101055) $find=SKIP;
