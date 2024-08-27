@@ -150,7 +150,7 @@ function findMember($fname,$lname)
 
    if(empty($found)){
               $retval=0;       // Didn't find last name
-              LOGGER( "didnt find ".$lname." < ---");
+              LOGGER( "cant find ".$lname." < ---");
 
    }else{
               LOGGER("found $pattern");
