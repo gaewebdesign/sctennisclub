@@ -51,6 +51,8 @@
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
       <a class="navbar-brand" href="./signup_debug.phtml">Signup</a>
       <a class="navbar-brand" href="./pending_mixer.phtml">Pending</a>
+
+
       <div class="dropdown" >
           <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Tournament
@@ -82,6 +84,27 @@
 -->
             </ul>
         </div>
+
+        <a class="navbar-brand" href="#">    </a>
+
+
+        <div class="dropdown" >
+          <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ladder
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item active" href="./ladder.phtml?mode=0">Info</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=1">Ladder </a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Report Scorer</a></li>
+              <hr/>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Enter Ladder</a></li>
+              
+
+            </ul>
+        </div>
+
+
+
         </p>
       
       </body>
