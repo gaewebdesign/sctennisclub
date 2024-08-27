@@ -95,9 +95,10 @@
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
               <li><a class="dropdown-item active" href="./ladder.phtml?mode=0">Info</a></li>
               <li><a class="dropdown-item" href="./ladder.phtml?mode=1">Ladder </a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Report Scorer</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Men's Singles Report Score</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Women's Singles Report Score</a></li>
               <hr/>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Enter Ladder</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=4">Enter Ladder</a></li>
               
 
             </ul>
