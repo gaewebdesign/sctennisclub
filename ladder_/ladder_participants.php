@@ -33,7 +33,8 @@ tr {
               $YEAR = 2024;
               
               $query = "select * from ".$TABLE_LADDER." where year=$YEAR and division regexp(\"$draw\") order by points desc ";
-//              echo $query;
+//           echo $query;
+
 
               $con = Configure();
  
