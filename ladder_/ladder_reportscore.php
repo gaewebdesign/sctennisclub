@@ -48,7 +48,7 @@ $theTABLE = "ladder";
 if ($winner_id == $loser_id) {
 
    echo("<center>");
-   echo("<h1>ERROR: same teams</h1>");
+   echo("<h1>ERROR: same opponent</h1>");
    echo("<h1>$w_team</h1>");
    echo("</center>");
    return;

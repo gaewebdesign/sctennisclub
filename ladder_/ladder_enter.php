@@ -126,7 +126,7 @@
     <p></p><br/> 
 
     <div class="col-12">
-    <button class="btn btn-primary" name="Button" type="submit">Enter Tournament</button>
+    <button class="btn btn-primary" name="Button" type="submit">Ladder Signup</button>
   </div>
 </form>
 
