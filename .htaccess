@@ -53,6 +53,8 @@ RewriteRule ^email$ email.phtml [NC,QSA,L]
 RewriteRule ^tournament$ /tournament.phtml [NC,QSA,L]
 RewriteRule ^teamtennis$ /teamtennis.phtml [NC,QSA,L]
 
+RewriteRule ^ladder$ /ladder.phtml [NC,QSA,L]
+
 #RewriteRule ^done return.php  [NC,QSA,L]
 #RewriteRule ^notify$ notify.php  [NC,QSA,L]
 #RewriteRule ^notify/([\d]*)$ notify.php?transaction=$1  [NC,QSA,L]
