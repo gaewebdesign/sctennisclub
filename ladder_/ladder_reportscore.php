@@ -113,6 +113,18 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $query_results=mysqli_query($con, $query);
    echo "<br>".$query;
 
+
+// Update last match date shown in ladder   
+   $date =time()-60*60*6;
+   $custom=time()-60*60*6;
+   $query = "update $theTABLE set date=$date where _id=$loser_id";     
+   $query_results=mysqli_query($con, $query);
+
+
+   $query = "update $theTABLE set date=$date where _id=$winner_id";     
+   $query_results=mysqli_query($con, $query);
+
+
 // RECORD SCORE FOR ALL TO SEE ********
     $theTABLE= "ladder_results";
 
@@ -131,8 +143,8 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
     $points =0;
     //$score= " --- ";
     $pwd="";
-    $date =time();
-    $custom=time();
+    $date =time()-60*60*6;
+    $custom=time()-60*60*6;
     $opt=0;
 
 
