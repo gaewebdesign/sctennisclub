@@ -115,8 +115,8 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
 
 // Update last match date shown in ladder   
-   $date =time()-60*60*6;
-   $custom=time()-60*60*6;
+   $date =time()-60*60*7;
+   $custom=time()-60*60*7;
    $query = "update $theTABLE set date=$date where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
 

@@ -76,6 +76,7 @@ $row = mysqli_fetch_assoc($qr);
 $average = $row["avg(points)"];
 
 $points = intval($average - $average/3.33);
+if($points <50) $points=rand(60,120);
 
 //echo("POINTS: $average $points");
 
