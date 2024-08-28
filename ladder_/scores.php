@@ -30,7 +30,7 @@ $TABLE_TOURNY="tourny";
 
   $con = DBMembership();
 
-  $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by points ";
+  $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by points desc";
 //  echo($query);
 
 $qr=mysqli_query($con,$query);
@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 ?>
 
-<form class="row g-3" action="./tournament_/tournament_reportscore.php" method="post">
+<form class="row g-3" action="./ladder_/ladder_reportscore.php" method="post">
 
 <!--
 <div class="container">
@@ -87,9 +87,9 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_points =  $team[$index][2];      // mtype    1-8  position in draw
                 $_record =  $team[$index][3];      // mtype    1-8  position in draw
                 $_custom = $team[$index][4];      // custom    determine round 0,1,2,99 (99 means to disable item)
-                echo("<option  value= \"$_id $_points \" > ");
+                echo("<option  value= \"$_id\" > ");
 
-                echo("$_team ($_id) ($_points) ($_record ) ");
+                echo("$_team ");
                 echo("</option>");
 
 
@@ -114,9 +114,9 @@ while ($row = mysqli_fetch_assoc($qr)) {
               $_points =  $team[$index][2];      // mtype    1-8  position in draw
               $_record =  $team[$index][3];      // mtype    1-8  position in draw
               $_custom = $team[$index][4];      // custom    determine round 0,1,2,99 (99 means to disable item)
-              echo("<option  value= \"$_id $_points $_custom\" > ");
+              echo("<option  value= \"$_id \" > ");
 
-              echo("$_team ($_id) ($_points) ($_record ) ");
+              echo("$_team ");
               echo("</option>");
 
 

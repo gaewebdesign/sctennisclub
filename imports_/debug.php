@@ -97,8 +97,9 @@
               <li><a class="dropdown-item" href="./ladder.phtml?mode=1">Ladder </a></li>
               <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Men's Singles Report Score</a></li>
               <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Women's Singles Report Score</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=4">Results</a></li>
               <hr/>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=4">Enter Ladder</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=5">Enter Ladder</a></li>
               
 
             </ul>

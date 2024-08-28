@@ -69,14 +69,21 @@ $pwd="-";
 $date=time()-60*60*8;
 $custom=$date;
 
+$con = DBMembership();
+$query = "select avg(points) from $theTABLE where division regexp(\"$division\") ";
+$qr= mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($qr);
+$average = $row["avg(points)"];
+
+$points = intval($average - $average/3.33);
+
+//echo("POINTS: $average $points");
+
 
 db_ladder($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,
 $year,$division,$team,$position,$points,$score,$pwd,$date,$custom,$opt);
 
-//enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
-
-
-//signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+signedUP($fname1,$lname1,$division,$points );
 
 
 $subject = "Tournament $division Signup ($lname1 )";
@@ -170,16 +177,21 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
 }
 
 
-function signedUp($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+function signedUp( $fname1,$lname1,$division,$points){
 
+    if($division=="Womyn") $division = "Womens";
 
+    echo("<center>" );
     echo("<h1>Signed Up </h1> " );
-    echo("<h3>");
-    echo("$fname1 $lname1   / $fname2 $lname2   $division");
-    echo("</h3>");
-
+    echo("<h2>");
+    echo("$fname1 $lname1 <p> ");
+    echo("Division: $division<p>");
+    echo("Initial Points: $points");
+    echo("</h2>");
+    echo("</center>" );
 
 }
+
 ?>
 
 <!--
