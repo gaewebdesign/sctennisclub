@@ -66,7 +66,7 @@ $position=rand(1,20);
 $points=rand(45,75);
 $score="7-5";
 $pwd="-";
-$date=time()-60*60*8;
+$date=time()-60*60*7;
 $custom=$date;
 
 $con = DBMembership();
@@ -114,7 +114,7 @@ function get_mtype($division ){
 }
 
 function password($fname1,$fname2){
-    $date = "".time()-60*60*7;
+    $date = "".time()-60*60*6;
     $pass = substr($date,-3);
 
     $i=0;
