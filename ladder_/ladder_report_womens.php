@@ -1,5 +1,5 @@
 <main id="headers">
-   <h3> 2024  Mx6.5 Tournament </h3>
+   <h3> 2024 Women's Ladder </h3>
 </main>
 
 <?php

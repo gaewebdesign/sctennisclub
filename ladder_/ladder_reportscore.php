@@ -86,14 +86,18 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
 // UPDATE RECORDS
 // Adjust Winner
+   $winner_points = $w_points > $l_points? $w_points : $l_points;
+   $loser_points  = $w_points > $l_points? $l_points : $w_points;
+   
+   echo("winner $winner_points  loser $loser_points");
+   
+   $w_add = intval($winner_points/2);
+   $l_add = intval($loser_points/4); 
 
    $query = "update $theTABLE set win=win+1 where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
    $query = "update $theTABLE set date=$date where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
-
-   $w_add = $w_points/2;
-   echo(" w_add =  $w_add ");
 
    $query = "update $theTABLE set points=points+$w_add where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
@@ -105,7 +109,6 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $query = "update $theTABLE set date=$date where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
 
-   $l_add = $w_points/4;
    $query = "update $theTABLE set points=points+$l_add where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
    echo "<br>".$query;
