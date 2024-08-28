@@ -55,7 +55,7 @@ tr {
                echo "<td>";
                $custom = $row[DATE];
                $dt = new DateTime("@$custom");
-               $date = ltrim($dt->format('m/d/y'),0);
+               $date = ltrim($dt->format('m/d/y h:m:s'),0);
                echo $date;
                
                echo "</tr>";
