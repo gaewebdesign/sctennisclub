@@ -122,6 +122,22 @@ window.addEventListener( "pageshow", function ( event ) {
                  TEXTER("All players must be Santa Clara Tennis Club members");
                  TEXTER("All matches must be played at Santa Clara Tennis Center");
                  TEXTER("All NTRP ratings eligible");
+                 echo "<p>";
+                 TEXTER("<h5>Point System</h5>");
+
+                 TEXTER("New entries receive a staring point total whch is approxmately the average points of particpiants in the division  minus 30%");
+                 TEXTER("The winner receives 1/2 the current point total of one of the  participants -- whch ever is higher");
+                 TEXTER("The loser  receives 1/2 the current point total of one of the participants -- whch ever is lower");
+
+
+                 echo "<p>";
+                 TEXTER("<h7>Examples:</h7>");
+
+                 TEXTER("If #1 plays #10 and wins -- the points won by #1 is 1/2 the #1 point total");
+                 TEXTER("If #10 plays #1 and wins -- the points won by #10 is 1/2 the #1 point total");
+
+
+
                  echo ("<hr/>");
 
                  echo ("<p>");
@@ -143,15 +159,16 @@ window.addEventListener( "pageshow", function ( event ) {
 
           }else if($v == 4){  
 
-            include "./ladder_/ladder_results.php";                       
+            include "./ladder_/ladder_resultsphp";                       
 
           }else if($v == 5 ){
 
-            include "./ladder_/ladder_enter.php";
+            include "./ladder_/ladder_email.php";
       
           }else if($v==6){
 
-            //include "./tournament_/tournament_report_mens.php";           
+            include "./ladder_/ladder_enter.php";
+
 
            } else if($v==7){
 
