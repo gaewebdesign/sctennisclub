@@ -89,7 +89,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $winner_points = $w_points > $l_points? $w_points : $l_points;
    $loser_points  = $w_points > $l_points? $l_points : $w_points;
    
-   echo("winner $winner_points  loser $loser_points");
+ //  echo("winner $winner_points  loser $loser_points");
    
    $w_add = intval($winner_points/2);
    $l_add = intval($loser_points/4); 
