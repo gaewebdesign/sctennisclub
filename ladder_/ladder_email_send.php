@@ -23,7 +23,9 @@ if( isset( $row)  ){
     $found=1;
     $gender = $row["gender1"] ;
 }else{
-    echo( "not found"  );
+    echo( "<center>"  );
+    echo( "<h2>$email not found </h2>"  );
+    echo( "</center>"  );
 }
 
 $division="Men";

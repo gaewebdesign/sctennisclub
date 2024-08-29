@@ -79,6 +79,14 @@ $points = intval($average - $average/3.33);
 if($points <50) $points=rand(60,120);
 
 //echo("POINTS: $average $points");
+$retval= checkDuplicateEmail($email1, $theTABLE);
+
+if( $retval == 1 ){
+   echo ("<center>");
+   echo ("<h2>duplicate entry for $email1<h2>");
+   echo ("</center>");
+   return;
+}
 
 
 db_ladder($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,
@@ -97,6 +105,19 @@ $toemail2 = "santaclarawebmaster@gmail.com";
 
 phpemailer($subject, $message ,$toemail1 , $toemail2);
 
+
+function checkDuplicateEmail($email1,$theTABLE){
+
+   $con = DBMembership();
+   $query ="select email1 from $theTABLE where email1=\"$email1\"";
+
+   $qr = mysqli_query($con, $query);
+   $row = mysqli_fetch_array($qr);
+
+   if(isset($row))  return 1;
+   return 0;
+
+}
 function get_mtype($division ){
 
    $con = DBMembership();
