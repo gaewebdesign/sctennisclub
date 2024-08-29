@@ -87,14 +87,14 @@ while ($row = mysqli_fetch_assoc($qr)) {
   $team
 ?>
 
-<form class="row g-3" action="./ladder_/ladder_reportscore.php" method="post">
+<form class="row g-3" action="./ladder_/ladder_email_send.php" method="post">
 
 
 
  <div class="col-md-12">
  <hr/>
 </div> 
-
+<!--
   <div class="container">
 
     <div class="col-md-5">
@@ -120,9 +120,9 @@ while ($row = mysqli_fetch_assoc($qr)) {
         ?>
         </select>
     </div>
-
+          
   </div>
-
+-->
 
   <div class="col-sm-8">
     <label for="validationDefaultUsername" class="form-label">From</label>
@@ -133,12 +133,13 @@ while ($row = mysqli_fetch_assoc($qr)) {
  </div>
 
   <hr/>
+<!--
   <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Message</label>
     <textarea type="textarea" row="4" cols="50" class="form-control" id="validationDefault05" name="score" row="4" cols="50"required></textarea>
   </div>
   <div>
-
+ -->
 
   <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
