@@ -18,7 +18,7 @@ tr {
         <th style="width:10%">NTRP</th>
         <th style="width:10%">Points</th>
         <th style="width:10%">Record</th>
-        <th style="width:10%">Date</th>
+        <th style="width:10%">Last Match</th>
 
         </tr>
       </thead>
@@ -78,8 +78,8 @@ tr {
   <th style="width:20%">Name</th>
   <th style="width:10%">NTRP</th>
   <th style="width:10%">Points</th>
-  <th style="width:10%">Record</th>
-  <th style="width:10%">Date</th>
+  <th style="width:10%">Last Match</th>
+  <th style="width:10%"</th>
 
 
   </tr>
