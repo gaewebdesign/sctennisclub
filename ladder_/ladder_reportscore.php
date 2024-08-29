@@ -101,7 +101,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
    $query = "update $theTABLE set points=points+$w_add where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
-   echo "<br>".$query;
+//   echo "<br>".$query;
 // Adjust loser
 
    $query = "update $theTABLE set loss=loss+1 where _id=$loser_id";     
@@ -111,7 +111,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
    $query = "update $theTABLE set points=points+$l_add where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
-   echo "<br>".$query;
+//   echo "<br>".$query;
 
 
 // Update last match date shown in ladder   
