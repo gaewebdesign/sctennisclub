@@ -76,7 +76,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
   <div class="container">
 
-    <div class="col-md-5">
+    <div class="col-md-10">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Winning Team</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="winner" required>
@@ -103,7 +103,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
   </div>
 
 
-  <div class="col-md-5">
+  <div class="col-md-10">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Opponent</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="loser" required>
