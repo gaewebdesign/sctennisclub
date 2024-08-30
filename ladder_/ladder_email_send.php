@@ -16,8 +16,7 @@ include "../library/dbevent.inc";
 
 include "../library/email/email.inc";
 
-// Check if keycode entered
-
+// Check for correct keycode 
 
 if ( isset($_POST['SubmitButton'])){
 
