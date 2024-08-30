@@ -1,7 +1,7 @@
 
 
 
-<form class="row g-3" action="./ladder_/ladder_signup.php" method="post">
+<form class="row g-3" action="./ladder_/ladder_enter_signup.php" method="post">
 
 <!--
 <div class="col-md-12">
@@ -103,9 +103,31 @@
    </div>
 
 -->
+<style>
+    /* already defined in bootstrap4 */
+    .text-xs-center {
+        text-align: center;
+    }
+
+    .g-recaptcha {
+        display: inline-block;
+    }
+
+    .captchacenter{
+          justify: center;
+          align: center; 
+    }
+</style>
+<div class="text-xs-center">
+<div class="row md-12 mt-5 g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+ </div>
+<div>
 
 
-  <div class="col-md-3 mt-3">
+
+
+  <div class="col-md-8 mt-3">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
@@ -126,10 +148,8 @@
     <p></p><br/> 
 
     <div class="col-12">
-    <button class="btn btn-primary" name="Button" type="submit">Ladder Signup</button>
+    <button class="btn btn-primary" name="SubmitButton" type="submit">Ladder Signup</button>
   </div>
 </form>
-
-
 
 
