@@ -19,13 +19,13 @@ include "../library/email/email.inc";
 // Check for correct keycode 
 
 if ( isset($_POST['SubmitButton'])){
-    print_r($_POST);
-    return;
-    
+//    print_r($_POST);
+//    return;
+
     if($_POST["secretcode"] != "queenbee" ){
         $attempt = $_POST["secretcode"];
 //      echo "<script>alert(\"Please Enter correct keyccode \")</script>";
-        echo "<script>alert(\"Please Enter correct keyccode ($attempt)\")</script>";
+        echo "<script>alert(\"Please Enter correct keyccode ($attempt entered)\")</script>";
 
         echo('
               <script >
