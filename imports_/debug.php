@@ -46,9 +46,12 @@
       <a class="navbar-brand" href="./pending.phtml">Pending</a>
       <a class="navbar-brand" href="./logger.phtml">Logger</a>
       <a class="navbar-brand" href="./members_debug.phtml">Members</a>
+<!--
       <a class="navbar-brand" href="./debug_sctccheck.phtml">USTACheck</a>  
-<!--     <a class="navbar-brand" href="./signup_lunch.phtml">Lunch</a>   -->
+-->
+      <!--     <a class="navbar-brand" href="./signup_lunch.phtml">Lunch</a>   -->
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
+
       <a class="navbar-brand" href="./signup_debug.phtml">Signup</a>
       <a class="navbar-brand" href="./pending_mixer.phtml">Pending</a>
 
