@@ -19,7 +19,8 @@ include "../library/email/email.inc";
 // Check for correct keycode 
 
 if ( isset($_POST['SubmitButton'])){
-    
+    print_r($_POST);
+    return;
     
     if($_POST["secretcode"] != "queenbee" ){
         $attempt = $_POST["secretcode"];

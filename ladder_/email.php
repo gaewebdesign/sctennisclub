@@ -22,7 +22,7 @@
 
     <hr/>
     <div class="col-12 mt-2">
-    <button class="btn btn-primary" name="SubmitButton" type="submit">Get Email Info</button>
+    <button class="btn btn-primary" name="SubmitButton" value="Clicked" type="submit">Get Email Info</button>
   </div>
 </form>
 
