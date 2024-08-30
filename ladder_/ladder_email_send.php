@@ -1,3 +1,14 @@
+<html>
+
+<head>
+
+      <link rel="stylesheet" href="../css/index.css" >
+      <title>Santa Clara Tennis Club</title>
+
+</head>
+
+<body class="Back" >
+
 <?php
 
 include "../library/include.inc";
@@ -89,3 +100,7 @@ function emailtable($con, $theTABLE,$title,$division){
 
 
 ?>
+
+</body>
+
+</html>
