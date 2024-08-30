@@ -80,7 +80,7 @@ tr {
   <th style="width:10%">Points</th>
   <th style="width:10%">Record</th>
   <th style="width:10%">Last Match</th>
-  <th style="width:10%"</th>
+  
 
 
   </tr>
