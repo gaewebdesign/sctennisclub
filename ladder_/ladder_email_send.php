@@ -16,6 +16,30 @@ include "../library/dbevent.inc";
 
 include "../library/email/email.inc";
 
+// Check if keycode entered
+
+
+if ( isset($_POST['SubmitButton'])){
+
+    if($_POST["secretcode"] != "queenbee" ){
+
+        echo "<script>alert(\"Please Enter correct keyccode \")</script>";
+		echo('
+              <script >
+                    window.setTimeout(function() {
+                    window.location.href="../ladder.phtml?mode=5";
+                 }, 100);
+              </script>
+                ');
+		return;
+    }
+
+
+}
+
+// Check if keycode entered
+
+
 $theTABLE = "ladder";
 
 $email = $_POST["email1"];
