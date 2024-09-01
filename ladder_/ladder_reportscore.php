@@ -70,6 +70,9 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $w_lname = $row["lname1"];
    $w_name = $row["fname1"]." ".$row["lname1"];
 
+   $w_win = $row["win"];
+   $w_loss = $row["loss"];
+
    $w_points = $row["points"];
 
    $division="Womyn";
@@ -82,6 +85,9 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $l_lname = $row["lname1"];
    $l_name = $row["fname1"]." ".$row["lname1"];
 
+   $l_win = $row["win"];
+   $l_loss = $row["loss"];
+
    $l_points = $row["points"];
 
 // UPDATE RECORDS
@@ -89,7 +95,13 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $winner_points = $w_points > $l_points? $w_points : $l_points;
    $loser_points  = $w_points > $l_points? $l_points : $w_points;
    
- //  echo("winner $winner_points  loser $loser_points");
+// FIGURE BONUS POINTS
+   $frequency=2;
+   $w_bonus = ($w_win + $w_loss + 1)%5   ?  0 :  250;
+   $l_bonus = ($l_win + $l_loss + 1)%5   ?  0 :  250;
+
+   
+//  echo("winner $winner_points  loser $loser_points");
    
    $w_add = intval($winner_points/2);
    $l_add = intval($loser_points/4); 
@@ -99,7 +111,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $query = "update $theTABLE set date=$date where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
 
-   $query = "update $theTABLE set points=points+$w_add where _id=$winner_id";     
+   $query = "update $theTABLE set points=points+$w_add + $w_bonus where _id=$winner_id";     
    $query_results=mysqli_query($con, $query);
 //   echo "<br>".$query;
 // Adjust loser
@@ -109,7 +121,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
    $query = "update $theTABLE set date=$date where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
 
-   $query = "update $theTABLE set points=points+$l_add where _id=$loser_id";     
+   $query = "update $theTABLE set points=points+$l_add + $l_bonus where _id=$loser_id";     
    $query_results=mysqli_query($con, $query);
 //   echo "<br>".$query;
 
@@ -153,7 +165,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
     
     $points=$bonus="";
-    announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points,$w_add,$l_add,$score,$bonus,$date );
+    announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points,$w_add,$l_add,$score,$w_bonus,$l_bonus,$date );
 
 
 }
@@ -165,7 +177,7 @@ function between($x , $min,$max){
 
 }
 
-function announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points, $w_add , $l_add,$score,$bonus,$date ){
+function announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points, $w_add , $l_add,$score,$bonus1,$bonus2,$date ){
 
    echo("<center>");
    echo("<h1>Score Report </h1>");
@@ -186,10 +198,15 @@ function announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points, $w_add
 
    echo("<h3>");
    echo("$fname1 $lname1 received $w_add points for this match");
+   if($bonus1 !=0 ) echo("<br>plus $bonus1 bonus points");
    echo("</h3>");   
 
    echo("<h3>");
+
    echo("$fname2 $lname2 received $l_add points for this match");
+   if($bonus2 !=0 ) echo("<br>plus $bonus2 bonus points");
+
+
    echo("</h3>");   
 
    echo("</center>");
