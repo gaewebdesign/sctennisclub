@@ -274,7 +274,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
   //      if( $teamid == 100261) $find=FINISH;
 
-//        if( $teamid == 100261) $find=FINISH;
+        if( $teamid == 100261) $find=FINISH; // 2024
         if( $teamid == 101055) $find=SKIP;
         if( $teamid == 96902) $find=FINISH;   // 2023
         
