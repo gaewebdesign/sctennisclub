@@ -62,7 +62,7 @@ function GetMembers(){
  
  $con = Configure();
   $TABLE = "paypal";
-  $YEAR =2024;
+  $YEAR =2023;
   $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
 
   $qr=mysqli_query($con,$query);
