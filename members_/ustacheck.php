@@ -48,7 +48,7 @@ $YEAR=2024;
 
 function ListMembers()
 {
-   global $MEMBERS,$YEAR;
+   global $MEMBERS;
    
    foreach( $MEMBERS as $key => $val){
         echo $key." ".$val." ";
@@ -57,12 +57,15 @@ function ListMembers()
 }
 
 function GetMembers(){
-  global$MEMBERS;
+  global $MEMBERS;
   global $YEAR;
  
+
  $con = Configure();
   $TABLE = "paypal";
-  //$YEAR =2024;
+  $YEAR =2024;
+
+  
   $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
 
   $qr=mysqli_query($con,$query);
