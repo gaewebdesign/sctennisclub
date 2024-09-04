@@ -42,8 +42,8 @@ date_default_timezone_set('America/Los_Angeles');
 // One time - get members and store in global array
 
 $MEMBERS = array();
-$YEAR=2023;
-//$YEAR=2024;
+//$YEAR=2023;
+$YEAR=2024;
 
 
 function ListMembers()
