@@ -90,7 +90,7 @@
 
         <a class="navbar-brand" href="#">    </a>
 
-
+<!--
         <div class="dropdown" >
           <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                   Ladder
@@ -109,7 +109,7 @@
 
             </ul>
         </div>
-
+-->
 
 
         </p>
