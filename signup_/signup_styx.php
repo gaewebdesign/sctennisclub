@@ -196,10 +196,8 @@
                         <label class="form-check-label" for="member"><b>Vegetarian </b> &nbsp;
                        </label> 
                   
-                <td style="text-align:left"> Lettuce Wrapped w/Shredded Mushrooms, Mixed Mushroom Pumpkin & String Beams, Lotus Root Fungus Peas & Ginko Nuts
-                       Fried Tofu w/Brown Sauce and Pea Sprouts , Chinese Broccoli Stir Fry , General Tso's Cauliflower,
-                       Money Bag Dumplings, Vegetable Chow Mein, Spinach and Pine Nuts Fried Rice
-               </tr>
+                <td style="text-align:left"> Vegetarian Fried Rice and 2-3 menu selections.
+                 </tr>
 
               </table>
 
