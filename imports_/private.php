@@ -74,6 +74,8 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
               <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws (Mx 6.5)</a></li>
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
               <li><a class="dropdown-item disabled"  href="./tournament.phtml?draw=4">Enter Tournament</a></li>
+              <li><a class="dropdown-item disabled"  href="./tournament.phtml?draw=5">Report Scores</a></li>
+
         </ul>
         </div>
 

@@ -56,8 +56,30 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.phtml">Home</a> 
-      <a class="navbar-brand" href="./info">Info</a>
+
+
+<!--  <a class="navbar-brand" href="./info">Info</a>  -->
+
+      <div class="dropdown" >
+          <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Info
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="./info">SCTC</a></li>
+              <li><a class="dropdown-item" href="./membership">Membership</a></li>
+
+              <li><a class="dropdown-item" href="./board">Board</a></li>
+<!--          <li><hr class="dropdown-divider" style="border-color:black;"></li>  -->
+
+            </ul>
+        </div>
+
+
+<!--
       <a class="navbar-brand" href="./membership">Membership</a>
+-->
+
+
       <a class="navbar-brand Link_Red" href="./join">Join</a>
       <a class="navbar-brand" href="./members">Members</a>
 <!--      <a class="navbar-brand" href="./signup">Pigout Signup</a>  -->
@@ -88,10 +110,13 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
 <!--  <a class="navbar-brand" href="./june" class="Link_Purple">June</a> -->
 
-      <a class="navbar-brand" href="./board">Board</a>
+<!--  <a class="navbar-brand" href="./board">Board</a>  -->
+
       <a class="navbar-brand" href="./usta">USTA</a>
-      <a class="navbar-brand" href="https://www.ustanorcal.com/organization.asp?id=20">SCTC Teams </a>
 <!--
+      <a class="navbar-brand" href="https://www.ustanorcal.com/organization.asp?id=20">SCTC Teams </a>
+-->
+      <!--
       <a class="navbar-brand" href="http://www.racquetstore.com">  <img src="./images/racquet_store_logo.png" width="25px" > Racquet Store </a>
 -->                
 
