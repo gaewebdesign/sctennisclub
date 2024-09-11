@@ -149,7 +149,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 <ul class="round">
 <li class="game-top dfont"> <?php echo $s[1] ?>  <span class="small"><?php echo $_s[1] ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top">  <?php echo $s[2]?>   <span class="small"><?php echo $_s[2] ?></span> </li>
+  <li class="game-top dfont">  <?php echo $s[2]?>   <span class="small"><?php echo $_s[2] ?></span> </li>
   <li class="spacer"> 
   <li class="spacer"> 
 <li class="game-top dfont">  <?php echo $s[3] ?>   <span class="small"><?php echo $_s[3] ?></span> </li>
