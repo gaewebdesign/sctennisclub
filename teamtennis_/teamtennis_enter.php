@@ -76,7 +76,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy team tennis  at <b>Santa Clara Tennis Center</b> 
-    on Saturday December 14 , 9am - 2pm. Deadline to signup is December 8, 2024.
+    on Sunday December 8 , 1:30 pn - 4:30 pm. Deadline to signup is December 1, 2024.
     Cost  is $<?php echo($MEMBER_FEE )?> for members , $ <?php echo($GUEST_FEE) ?> for guests <br/>
     Team Tennis includes tennis and lunch. Just need to show up. <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
@@ -150,10 +150,13 @@
             <div class="input-group">
             <label for="validationDefault04" class="form-label">NTRP</label> <p>
             <select class="form-select" id="validationDefault04" name="ntrp" required>
+            <option selected value="2.5">2.5</option>
             <option selected value="3.0">3.0</option>
             <option value="3.5">3.5</option>    
             <option value="4.0">4.0</option>
-            </select>
+            <option value="4.5">4.5+</option>
+
+          </select>
         </div>
        </div>
 
