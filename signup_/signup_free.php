@@ -69,7 +69,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Information (one person per entry)</h4>
-        <form  class="row g-3"  action="tofree.php", method="post" >
+        <form  class="row g-3"  action="topigout.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -157,7 +157,7 @@
         </div>         
 
 <!-- <button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button> -->
-          <button class="w-100 btn btn-primary btn-lg" disabled name = "SubmitButton" type="submit"> Signups Closed! </button>
+          <button class="w-100 btn btn-primary btn-lg"  name = "SubmitButton" type="submit"> Signups Closed! </button>
         </form>
 
       </div>

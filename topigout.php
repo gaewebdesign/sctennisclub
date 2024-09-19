@@ -13,20 +13,48 @@ $email = $_POST['email'];
 $password = "" ;// $_POST['password'];
 $submitButton = $_POST['SubmitButton'];
 
-//echo("Submit $submitButton");
+// CHECK IF EMAIL MATCH
+$retv= CHECK_EMAIL( $email);
 
+if($retv == false){
 
-$error=false;
-/*
-if($password=="4pigs"){
-    echo "<script>alert('Thanks $fname $lname for signing up!') </script>";
-}else{
-    echo "<script>alert('PASSWORD ERROR  $password ') </script>";
-    $error = true;
+    $message = "Email address ($email) not found in membership. ";
+    $message .= "The Pigout is a members only event. ";
+	$message .= "Please signup to Santa Clara Tennis Club";
+
+    echo "<script>alert('$message');</script>";
+//		window.location.href="./pigout";
+	echo('
+	<script >
+		window.setTimeout(function() {
+					window.location.href="./signup_free.phtml";
+			}, 500);
+	</script>
+	');
+
+    return;
+
 }
-*/
-//if (isset($_POST['submit_btn'])) { 
+ 
+// Check Captcha
+$retv = CAPTCHA_CHECKOUT();
+if ($retv == false ){
+	$message = "Please complete CAPTCHA ";
+	echo "<script>alert('$message');</script>";
+	echo('
+	<script >
+		window.setTimeout(function() {
+					window.location.href="./signup_free.phtml";
+			}, 500);
+	</script>
+	');
 
+    return;	
+
+
+}
+
+/*
 
 echo('
 <script >
@@ -35,12 +63,9 @@ echo('
     }, 500);
 </script>
 ');
+*/
 
-if( $error == true) return;
-
-
-
-
+// This far means passed email and CAPTCHA tests
 $theTABLE = "mixer_free";
 
 //echo ("INSERT $fname $lname $paid $date $custom");
@@ -59,19 +84,26 @@ $paid=0;
 $event="2024Pigout";
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
-$res = checkCAPTCHA() ;
+//$res = checkCAPTCHA() ;
+//$retv = CAPTCHA_CHECKOUT();
 
-if($res==true)
+//if($retv==true)
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+/*
+else{
+     echo("cannot do it");
+     return;
+}
+*/
 
-    //toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+//toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
 //sendemail($fname." ".$lname, $email, "sctennisclub.org => $theTABLE ");
 
 $subject = "Pigout Signup ($fname $lname) ---";
 $email = "santaclarawebmaster@gmail.com";
 $message = "Pigout 2024 $fname $lname signup";
-if($res==true)
+
   phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
 
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat

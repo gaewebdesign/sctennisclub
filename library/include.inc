@@ -116,6 +116,27 @@ function DEBUG($message){
 
  }
 
+//define("PAYPAL_MAIL","treasurer@sctennisclub.org");
+function CHECK_EMAIL($_EMAIL){
+
+  $con = DBMembership();
+  $theTABLE = TABLE_PAYPAL;
+  $YEAR=YEAR;
+  
+  $query = "select * from $theTABLE where year=$YEAR and email=\"$_EMAIL\" ";
+
+  $qr=mysqli_query($con,$query);
+  $row = mysqli_fetch_assoc($qr);
+  //print_r($row);
+  $ret=false;
+  if( isset($row)) $ret=true;
+
+   return $ret;
+
+}
+
+
+
  function RESIDENT_MATCH( $_CITY){
   
     if(preg_match("/santa/i",$_CITY) and  preg_match("/clara/i",$_CITY )){
