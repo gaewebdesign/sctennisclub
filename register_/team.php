@@ -22,7 +22,7 @@
 
           <li class="list-group-item d-flex justify-content-start  Back">
           <input type="checkbox" id="resprev" value="RF" name="resprev" notrequired >
-          <label>&nbsp;&nbsp; Santa Clara Tennis Club member in <?php echo(YEAR-1)?> or <?php echo(YEAR) ?> &nbsp; </label>
+          <label>&nbsp;&nbsp; Santa Clara Tennis Club member in <?php echo(YEAR-1)?> (last year) &nbsp; </label>
           <br/>
           </li>
 
