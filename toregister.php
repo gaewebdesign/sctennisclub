@@ -12,6 +12,31 @@ $email = $_POST['email'];
 $team = $_POST["team"];
 $ntrp = $_POST["ntrp"];
 
+// check if already Santa Clara Tennis Club member
+
+$retv = CHECK_EMAIL ($email);
+if($retv == false){
+
+    $message = "Email address ($email) not found in membership. ";
+    $message .= "Captain must be a Santa Clara Tennis Club member. ";
+    $message .= "If you signup to SCTC and we are unable to host your team,"; 
+    $message .= "you may request a refund of your membership fee.";
+
+    echo "<script>alert('$message');</script>";
+//		window.location.href="./pigout";
+	echo('
+	<script >
+		window.setTimeout(function() {
+					window.location.href="./register.phtml";
+			}, 500);
+	</script>
+	');
+
+    return;
+
+}
+ 
+
 $daytime="";
 if (  isset($_POST["daytime"])  )
      $daytime = "y";
