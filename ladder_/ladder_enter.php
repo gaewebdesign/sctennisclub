@@ -125,14 +125,14 @@
 <div>
 
 
-
-
+<!--
   <div class="col-md-8 mt-3">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
+-->
 
-<!--
+  <!--
 
   <div class="col-12">
     <div class="form-check">

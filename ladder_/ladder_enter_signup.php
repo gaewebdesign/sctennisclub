@@ -7,6 +7,22 @@ include "../library/dbevent.inc";
 include "../library/email/email.inc";
 
 
+$email1 = $_POST["email1"];
+$retv  = CHECK_EMAIL($email1);
+$retv= false;
+if ( isset($_POST['SubmitButton'])){
+      if( $retv == false) {
+
+         $message = "Email ($email1) not in membership. ";
+         $message .= " Please sign up to SCTC to enter the ladder";
+         MESSAGE_ALERT( $message);
+         $url = "../ladder.phtml?mode=6";
+         REDIRECT_ALERT( $url);
+         return;
+      }
+}
+
+/*
 if ( isset($_POST['SubmitButton'])){
 
     if($_POST["secretcode"] != "queenbee" ){
@@ -21,12 +37,10 @@ if ( isset($_POST['SubmitButton'])){
                 ');
 		return;
     }
-//   echo "POST VALUES";
-//   print_r($_POST);
-//   print_r($_GET);
+
 
 }
-
+*/
 // ************************************************* 
 
 $res = CAPTCHA_CHECKOUT() ;
