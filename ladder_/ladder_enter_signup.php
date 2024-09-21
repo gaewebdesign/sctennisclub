@@ -233,14 +233,15 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
 
 
 function signedUp( $fname1,$lname1,$division,$points){
-
-    if($division=="Womyn") $division = "Womens";
+ 
+   $ladder = "Men's Singles";
+   if($division=="Womyn") $ladder = "Women's Singles";
 
     echo("<center>" );
     echo("<h1>Signed Up </h1> " );
     echo("<h2>");
     echo("$fname1 $lname1 <p> ");
-    echo("Division: $division<p>");
+    echo("Division: $ladder<p>");
     echo("Initial Points: $points");
     echo("</h2>");
     echo("</center>" );
