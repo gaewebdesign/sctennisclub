@@ -9,7 +9,7 @@ include "../library/email/email.inc";
 
 $email1 = $_POST["email1"];
 $retv  = CHECK_EMAIL($email1);
-$retv= false;
+
 if ( isset($_POST['SubmitButton'])){
       if( $retv == false) {
 
