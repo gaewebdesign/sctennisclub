@@ -580,7 +580,11 @@ function EMAILER($subject, $message, $verbose=false)
 
 }
 
+function CHECK_CAPTCHA(){
 
+  return CAPTCHA_CHECKOUT();
+  
+}
 
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat
 function CAPTCHA_CHECKOUT() {

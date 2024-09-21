@@ -12,6 +12,9 @@ $email = $_POST['email'];
 $team = $_POST["team"];
 $ntrp = $_POST["ntrp"];
 
+$fname = filter_var($fname,  FILTER_SANITIZE_STRING);
+//$lname = mysql_real_escape_string($lname);
+
 // check if already Santa Clara Tennis Club member
 
 $retv = CHECK_EMAIL ($email);
@@ -86,16 +89,33 @@ $custom="";
 $pwd="4pigs";
 
 
-$res = checkCAPTCHA() ;
-//$res = true;
-if($res==true){
- //   toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-//    toRegisterDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-LOGGER( " toRegisterDB");
-toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
+$res = CHECK_CAPTCHA() ;
 
+if($res==true){
+
+    LOGGER( "toregister.php: CAPTCHA filled ");
+    echo '<script>alert("You\'re registered - read your email for more information from \n Santa Clara Tennis Club")</script>'; 
+    toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,$rescaptain,$resprev , $rescount, $year , $date, $insignia, $custom, $pwd);
+
+}else{
+
+    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
 
 }
+/*
+if ($response->success == true) { 
+        
+    echo '<script>alert("You\'re registered - read your email for more information from \n Santa Clara Tennis Club")</script>'; 
+    return true;
+} else { 
+    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+    return false;
+} 
+*/
+
+
+
+
 
 
 
@@ -151,7 +171,7 @@ $message2 = "
 // using Message 2
 phpemailer($subject, $message2 , "ustarep@sctennisclub.org",$email);
 
-
+/*
 function checkCAPTCHA() {
 
     // Checking valid form is submitted or not 
@@ -194,4 +214,5 @@ if (isset($_POST['SubmitButton'])) {
 } 
 }
 
+*/
 ?>
