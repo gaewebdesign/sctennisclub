@@ -37,7 +37,7 @@ if($retv == false){
 }
  
 // Check Captcha
-$retv = CAPTCHA_CHECKOUT();
+$retv = CHECK_CAPTCHA();
 if ($retv == false ){
 	$message = "Please complete CAPTCHA ";
 	echo "<script>alert('$message');</script>";
@@ -82,23 +82,11 @@ $payment=0;
 $member = "W";
 $paid=0;
 $event="2024Pigout";
-//toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
-//$res = checkCAPTCHA() ;
-//$retv = CAPTCHA_CHECKOUT();
 
-//if($retv==true)
+
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-/*
-else{
-     echo("cannot do it");
-     return;
-}
-*/
 
-//toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
-
-//sendemail($fname." ".$lname, $email, "sctennisclub.org => $theTABLE ");
 
 
 $subject = "Pigout Signup ($fname $lname) ---";

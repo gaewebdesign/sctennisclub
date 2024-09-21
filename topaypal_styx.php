@@ -117,7 +117,7 @@ $message = "$fname $lname signed up";
 $recipient = "tennis.mutt@gmail.com";
 
 
-$res = CAPTCHA_CHECKOUT() ;
+$res = CHECK_CAPTCHA() ;
 if($res == true) {
 
   phpemailer($subject,$message , $recipient );
