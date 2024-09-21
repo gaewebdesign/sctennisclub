@@ -14,23 +14,26 @@
 -->
   
 
-  <div class="col-sm-3">
+  <div class="col-sm-5">
     <label for="validationDefault01" class="form-label">First name</label>
     <input type="text" class="form-control fs-6" id="validationDefault01" value="" required name="fname1">
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-5">
     <label for="validationDefault02" class="form-label">Last name</label>
     <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname1">
   </div>
-  <div class="col-sm-3">
-    <label for="validationDefaultUsername" class="form-label">Email</label>
+  <div class="col-sm-7">
+    <label for="validationDefaultUsername" class="form-label">Email (SCTC Member only) </label>
     <div class="input-group">
 <!--      <span class="input-group-text" id="inputGroupPrepend2"></span> -->
       <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
     </div>
   </div>
 
-  <div class="col-sm-1">
+  <div class="col-sm-12">
+  </div>
+
+  <div class="col-sm-3">
     <br/>
    <div class="input-group"> <p>
     <label for="validationDefault04" class="form-label">Gender</label> 
@@ -41,8 +44,11 @@
     </select>
     </div>
    </div>
+ 
 
-   <div class="col-sm-1">
+
+
+    <div class="col-sm-3">
     <br/>
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
@@ -56,10 +62,9 @@
     </div>
    </div>
 
+   <div class="col-sm-6"> </div>
 
 
-
-  <hr/>
 <!--
   <div class="col-sm-3">
     <label for="validationDefault01" class="form-label">First name</label>
