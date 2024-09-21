@@ -10,13 +10,16 @@ include "../library/email/email.inc";
 $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $mode=2;            // Mens ladder
-if( str_contains($_POST["draw"] ,"o")  ) $mode =3;  // Womyns ladder
-
+$gender="M";
+if( str_contains($_POST["draw"] ,"o")  ) {
+    $mode =3;  // Womyns ladder
+    $gender="F";
+}
 $email = $_POST["secretcode"];
 
 if ( isset(  $_POST['Button']  )   ){
     
-    $retv  = CHECK_LADDER_EMAIL($email);
+    $retv  = CHECK_LADDER_EMAIL($email , $gender);
     
     if( $retv == false ){
       $message = "Email ($email) not in ladder. ";
