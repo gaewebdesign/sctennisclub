@@ -119,13 +119,13 @@ function DEBUG($message){
 //define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("TABLE_LADDER","ladder");
 
-function CHECK_LADDER_EMAIL($_EMAIL){
+function CHECK_LADDER_EMAIL($_EMAIL,$_G="M"){
 
   $con = DBMembership();
   $theTABLE = TABLE_LADDER;
   $YEAR=YEAR;
   
-  $query = "select * from $theTABLE where year=$YEAR and email1=\"$_EMAIL\" ";
+  $query = "select * from $theTABLE where year=$YEAR and email1=\"$_EMAIL\" and gender1=\"$_G\" ";
   
   $qr=mysqli_query($con,$query);
   $row = mysqli_fetch_assoc($qr);
