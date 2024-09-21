@@ -7,23 +7,47 @@ include "../library/dbevent.inc";
 include "../library/email/email.inc";
 
 // GRAB entire table
+$actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+$mode=2;            // Mens ladder
+if( str_contains($_POST["draw"] ,"o")  ) $mode =3;  // Womyns ladder
+
+$email = $_POST["secretcode"];
+
+if ( isset(  $_POST['Button']  )   ){
+    
+    $retv  = CHECK_LADDER_EMAIL($email);
+    
+    if( $retv == false ){
+      $message = "Email ($email) not in ladder. ";
+      $message .= " Please sign up to SCTC and  enter the ladder";
+      MESSAGE_ALERT( $message);
+      $url = "../ladder.phtml?mode=$mode";
+
+      REDIRECT_ALERT( $url);
+
+      $MESSAGE = "<script>";
+      $MESSAGE .= "window.setTimeout(function() {";
+      $MESSAGE .= "window.location.href=\"../ladder.phtml?mode=$mode\"";
+      $MESSAGE .= "},100);";
+      $MESSAGE .= "</script>";
+
+//      echo $MESSAGE;
 
 
-if ( isset($_POST['Button'])){
-
-    if($_POST["secretcode"] != "queenbee" ){
-
-        echo "<script>alert(\"Enter correct keyccode \")</script>";
-		echo('
+/*
+      echo('
               <script >
                     window.setTimeout(function() {
-                    window.location.href="../tournament.phtml?draw=6";
+                    window.location.href="../ladder.phtml?mode=2";
                  }, 100);
               </script>
                 ');
-		return;
-    }
 
+*/                
+      return;
+
+   }
 }
 
 $theTABLE = "ladder";
@@ -49,7 +73,7 @@ if ($winner_id == $loser_id) {
 
    echo("<center>");
    echo("<h1>ERROR: same opponent</h1>");
-   echo("<h1>$w_team</h1>");
+//   echo("<h1>$w_team</h1>");
    echo("</center>");
    return;
 }
@@ -61,7 +85,7 @@ reportScore($theTABLE,$winner_id,$loser_id,$score);
 function reportScore($theTABLE, $winner_id,$loser_id,$score){
 
    $con = DBMembership();
-   $date = time()+60*60*8;
+   $date = time()-60*60*6;
 
    $query = "select * from $theTABLE  where _id=$winner_id";        
    $qr= mysqli_query($con, $query);

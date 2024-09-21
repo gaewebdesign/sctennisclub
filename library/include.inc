@@ -117,7 +117,27 @@ function DEBUG($message){
  }
 
 //define("PAYPAL_MAIL","treasurer@sctennisclub.org");
-function CHECK_EMAIL($_EMAIL){
+define("TABLE_LADDER","ladder");
+
+function CHECK_LADDER_EMAIL($_EMAIL){
+
+  $con = DBMembership();
+  $theTABLE = TABLE_LADDER;
+  $YEAR=YEAR;
+  
+  $query = "select * from $theTABLE where year=$YEAR and email1=\"$_EMAIL\" ";
+  
+  $qr=mysqli_query($con,$query);
+  $row = mysqli_fetch_assoc($qr);
+  //print_r($row);
+  $ret=false;
+  if( isset($row)) $ret=true;
+
+   return $ret;
+
+}
+
+function CHECK_EMAIL($_EMAIL ){
 
   $con = DBMembership();
   $theTABLE = TABLE_PAYPAL;
@@ -583,7 +603,7 @@ function EMAILER($subject, $message, $verbose=false)
 function CHECK_CAPTCHA(){
 
   return CAPTCHA_CHECKOUT();
-  
+
 }
 
 // Completely Automated Public Turing Test to tell Computers and Humans Aparat
@@ -638,6 +658,40 @@ if ($response->success == true) {
 
 
 }
+
+
+function MESSAGE_ALERT( $message , $href=""){
+
+  echo "<script>alert('$message');</script>";
+/*
+  echo('
+    <script >
+       window.setTimeout(function() {
+        window.location.href=".$href;
+    }, 500);
+    </script>
+  ');
+*/
+  //$href = "./ladder.phtml?mode=2";
+//  window.location.href="../ladder.phtml?mode=2";
+
+}
+function REDIRECT_ALERT( $url){
+
+    $MESSAGE = "<script>";
+    $MESSAGE .= "window.setTimeout(function() {";
+    $MESSAGE .= "window.location.href=\"$url\"";
+    $MESSAGE .= "},100);";
+    $MESSAGE .= "</script>";
+
+    echo $MESSAGE;
+
+}
+
+
+
+
+
 
 
  ?>

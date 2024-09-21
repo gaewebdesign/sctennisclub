@@ -68,7 +68,9 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 </div>
 -->
-
+<?php
+echo '<input type="hidden" name="draw" value=\"'.$draw.'\" />';
+?>
 
  <div class="col-md-12">
  <hr/>
@@ -143,7 +145,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 
   <div class="col-md-7 mt-2">
-    <label for="validationDefault05" class="form-label">Enter Keycode</label>
+    <label for="validationDefault05" class="form-label">Enter Email Address </label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
 
