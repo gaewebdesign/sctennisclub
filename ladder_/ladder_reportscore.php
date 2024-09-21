@@ -81,11 +81,11 @@ if ($winner_id == $loser_id) {
    return;
 }
 
-
-reportScore($theTABLE,$winner_id,$loser_id,$score);
+$reportedby=$email;   // from above
+reportScore($theTABLE,$winner_id,$loser_id,$score,$reportedby);
 //announceScore($winner_team , $loser_team,$score);
 
-function reportScore($theTABLE, $winner_id,$loser_id,$score){
+function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
    $con = DBMembership();
    $date = time()-60*60*6;
@@ -173,7 +173,9 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score){
     $fname2 =$l_fname;
     $lname2 = $l_lname;
     
-    $email1=$gender1=$ntrp1="";
+    $email1 = $reportedby;
+
+    $gender1=$ntrp1="";
     $email2=$gender2=$ntrp2="";
     $year=2024;
     $division=$division;
