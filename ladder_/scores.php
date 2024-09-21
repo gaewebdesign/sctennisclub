@@ -132,7 +132,7 @@ echo '<input type="hidden" name="draw" value=\"'.$draw.'\" />';
 
 <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Score</label>
-    <input type="text" class="form-control" id="validationDefault05" name="score" required>
+    <input type="text" class="form-control" id="validationDefault05" name="score" required maxlength="12" >
   </div>
 
 
