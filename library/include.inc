@@ -127,7 +127,7 @@ function CHECK_LADDER_EMAIL($_EMAIL,$_G="M"){
   
   $query = "select * from $theTABLE where year=$YEAR and email1=\"$_EMAIL\" and gender1=\"$_G\" ";
   
-  echo $query;
+  //echo $query;
   LOGGER($query);
   
   $qr=mysqli_query($con,$query);
