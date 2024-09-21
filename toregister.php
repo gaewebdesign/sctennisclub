@@ -13,6 +13,8 @@ $team = $_POST["team"];
 $ntrp = $_POST["ntrp"];
 
 $fname = filter_var($fname,  FILTER_SANITIZE_STRING);
+$lname = filter_var($lname,  FILTER_SANITIZE_STRING);
+
 //$lname = mysql_real_escape_string($lname);
 
 // check if already Santa Clara Tennis Club member
