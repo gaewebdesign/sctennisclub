@@ -15,11 +15,12 @@
 
   <hr/>
 
+<!--
   <div class="col-md-7 mt-2">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required> 
   </div>
-
+-->
     <hr/>
     <div class="col-12 mt-2">
     <button class="btn btn-primary" name="SubmitButton" value="Clicked" type="submit">Get Email Info</button>
