@@ -128,7 +128,7 @@ $year,$division,$team,$position,$points,$score,$pwd,$date,$custom,$opt);
 signedUP($fname1,$lname1,$division,$points );
 
 
-$subject = "Tournament $division Signup ($lname1 )";
+$subject = "Ladder $division Signup ($fname1 $lname1 )";
 $message = "$fname1  $lname1  Signup \n";
 $message .= "$division";
 
