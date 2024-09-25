@@ -76,7 +76,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy team tennis  at <b>Santa Clara Tennis Center</b> 
-    on Sunday September 24,2022  1:30 pm - 5 pm. Deadline to signup is September 21, 2022.
+    on Sunday September 24,2022  1pm - 4:30 pm. Deadline to signup is September 21, 2022.
     Cost  is $<?php echo($MEMBER_FEE )?> for members , $ <?php echo($GUEST_FEE) ?> for guests <br/>
     Team Tennis includes tennis and lunch. Just need to show up. <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
