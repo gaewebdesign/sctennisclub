@@ -42,6 +42,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.phtml">Home</a> 
+      <a class="navbar-brand" href="./gmail.phtml">Gmail</a> 
       <a class="navbar-brand" href="./join_debug.phtml">Join</a>
       <a class="navbar-brand" href="./pending.phtml">Pending</a>
       <a class="navbar-brand" href="./logger.phtml">Logger</a>
