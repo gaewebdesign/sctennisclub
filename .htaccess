@@ -19,7 +19,7 @@ RewriteRule ^info$  info.phtml  [NC,QSA,L]
 RewriteRule ^join$  join.phtml  [NC,QSA,L]
 
 RewriteRule ^mixers$  mixers.phtml  [NC,QSA,L]
-RewriteRule ^board$  board.phtml  [NC,QSA,L]
+
 
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
 RewriteRule ^ustacheck$ ustacheck.phtml [NC,QSA,L]
@@ -27,7 +27,7 @@ RewriteRule ^ustacheck$ ustacheck.phtml [NC,QSA,L]
 RewriteRule ^signup$ signup_free.phtml  [NC,QSA,L]
 RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
-RewriteRule ^register$ register.phtml  [NC,QSA,L]
+RewriteRule ^ustasignup$ register.phtml  [NC,QSA,L]
 
 RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
 RewriteRule ^august$ signup_icecream.phtml  [NC,QSA,L]
