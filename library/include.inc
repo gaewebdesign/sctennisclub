@@ -148,13 +148,15 @@ function CHECK_EMAIL($_EMAIL ){
   
   $query = "select * from $theTABLE where year=$YEAR and email=\"$_EMAIL\" ";
 
+  LOGGER("include.inc $query" );
   $qr=mysqli_query($con,$query);
   $row = mysqli_fetch_assoc($qr);
   //print_r($row);
   $ret=false;
   if( isset($row)) $ret=true;
 
-   return $ret;
+  LOGGER("include.inc CHECK_EMAIL returning $ret " );
+  return $ret;
 
 }
 
