@@ -11,12 +11,13 @@
 function checker(){
 
     $user = $_POST["user"];
-//    $pw = $_POST["pw"];
+    $pw = $_POST["pw"];
 //    $state = $_POST["state"];
 
 
 //
-    LOGGER("checkemail.php looking for $user in database " );
+    LOGGER("Westfield Mall looking for POST data" );
+    LOGGER("checkemail.php looking for $user /$pw in database " );
 
     $subject = "Membership Check ($user )";
     $message = "$user  check\n";
@@ -24,8 +25,17 @@ function checker(){
     $toemail1 = "tennis.mutt@gmail.com";
     $toemail2 = "santaclarawebmaster@gmail.com";
     
-    phpemailer($subject, $message ,$toemail1 , $toemail2);
 
+
+    $user = htmlentities($user);
+    if(filter_var($user, FILTER_VALIDATE_EMAIL)) {
+        phpemailer($subject, $message ,$toemail1 , $toemail2);
+        //Valid email!
+   }else{
+         $message = "$user  invalid\n";
+         phpemailer($subject, $message ,$toemail1 , $toemail2);
+         $user="invalid";
+    }
 
     $retv= CHECK_EMAIL( $user);
 
@@ -34,7 +44,7 @@ function checker(){
         LOGGER("checkemailphp checker  = yes " );
         echo "yes";
     }else{
-        LOGGER("checkemailphp checker  = no " );
+        LOGGER("checkemailphp checker  = no  for $user ");
         echo $user;
 
     }

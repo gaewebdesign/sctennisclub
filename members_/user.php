@@ -1,57 +1,48 @@
-<!--
 
- <form class="needs-validation" novalidate name="signup" action="topaypal.php", method="post" >
 
--->
-<?php
+<form action="./notused.php", method="POST">
 
-?>
-<p> &nbsp;
+<div class="container-sm"  > 
+  <div class="row">
+  
+        <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="input-group">
+              <span class="input-group-text " id="inputGroupPrepend1" >Email</span>
+              <input name="user" type="text" class="form-control BackInput" id="user"  required>
 
-<form class="row g-3" action="./notused.php", method="POST">
+              <input type="hidden" id="pw" name="pw" value="pw_picad_2913334657" />
+             </div>
+             </div>
 
-  <hr/>
-  <div class="col-md-1"></div>
-  <div class="col-md-8"> 
-    Enter membership email to see membership list.
-  </div>
-   <div class="col-md-3"></div>
+             <div class="col-md-2"></div>
 
-  <div class="col-md-6">
-    <div class="input-group">
-    <span class="input-group-text " id="inputGroupPrepend1" >Email</span>
-    <input name="USER" type="text" class="form-control BackInput" id="user"  required>
-     </div>
   </div>
 
-  <div class="col-md-4"></div>
-
-  <!--        -->
-
-  <div class="col-md-2"></div>
-
-<!--
-  <div class="col-md-6">
-    <div class="input-group">
-    <span class="input-group-text" id="inputGroupPrepend2" >password</span>
-    <input name="PASSWORD" type="text" class="form-control BackInput" id="pw"  required>
-    </div>
-  </div>
-  <div class="col-md-4"></div>
--->   
-
-
-
-  <p><br>&nbsp;
-  <div class="col-md-1"></div>
-
-  <div class="col-md-2">
- <!--
-  <button class="btn btn-primary" type="submit">Enter</button>
--->
-  </div>
-  <div class="col-md-9"></div>
+</div>
 
 
 
 </form>
+
+
+
+<!--
+<form  method="POST">
+
+<div class="container-sm"  > 
+            <div class="row">
+            <div class="col-sm-2">&nbsp;</div>
+            <div class="col-sm-8 text-center">
+                <span > Message Center </span>      
+            </div>
+            <div class="col-sm-2">&nbsp;</div>
+
+            <div>
+      </div>
+
+
+</form>
+
+
+-->
