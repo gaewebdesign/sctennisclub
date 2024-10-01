@@ -73,9 +73,8 @@
       <h2>Santa Clara Tennis Club Year End Dinner </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy dinner at <b>China Stix</b> in Santa Clara
-    on Thursday November 14 , 6:30-8 pm. Deadline to signup is November 1, 2024.
-    Dinner is $<?php echo($MEMBER_FEE )?> <br/>
+    Enjoy dinner at <b>China Stix</b> in Santa Clara on Thursday November 14 , 6-8 pm. (dinner served at 6:30) Early bird registration is <?php echo($MEMBER_FEE) ?> until October 21, 2024.
+    Registration afterwards wil be $<?php echo($MEMBER_FEE+5 )?> until the final deadline of November 4 <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
     </h3>
@@ -110,7 +109,7 @@
               <label for="firstName" class="form-label">First name</label>
               <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
               <div class="invalid-feedback">
-                Valid first name is required.
+                 Valid first name is required.
               </div>
             </div>
             <div class="col-sm-5">
