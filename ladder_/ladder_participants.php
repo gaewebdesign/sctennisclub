@@ -62,7 +62,7 @@ tr {
               }
              }
 
-             ladderlist("Men");
+             pointlist("Men");
 
 
            ?>
