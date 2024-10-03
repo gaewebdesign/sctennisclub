@@ -8,6 +8,20 @@ include "../library/email/email.inc";
 
 
 $email1 = $_POST["email1"];
+
+// SANITIZE EMAIL 
+$email1 = htmlentities($email1);
+if(filter_var($email1, FILTER_VALIDATE_EMAIL)) {
+//    phpemailer($subject, $message ,$toemail1 , $toemail2);
+    //Valid email!
+}else{
+     $message = "$email1  invalid\n";
+//    phpemailer($subject, $message ,$toemail1 , $toemail2);
+     $email1="invalid";
+}
+// SANITIZE EMAIL 
+
+
 $retv  = CHECK_EMAIL($email1);
 
 if ( isset($_POST['SubmitButton'])){

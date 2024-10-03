@@ -28,7 +28,7 @@ tr {
            <p>
 
            <?php
-             function ladderlist($draw){
+             function resultlist($draw){
               $TABLE_LADDER = "ladder_results";
               $YEAR = 2024;
               
@@ -65,7 +65,7 @@ tr {
               }
              }
 
-             ladderlist("Men");
+             resultlist("Men");
 
 
            ?>
@@ -93,7 +93,7 @@ tr {
 
      <?php
 
-             ladderlist("Womyn");
+             resultlist("Womyn");
 
       ?>
 

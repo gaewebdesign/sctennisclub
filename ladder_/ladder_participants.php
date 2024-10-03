@@ -28,7 +28,7 @@ tr {
            <p>
 
            <?php
-             function ladderlist($draw){
+             function pointlist($draw){
               $TABLE_LADDER = "ladder";
               $YEAR = 2024;
               
@@ -92,7 +92,7 @@ tr {
 
      <?php
 
-             ladderlist("Womyn");
+             pointlist("Womyn");
 
       ?>
 
