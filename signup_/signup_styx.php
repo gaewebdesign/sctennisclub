@@ -58,7 +58,7 @@
   <?php 
    // include "includes.inc";
    $MEMBER_FEE=DINNER;
-   $MEMBER_FEE="25";
+   $MEMBER_FEE="20";
   
   ?>
 
@@ -74,7 +74,7 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy dinner at <b>China Stix</b> in Santa Clara on Thursday November 14 , 6-8 pm. (dinner served at 6:30)
-     Early bird registration is <?php echo($MEMBER_FEE) ?> until October 21, 2024.
+     Early bird registration is $<?php echo($MEMBER_FEE) ?> until October 21, 2024.
     Registration afterwards wil be $25 until the final deadline of November 4 <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
   
