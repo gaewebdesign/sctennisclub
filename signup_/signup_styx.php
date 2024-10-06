@@ -73,7 +73,7 @@
       <h2>Santa Clara Tennis Club Year End Dinner </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy dinner at <b>China Stix</b> in Santa Clara on Thursday November 14 , 6-8 pm. (dinner served at 6:30)
+    Enjoy dinner at <a href="http://www.chinastix.net"><b>China Stix</b></a> in Santa Clara on Thursday November 14 , 6-8 pm. (dinner served at 6:30)
      Early bird registration is $<?php echo($MEMBER_FEE) ?> until October 21, 2024.
     Registration afterwards will be $25 until the final deadline of November 4 <br/>
     Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
