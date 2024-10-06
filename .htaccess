@@ -24,7 +24,7 @@ RewriteRule ^mixers$  mixers.phtml  [NC,QSA,L]
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
 RewriteRule ^ustacheck$ ustacheck.phtml [NC,QSA,L]
 
-RewriteRule ^signup$ signup_free.phtml  [NC,QSA,L]
+RewriteRule ^signup$ signup_styx.phtml  [NC,QSA,L]
 RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule ^ustasignup$ register.phtml  [NC,QSA,L]
