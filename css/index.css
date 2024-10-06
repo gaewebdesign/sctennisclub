@@ -13,6 +13,8 @@
 
 }
 
+
+
 .Develop{
 
     background-color: rgb(186, 240, 155);
@@ -212,6 +214,19 @@ sctitle{
 }
 
 
+
+article h1 {
+    color: rgb(33, 88, 132);
+    color: purple;
+    text-shadow: rgb(132, 0, 101) -2px 0px 0px, rgb(151, 151, 151) -7px 0px 4px;
+    font-family: Speeder;
+    font-weight: bold;
+    font-size: 3.0em;
+    font-style: oblique;
+    letter-spacing: 0.03em;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+ }
 /*
 
 a{
