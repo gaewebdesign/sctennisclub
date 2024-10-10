@@ -25,8 +25,31 @@ function CHECK_DOUBLES( $email1 , $email2){
 
 }
 
+$theTABLE = "tourny";
+$division = $_POST["division"];
+
+$year=2024;
+
+$fname1 = $_POST["fname1"];
+$fname2 = $_POST["fname2"];
+$lname1 = $_POST["lname1"];
+$lname2 = $_POST["lname2"];
+
+$gender1 =$_POST["gender1"];
+$gender2 =$_POST["gender2"];
+$ntrp1 =$_POST["ntrp1"];
+$ntrp2 =$_POST["ntrp2"];
 $email1 = $_POST["email1"]; 
 $email2 = $_POST["email2"]; 
+
+$date = "".time()-60*60*7;
+$pwd = password($fname1,$fname2);
+
+$mtype= get_mtype($division);
+
+$team="";
+//$team=$insignia=$payment=$custom=$opt="";
+//$event = "-";
 
 
 if(filter_var($email1, FILTER_VALIDATE_EMAIL) == false) {
@@ -36,7 +59,6 @@ if(filter_var($email1, FILTER_VALIDATE_EMAIL) == false) {
 if(filter_var($email2, FILTER_VALIDATE_EMAIL) == false) {
    $email2 = "invalid";
 }
-
 
 
     $retv = CHECK_DOUBLES($email1 , $email2 );
@@ -64,7 +86,10 @@ if( isset($_POST['Button'])  ){
    if ( $retv >0  ){  
    
        LOGGER("email $email1 and $email2  found in db");
+       enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
+       signedUP($theTABLE,$fname1,$lname1,$email1,$fname2,$lname2,$email2,$division );
 
+       
    }else{
 //    echo "<script>alert(\"Enter correct email \")</script>";
 //      echo "<script>alert(\"$message\")</script>";
@@ -108,55 +133,6 @@ if ( isset($_POST['Button'])){
 
 }
 */
-
-if( !isset($_POST['fname1'] )) {
-   echo ("spammer");
-   return;
-}
-
-$theTABLE = "tourny";
-
-
-$fname1 = $_POST["fname1"];
-$fname2 = $_POST["fname2"];
-
-$lname1 = $_POST["lname1"];
-$lname2 = $_POST["lname2"];
-
-$email1 = $_POST["email1"];
-$email2 = $_POST["email2"];
-
-$event = $gender1 = $ntrp1 = "-";
-$gender2 = $ntrp2 = "-";
-
-$team=$mtype=$date=$insignia=$payment=$custom=$opt=$pwd="";
-
-$division = $_POST["division"];
-
-$gender1 =$_POST["gender1"];
-$gender2 =$_POST["gender2"];
-
-$ntrp1 =$_POST["ntrp1"];
-$ntrp2 =$_POST["ntrp2"];
-
-
-$year=2024;
-
-$theTABLE = "tourny";
-
-$date = "".time()-60*60*7;
-$pwd = password($fname1,$fname2);
-
-
-$mtype= get_mtype($division);
-
-
-
-enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
-
-
-signedUP($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-
 
 
 $subject = "Tournament $division Signup ($lname1 $lname2)";
@@ -249,8 +225,8 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
 }
 
 
-function signedUp($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
-
+//function signedUp($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+   function signedUp($theTABLE,$fname1,$lname1,$email1,$fname2,$lname2,$email2,$division){
     
     echo("<body bgcolor=\"CAE9F5\" >");
     echo("<center>");
