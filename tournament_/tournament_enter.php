@@ -116,7 +116,7 @@
     <hr/>
     <p></p><br/> 
     <div class="col-12">
-     <span id="Message"> MESSAGE </span>
+     <span id="Message">  </span>
     </div>
     <div class="col-12">
     <button class="btn btn-primary" name="Button" type="submit">Enter Tournament</button>
