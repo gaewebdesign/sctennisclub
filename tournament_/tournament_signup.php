@@ -4,6 +4,85 @@
 include "../library/include.inc";
 include "../library/email/email.inc";
 
+function CHECK_DOUBLES( $email1 , $email2){
+
+   if( CHECK_EMAIL($email1) != true ) {
+      LOGGER( "ERR: $email1");
+      return -1;
+   
+   }elseif ( CHECK_EMAIL( $email2) != true){
+      LOGGER( "ERR: $email2");
+      return -2;
+
+   }elseif ( $email1 ==  $email2 ){
+      LOGGER( "ERR: $email1 = $email2");      
+      return -3;
+   }
+   
+   LOGGER("CHECK_DOUBLES returning true");
+   return true;
+
+
+}
+
+$email1 = $_POST["email1"]; 
+$email2 = $_POST["email2"]; 
+
+
+if(filter_var($email1, FILTER_VALIDATE_EMAIL) == false) {
+   $email1 = "invalid";
+}
+
+if(filter_var($email2, FILTER_VALIDATE_EMAIL) == false) {
+   $email2 = "invalid";
+}
+
+
+
+    $retv = CHECK_DOUBLES($email1 , $email2 );
+LOGGER("retv = $retv");
+
+$message = "";
+switch( $retv){
+      case -1:
+           $message = "$email1 email not found for first player";
+            break;
+      case -2:
+            $message = "$email2 email not found for second player";
+            break;
+      case -3:
+            $message = "Emails ($email1) are the same";
+            break;
+      default:
+            $retv = 5;
+            $message = "good";
+
+}
+
+if( isset($_POST['Button'])  ){
+
+   if ( $retv >0  ){  
+   
+       LOGGER("email $email1 and $email2  found in db");
+
+   }else{
+//    echo "<script>alert(\"Enter correct email \")</script>";
+//      echo "<script>alert(\"$message\")</script>";
+
+      echo('
+           <script >
+                 window.setTimeout(function() {
+                 window.location.href="../tournament.phtml?draw=4";
+              }, 100);
+           </script>
+             ');
+         return;
+ }
+
+}
+
+/*
+
 
 if ( isset($_POST['Button'])){
 
@@ -24,7 +103,7 @@ if ( isset($_POST['Button'])){
 //   print_r($_GET);
 
 }
-
+*/
 
 if( !isset($_POST['fname1'] )) {
    echo ("spammer");
@@ -168,12 +247,16 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
 
 function signedUp($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
-
+    
+    echo("<body bgcolor=\"CAE9F5\" >");
+    echo("<center>");
     echo("<h1>Signed Up </h1> " );
-    echo("<h3>");
-    echo("$fname1 $lname1   / $fname2 $lname2   $division");
-    echo("</h3>");
-
+    echo("<h2><u>$division</u> <p>");
+    echo("$fname1 $lname1   / $fname2 $lname2   <br>");
+    echo("$email1           / $email2 <br>");
+    echo("</h2>");
+    echo("</center>");
+    echo("</body>" );
 
 }
 ?>

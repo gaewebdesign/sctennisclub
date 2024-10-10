@@ -1,4 +1,7 @@
+<script>
 
+
+</script>
 
 
 <form class="row g-3" action="./tournament_/tournament_signup.php" method="post">
@@ -26,7 +29,7 @@
     <input type="text" class="form-control fs-6" id="validationDefault02" value="" required name="lname1">
   </div>
   <div class="col-sm-3">
-    <label for="validationDefaultUsername" class="form-label">Email</label>
+    <label for="validationDefaultUsername" class="form-label">SCTC Email</label>
     <div class="input-group">
 <!--      <span class="input-group-text" id="inputGroupPrepend2"></span> -->
       <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
@@ -70,7 +73,7 @@
     <input type="text" class="form-control" id="validationDefault02" value="" name="lname2" required>
   </div>
   <div class="col-sm-3">
-    <label for="validationDefaultUsername" class="form-label">Email</label>
+    <label for="validationDefaultUsername" class="form-label">SCTC Email</label>
     <div class="input-group">
 <!-- <span class="input-group-text" id="inputGroupPrepend2"></span> -->
       <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email2" required>
@@ -103,46 +106,18 @@
    </div>
 
 
-
-  <!--
-  <div class="col-md-6">
-    <label for="validationDefault03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationDefault03" required>
-  </div>
--->
-
-
-
 <!--
-  <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">Division</label>
-    <select class="form-select" id="validationDefault04" required>
-    <option selected value="">Mx 6.5</option>
-    <option selected value="">Mx 7.5</option>
-    </select>
-  </div>
-
--->
   <div class="col-md-3">
     <label for="validationDefault05" class="form-label">Enter Keycode</label>
     <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
 
-<!--
-
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
-    </div>
-  </div>
-
 -->
     <hr/>
     <p></p><br/> 
-
+    <div class="col-12">
+     <span id="Message"> MESSAGE </span>
+    </div>
     <div class="col-12">
     <button class="btn btn-primary" name="Button" type="submit">Enter Tournament</button>
   </div>
