@@ -68,6 +68,9 @@ if( isset($_POST['Button'])  ){
    }else{
 //    echo "<script>alert(\"Enter correct email \")</script>";
 //      echo "<script>alert(\"$message\")</script>";
+      echo ("<script>");
+      echo("alert(\"$message\")");
+      echo ("</script>");
 
       echo('
            <script >
@@ -76,7 +79,8 @@ if( isset($_POST['Button'])  ){
               }, 100);
            </script>
              ');
-         return;
+
+             return;
  }
 
 }
