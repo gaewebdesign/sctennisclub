@@ -4,7 +4,7 @@
 </script>
 
 
-<form class="row g-3" action="./tournament_/tournament_signup.php" method="post">
+<form class="row g-3" action="./tournament_/ttournament_signup.php" method="post">
 
 
 
