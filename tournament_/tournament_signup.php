@@ -135,15 +135,15 @@ if ( isset($_POST['Button'])){
 */
 
 
-$subject = "Tournament $division Signup ($lname1 $lname2)";
+$subject = "Tournament (mnscuo) $division Signup ($lname1 $lname2)";
 $message = "$fname1  $lname1  $fname2 $lname2 Signup \n";
 $message .= "$division";
 
 
-$toemail1 = "tennis.mutt@gmail.com";
+$toemail1 = "mnscuo@gmail.com";
 $toemail2 = "santaclarawebmaster@gmail.com";
 
-phpemailer($subject, $message ,$toemail1 , $toemail2);
+phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
 
 function get_mtype($division ){
 
