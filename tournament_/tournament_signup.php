@@ -83,9 +83,16 @@ switch( $retv){
 
 if( isset($_POST['Button'])  ){
 
-   if ( $retv >0  ){  
+    $toemail1 = "mnscuo@gmail.com";
+    $subject = "_POST button set";
+    $message = "this shouldnt go";
+    phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
+
+    if ( $retv >0  ){  
    
-       LOGGER("email $email1 and $email2  found in db");
+      phpemailer($subject, $message." retv>0" ,$toemail1 ); //, $toemail2);
+      
+      LOGGER("email $email1 and $email2  found in db");
        enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
        signedUP($theTABLE,$fname1,$lname1,$email1,$fname2,$lname2,$email2,$division );
 
