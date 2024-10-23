@@ -58,11 +58,13 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="./index.phtml">Home</a> 
       <a class="navbar-brand" href="./email.phtml">Members</a>
       <a class="navbar-brand" href="./email_past.phtml">Last Year</a>
+      
+      <a class="navbar-brand" href="./email_join.phtml">China Styx</a>
 
-      <a class="navbar-brand" href="./email_tournament.phtml">Tournament</a>
+<!--      <a class="navbar-brand" href="./email_tournament.phtml">ChinaStyx</a>  -->
       <a class="navbar-brand" href="./email_free.phtml">Pigout</a>
       <a class="navbar-brand" href="./email_lunch.phtml">Fatima Lunch</a>
-      <a class="navbar-brand" href="./email_join.phtml">Athena Dinner</a>
+<!--     <a class="navbar-brand" href="./email_join.phtml">Athena Dinner</a> -->
 
 
       <div class="dropdown" >
