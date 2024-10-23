@@ -39,11 +39,12 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <tbody>
 <?php
    // define("TABLE_PAYPAL","paypal");  
-    $y = YEAR;
-    $_y = YEAR-1;
+    $y = $theYEAR;
+//    $_y = YEAR-1;
     $m = MEMBERS($y);
-    $_m = MEMBERS($_y);
-    echo ("Members for $y ($m) and $_y ($_m) " );
+//    $_m = MEMBERS($_y);
+    echo ("<h1>Members for $y ($m total) </h1>" );
+//  echo ("Members for $y ($m) and $_y ($_m) " );
     
     
     function Configure_()
@@ -146,9 +147,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
             }
 
-            memberlist(YEAR);
+            memberlist($theYEAR);
 //            if(YEAR>=2024)
-            memberlist(YEAR-1);
+ //           memberlist(YEAR-1);
 
 
 
