@@ -19,8 +19,8 @@ function checker($date ){
     LOGGER("TEST checkemail.php " );
 
     $subject = "EMAIL Check $date ";
-    $message = "using a php program to programtically send multiple copies of an email to one address \n";
-    $message .= "thereby by-passing whatever limits an email program imposes \n ";
+    $message = "using a php program to programtically send multiple copies of an email to one address within a tight loop\n";
+    $message .= "making it appear that several copies are sent at once, but they're actually sent separately\n ";
 
    
     $message .= "Time check: $date ";
@@ -31,7 +31,7 @@ function checker($date ){
 
     $last=6;
     while($last-- > 0)
-      phpemailer($subject, $message ,$toemail1 , $toemail2);
+      phpemailer($subject, $message."($last)" ,$toemail1 , $toemail2);
 
 
 
