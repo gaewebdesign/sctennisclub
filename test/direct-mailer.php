@@ -12,14 +12,23 @@
 	/* CONFIGURE PHP IF NEEDED */
 	// ini_set("sendmail_from","$fromFull");
 	// ini_set("SMTP","mail.smtp2go.com");
-	// ini_set('smtp_port',2525);
+
 	// ini_set('username',"snake");
 	// ini_set('password',"cobra");
 
 	echo("***init*******<br>");
 
+	$fromFull = "tennis.mutt@gmail.com";
+	ini_set("sendmail_from","$fromFull");	
+	ini_set('smtp_port',25);
+
+	init_set('username',  "webmaster@sctennisclub.org");
+	init_set('password',  "webmaster.3722");
+//	$mail->Password = "webmaster.3722";
 
 	print_r(ini_get_all());
+
+
 
 	//print_r(  ini_get_all("SMTP")  );
 	//print_r(  ini_get_all("smtp")  );
