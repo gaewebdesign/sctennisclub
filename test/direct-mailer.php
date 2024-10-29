@@ -16,6 +16,12 @@
 	// ini_set('username',"snake");
 	// ini_set('password',"cobra");
 
+	echo("**********");
+	print_r(ini_get_all());
+    echo("**********");
+
+
+	return;
 
 	// COMPOSE
 	$to      = 'tennis.mutt@gmail.com';
