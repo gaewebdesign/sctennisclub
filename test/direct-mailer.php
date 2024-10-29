@@ -44,7 +44,7 @@
 	echo("**********<br>");
 	
 
-	return;
+	
 
 	// COMPOSE
 	$to      = 'tennis.mutt@gmail.com';
@@ -59,10 +59,10 @@
 	
 	
 	// SEND AND SHOW MESSAGE
-	/*
+	// sending
 	if (mail($to, $subject, $message, $headers)) echo $headers.'<h1>Mail sent!</h1>';
 	else echo '<h1>Something went wrong...</h1>';
-	*/
+	
 
 	// FULL HEADER
 	// $headers  = "From: testsite < mail@testsite.com >\n";
