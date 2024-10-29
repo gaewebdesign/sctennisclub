@@ -17,8 +17,13 @@
 	// ini_set('password',"cobra");
 
 	echo("**********");
-	print_r(ini_get_all());
+	//print_r(ini_get_all());
     
+	foreach ($ini_get_all as $key => $value) {
+		echo $key." -->".$value;
+		echo ("<br>");
+	
+	}
 	echo("**********");	
 	echo("**********");
 
