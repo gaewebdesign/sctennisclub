@@ -17,11 +17,11 @@
 	// ini_set('password',"cobra");
 
 	echo("**********<br>");
-	//print_r(ini_get_all());
+	print_r(ini_get_all());
 
-	print_r(  ini_get_all("SMTP")  );
-	print_r(  ini_get_all("smtp")  );
-	print_r(  ini_get_all("smtp_port")  );
+	//print_r(  ini_get_all("SMTP")  );
+	//print_r(  ini_get_all("smtp")  );
+	//print_r(  ini_get_all("smtp_port")  );
     
 /*
 	foreach ($ar as $key => $value) {
