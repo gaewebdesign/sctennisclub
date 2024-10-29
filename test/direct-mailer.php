@@ -64,7 +64,7 @@
 	// sending
 	$errcode=-99;
 	if ($errcode=mail($to, $subject, $message, $headers)) echo $headers.'<h1>Mail sent!</h1>';
-	else echo '<h1>Something went wrong...$ercode</h1>';
+	else echo "<h1>Something went wrong...$errcode</h1>";
 	
 
 	// FULL HEADER
