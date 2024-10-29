@@ -4,8 +4,8 @@
 
 
   include  "../library/include.inc";
-  include "../library/email/email.inc";
-  //include "../library/email/test.inc";
+  //include "../library/email/email.inc";
+  include "../library/email/test.inc";
 
 
 
@@ -18,9 +18,9 @@ function checker($date ){
 
     LOGGER("TEST checkemail.php " );
 
-    $subject = "EMAIL Check ";
+    $subject = "EMAIL Check $date ";
     $message = "using a php program to programtically send multiple copies of an email to one address \n";
-    $message .= "thereby by-passing whatever limits an email program imposes";
+    $message .= "thereby by-passing whatever limits an email program imposes \n ";
 
    
     $message .= "Time check: $date ";
