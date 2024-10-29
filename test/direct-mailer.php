@@ -19,6 +19,8 @@
 	echo("***init*******<br>");
 
 	$fromFull = "tennis.mutt@gmail.com";
+	$fromFull = "webmaster@sctennisclub.org";
+
 	ini_set("sendmail_from","$fromFull");	
 	ini_set('smtp_port',25);
 
@@ -60,8 +62,9 @@
 	
 	// SEND AND SHOW MESSAGE
 	// sending
-	if (mail($to, $subject, $message, $headers)) echo $headers.'<h1>Mail sent!</h1>';
-	else echo '<h1>Something went wrong...</h1>';
+	$errcode=-99;
+	if ($errcode=mail($to, $subject, $message, $headers)) echo $headers.'<h1>Mail sent!</h1>';
+	else echo '<h1>Something went wrong...$ercode</h1>';
 	
 
 	// FULL HEADER
