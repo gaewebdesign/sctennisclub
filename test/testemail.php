@@ -12,19 +12,21 @@
 function checker(){
 
 //    $user = $_POST["user"];
-//    $pw = $_POST["pw"];
+
 //    $state = $_POST["state"];
 //
 
     LOGGER("TEST checkemail.php " );
 
     $subject = "EMAIL Check ";
-    $message = "CHECK FOR MULTIPLE TO USER\n";
+    $message = "using a php program to programtically send multiple copies of an email to one address \n";
+    $messsage .= "thereby by-passing whatever limits an email program imposes";
+
     
     $toemail1 = "tennis.mutt@gmail.com";
     $toemail2 = "tennis.mutt@gmail.com";
 
-       phpemailer($subject, $message ,$toemail1 , $toemail2);
+    phpemailer($subject, $message ,$toemail1 , $toemail2);
 
 
 
@@ -33,6 +35,8 @@ function checker(){
 
 
 checker();
+echo ("email sent");
+
 //$retv= "yes";
 //echo $retv;
 //LOGGER( "checkmail.php retv=$retv");
