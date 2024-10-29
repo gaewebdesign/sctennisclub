@@ -22,8 +22,8 @@
 	ini_set("sendmail_from","$fromFull");	
 	ini_set('smtp_port',25);
 
-	init_set('username',  "webmaster@sctennisclub.org");
-	init_set('password',  "webmaster.3722");
+	ini_set('username',  "webmaster@sctennisclub.org");
+	ini_set('password',  "webmaster.3722");
 //	$mail->Password = "webmaster.3722";
 
 	print_r(ini_get_all());
