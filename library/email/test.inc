@@ -38,8 +38,6 @@ try {
 
       $mail->Port = 587;      
       $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
-      
-      $mail->setFrom( "rogero.tennis@gmail.com" , "Santa Clara Tennis Club" ) ; 
 
  //   $mail->setFrom( "tennis.mutt@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 
@@ -49,10 +47,6 @@ try {
       $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( $_TOEMAIL ) ; 
       $mail->addAddress( $_TOEMAIL2 ) ; 
-      $mail->addAddress( $_TOEMAIL ) ; 
-      $mail->addAddress( $_TOEMAIL ) ; 
-      $mail->addAddress( $_TOEMAIL ) ; 
-      $mail->addAddress( $_TOEMAIL ) ; 
 
       $mail->isHTML( true);
 
