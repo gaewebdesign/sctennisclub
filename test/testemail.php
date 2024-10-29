@@ -31,7 +31,7 @@ function checker($date ){
 
     $last=6;
     while($last-- > 0)
-      phpemailer($subject, $message."($last)" ,$toemail1 , $toemail2);
+      phpemailer($subject.($last), $message ,$toemail1 , $toemail2);
 
 
 
