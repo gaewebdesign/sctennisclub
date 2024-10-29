@@ -9,7 +9,7 @@
 
 
 
-function checker(){
+function checker($date ){
 
 //    $user = $_POST["user"];
 
@@ -22,10 +22,7 @@ function checker(){
     $message = "using a php program to programtically send multiple copies of an email to one address \n";
     $message .= "thereby by-passing whatever limits an email program imposes";
 
-    $custom = time()-60*60*7;
-    $dt = new DateTime("@$custom");
-    $date = ltrim($dt->format('m/d/Y H:i:s '),0);
-
+   
     $message .= "Time check: $date ";
     
     
@@ -39,9 +36,14 @@ function checker(){
 
 }
 
+$custom = time()-60*60*7;
+$dt = new DateTime("@$custom");
+$date = ltrim($dt->format('m/d/Y H:i:s '),0);
 
-checker();
-echo ("email sent");
+
+
+checker($date );
+echo ("email sent $date");
 
 //$retv= "yes";
 //echo $retv;
