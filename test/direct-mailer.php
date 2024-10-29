@@ -16,16 +16,22 @@
 	// ini_set('username',"snake");
 	// ini_set('password',"cobra");
 
-	echo("**********");
+	echo("**********<br>");
 	//print_r(ini_get_all());
+
+	print_r(  ini_get_all("SMTP")  );
+	print_r(  ini_get_all("smtp")  );
+	print_r(  ini_get_all("smtp_port")  );
     
-	foreach ($ini_get_all() as $key => $value) {
+/*
+	foreach ($ar as $key => $value) {
 		echo $key." -->".$value;
 		echo ("<br>");
+		}
+	*/
+
+	echo("**********<br>");
 	
-	}
-	echo("**********");	
-	echo("**********");
 
 	return;
 
