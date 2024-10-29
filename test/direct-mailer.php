@@ -16,7 +16,9 @@
 	// ini_set('username',"snake");
 	// ini_set('password',"cobra");
 
-	echo("**********<br>");
+	echo("***init*******<br>");
+
+
 	print_r(ini_get_all());
 
 	//print_r(  ini_get_all("SMTP")  );
