@@ -29,7 +29,9 @@ function checker($date ){
     $toemail1 = "tennis.mutt@gmail.com";
     $toemail2 = "tennis.mutt@gmail.com";
 
-    phpemailer($subject, $message ,$toemail1 , $toemail2);
+    $last=6;
+    while($last-- > 0)
+      phpemailer($subject, $message ,$toemail1 , $toemail2);
 
 
 
