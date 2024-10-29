@@ -20,12 +20,13 @@ function checker(){
 
     $subject = "EMAIL Check ";
     $message = "using a php program to programtically send multiple copies of an email to one address \n";
-    $messsage .= "thereby by-passing whatever limits an email program imposes";
+    $message .= "thereby by-passing whatever limits an email program imposes";
 
     $custom = time()-60*60*7;
+    $dt = new DateTime("@$custom");
     $date = ltrim($dt->format('m/d/Y H:i:s '),0);
 
-    $messsage .= "Time check: $date ";
+    $message .= "Time check: $date ";
     
     
     $toemail1 = "tennis.mutt@gmail.com";
