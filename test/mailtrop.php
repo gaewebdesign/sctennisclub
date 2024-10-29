@@ -1,10 +1,10 @@
 <?php
 
-$to = 'tennis.mutt@gmail.com';
+$to = 'tennis.mutt@gmail.com, santaclarawebmaster@gmail.com, tennis.mutt@gmail.com';
 $from = 'rogero.tennis@gmail.com';
 $subject = 'Hello!';
 
-$headers['From'] = 'sender@example.com';
+$headers['From'] = $from;
 $headers['MIME-Version'] = 'MIME-Version: 1.0';
 $headers['Content-type'] = 'text/html; charset=iso-8859-1';
 
@@ -34,6 +34,7 @@ $result = mail($to, $subject, $message, $headers);
 
 if ($result) {
     echo 'Success!' . PHP_EOL;
+    echo "from $from to $to ". PHP_EOL;
 } else {
     echo 'Error.' . PHP_EOL;
 }
