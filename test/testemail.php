@@ -4,7 +4,8 @@
 
 
   include  "../library/include.inc";
-  include "../library/email/email.inc";
+  //include "../library/email/email.inc";
+  include "../library/email/test.inc";
 
 
 
