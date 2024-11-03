@@ -25,7 +25,8 @@ tr {
       </thead>
       <tbody>
            <p>
-           <h4>Participants  </h4> 
+<!--           <h4>Participants  </h4>  -->
+           
            <p>
        <?php
           
@@ -37,17 +38,20 @@ tr {
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
 
 
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by custom desc";
 
+
+          
           // switch back
 
 //          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
 
           $con = Configure();
-           
- //        echo( $query );           
-          $qr=mysqli_query($con,$query);
 
+ //        echo( $query );           
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by custom desc";
+          $qr=mysqli_query($con,$query);
+          $n = mysqli_num_rows($qr);
+          echo("<h4>Participants  ($n) </h4>"  );         
 
           while ($row = mysqli_fetch_assoc($qr)) {  
             echo "<tr>";
