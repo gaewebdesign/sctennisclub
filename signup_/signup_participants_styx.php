@@ -48,7 +48,7 @@ tr {
           $con = Configure();
 
  //        echo( $query );           
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
           $qr=mysqli_query($con,$query);
           $n = mysqli_num_rows($qr);
           echo("<h4>Participants  ($n) </h4>"  );         
