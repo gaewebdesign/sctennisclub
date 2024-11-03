@@ -303,6 +303,7 @@ function Configure()
         $DB= "southb56_sctc";
            
         if(strstr($_SERVER["SERVER_NAME"],"sctennis")){
+          $PASSWORD="Roger.Okamoto";
           $USER  = "southb56_rog";    // inmotion
         } 
         
