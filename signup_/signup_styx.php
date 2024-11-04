@@ -209,7 +209,7 @@
 
 
 
-<button class="w-100 btn btn-primary btn-lg"  name="SubmitButton" > Signup for Dinner! </button>
+<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > Thanks for signing up for Dinner! </button>
 
 
 </form>
