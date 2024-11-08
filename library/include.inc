@@ -284,7 +284,7 @@ function toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,
 
 } 
 
-function Sanitize_($v)
+function Sanitize($v)
 {
 
     $FILTER = FILTER_SANITIZE_ENCODED | FILTER_SANITIZE_SPECIAL_CHARS | FILTER_SANITIZE_FULL_SPECIAL_CHARS;
@@ -295,7 +295,7 @@ function Sanitize_($v)
 
 }
 
-include "../library/include.inc";
+
 
 function DBMembership() {
 
