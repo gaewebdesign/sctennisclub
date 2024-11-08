@@ -284,7 +284,16 @@ function toRegisterDB($theTABLE, $fname,$lname,$team, $ntrp , $daytime , $email,
 
 } 
 
+function Sanitize($v)
+{
 
+    $FILTER = FILTER_SANITIZE_ENCODED | FILTER_SANITIZE_SPECIAL_CHARS | FILTER_SANITIZE_FULL_SPECIAL_CHARS;
+//    $v = filter_var( $v, $FILTER );
+//  $v = str_replace([",", "#", "$", "%", "*", "~", "'", "=", "{", "[", "|", "`", "^", "]", "}", ":", ";", "<", ">", "/", "?", "&"], "", $v );
+    $v = str_replace([",",  "$", "%", "~", "'", "=", "{", "[", "|", "`", "^", "]", "}", ":", ";", "<", ">", "/","\\", "?", "&"], "", $v );
+    return $v; 
+
+}
 
 
 function DBMembership() {
