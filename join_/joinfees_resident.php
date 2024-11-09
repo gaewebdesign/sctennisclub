@@ -24,12 +24,15 @@
           <br/>
           </li>
 
-          <li class="list-group-item d-flex justify-content-between Memb_Color  Back">
+          <li class="list-group-item d-flex justify-content-between Back">
           <label> Santa Clara Tennis Club must maintain a resident majority. <br> 
-                  Not accepting Non-Residents at this time <br>
-            Currently there are: </b>
+<!--              Not accepting Non-Residents at this time <br>  -->
+                  Non-resident applications will open in 2025 <br>
+
+                  <!--      Currently there are: </b>
           <?php print("<b>".Residents(YEAR)."</b> Residents") ?>  
           <?php print("<b>".NonResidents(YEAR)."</b> Non-Residents") ?>  
+-->
           <br>
 
 <!--  
