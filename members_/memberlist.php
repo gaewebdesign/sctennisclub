@@ -82,8 +82,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
          $con = Configure();
+         $year = $YEAR-1;
 
-         $query = "select * from ".TABLE_PAYPAL." where year=$YEAR order by lname limit 300 ";
+         $query = "select * from ".TABLE_PAYPAL." where year>=$YEAR order by lname limit 300 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 //         TEXT($query);
 
