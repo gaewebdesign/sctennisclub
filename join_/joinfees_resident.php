@@ -25,9 +25,15 @@
           </li>
 
           <li class="list-group-item d-flex justify-content-between Back">
-          <label> Santa Clara Tennis Club must maintain a resident majority. <br> 
-<!--              Not accepting Non-Residents at this time <br>  -->
-                  Non-resident applications will open in 2025 <br>
+          <label> 
+                 Santa Clara residents may signup before 2025 for the discount resident fee 
+                 of <?php echo(RES_FEE); ?>.
+                 Non-resident applications will open in 2025. <br>
+<!--
+                 Santa Clara Tennis Club must maintain a resident majority. <br> 
+-->
+  <!--              Not accepting Non-Residents at this time <br>  -->
+  
 
                   <!--      Currently there are: </b>
           <?php print("<b>".Residents(YEAR)."</b> Residents") ?>  
