@@ -22,7 +22,7 @@ define("TABLE_TEAMTENNIS_PENDING", "teamtennis_pending");
 
 
 
-define ("YEAR" , "2024");
+define ("YEAR" , "2025");
 define("RES_FEE" , "30" );
 //define("RES_FEE" , "25" );
 
