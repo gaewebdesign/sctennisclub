@@ -27,7 +27,7 @@
           <li class="list-group-item d-flex justify-content-between Back">
           <label> 
                  Santa Clara residents may signup before 2025 for the discount resident fee 
-                 of <?php echo(RES_FEE); ?>.
+                 of $<?php echo(RES_FEE); ?>.
                  Non-resident applications will open in 2025. <br>
 <!--
                  Santa Clara Tennis Club must maintain a resident majority. <br> 
