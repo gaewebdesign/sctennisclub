@@ -108,7 +108,7 @@ $paypal->price = $paid;
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Membership");
+$paypal->add("item_name","SCTC $year Membership");
 $paypal->add("quantity",1);
 
 $paypal->add("return",RETURN_URL);
