@@ -145,9 +145,9 @@ function CHECK_EMAIL($_EMAIL ){
 
   $con = DBMembership();
   $theTABLE = TABLE_PAYPAL;
-  $YEAR=YEAR;
+  $YEAR=YEAR-1;
   
-  $query = "select * from $theTABLE where year=$YEAR and email=\"$_EMAIL\" ";
+  $query = "select * from $theTABLE where year>=$YEAR and email=\"$_EMAIL\" ";
 
   LOGGER("include.inc $query" );
   $qr=mysqli_query($con,$query);
