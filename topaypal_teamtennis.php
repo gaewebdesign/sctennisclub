@@ -95,6 +95,8 @@ $subject = "2024 Team Tennis (pending)";
 $message = "$fname $lname $email $team ";
 $to = "santaclarawebmaster@gmail.com";
 
+// OK
+
 phpemailer($subject, $message , $to);
 
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
