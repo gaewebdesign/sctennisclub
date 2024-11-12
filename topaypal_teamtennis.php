@@ -46,11 +46,15 @@ $paypal->add("notify_url",NOTIFY_URL_TEAMTENNIS);
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
-$phone = $_POST["team"];
+$phone = $_POST["phone"];
 
 $gender = $_POST["gender"];
 $ntrp   = $_POST["ntrp"];
 $paid   = $_POST["_FEE"];
+
+//echo $phone;
+//echo $ntrp.$gender;
+
 
 
 // ********************************
