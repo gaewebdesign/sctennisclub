@@ -105,17 +105,11 @@ $data = array(
 $subject= "2024 Team Tennis (pending)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
-
-$recipient = "santaclarawebmaster@gmail.com";
-phpemailer($subject, $message , $recipient);
-
-
+$recipient = "rogie@sctennisclub.org";
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
-   $subject= "2024 Team Tennis (signup)";
-   $recipient = "rogie@sctennisclub.org";
-   
+
    phpemailer($subject,$message , $recipient );
    
    $theTABLE="teamtennis";
