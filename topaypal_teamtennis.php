@@ -115,7 +115,8 @@ phpemailer($subject, $message , $recipient);
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
-
+   $subject= "2024 Team Tennis (signup)";
+   
    phpemailer($subject,$message , $recipient );
    
    $theTABLE="teamtennis";
