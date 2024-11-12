@@ -96,8 +96,9 @@ $data = array(
 
 );
 
-$subject = "2024 Team Tennis (pending)";
-$message = "$fname $lname $email $team ";
+$subject = "2024 Team Tennis (*pending)";
+$rating = $gender.$ntrp;
+$message = "$fname $lname $rating $email $pnone ";
 $to = "santaclarawebmaster@gmail.com";
 
 // OK
