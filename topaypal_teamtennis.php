@@ -99,6 +99,10 @@ $to = "santaclarawebmaster@gmail.com";
 
 phpemailer($subject, $message , $to);
 
+$to = "rogie@sctennisclub.org";
+phpemailer($subject, $message , $to);
+
+
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
