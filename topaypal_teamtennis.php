@@ -46,7 +46,7 @@ $paypal->add("notify_url",NOTIFY_URL_TEAMTENNIS);
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
-$phone = $_POST["phone"];
+$phone = $_POST["team"];
 
 $gender = $_POST["gender"];
 $ntrp   = $_POST["ntrp"];
@@ -104,8 +104,8 @@ phpemailer($subject, $message , $to);
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Team Tennis";
-$message = "$fname $lname pending";
+$subject= "2024 Team Tennis (pending)";
+$message = "$fname $lname  $gender.$ntrp $phone";
 $recipient = "tennis.mutt@gmail.com";
 
 
