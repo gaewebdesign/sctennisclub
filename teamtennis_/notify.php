@@ -43,8 +43,9 @@ $recipient = "rogie@sctennisclub.org";
 $subject = "Team Tennis Subject";
 $message = "sign-up";
 
-phpemailer($subject,$message , $recipient );
 echo("sending to $recipient");
+phpemailer($subject,$message , $recipient );
+
 
 if( !empty($_POST["custom"])){
 
