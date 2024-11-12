@@ -96,18 +96,6 @@ $data = array(
 
 );
 
-$subject = "2024 Team Tennis (*pending)";
-$rating = $gender.$ntrp;
-$message = "$fname $lname $rating $email $pnone ";
-$to = "santaclarawebmaster@gmail.com";
-
-// OK
-
-phpemailer($subject, $message , $to);
-
-$to = "rogie@sctennisclub.org";
-phpemailer($subject, $message , $to);
-
 
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
@@ -115,8 +103,14 @@ phpemailer($subject, $message , $to);
 //print_r($paypal);
 
 $subject= "2024 Team Tennis (pending)";
-$message = "$fname $lname  $gender.$ntrp $phone";
-$recipient = "tennis.mutt@gmail.com";
+$rating = $gender.$ntrp;
+$message = "$fname $lname $rating $email $phone ";
+
+$to = "santaclarawebmaster@gmail.com";
+phpemailer($subject, $message , $to);
+
+$to = "rogie@sctennisclub.org";
+phpemailer($subject, $message , $to);
 
 
 $res = CHECK_CAPTCHA() ;
