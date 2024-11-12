@@ -44,6 +44,7 @@ $subject = "Team Tennis Subject";
 $message = "sign-up";
 
 phpemailer($subject,$message , $recipient );
+echo("sending to $recipient");
 
 if( !empty($_POST["custom"])){
 
