@@ -52,8 +52,9 @@ $gender = $_POST["gender"];
 $ntrp   = $_POST["ntrp"];
 $paid   = $_POST["_FEE"];
 
+//echo $email;
 //echo $phone;
-//echo $ntrp.$gender;
+//echo $gender.$ntrp;
 
 
 
