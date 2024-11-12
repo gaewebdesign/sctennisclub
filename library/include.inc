@@ -64,8 +64,8 @@ define("RETURN_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/done.php
 define("CANCEL_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/cancel.php");
 define("NOTIFY_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/notify.php");
 
-define("TEAMTENNIS_MEMBER_FEE" , "10");
-define("TEAMTENNIS_GUEST_FEE" , "15");
+define("TEAMTENNIS_MEMBER_FEE" , "5");
+define("TEAMTENNIS_GUEST_FEE" , "10");
 
 
 
@@ -246,6 +246,9 @@ function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city
 function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 
   $con = DBMembership();
+
+    $zip = substr($zip, 0,5);
+
 
      $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) values';
      $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($event).add($gender).add($ntrp).add($address).add($city).add($zip);

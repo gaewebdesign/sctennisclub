@@ -37,13 +37,15 @@ tr {
            <?php
              function teamtennislist( ){
 
+              $TABLE_TOURNY = "teamtennis";
               $TABLE_TOURNY = "teamtennis_pending";
 
-              
-              $TABLE_TOURNY = "teamtennis";
+              $jurassic = strtotime('2024-11-2');
+              $cretaceous = strtotime('2024-12-7');
 
               $YEAR = 2024;
               $query = "select * from ".$TABLE_TOURNY." where year=$YEAR order by date";
+              $query = "select * from ".$TABLE_TOURNY."  where custom>$jurassic and custom<$cretaceous order by date desc";
 
               $con = Configure();
  
