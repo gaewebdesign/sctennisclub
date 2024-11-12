@@ -13,6 +13,18 @@ define("NOTIFY_URL","http://www.sctennisclub.org/signup/notify.php");
 
 //print_r($_POST);
 
+// Sanitize
+
+$_POST[FNAME] = Sanitize( $_POST[FNAME] );
+$_POST[LNAME] = Sanitize( $_POST[LNAME] );
+$_POST[ADDRESS] = Sanitize( $_POST[ADDRESS] );
+
+$_POST[CITY] = Sanitize( $_POST[CITY] );
+$_POST[TEAM] = Sanitize( $_POST[TEAM] );
+
+
+
+
 $paypal = new paypal();
 
 
@@ -80,7 +92,7 @@ if(preg_match( "/F/i",$mtype)){
 }
 
 
-$date = $custom;
+//$date = $custom;
 $payment = $paid;
 $insignia = "1";
 $year = YEAR ;      // defined in library/include.inc
@@ -96,7 +108,7 @@ $paypal->price = $paid;
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Membership");
+$paypal->add("item_name","SCTC $year Membership");
 $paypal->add("quantity",1);
 
 $paypal->add("return",RETURN_URL);
@@ -115,7 +127,7 @@ $email = $_POST[EMAIL]; //"rwokamoto@gmail.com";   ///$_POST["email"];
 $gender = $_POST[GENDER];
 $ntrp   =$_POST[NTRP]; 
 $member =$_POST["membership"];
-$event = $_POST["event"];
+$event = "Memb".YEAR;//$_POST["event"];
 
 $address = $_POST[ADDRESS];
 $city = $_POST[CITY];
