@@ -11,8 +11,8 @@ include "../library/email/email.inc";
 
 
 
-LOGGER("notify.php called : _GET custom = " .$_GET["custom"]);
-LOGGER("notify.php called : _POST custom = " .$_POST["custom"]);
+//LOGGER("notify.php called : _GET custom = " .$_GET["custom"]);
+//LOGGER("notify.php called : _POST custom = " .$_POST["custom"]);
 LOGGER("notify.php  Use _POST !!!! ******************");
 
 
@@ -49,6 +49,27 @@ if( !empty($_POST["custom"])){
    LOGGER("notify.php saving TeamTennis info copyto_teamtennis $src -> $dest : $epoch " );
 
    copyto_teamtennis( $src, $dest, $epoch);
+
+   //** SEND SIGN-UP NOTIFICATION */
+   $con = DBMembership();
+   $query = "select * from teamtennis where date = $epoch";
+   $query_results=mysqli_query($con, $query);
+   $row = mysqli_fetch_assoc( $query_results);
+   $fname = $row[FNAME];
+   $lname = $row[LNAME];
+   $email = $row[EMAIL];
+   $phone = $row["team"];
+   $ntrp =  $row["gender"].".".$row["ntrp"];
+   $subject = "2024 Team Tennis Signup";
+   $rating = $gender.$ntrp;
+   $message = $subject."<br>";
+   $message .= "$fname $lname <br>$rating <br>$email <br>$phone ";
+   $recipient = "rogie@sctennisclub.org";
+
+   phpemailer($subject,$message , $recipient );
+
+   //** SEND SIGN-UP NOTIFICATION */
+
 
    // notify email
    $data = array(
