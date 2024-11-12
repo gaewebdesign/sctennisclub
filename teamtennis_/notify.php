@@ -18,10 +18,11 @@ LOGGER("notify.php  Use _POST !!!! ******************");
 
 LOGGER("notify.php: enumerate _GET array");
 TEXT("notify.php: enumerate _GET array");
+$message = "";
 foreach ($_GET as $key => $value) {
    LOGGER("notify.php $key -> $value ");
    TEXT("notify.php $key -> $value ");
-
+   $message .= "$key -> $value";
 }
 
 
@@ -70,11 +71,11 @@ if( !empty($_POST["custom"])){
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
 $subject = "Team Tennis Signup";
-$message = "notify.php: get names ";
+//$message = "notify.php: get names ";
 
 //TEXT("EMAILER");
 
-phpemailer($subject, $message);
+phpemailer($subject, $message, "rogie@sctennisclub.org");
 
 //EMAILER( $subject, $name, $verbose=true);
 /*
