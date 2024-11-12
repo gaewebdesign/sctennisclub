@@ -39,6 +39,11 @@ foreach ($_POST as $key => $value) {
 $dest = TABLE_TEAMTENNIS;
 $src = TABLE_TEAMTENNIS_PENDING;
 
+$recipient = "rogie@sctennisclub.org";
+$subject = "Team Tennis Subject";
+$message = "sign-up";
+
+phpemailer($subject,$message , $recipient );
 
 if( !empty($_POST["custom"])){
 
