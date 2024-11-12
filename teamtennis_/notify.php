@@ -43,7 +43,7 @@ $recipient = "rogie@sctennisclub.org";
 $subject = "Team Tennis Subject";
 $message = "sign-up";
 
-echo("sending to $recipient");
+TEXT("sending message to $recipient");
 phpemailer($subject,$message , $recipient );
 
 
