@@ -46,6 +46,8 @@ $paypal->add("notify_url",NOTIFY_URL_TEAMTENNIS);
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
+$phone = $_POST["phone"];
+
 $gender = $_POST["gender"];
 $ntrp   = $_POST["ntrp"];
 $paid   = $_POST["_FEE"];
@@ -54,7 +56,7 @@ $paid   = $_POST["_FEE"];
 // ********************************
 // use this to identify person in database
 $custom = time()-60*60*7;
-$custom  -= 60*60*24*rand(700,725);
+//$custom  -= 60*60*24*rand(700,725);
 //*******
 
 $paypal->add("item_number"," $fname $lname " );
@@ -89,7 +91,11 @@ $data = array(
 
 );
 
-SENDER( $data );
+$subject = "2024 Team Tennis (pending)";
+$message = "$fname $lname $email $team ";
+$to = "santaclarawebmaster@gmail.com";
+
+phpemailer($subject, $message , $to);
 
 //EMAILER($fname." ".$lname, $email, "Year-end Dinner => $theTABLE ");
 
@@ -97,7 +103,7 @@ SENDER( $data );
 //print_r($paypal);
 
 $subject= "2024 Team Tennis";
-$message = "$fname $lname signed up";
+$message = "$fname $lname pending";
 $recipient = "tennis.mutt@gmail.com";
 
 
@@ -106,14 +112,14 @@ if($res == true) {
 
    phpemailer($subject,$message , $recipient );
    
-   $theTABLE="teamtennis_pending";
    $theTABLE="teamtennis";
+   $theTABLE="teamtennis_pending";
 
    $division=$team="";
 
    $opt = "member";
    if($payment != TEAMTENNIS_MEMBER_FEE) $opt="guest";
-
+   $team = $phone."*";
    dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$payment,$date,$opt);
 // dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$payment,$custom,$opt){
 
