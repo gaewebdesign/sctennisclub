@@ -22,7 +22,7 @@ $message .=  "Santa Clara Tennis Club";
 //emailer( $subject, $message );
 
 
-function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
+function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mns.mutt@gmail.com", $_TOEMAIL2="santaclarawebmaster@gmail.com"){
 
     require 'vendor/autoload.php';
 
@@ -44,7 +44,7 @@ try {
 //    $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
       
-      $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
+//      $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( $_TOEMAIL ) ; 
       $mail->addAddress( $_TOEMAIL2 ) ; 
 
