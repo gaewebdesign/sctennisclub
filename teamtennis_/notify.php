@@ -73,7 +73,7 @@ if( !empty($_POST["custom"])){
    $message .= "$fname $lname <br>$rating <br>$email <br>$phone ";
    $recipient = "rogie@sctennisclub.org";
 
-   phpemailer($subject,$message , $recipient ,"tennis.mutt@gmail.com");
+   phpemailer($subject,$message , $recipient ,$recipient);
 
    //** SEND SIGN-UP NOTIFICATION */
 
