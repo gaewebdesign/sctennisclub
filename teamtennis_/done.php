@@ -43,7 +43,8 @@
 
   */
 
-      include "../library/include.inc";
+/*
+  include "../library/include.inc";
 
       $NAME = $_GET["item_number"];
       $EMAIL = $_GET["payer_email"];
@@ -55,7 +56,7 @@
 
 //      LOGGER("done.php: calling copyto_teamtennis") ;       
       copyto_teamtennis( TABLE_TEAMTENNIS_PENDING,  TABLE_TEAMTENNIS, $CUSTOM);
-
+*/
      ?>
 
 
