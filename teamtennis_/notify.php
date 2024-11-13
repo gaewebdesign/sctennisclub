@@ -66,7 +66,7 @@ if( !empty($_POST["custom"])){
    $lname = $row["lname1"];
    $email = $row["email1"];
    $phone = $row["team"];
-   $ntrp =  $row["gender1"].".".$row["ntrp1"];
+   $ntrp =  $row["gender1"].$row["ntrp1"];
    $subject = "2024 Team Tennis Signup";
    $rating = $gender.$ntrp;
    $message = $subject."<br>";
