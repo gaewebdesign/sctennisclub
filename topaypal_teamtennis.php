@@ -102,7 +102,7 @@ $data = array(
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Team Tennis (pending)";
+$subject= "2024 Team Tennis (to pending)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
 $recipient = "rogie@sctennisclub.org";
@@ -110,7 +110,7 @@ $recipient = "rogie@sctennisclub.org";
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
 
-   phpemailer($subject,$message , $recipient );
+   phpemailer($subject,$message , $recipient, $recipient );
    
    $theTABLE="teamtennis";
    $theTABLE="teamtennis_pending";
@@ -119,7 +119,7 @@ if($res == true) {
 
    $opt = "member";
    if($payment != TEAMTENNIS_MEMBER_FEE) $opt="guest";
-   $team = $phone."*";
+   $team = $phone;
    dbteamtennis($theTABLE,$fname,$lname,$email,$gender,$ntrp,$year,$division,$team,$date,$payment,$date,$opt);
 // dbteamtennis($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$year,$division,$team,$date,$payment,$custom,$opt){
 
