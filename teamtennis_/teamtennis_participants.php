@@ -37,8 +37,8 @@ tr {
            <?php
              function teamtennislist( ){
 
-              $TABLE_TOURNY = "teamtennis";
               $TABLE_TOURNY = "teamtennis_pending";
+              $TABLE_TOURNY = "teamtennis";
 
               $jurassic = strtotime('2024-11-2');
               $cretaceous = strtotime('2024-12-7');
