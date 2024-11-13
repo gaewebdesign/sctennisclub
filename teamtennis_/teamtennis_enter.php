@@ -163,7 +163,7 @@
        </div>
 
        <div class="col-sm-8">
-              <label for="phone" class="form-label">Cell Phone</label>
+              <label for="phone" class="form-label">Phone</label>
               <input type="phone" class="form-control BackInput" id="phone" placeholder="" value="" required name="phone">
               <div class="invalid-feedback">
                 Valid cell phone is required.
