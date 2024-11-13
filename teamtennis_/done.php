@@ -33,7 +33,7 @@
 
     <a href="https://www.instagram.com/santaclaratennisclub/"> 
 
-        <img class="RESP_IMAGE" src = "./images/instagram.png">
+        <img class="RESP_IMAGE" src = "../images/instagram.png">
 
     </a>
 
