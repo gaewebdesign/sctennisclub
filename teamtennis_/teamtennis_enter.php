@@ -78,7 +78,7 @@
     Enjoy team tennis  at <b>Santa Clara Tennis Center</b> 
     on Sunday December 8,2024  1:30 pm - 4:30 pm. Deadline to signup is December 1 or until the event is filled.
     Cost is $<?php echo($MEMBER_FEE) ?> for members, $<?php echo($GUEST_FEE); ?> for guests. <br/>
-    Signup page is at <a href="./signup">www.sctennisclub.org/teamtennis</a>
+    Signup page is at <a href="./teamtennis">www.sctennisclub.org/teamtennis</a>
     <p>
       For more information email Roy and Alice at <br>
        <img src = "./images/teamtennis.png" >
