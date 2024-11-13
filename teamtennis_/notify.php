@@ -43,8 +43,8 @@ $recipient = "rogie@sctennisclub.org";
 $subject = "Team Tennis Subject";
 $message = "sign-up";
 
-TEXT("sending message to $recipient");
-phpemailer($subject,$message , $recipient );
+//TEXT("sending message to $recipient");
+//phpemailer($subject,$message , $recipient );
 
 
 if( !empty($_POST["custom"])){
@@ -62,11 +62,11 @@ if( !empty($_POST["custom"])){
    $query = "select * from teamtennis where date = $epoch";
    $query_results=mysqli_query($con, $query);
    $row = mysqli_fetch_assoc( $query_results);
-   $fname = $row[FNAME];
-   $lname = $row[LNAME];
-   $email = $row[EMAIL];
+   $fname = $row["fname1"];
+   $lname = $row["lname1"];
+   $email = $row["email1"];
    $phone = $row["team"];
-   $ntrp =  $row["gender"].".".$row["ntrp"];
+   $ntrp =  $row["gender1"].".".$row["ntrp1"];
    $subject = "2024 Team Tennis Signup";
    $rating = $gender.$ntrp;
    $message = $subject."<br>";
