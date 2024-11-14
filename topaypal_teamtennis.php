@@ -105,7 +105,7 @@ $data = array(
 $subject= "2024 Team Tennis (pending)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
-$recipient = "rogie@sctenniscluborg";
+$recipient = "rogie@sctennisclub.org";
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
