@@ -64,7 +64,7 @@ define("RETURN_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/done.php
 define("CANCEL_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/cancel.php");
 define("NOTIFY_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/notify.php");
 
-define("TEAMTENNIS_MEMBER_FEE" , ".01");
+define("TEAMTENNIS_MEMBER_FEE" , "5");
 define("TEAMTENNIS_GUEST_FEE" , "10");
 
 
