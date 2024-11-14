@@ -71,7 +71,7 @@ if( !empty($_POST["custom"])){
    $rating = $gender.$ntrp;
    $message = $subject."<br>";
    $message .= "$fname $lname <br>$rating <br>$email <br>$phone ";
-   $recipient = "rogie@sctennisclub.org";
+   $recipient = "teamtennis@sctennisclub.org";
 
    phpemailer($subject,$message , $recipient ,$recipient);
 
