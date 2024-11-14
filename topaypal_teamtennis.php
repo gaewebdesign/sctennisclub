@@ -102,15 +102,15 @@ $data = array(
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Team Tennis (to pending rogie & santaclarawebmaster)";
+$subject= "2024 Team Tennis (pending)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
-$recipient = "rogie@sctennisclub.org";
+$recipient = "rogie@sctenniscluborg";
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
 
-   phpemailer($subject,$message , $recipient , "docker.mutt@gmail.com");//, $recipient );
+   phpemailer($subject,$message , $recipient , "santaclarawebmaster@gmail.com");//, $recipient );
    
    $theTABLE="teamtennis";
    $theTABLE="teamtennis_pending";
