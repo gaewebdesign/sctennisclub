@@ -98,8 +98,8 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
               <li><a class="dropdown-item" href="./signup_free.phtml">July - Annual Pigout</a></li>
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
               <li><a class="dropdown-item" href="./signup_icecream.phtml">August - Ice Cream Social</a></li>
-
-              <li><a class="dropdown-item" href="./teamtennis.phtml">September - Team Tennis</a></li>
+              <li><a class="dropdown-item" href="./signup_styx.phtml">November - End of year Dinner</a></li>
+              <li><a class="dropdown-item" href="./teamtennis.phtml">December - Team Tennis</a></li>
 
 <!--
               <li><a class="dropdown-item" href="./signup_styx.phtml">November - Annual Dinner</a></li>
