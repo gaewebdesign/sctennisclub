@@ -4,14 +4,15 @@
 </script>
 
 
-<form class="row g-3" action="./tournament_/ttournament_signup.php" method="post">
+
+<form class="row g-3" action="./tournament_/tournament_signup.php" method="post">
 
 
 
 
 
 <div class="col-md-12">
-    <label for="validationDefault04" class="form-label">Division</label>
+    <label for="validationDefault04" class="form-label"><?php echo("".YEAR); ?>  Division</label>
     <select class="form-select" id="validationDefault05" name="division" required>
     <option selected value="Mx6.5">Mx 6.5</option>
     <option value="Mx7.5">Mx 7.5</option>
