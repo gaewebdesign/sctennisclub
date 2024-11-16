@@ -133,8 +133,9 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=4">Enter Tournament</a></li>
 
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=5">Report Mx7.5 Scores</a></li>
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=6">Report Mx6.5 Scores</a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=5">Contact Players</a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=6">Report Mx7.5 Scores</a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=7">Report Mx6.5 Scores</a></li>
         </ul>
         </div>
 
