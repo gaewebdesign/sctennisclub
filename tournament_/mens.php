@@ -1,19 +1,19 @@
 <html>
-
-   <div class="h3">2024  Mx 7.5 Tournament</div>
+   
+   <div class="h3"><?php echo(YEAR);?>  Mx 7.5 Tournament</div>
 
  <main id="headers">
 
  <ul class="round">
    Quarter-Finals
-   <div class="small">Finish by 9/7/2024</div>
+   <div class="small">Finish by 2/16/2025</div>
   </ul>
   <ul class="round">
    Semi-Finals
-   <div class="small">Finish by 9/21/2024</div></ul>
+   <div class="small">Finish by 3/2/2025</div></ul>
   <ul class="round">
    Finals
-   <div class="small">Finish by 10/4/2024</div>
+   <div class="small">Finish by 3/16/2025</div>
   </ul>
   
 </main>
