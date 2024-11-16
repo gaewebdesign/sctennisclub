@@ -23,7 +23,7 @@
 <?php
   $draw="7.5";
   $TABLE_TOURNY = "tourny";
-  $YEAR=2024;
+  $YEAR=YEAR;
   include "draw.php";
 
 ?>
