@@ -30,7 +30,7 @@ tr {
            <?php
              function tournylist($draw){
               $TABLE_TOURNY = "tourny";
-              $YEAR = 2024;
+              $YEAR = YEAR;
               $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype  ";
 //              echo $query;
 
