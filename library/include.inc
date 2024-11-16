@@ -101,9 +101,9 @@ define("RESPREV", "resprev" );
 define("RESCOUNT", "rescount" );
 define("PREFERENCE","preference");
 
-define("TOURNAMENT_DIVISION_MEN","Mx7.5");
-define("TOURNAMENT_DIVISION_WOMYN","Mx6.5");
-
+define("TOURNY_MEN","Mx7.5");
+define("TOURNY_WOMYN","Mx6.5");
+define("TABLE_TOURNY", "tourny");
 
 
 function alert($v){

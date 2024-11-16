@@ -12,7 +12,7 @@
 //include "../library/include.inc";
 //include "../library/email/email.inc";
 
- $TABLE_TOURNY="ladder";
+ $TABLE_TOURNY= TABLE_TOURNY;
  $YEAR=YEAR;
  $title = "Send Email";
  $draw="Men";
