@@ -85,7 +85,7 @@ if( isset($_POST['Button'])  ){
 
     $toemail1 = "mnscuo@gmail.com";
     $subject = "_POST button set";
-    $message = "this shouldnt go";
+    $message = "ERROR: Possibly email error";
     phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
 
     if ( $retv >0  ){  
