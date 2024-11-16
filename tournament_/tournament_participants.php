@@ -32,7 +32,7 @@ tr {
               $TABLE_TOURNY = "tourny";
               $YEAR = YEAR;
               $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype  ";
-             echo $query;
+           //  echo $query;
 
               $con = Configure();
  
