@@ -7,7 +7,7 @@
 //include "../library/email/email.inc";
 
  $TABLE_TOURNY="tourny";
- $YEAR=2024;
+ $YEAR=YEAR;
  //$title = "Mixed 6.5";
  $draw="Mx6.5";
 
