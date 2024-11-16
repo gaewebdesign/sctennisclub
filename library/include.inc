@@ -101,6 +101,11 @@ define("RESPREV", "resprev" );
 define("RESCOUNT", "rescount" );
 define("PREFERENCE","preference");
 
+define("TOURNAMENT_DIVISION_MEN","MX7.5");
+define("TOURNAMENT_DIVISION_WOMYN","MX6.5");
+
+
+
 function alert($v){
 	echo "<script>alert($v)</script>";
 
