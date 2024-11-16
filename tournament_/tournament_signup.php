@@ -28,7 +28,7 @@ function CHECK_DOUBLES( $email1 , $email2){
 $theTABLE = "tourny";
 $division = $_POST["division"];
 
-$year=2024;
+$year=YEAR;
 
 $fname1 = $_POST["fname1"];
 $fname2 = $_POST["fname2"];
