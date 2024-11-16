@@ -14,8 +14,8 @@
 <div class="col-md-12">
     <label for="validationDefault04" class="form-label"><?php echo("".YEAR); ?>  Division</label>
     <select class="form-select" id="validationDefault05" name="division" required>
-    <option selected value="Mx6.5">Mx 6.5</option>
-    <option value="Mx7.5">Mx 7.5</option>
+    <option selected value="<?php echo(TOURNY_MEN) ?>"><?php echo(TOURNY_MEN)?></option>
+    <option value="<?php echo(TOURNY_WOMYN)?>"><?php echo(TOURNY_WOMYN)?></option>
     </select>
   </div>
 
