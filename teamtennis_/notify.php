@@ -47,11 +47,9 @@ $message = "sign-up";
 //phpemailer($subject,$message , $recipient );
 if( empty($_POST["custom"])){
    $subject= "2024 Team Tennis Test";
-   $message = "empty custom";
-   $recipient = "tennis.mutt@gmail.com";
+   $message = "within empty custom loop";
+   $recipient = "recipient@sctennisclub.org";
    phpemailer($subject,$message , $recipient ,$recipient);
-   echo ("empty custom");
-   //phpemailer($subject,$message , $recipient );
 
 }   
 echo ("past empty custom");
