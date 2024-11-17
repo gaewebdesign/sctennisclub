@@ -114,10 +114,12 @@ $subject = "Team Tennis - Reached end of file with no errors";
 phpemailer($subject, $message, "tennis.mutt@gmail.com","rrmolseed@gmail.com");
 
 $subject = "Team Tennis Signup ( to roger,alice)";
+$message = "sent to roger,alice";
 phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com");
 
+$subject = "Team Tennis Signup ( to teamtennis)";
 $message = "to teamtennis alias";
-phpemailer($subject, $message, "tennistennis@sctennisclub.org","teamtennis@sctennisclub.org");
+phpemailer($subject, $message, "teamtennis@sctennisclub.org","teamtennis@sctennisclub.org");
 
 //EMAILER( $subject, $name, $verbose=true);
 /*
