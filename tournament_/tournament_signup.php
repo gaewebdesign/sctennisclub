@@ -84,7 +84,7 @@ switch( $retv){
 if( isset($_POST['Button'])  ){
 
     $toemail1 = "mnscuo@gmail.com";
-    $subject = "_POST button set";
+    $subject = "tournament_signup.php _POST button set";
     $message = "ERROR: Possibly email error";
     phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
 
