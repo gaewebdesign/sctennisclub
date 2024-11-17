@@ -98,7 +98,7 @@ if( !empty($_POST["custom"])){
       'message' => "signup_/notify.php: $src to $dest (copyto paypal )"
    );
    
-   SENDER( $data );
+  // SENDER( $data );
 
  
 }
