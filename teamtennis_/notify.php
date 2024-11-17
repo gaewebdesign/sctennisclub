@@ -112,12 +112,13 @@ $subject = "Team Tennis Signup ( 2nd try)";
 
 //TEXT("EMAILER");
 
+/*
 phpemailer($subject, $message, "aliceisaacson@yahoo.com","rrmolseed@gmail.com");
 
 $subject = "Team Tennis Signup ( 3rd try)";
 phpemailer($subject, $message, "tennis.mutt@gmail.com","rrmolseed@gmail.com");
 phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com");
-
+*
 //EMAILER( $subject, $name, $verbose=true);
 /*
                                                                                                                                                                                                                       |
