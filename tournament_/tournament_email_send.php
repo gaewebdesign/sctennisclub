@@ -5,6 +5,9 @@
       <link rel="stylesheet" href="../css/index.css" >
       <title>Santa Clara Tennis Club</title>
 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 </head>
 
 <body class="Back" >
@@ -43,78 +46,105 @@ if ( isset($_POST['SubmitButton'])){
 // Check if keycode entered
 
 
-$theTABLE = "tourny";
+$theTABLE = TABLE_TOURNY;
 
 $email = $_POST["email1"];
 
 $con = DBMembership();
 
-$query = "select * from $theTABLE where email1=\"$email\"";
-
+$query = "select * from $theTABLE where email1=\"$email\" or email2=\"$email\" and mtype>0";
+$query .=" and year=".YEAR;
 
 $qr  = mysqli_query($con,$query);
-$row = mysqli_fetch_assoc($qr);
+while ($row = mysqli_fetch_assoc($qr)) {
+        
+     display($row , $con , $theTABLE);
+}
+
+return;
+
+$num = mysqli_num_rows($qr);
+
+echo( $query); 
+echo ("<br> count $num <br>");
 
 $found=0;
-$gender="-";
+$division="-";
 if( isset( $row)  ){
     $found=1;
-    $gender = $row["gender1"] ;
+    //$division = $row["division"];//."(".$num.")";
+   
 }else{
     echo( "<center>"  );
     echo( "<h2>$email not found </h2>"  );
     echo( "</center>"  );
 }
 
-$division="Men";
-$title = "Men's Singles Participants";
-if( $gender=="F") {
-    $division="Womyn";
-    $title = "Women's Singles Participants";
+
+$title = $division;
+if( $division==TOURNY_WOMYN) {
+    $division= TOURNY_WOMYN;
+    $title = TOURNY_WOMYN."  Participants";
 }
 
+$found=1;
   
    if($found)
       emailtable($con,$theTABLE,$title, $division);
 
+function display($row, $con,$theTABLE){
+    
+    $division = $row["division"];//."(".$num.")";
+    $title = " $division Participants";
+    
+    emailtable($con, $theTABLE, $title, $division);
 
+}
 
 function emailtable($con, $theTABLE,$title,$division){
-    // 
-    echo ('<html>' );
-    echo ('<style>');
-    echo ('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">');
-    echo ('</style>');
-    
-//    echo('<body>');
+ 
+
     echo("<center>");
     echo("<p><br>");
-    echo("<h2>$title</h2");
-    echo ("<p><hr>");
+
+    echo( "<table class=\"table table-bordered table-striped table-condensed sortable\"> ");
 
 
-    echo('<table style="font-size: 24px">');
-    
     echo ('<thead>');
     echo ('<tr>');
     echo ('<td>');
-
-    echo ('</td>');
+    echo "Name";
+    echo ('<td>');
+    echo "Email";
+    echo ('<td>');
+    echo "Name";
+    echo ('<td>');
+    echo "Email";
     echo ('</tr>');
     echo ('</thead>');
 
-    $query = "select * from $theTABLE where division=\"$division\" ";
+
+
+//    $query = "select * from $theTABLE where division=\"$division\" ";
+
+    $query = "select * from $theTABLE where division=\"$division\" and mtype>0";
+    $query .=" and year=".YEAR;
+
     $qr=mysqli_query($con,$query);
 
-
+    echo ('<tbody>');
+    echo ("<h4>$division </h4> ");
     while( $row = mysqli_fetch_assoc($qr)){
         echo("<tr>");
         echo("<td>");
-        echo( $row["fname1"] );
-        echo(" ");
-        echo( $row["lname1"]);
+        echo( $row["fname1"]." ".$row["lname1"] );
         echo("<td>");
         echo( $row["email1"] );
+
+        echo("<td>");
+        echo( $row["fname2"]." ".$row["lname2"] );
+        echo("<td>");
+        echo( $row["email2"] );
 
     }
 
