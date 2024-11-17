@@ -105,6 +105,15 @@ define("TOURNY_MEN","Mx7.5");
 define("TOURNY_WOMYN","Mx6.5");
 define("TABLE_TOURNY", "tourny");
 
+define("FNAME1","fname1");
+define("LNAME1","lname1");
+define("EMAIL1","email1");
+define("GENDER1","gender1");
+
+define("FNAME2","fname2");
+define("LNAME2","lname2");
+define("EMAIL2","email2");
+define("GENDER2","gender2");
 
 function alert($v){
 	echo "<script>alert($v)</script>";

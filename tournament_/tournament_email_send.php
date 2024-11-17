@@ -137,14 +137,14 @@ function emailtable($con, $theTABLE,$title,$division){
     while( $row = mysqli_fetch_assoc($qr)){
         echo("<tr>");
         echo("<td>");
-        echo( $row["fname1"]." ".$row["lname1"] );
+        echo( $row[FNAME1]." ".$row[LNAME1] );
         echo("<td>");
-        echo( $row["email1"] );
+        echo( $row[EMAIL1] );
 
         echo("<td>");
-        echo( $row["fname2"]." ".$row["lname2"] );
+        echo( $row[FNAME2]." ".$row[LNAME2] );
         echo("<td>");
-        echo( $row["email2"] );
+        echo( $row[EMAIL2] );
 
     }
 
