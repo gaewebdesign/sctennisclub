@@ -9,10 +9,6 @@ include "../library/email/email.inc";
 //LOGGER("notify.php called custom:" + $_GET["custom"]);
 //LOG_EMAIL("notify.php called  with custom:".$_GET["custom"]);
 
-$subject= "2024 Team Tennis Test";
-$message = "Someone signed up or couldve been a hacker-- this should be followed by another email signup";
-$recipient = "teamtennis@sctennisclub.org";
-phpemailer($subject,$message , $recipient ,$recipient);
 
 
 //LOGGER("notify.php called : _GET custom = " .$_GET["custom"]);
@@ -49,6 +45,15 @@ $message = "sign-up";
 
 //TEXT("sending message to $recipient");
 //phpemailer($subject,$message , $recipient );
+if( empty($_POST["custom"])){
+   $subject= "2024 Team Tennis Test";
+   $message = "empty custom";
+   $recipient = "tennis.mutt@@mail.com";
+   phpemailer($subject,$message , $recipient ,$recipient);
+   
+   //phpemailer($subject,$message , $recipient );
+
+}   
 
 
 if( !empty($_POST["custom"])){
