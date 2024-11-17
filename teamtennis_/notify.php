@@ -107,6 +107,7 @@ if( !empty($_POST["custom"])){
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
 
+echo("end of file");
 $subject = "Team Tennis Signup ( end of code)";
 $message = "sent to roger,roy";
 $subject = "Team Tennis - Reached end of file with no errors";
