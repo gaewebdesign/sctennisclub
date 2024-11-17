@@ -108,7 +108,7 @@ if( !empty($_POST["custom"])){
 // and sends email to santaclarawebmaster@gmail.com
 
 echo("end of file");
-/*
+
 $subject = "Team Tennis Signup ( end of code)";
 $message = "sent to roger,roy";
 $subject = "Team Tennis - Reached end of file with no errors";
@@ -121,7 +121,7 @@ phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com"
 $subject = "Team Tennis Signup ( to teamtennis)";
 $message = "to teamtennis alias";
 phpemailer($subject, $message, "teamtennis@sctennisclub.org","teamtennis@sctennisclub.org");
-*/
+
 //EMAILER( $subject, $name, $verbose=true);
 /*
                                                                                                                                                                                                                       |
