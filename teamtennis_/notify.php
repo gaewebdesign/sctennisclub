@@ -9,6 +9,10 @@ include "../library/email/email.inc";
 //LOGGER("notify.php called custom:" + $_GET["custom"]);
 //LOG_EMAIL("notify.php called  with custom:".$_GET["custom"]);
 
+$subject= "TEST";
+$message = "test alias";
+$recipient = "teamtennis@sctennisclub.org";
+phpemailer($subject,$message , $recipient ,$recipient);
 
 
 //LOGGER("notify.php called : _GET custom = " .$_GET["custom"]);
