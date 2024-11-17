@@ -85,7 +85,7 @@ if( !empty($_POST["custom"])){
 
    //** SEND SIGN-UP NOTIFICATION */
 
-
+/*
    // notify email
    $data = array(
       'year' => YEAR,
@@ -97,7 +97,7 @@ if( !empty($_POST["custom"])){
       'subject' => "signup_/notify.php: $src to $dest (copyto paypal )",
       'message' => "signup_/notify.php: $src to $dest (copyto paypal )"
    );
-   
+   */
   // SENDER( $data );
 
  
@@ -108,6 +108,7 @@ if( !empty($_POST["custom"])){
 // and sends email to santaclarawebmaster@gmail.com
 
 echo("end of file");
+/*
 $subject = "Team Tennis Signup ( end of code)";
 $message = "sent to roger,roy";
 $subject = "Team Tennis - Reached end of file with no errors";
@@ -120,7 +121,7 @@ phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com"
 $subject = "Team Tennis Signup ( to teamtennis)";
 $message = "to teamtennis alias";
 phpemailer($subject, $message, "teamtennis@sctennisclub.org","teamtennis@sctennisclub.org");
-
+*/
 //EMAILER( $subject, $name, $verbose=true);
 /*
                                                                                                                                                                                                                       |
