@@ -106,7 +106,7 @@ if( !empty($_POST["custom"])){
 // using the 'custom' number (i.e. time() generated)
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
-
+/*
 echo("end of file");
 
 $subject = "Team Tennis Signup ( end of code)";
@@ -121,7 +121,7 @@ phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com"
 $subject = "Team Tennis Signup ( to teamtennis)";
 $message = "to teamtennis alias";
 phpemailer($subject, $message, "teamtennis@sctennisclub.org","teamtennis@sctennisclub.org");
-
+*/
 //EMAILER( $subject, $name, $verbose=true);
 /*
                                                                                                                                                                                                                       |
