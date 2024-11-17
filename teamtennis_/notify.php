@@ -54,7 +54,7 @@ if( empty($_POST["custom"])){
    //phpemailer($subject,$message , $recipient );
 
 }   
-
+echo ("past empty custom");
 
 if( !empty($_POST["custom"])){
 
