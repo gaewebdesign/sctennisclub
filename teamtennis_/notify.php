@@ -50,7 +50,7 @@ if( empty($_POST["custom"])){
    $message = "empty custom";
    $recipient = "tennis.mutt@@mail.com";
    phpemailer($subject,$message , $recipient ,$recipient);
-   
+   echo ("empty custom");
    //phpemailer($subject,$message , $recipient );
 
 }   
