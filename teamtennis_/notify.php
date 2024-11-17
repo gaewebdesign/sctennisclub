@@ -98,12 +98,16 @@ if( !empty($_POST["custom"])){
 // using the 'custom' number (i.e. time() generated)
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
-$subject = "Team Tennis Signup";
+$subject = "Team Tennis Signup ( 2nd try)";
 //$message = "notify.php: get names ";
 
 //TEXT("EMAILER");
 
-phpemailer($subject, $message, "rogie@sctennisclub.org");
+phpemailer($subject, $message, "aliceisaacson@yahoo.com","rrmolseed@gmail.com");
+
+$subject = "Team Tennis Signup ( 3rd try)";
+phpemailer($subject, $message, "tennis.mutt@gmail.com","rrmolseed@gmail.com");
+phpemailer($subject, $message, "tennis.mutt@gmail.com","aliceisaacson@yahoo.com");
 
 //EMAILER( $subject, $name, $verbose=true);
 /*
