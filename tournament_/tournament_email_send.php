@@ -56,11 +56,17 @@ $query = "select * from $theTABLE where email1=\"$email\" or email2=\"$email\" a
 $query .=" and year=".YEAR;
 
 $qr  = mysqli_query($con,$query);
+$found=0;
 while ($row = mysqli_fetch_assoc($qr)) {
-        
+    $found=1;        
      display($row , $con , $theTABLE);
 }
 
+if($found==0){
+
+  echo ("<center><p><br/><h2> Not in tournament </h1></center>");
+
+}
 return;
 
 $num = mysqli_num_rows($qr);
