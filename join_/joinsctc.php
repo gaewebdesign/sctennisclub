@@ -170,8 +170,19 @@ include "./library/emailer.php";
       </label>
     </div>
   </div>
+
+        <!-- div to show reCAPTCHA -->
+        <p>
+         <div class="g-recaptcha"
+          data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
+        </div>
+        <div>         
+        <br><br><p><br>
+        </div> 
+
+
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
-    <button class="btn btn-primary" disabled  type="submit">Go to Paypal</button>
+    <button class="btn btn-primary" name="SubmitButton" disabled  type="submit">Go to Paypal</button>
   </div>
 </form>
