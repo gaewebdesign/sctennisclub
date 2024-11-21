@@ -551,8 +551,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
   $res = Residents($_YEAR);
   $mem = Members($_YEAR);
   
-  $junk = 234;
-
+  
   // return false means non-residents not permitted 
   return false;      // no non-residents until 2025
  // return true;  
