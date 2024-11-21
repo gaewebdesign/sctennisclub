@@ -24,7 +24,7 @@ define("TABLE_TEAMTENNIS_PENDING", "teamtennis_pending");
 
 define ("YEAR" , "2025");
 //define("RES_FEE" , "25" );
-define("RES_FEE" , ".01" );
+define("RES_FEE" , "25" );
 //define("RES_FEE" , "25" );
 
 define("NONRES_SINGLE_FEE" , "35" );
