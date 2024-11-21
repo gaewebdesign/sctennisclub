@@ -166,7 +166,7 @@ include "./library/emailer.php";
       >
 
       <label class="form-check-label" for="invalidCheck2">
-        Agree to Waiver terms and conditions --
+        Agree to Waiver terms and conditions.
       </label>
     </div>
   </div>
