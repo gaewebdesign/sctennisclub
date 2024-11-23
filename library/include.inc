@@ -102,9 +102,27 @@ define("RESPREV", "resprev" );
 define("RESCOUNT", "rescount" );
 define("PREFERENCE","preference");
 
-define("TOURNY_MEN","Mx7.5");
-define("TOURNY_WOMYN","Mx6.5");
-define("TABLE_TOURNY", "tourny");
+define("TOURNY_MEN","M4.0");
+define("TOURNY_WOMYN","W4.0");
+
+define("TOURNY_MEN_QUARTERS","2/23");
+define("TOURNY_MEN_SEMIS","3/9");
+define("TOURNY_MEN_FINALS","3/23");
+
+
+define("TOURNY_WOMYN_QUARTERS","2/23");
+define("TOURNY_WOMYN_SEMIS","3/9");
+define("TOURNY_WOMYN_FINALS","3/23");
+
+
+//define("TABLE_TOURNY", "tourny");
+
+define("TABLE_TOURNY", "tourny_natsu");
+//define("TABLE_TOURNY", "tourny_aki");
+
+function QTEXT($t){
+  echo($t);
+}
 
 define("FNAME1","fname1");
 define("LNAME1","lname1");
@@ -551,7 +569,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
   $res = Residents($_YEAR);
   $mem = Members($_YEAR);
   
-  
+  echo ("*");
   // return false means non-residents not permitted 
   return false;      // no non-residents until 2025
  // return true;  

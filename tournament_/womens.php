@@ -1,19 +1,21 @@
 <html>
 
-   <div class="h3"><?php echo(YEAR) ?> Mx 6.5 Tournament</div>
+  <div class="h3"><?php QTEXT(YEAR." ".TOURNY_WOMYN." Tournament" ) ?> </div>
 
  <main id="headers">
 
  <ul class="round">
    Quarter-Finals
-   <div class="small">Finish by 2/23/2024</div>
+   <div class="small"><?php QTEXT("Finish by ".TOURNY_WOMYN_QUARTERS) ?></div>
   </ul>
   <ul class="round">
    Semi-Finals
-   <div class="small">Finish by 3/9/2025</div></ul>
+   <div class="small"><?php QTEXT("Finish by ".TOURNY_WOMYN_SEMIS) ?>  </div></ul>
   <ul class="round">
-   Finals
-   <div class="small">Finish by 3/23/2025</div>
+    Finals
+    <div class="small">
+    <?php QTEXT("Finish by ".TOURNY_WOMYN_FINALS) ?></div>
+   
   </ul>
   
 </main>
@@ -21,8 +23,8 @@
 <body>
 <main id="tournament2">
 <?php
-  $draw="6.5";
-  $TABLE_TOURNY = "tourny";
+  $draw=TOURNY_WOMYN;
+  $TABLE_TOURNY = TABLE_TOURNY;
   $YEAR=YEAR;
   include "draw.php";
 

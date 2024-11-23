@@ -1,5 +1,7 @@
 <main id="headers">
-   <h3> 2024  Mx6.5 Tournament </h3>
+
+   <h3> <?php QTEXT(YEAR." ".TOURNY_WOMYN." Tournament"); ?> </h3>
+
 </main>
 
 <?php

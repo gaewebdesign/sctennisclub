@@ -25,7 +25,7 @@ function CHECK_DOUBLES( $email1 , $email2){
 
 }
 
-$theTABLE = "tourny";
+$theTABLE = TABLE_TOURNY; // "tourny";
 $division = $_POST["division"];
 
 $year=YEAR;
@@ -155,7 +155,8 @@ phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
 function get_mtype($division ){
 
    $con = DBMembership();
-   $query ="SELECT MAX(mtype) FROM tourny where division=\"$division\"";
+   $theTable = TABLE_TOURNY;
+   $query ="SELECT MAX(mtype) FROM $theTable where division=\"$division\"";
    
    $qr = mysqli_query($con, $query);
    $row = mysqli_fetch_array($qr);
@@ -205,7 +206,8 @@ function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fnam
     $query .= add(0);
     $query .= ")";
  
- 
+    echo $query;
+    
     $query_results=mysqli_query($con, $query);
 
  

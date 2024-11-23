@@ -4,7 +4,7 @@
    
 
  <main id="headers">
-   <h3> 2024  Mx7.5 Tournament </h3>
+   <h3> <?php QTEXT(YEAR." ".TOURNY_MEN." Tournament"); ?> </h3>
 </main>
 
 
@@ -14,8 +14,8 @@
 
  $TABLE_TOURNY="tourny";
  $YEAR=YEAR;
- $title = "Mixed 7.5";
- $draw="Mx7.5";
+ $title = TOURNY_MEN;//"Mixed 7.5";
+ $draw=TOURNY_MEN; //"Mx7.5";
 
  include "scores.php";
  

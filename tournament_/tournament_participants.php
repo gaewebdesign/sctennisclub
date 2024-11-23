@@ -24,15 +24,15 @@ tr {
       </thead>
       <tbody>
            <p>
-           <h4>Mx 7.5 </h4> 
+           <h4><?php QTEXT(TOURNY_MEN); ?> Division </h4> 
            <p>
 
            <?php
              function tournylist($draw){
-              $TABLE_TOURNY = "tourny";
+              $TABLE_TOURNY = TABLE_TOURNY;//"tourny";
               $YEAR = YEAR;
-              $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype  ";
-           //  echo $query;
+              $query = "select * from $TABLE_TOURNY where year=$YEAR and division regexp(\"$draw\") order by mtype  ";
+//              echo $query;
 
               $con = Configure();
  
@@ -60,7 +60,7 @@ tr {
               }
              }
 
-             tournylist("7.5");
+             tournylist(TOURNY_MEN); //"7.5");
 
 
            ?>
@@ -83,12 +83,12 @@ tr {
 </thead>
 <tbody>
      <p>
-     <h4>Mx 6.5 </h4> 
+     <h4><?php QTEXT(TOURNY_WOMYN); ?> Division </h4> 
      <p>
 
      <?php
 
-             tournylist("6.5");
+             tournylist(TOURNY_WOMYN);
 
       ?>
 
