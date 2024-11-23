@@ -62,26 +62,26 @@ if( !empty($_GET['mode']) ){
 
 if($mode == 0){
 
-    echo("reorder MX7.5 ");
-    reorder( "Mx7.5");
+    echo("reorder ". TOURNY_MEN);
+    reorder( TOURNY_MEN);
 
 }else if($mode==1){
 
-    echo("reorder Mx6.5");
-    reorder( "Mx6.5");
+    echo("reorder ".TOURNY_WOMYN);
+    reorder(TOURNY_WOMYN );
 
 }else if($mode==2){
 
 
-    setToDefaults( "Mx7.5");
-    lister( "Mx7.5");
+    setToDefaults( TOURNY_MEN);
+    lister( TOURNY_MEN );
 
 
 }else if($mode==3){
 
 
-    setToDefaults( "Mx6.5");
-    lister( "Mx6.5");
+    setToDefaults( TOURNY_WOMYN );
+    lister( TOURNY_WOMYN );
 
 }else if($mode==4){
 
@@ -93,7 +93,7 @@ if($mode == 0){
 
 function reorder($division){
 
-    $query = "select * from tourny where division = \"$division\" order by mtype";
+    $query = "select * from ".TABLE_TOURNY." where division = \"$division\" order by mtype";
     $con = DBMembership();
     $qr=mysqli_query($con,$query);
     $id_ = array();
@@ -117,7 +117,7 @@ function reorder($division){
         $__id      = $id_[$i];
         $__mtype   = $i+1;
 
-        $query = "update tourny set mtype = $__mtype where _id =$__id";
+        $query = "update ".TABLE_TOURNY." set mtype = $__mtype where _id =$__id";
         echo $query."<br>";
         $qr=mysqli_query($con,$query);
     }
@@ -128,27 +128,27 @@ function setToDefaults($division){
 // finals score2
 // winner , score3
 
-
+       $theTable = TABLE_TOURNY;
        $con=DBMembership();
-       $query = "update tourny set semis =default(semis) where division =\"$division\" ";
+       $query = "update $theTable set semis =default(semis) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set score1 =default(score1) where division =\"$division\" ";
+       $query = "update $theTable set score1 =default(score1) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set finals =default(finals) where division =\"$division\" ";
+       $query = "update $theTable set finals =default(finals) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set score2 =default(score2) where division =\"$division\" ";
+       $query = "update $theTable set score2 =default(score2) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set winner =default(winner) where division =\"$division\" ";
+       $query = "update $theTable set winner =default(winner) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set score3 =default(score3) where division =\"$division\" ";
+       $query = "update $theTable set score3 =default(score3) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
-       $query = "update tourny set custom = default(custom) where division =\"$division\" ";
+       $query = "update $theTable set custom = default(custom) where division =\"$division\" ";
        $qr=mysqli_query($con,$query);
 
 
@@ -192,7 +192,7 @@ function setToDefaults($division){
 
     function lister($division){
 
-    $query = "select * from tourny where division = \"$division\" order by mtype";
+    $query = "select * from ".TABLE_TOURNY."  where division = \"$division\" order by mtype";
 
     //echo($query);
 

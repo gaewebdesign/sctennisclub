@@ -206,7 +206,7 @@ function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fnam
     $query .= add(0);
     $query .= ")";
  
-    echo $query;
+   // echo $query;
     
     $query_results=mysqli_query($con, $query);
 

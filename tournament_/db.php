@@ -49,12 +49,17 @@
     </tr>
  </thead>
       <tbody>
+      <tr><td colspan="16">
       <?php
-        tournylog("Mx7.5");
+         echo("<h4>db: ".TABLE_TOURNY." division:".TOURNY_MEN."</h4>"); 
+         tournylog( TABLE_TOURNY , TOURNY_MEN);
       ?>
-      <tr><td>Mx6.5<td><td><td><td>Mx6.5<td><td><td>Mx6.5<td><td><td><td>Mx6.5<td></tr>
+      </tr>
+      <tr><td colspan="16">
+        <?php echo("<h4>db: ".TABLE_TOURNY." division:".TOURNY_WOMYN."</h4>"); ?>
+      </tr>
       <?php
-        tournylog("Mx6.5");
+        tournylog( TABLE_TOURNY,TOURNY_WOMYN);
       ?>
 
     </tbody>
@@ -65,9 +70,12 @@
 
 <?php
 
-function tournylog($d) {
+function tournylog( $theTable,$division) {
 
-    $query = "select * from tourny where division regexp(\"$d\") order by mtype";
+    $query = "select * from $theTable where division regexp(\"$division\") order by mtype";
+
+//    echo($query);
+
     $con = DBMembership();
     $qr=mysqli_query($con,$query);
 
