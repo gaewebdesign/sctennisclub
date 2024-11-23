@@ -8,10 +8,10 @@
 //include "../library/include.inc";
 //include "../library/email/email.inc";
 
- $TABLE_TOURNY="tourny";
+ $TABLE_TOURNY=TABLE_WOMYN;
  $YEAR=YEAR;
  //$title = "Mixed 6.5";
- $draw="Mx6.5";
+ $draw=TOURNY_WOMYN;
 
  include "scores.php";
  

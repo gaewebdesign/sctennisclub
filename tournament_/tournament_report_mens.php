@@ -12,7 +12,7 @@
 //include "../library/include.inc";
 //include "../library/email/email.inc";
 
- $TABLE_TOURNY="tourny";
+ $TABLE_TOURNY=TABLE_TOURNY;
  $YEAR=YEAR;
  $title = TOURNY_MEN;//"Mixed 7.5";
  $draw=TOURNY_MEN; //"Mx7.5";
