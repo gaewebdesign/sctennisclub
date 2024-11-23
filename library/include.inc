@@ -130,6 +130,17 @@ function QTEXT($t){
   echo($t);
 }
 
+// Tournament Name
+function NTEXT($t){
+  echo($t);
+}
+
+// Tournament Name
+function DTEXT($t){
+  echo($t);
+}
+
+
 define("FNAME1","fname1");
 define("LNAME1","lname1");
 define("EMAIL1","email1");
