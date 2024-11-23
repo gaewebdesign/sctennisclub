@@ -136,15 +136,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
            if($v == 0){
 
-            TEXTER("<h5>2024 Tournament (Mx 6.5/7.5)</h5>");
+                 TEXTER("<h5>".YEAR." Tournament (".TOURNY_MEN."/".TOURNY_WOMYN.")</h5>");
                  TEXTER("<h5>Rules</h5>");
                  TEXTER("All players must be Santa Clara Tennis Club members");
                  TEXTER("All matches must be played at Santa Clara Tennis Center");
                  TEXTER("Player may enter both divisions if eligible");
-                 TEXTER("Mx 7.5 - maximum player NTRP is 4.0");
-                 TEXTER("Mx 6.5 - maximum player NTRP is 3.5");
-                 TEXTER("Mx 7.5 match due dates are 9/7 , 9/21 , 10/4 (quarters/semis/finals)");
-                 TEXTER("Mx 6.5 match due dates are 8/31 , 9/14 , 9/28 (quarters/semis/finals)");
+                 TEXTER(TOURNY_MEN." maximum player NTRP is 4.0");
+                 TEXTER(TOURNY_WOMYN." maximum player NTRP is 4.0");
+                 TEXTER(TOURNY_MEN." match due dates are ".TOURNY_MEN_QUARTERS." ".TOURNY_MEN_SEMIS." ".TOURNY_MEN_FINALS." (quarters/semis/finals)");
+                 TEXTER(TOURNY_WOMYN." match due dates are ".TOURNY_WOMYN_QUARTERS." ".TOURNY_WOMYN_SEMIS." ".TOURNY_WOMYN_FINALS." (quarters/semis/finals)");
                  echo ("<hr/>");
                  
 
