@@ -121,10 +121,10 @@ define("TOURNY_WOMYN_SEMIS","3/9");
 define("TOURNY_WOMYN_FINALS","3/23");
 
 
-//define("TABLE_TOURNY", "tourny");
+//define("TABLE_TOURNY", "tourny");        // Mx7.5 , Mx6.5
 
-//define("TABLE_TOURNY", "tourny_natsu");
-define("TABLE_TOURNY", "tourny_aki");
+//define("TABLE_TOURNY", "tourny_natsu");  // M4.0 , W4.0
+define("TABLE_TOURNY", "tourny_aki");      // M3.5 , W3.5
 
 function QTEXT($t){
   echo($t);
