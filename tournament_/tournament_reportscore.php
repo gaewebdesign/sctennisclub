@@ -170,7 +170,7 @@ if( $winner_custom ==1 || $loser_custom==1){
 }
 
 
-reportScore($theTABLE,$division,$winner_id,$loser_id,$score);
+reportScore($theTable , $division,$winner_id,$loser_id,$score);
 announceScore($winner_team , $loser_team,$score);
 //enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date );
 
