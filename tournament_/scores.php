@@ -10,7 +10,7 @@ $TABLE_TOURNY="tourny";
   */
   
   $team= array(
-
+/*
     array(".",".","."),
     array(".",".","."),
     array(".",".","."),
@@ -21,7 +21,7 @@ $TABLE_TOURNY="tourny";
     array(".",".","."),
     array(".",".","."),
     array(".",".","."),
-
+*/
 /*
 
 */
@@ -35,6 +35,7 @@ $TABLE_TOURNY="tourny";
 
 $qr=mysqli_query($con,$query);
 $index=1;
+$totalrows = 0;
 while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
     $_mtype = $row["mtype"];
@@ -51,10 +52,12 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $team[$index][4]=$_custom;
 
  //   DEBUG("_custom = $_custom");
-
+    
+    $totalrows= $index;
     $index++;
-}
-
+    
+}   
+//    echo(" * $totalrows scores.php*");
 
 ?>
 
@@ -82,7 +85,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
         <label for="validationDefault04" class="form-label">Winning Team</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="winner" required>
         <?php
-            for($index=1 ; $index<9 ; $index++){
+            for($index=1 ; $index<=$totalrows ; $index++){
                 $_id = $team[$index][0];          // _id       use to determine team
                 $_team =  $team[$index][1];       // team name
                 $_disabled = $team[$index][2];    // either blank or disabledd
@@ -108,7 +111,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
         <label for="validationDefault04" class="form-label">Opponent</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="loser" required>
         <?php
-            for($index=1 ; $index<9 ; $index++){
+            for($index=1 ; $index<=$totalrows ; $index++){
                 $_id = $team[$index][0];
                 $_team =  $team[$index][1];
                 $_disabled =  $team[$index][2];

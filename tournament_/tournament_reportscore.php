@@ -76,17 +76,17 @@ $loser_custom  = (int)$loser_custom;
 //echo("winner_custom($winner_custom) <------> loser_custom($loser_custom) <br>");
 
 
-$year=2024;
+$year=YEAR;
 
-$theTABLE = "tourny";
+$theTable = TABLE_TOURNY;
 
 
 $con = DBMembership();
-$query = "select * from tourny where _id=$winner_id";
+$query = "select * from $theTable where _id=$winner_id";
 $qr= mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($qr);
 $winner_team = $row["fname1"]." ".$row["lname1"]." / ". $row["fname2"]." ".$row["lname2"];
-$query = "select * from tourny where _id=$loser_id";
+$query = "select * from $theTable where _id=$loser_id";
 $qr= mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($qr);
 $loser_team = $row["fname1"]." ".$row["lname1"]." / ". $row["fname2"]." ".$row["lname2"];
