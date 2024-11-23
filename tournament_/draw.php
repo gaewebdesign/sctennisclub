@@ -116,28 +116,28 @@ while ($row = mysqli_fetch_assoc($qr)) {
 ?>
 <ul class="round">
   <li class="spacer">
-  <li class="game-top dfont"> <?php echo $q[1];  ?> <span class="small"><?php DEBUG( $mtype[1])  ?></span> </li>
+  <li class="game-top dfont"> <?php NTEXT($q[1]);  ?> <span class="small"><?php DTEXT( $mtype[1])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top dfont"> <?php echo $q[2] ?> <span class="small"> <?php DEBUG( $mtype[2]) ?></span> </li>
+  <li class="game-top dfont"> <?php NTEXT($q[2]) ?> <span class="small"> <?php DTEXT( $mtype[2]) ?></span> </li>
   <li class="spacer">  
 
 <!--   -->
-  <li class="game-top dfont"> <?php echo $q[3] ?> <span class="small"> <?php DEBUG( $mtype[3])  ?></span> </li>
+  <li class="game-top dfont"> <?php NTEXT($q[3]) ?> <span class="small"> <?php DTEXT( $mtype[3])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top dfont"><?php echo $q[4] ?><span class="small"> <?php DEBUG( $mtype[4])  ?></span> </li>
+  <li class="game-top dfont"><?php NTEXT($q[4]) ?><span class="small"> <?php DTEXT( $mtype[4])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
 
-<li class="game-top dfont"><?php echo $q[5] ?> <span class="small"><?php DEBUG( $mtype[5])  ?></span> </li>
+<li class="game-top dfont"><?php NTEXT($q[5]) ?> <span class="small"><?php DTEXT( $mtype[5])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top dfont"><?php echo $q[6] ?> <span class="small"><?php DEBUG( $mtype[6])  ?></span> </li>
+  <li class="game-top dfont"><?php NTEXT($q[6]) ?> <span class="small"><?php DTEXT( $mtype[6])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
-<li class="game-top dfont"> <?php echo $q[7] ?> <span class="small"><?php DEBUG( $mtype[7])  ?></span> </li>
+<li class="game-top dfont"> <?php NTEXT($q[7]) ?> <span class="small"><?php DTEXT( $mtype[7])  ?></span> </li>
   <li class="draw"></li>
-  <li class="game-top dfont"><?php echo $q[8] ?>  <span class="small"><?php DEBUG( $mtype[8])  ?></span> </li>
+  <li class="game-top dfont"><?php NTEXT($q[8]) ?>  <span class="small"><?php DTEXT( $mtype[8])  ?></span> </li>
 
   <li class="spacer"> 
 <!--   -->
@@ -148,28 +148,28 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 <!-- Semi-Finals  -->
 <ul class="round">
-<li class="game-top dfont"> <?php echo $s[1] ?>  <span class="small"><?php echo $_s[1] ?></span> </li>
+<li class="game-top dfont"> <? NTEXT($s[1]) ?>  <span class="small"><?php DTEXT($_s[1]) ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top dfont">  <?php echo $s[2]?>   <span class="small"><?php echo $_s[2] ?></span> </li>
+  <li class="game-top dfont">  <?php NTEXT($s[2]) ?>   <span class="small"><?php DTEXT($_s[2]) ?></span> </li>
   <li class="spacer"> 
   <li class="spacer"> 
-<li class="game-top dfont">  <?php echo $s[3] ?>   <span class="small"><?php echo $_s[3] ?></span> </li>
+<li class="game-top dfont">  <?php NTEXT($s[3]) ?>   <span class="small"><?php DTEXT($_s[3]) ?></span> </li>
   <li class="draw draw2"></li>
-  <li class="game-top dfont">  <?php echo $s[4] ?>   <span class="small"><?php echo $_s[4] ?></span> </li>
+  <li class="game-top dfont">  <?php NTEXT($s[4]) ?>   <span class="small"><?php DTEXT($_s[4]) ?></span> </li>
 </ul>
 
  <!-- Finals -->
   <ul class="round">
-  <li class="game-top dfont">  <?php echo $f[1] ?>   <span class="small"><?php echo $_f[1] ?></span </li>
+  <li class="game-top dfont">  <?php NTEXT($f[1]) ?>   <span class="small"><?php DTEXT($_f[1]) ?></span </li>
   <li class="draw draw3"></li>
-  <li class="game-top dfont">  <?php echo $f[2] ?>   <span class="small"><?php echo $_f[2] ?></span </li>
+  <li class="game-top dfont">  <?php NTEXT($f[2]) ?>   <span class="small"><?php DTEXT($_f[2]) ?></span </li>
 
 </ul>
 
  <!-- Winner -->
 <ul class="round">
 
-<li class="game-top dfont">  <?php echo $winner ?>   <span class="small"><?php echo $_winner ?></span> </li>
+<li class="game-top dfont">  <?php NTEXT($winner) ?>   <span class="small"><?php DTEXT($_winner) ?></span> </li>
 </ul>
 
 </main>

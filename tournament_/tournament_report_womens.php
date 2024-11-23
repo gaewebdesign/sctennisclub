@@ -8,7 +8,7 @@
 //include "../library/include.inc";
 //include "../library/email/email.inc";
 
- $TABLE_TOURNY=TABLE_WOMYN;
+ $TABLE_TOURNY=TABLE_TOURNY;
  $YEAR=YEAR;
  //$title = "Mixed 6.5";
  $draw=TOURNY_WOMYN;
