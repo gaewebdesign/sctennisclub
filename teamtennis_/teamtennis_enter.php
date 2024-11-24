@@ -227,9 +227,26 @@
   </div>
 <hr/>
 
+<?php
 
+
+$theTable = TABLE_TEAMTENNIS;
+$YEAR = YEAR-1;
+$query = "select * from $theTable where year=$YEAR";
+
+$con = Configure();
+$qr=mysqli_query($con,$query);
+$n = mysqli_num_rows($qr);
+if($n<26){
+  include "button.php";
+}else{
+  include "button_disabled.php";
+}
+
+?>
+<!--
 <button class="w-500 btn btn-primary btn-lg"   name="SubmitButton" > Signup for Team Tennis! </button>
-
+-->
 
 </form>
 
