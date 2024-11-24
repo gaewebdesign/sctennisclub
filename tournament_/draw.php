@@ -148,7 +148,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 <!-- Semi-Finals  -->
 <ul class="round">
-<li class="game-top dfont"> <? NTEXT($s[1]) ?>  <span class="small"><?php DTEXT($_s[1]) ?></span> </li>
+<li class="game-top dfont"> <?php NTEXT($s[1]) ?>  <span class="small"><?php DTEXT($_s[1]) ?></span> </li>
   <li class="draw draw2"></li>
   <li class="game-top dfont">  <?php NTEXT($s[2]) ?>   <span class="small"><?php DTEXT($_s[2]) ?></span> </li>
   <li class="spacer"> 
