@@ -33,7 +33,7 @@
     <label for="validationDefaultUsername" class="form-label">SCTC Email</label>
     <div class="input-group">
 <!--      <span class="input-group-text" id="inputGroupPrepend2"></span> -->
-      <input type="text" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
+      <input type="email" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
     </div>
   </div>
 
