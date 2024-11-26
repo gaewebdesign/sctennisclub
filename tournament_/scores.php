@@ -30,7 +30,7 @@ $TABLE_TOURNY="tourny";
 
   $con = DBMembership();
 
-  $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype ";
+  $query = "select * from ".$TABLE_TOURNY." where year=$YEAR and division regexp(\"$draw\") order by mtype limit 8";
 //  echo($query);
 
 $qr=mysqli_query($con,$query);
