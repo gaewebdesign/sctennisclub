@@ -139,13 +139,14 @@ if( $winner_custom ==0 || $loser_custom==0){
       echo("<h3>ERROR:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($loser_mtype)<p>in the quarterfinals </h3>");
       echo("</center>");
 
-      LOGGER("TOURNY: ERROR $winner_team ($winner_id , $winner_mtype) cant play $loser_team ($loser_id,$loser_mtype) in the quarterfinals ");         
-      LOGGER("TOURNY: ---");
+      LOGGER("TOURNY quarters: ERROR $winner_team ($winner_id , $winner_mtype) cant play $loser_team ($loser_id,$loser_mtype) in the quarterfinals ");         
+      LOGGER("tournament_reportscore.php: ---");
       return;
    }
 
-   LOGGER("TOURNY:  $winner_team ($winner_id,$winner_mtype) VS $loser_team ($winner_id,$loser_mtype) in the quarterfinals </h3>");         
-   LOGGER("TOURNY: ---");
+   LOGGER("TOURNY quarters:  $winner_team ($winner_id,$winner_mtype) VS $loser_team ($winner_id,$loser_mtype) </h3>");         
+   LOGGER("tournament_reportscore.php: ---");
+   
 
 }
 
@@ -155,15 +156,15 @@ if( $winner_custom ==1 || $loser_custom==1){
 
 //   if( ($winner_mtype <=4 && $loser_mtype > 4) || ($winner_mtype>=4 && $loser_mtype<4) ){
     if( ($winner_mtype <=4 && $loser_mtype <= 4) || ($winner_mtype>=4 && $loser_mtype>=4) ){
-      LOGGER("TOURNY $winner_team($winner_id, $winner_custom) vs $loser_team($winner_id, $winner_custom) in the semi-finals");
+      LOGGER("TOURNY semis: $winner_team($winner_id, $winner_custom) vs $loser_team($winner_id, $winner_custom)");
 
      }else{
      echo("<center>");
      echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
      echo("</center>");
 
-     LOGGER("TOURNY $winner_team($winner_id, $winner_custom) cant play $loser_team($winner_id, $winner_custom) in the semi-finals");
-     LOGGER("TOURNY ---");   
+     LOGGER("TOURNY semis: $winner_team($winner_id, $winner_custom) cant play $loser_team($winner_id, $winner_custom) in the semi-finals");
+     LOGGER("tournament_reportscore.php ---");   
      return;
   }
 
@@ -228,16 +229,16 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
      $_id = $winner_id;
      switch($custom){
          case 0:
-            $query1 = "update $theTABLE set semis=\"semis\" where _id=$_id";
-            $query2 = "update $theTABLE set score1=\"$score\" where _id=$_id";
+            $query1 = "update $theTABLE set semis= \"semis\" where _id=$_id";
+            $query2 = "update $theTABLE set score1= \"$score\" where _id=$_id";
          break;
          case 1:
-            $query1 = "update $theTABLE set finals=\"finals\" where _id=$_id";
-            $query2 = "update $theTABLE set score2=\"$score\" where _id=$_id";
+            $query1 = "update $theTABLE set finals= \"finals\" where _id=$_id";
+            $query2 = "update $theTABLE set score2= \"$score\" where _id=$_id";
          break;
          case 2:
-            $query1 = "update $theTABLE set winner=\"winner\" where _id=$_id";
-            $query2 = "update $theTABLE set score3=\"$score\" where _id=$_id";
+            $query1 = "update $theTABLE set winner= \"winner\" where _id=$_id";
+            $query2 = "update $theTABLE set score3= \"$score\" where _id=$_id";
          break;
 
          default:
@@ -251,9 +252,11 @@ function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
      echo("$query2 <br> ");
      echo("$query3  <br>");
 */
-     LOGGER("TOURNY: $query1 ");
-     LOGGER("TOURNY: $query2 ");
-     LOGGER("TOURNY: $query3 ");
+     LOGGER("tournament_reportscore.php : at end ");
+     LOGGER("TOURNY saving score: custom=$custom ");
+     LOGGER("TOURNY saving score: $query1 ");
+     LOGGER("TOURNY saving score: $query2 ");
+     LOGGER("TOURNY saving sccore: $query3 ");
 
      
           $query_results=mysqli_query($con, $query1);
@@ -325,7 +328,8 @@ function get_mtype($division ){
 function get_custom($_id){
 
     $con = DBMembership();
-    $query ="SELECT custom FROM tourny where _id=\"$_id\"";
+    $theTable = TABLE_TOURNY;
+    $query ="SELECT custom FROM $theTable where _id=\"$_id\"";
     
     $qr = mysqli_query($con, $query);
     $row = mysqli_fetch_array($qr);
