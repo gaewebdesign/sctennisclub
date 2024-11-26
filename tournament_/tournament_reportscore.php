@@ -2,7 +2,10 @@
 <?php
 
 include "../library/include.inc";
+include "../library/tourny.inc";
+
 include "../library/email/email.inc";
+
 
 // GRAB entire table
 

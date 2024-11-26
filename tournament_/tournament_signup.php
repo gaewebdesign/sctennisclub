@@ -2,6 +2,8 @@
 <?php
 
 include "../library/include.inc";
+include "../library/tourny.inc";
+
 include "../library/email/email.inc";
 
 function CHECK_DOUBLES( $email1 , $email2){
@@ -41,6 +43,9 @@ $ntrp1 =$_POST["ntrp1"];
 $ntrp2 =$_POST["ntrp2"];
 $email1 = $_POST["email1"]; 
 $email2 = $_POST["email2"]; 
+
+$email1 = trim( $email1);
+$email2 = trim( $email2);
 
 $date = "".time()-60*60*7;
 $pwd = password($fname1,$fname2);

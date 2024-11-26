@@ -15,6 +15,8 @@
 <?php
 
 include "../library/include.inc";
+include "../library/tourny.inc";
+
 include "../library/dbevent.inc";
 
 include "../library/email/email.inc";
