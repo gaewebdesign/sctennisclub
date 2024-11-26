@@ -193,7 +193,8 @@ function between($x , $min,$max){
 }
 
 function announceScore($_w , $_l , $_s){
-
+   echo("<html>");
+   echo('<body style="background-color:powderblue;"> ');
    echo("<center>");
    echo("<h1>Score Report </h1>");
    echo("<h3>");
@@ -210,6 +211,7 @@ function announceScore($_w , $_l , $_s){
    echo("$_s");
    echo("</h3>");
    echo("</center>");
+   echo("</html>");
 
 }
 function reportScore($theTABLE,$division,$winner_id,$loser_id,$score){
