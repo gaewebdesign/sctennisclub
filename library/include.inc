@@ -233,6 +233,7 @@ function LOGTEXT($text){
  function LOGGER( $text )
  {
  
+ $text = Sanitize($text);
  
  $query = "insert into logger values (NULL,";
  

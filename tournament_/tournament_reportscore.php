@@ -6,10 +6,11 @@ include "../library/email/email.inc";
 
 // GRAB entire table
 
+define("TOURNAMENT_SECRET", "ok");
 
 if ( isset($_POST['Button'])){
 
-    if($_POST["secretcode"] != "queenbee" ){
+    if($_POST["secretcode"] != TOURNAMENT_SECRET ){
 
         echo "<script>alert(\"Enter correct keyccode \")</script>";
 		echo('
