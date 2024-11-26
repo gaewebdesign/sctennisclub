@@ -138,10 +138,12 @@ if( $winner_custom ==0 || $loser_custom==0){
    }else if( between($winner_mtype,7,8) &&  between($loser_mtype, 7,8) ){
 
    }else{
+      echo("<html>");
+      echo('<body style="background-color:powderblue;"> ');
       echo("<center>");
       echo("<h3>ERROR:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($loser_mtype)<p>in the quarterfinals </h3>");
       echo("</center>");
-
+      echo("</html>");
       LOGGER("TOURNY quarters: ERROR $winner_team ($winner_id , $winner_mtype) cant play $loser_team ($loser_id,$loser_mtype) in the quarterfinals ");         
       LOGGER("tournament_reportscore.php: ---");
       return;
@@ -162,9 +164,12 @@ if( $winner_custom ==1 || $loser_custom==1){
       LOGGER("TOURNY semis: $winner_team($winner_id, $winner_custom) vs $loser_team($winner_id, $winner_custom)");
 
      }else{
-     echo("<center>");
-     echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
-     echo("</center>");
+      echo("<html>");
+      echo('<body style="background-color:powderblue;"> ');
+      echo("<center>");
+      echo("<h3>ERROR:<p> $winner_team <p>cant play <p>$loser_team <p>in the semi-finals </h3>");
+      echo("</center>");
+      echo("</html>");
 
      LOGGER("TOURNY semis: $winner_team($winner_id, $winner_custom) cant play $loser_team($winner_id, $winner_custom) in the semi-finals");
      LOGGER("tournament_reportscore.php ---");   
