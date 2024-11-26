@@ -57,6 +57,7 @@ $con = DBMembership();
 $query = "select * from $theTABLE where email1=\"$email\" or email2=\"$email\" and mtype>0";
 $query .=" and year=".YEAR;
 
+
 $qr  = mysqli_query($con,$query);
 $found=0;
 while ($row = mysqli_fetch_assoc($qr)) {
@@ -136,7 +137,7 @@ function emailtable($con, $theTABLE,$title,$division){
 //    $query = "select * from $theTABLE where division=\"$division\" ";
 
     $query = "select * from $theTABLE where division=\"$division\" and mtype>0";
-    $query .=" and year=".YEAR;
+    $query .=" and year=".YEAR."  limit 8";
 
     $qr=mysqli_query($con,$query);
 
