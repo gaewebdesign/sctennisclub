@@ -108,9 +108,9 @@ if ($winner_id == $loser_id) {
 
 
 if( $winner_custom != $loser_custom){
-   echo ("winner_custom($winner_custom)  != loser_custom($loser_custom)    ");
+ //  echo ("winner_custom($winner_custom)  != loser_custom($loser_custom)    ");
    echo("<center>");
-   echo("<h3>WRONG ROUND:<p> $winner_team ($winner_mtype)<p>can\'t play <p>$loser_team ($loser_mtype) </h3>");
+   echo("<h3>WRONG ROUND:<p> $winner_team ($winner_mtype)<p>cant play <p>$loser_team ($loser_mtype) </h3>");
       echo("</center>");
       
       LOGGER("TOURNY: ROUND      : winner_custom ($winner_custom)  loser_custom ($loser_custom) ");   
