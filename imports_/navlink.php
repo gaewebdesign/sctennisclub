@@ -131,14 +131,14 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
               <li><a class="dropdown-item active" href="./tournament.phtml">Info</a></li>
               <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./tournament.phtml?draw=1">Players</a></li>
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=2">Draws <?php echo(DRAW_MEN) ?></a></li>
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws <?php echo(DRAW_WOMYN) ?></a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=2">Draws <?php echo(TOURNY_MEN) ?></a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws <?php echo(TOURNY_WOMYN) ?></a></li>
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=4">Enter Tournament</a></li>
 
               <li><a class="dropdown-item" href="./tournament.phtml?draw=5">Contact Players</a></li>
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=6">Report <?php echo(DRAW_MEN) ?> Scores</a></li>
-              <li><a class="dropdown-item" href="./tournament.phtml?draw=7">Report <?php echo(DRAW_WOMYN) ?> Scores</a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=6">Report <?php echo(TOURNY_MEN) ?> Scores</a></li>
+              <li><a class="dropdown-item" href="./tournament.phtml?draw=7">Report <?php echo(TOURNY_WOMYN) ?> Scores</a></li>
         </ul>
         </div>
 
