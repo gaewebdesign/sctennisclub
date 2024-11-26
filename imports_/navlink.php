@@ -126,7 +126,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
             Tournament
           </a>
 <?php
-     include "./library/tourny.inc";
+     include "./library/tourny.inc";  // Tournament menu items
 ?>
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
               <li><a class="dropdown-item active" href="./tournament.phtml">Info</a></li>
