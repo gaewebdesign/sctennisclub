@@ -102,7 +102,7 @@ $data = array(
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Team Tennis (pending)";
+$subject= "2024 Team Tennis (late entry)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
 $recipient = "rogie@sctennisclub.org";
@@ -135,8 +135,18 @@ if($res == true) {
 ');
     return;
 }
+ echo "<html>";
 
-$paypal->output_form();
+ echo('<body style="background-color:powderblue;"> ');
+
+ echo "<center>";
+ echo "<h1> Entries are Closed </h1>";
+ echo "<h2> Thanks $fname $lname  for signing up</h2>";
+ echo "<h2> If a participant withdraws you will be contacted </h2>";
+ echo "</center>";
+ echo "</html>";
+
+//$paypal->output_form();
 // 
 // ***********************************************************************************
 
