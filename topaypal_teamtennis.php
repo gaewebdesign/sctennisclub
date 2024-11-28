@@ -102,7 +102,7 @@ $data = array(
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Team Tennis (late entry)";
+$subject= "2024 Team Tennis (late entry  -- $payment at desk)";
 $rating = $gender.$ntrp;
 $message = "$fname $lname <br>$rating <br>$email <br>$phone ";
 $recipient = "rogie@sctennisclub.org";
