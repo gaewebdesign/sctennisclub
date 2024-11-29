@@ -752,7 +752,29 @@ function REDIRECT_ALERT( $url){
 }
 
 
+function deadline( $deadline){
+      
+  date_default_timezone_set('America/Los_Angeles');
+  //      $deadline  = strtotime('12/1/2024');
+  $epoch = strtotime($deadline);
+  $current = time();
 
+  $diff = $epoch-$current;
+  
+ // echo( "Compare deadline=$epoch to current $current ($diff)\n");
+ // echo( "Compare deadline=$deadline to ");
+ // echo( "Current Time = ".date('Y-m-d H:i:s', $current)."\n"   );
+
+  $retv = false;
+  if( $diff < 0) {
+ //   echo "deadline done \n";
+      $retv=true;
+  }
+   
+//   echo ("deadline passed: $retv ");
+   return $retv;
+
+}
 
 
 

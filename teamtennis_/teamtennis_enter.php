@@ -237,7 +237,16 @@ $query = "select * from $theTable where year=$YEAR";
 $con = Configure();
 $qr=mysqli_query($con,$query);
 $n = mysqli_num_rows($qr);
-if($n<26){
+
+//$deadlinepassed = deadline("2024-11-30 22:00:00");
+$deadlinepassed = deadline("2024-11-30 22:22:22");
+if( $deadlinepassed == true) {
+  include "button_disabled.php";
+  return;
+
+}
+
+if( $n<26 ){
   include "button.php";
 }else{
   include "button_disabled.php";
