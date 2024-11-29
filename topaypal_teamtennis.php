@@ -130,7 +130,7 @@ if($res == true) {
 	echo('
       <script >
       window.setTimeout(function() {
-        window.location.href="./dinner";
+        window.location.href="./signup";
     }, 500);
        </script>
 ');
