@@ -106,7 +106,7 @@ $subject= "2024 Team Tennis (late entry  -- $"."$payment at desk)";
 $rating = $gender.$ntrp;
 $message = "LATE ENTRY: if there are openings, contact this person <br> ";
 $message .= "$fname $lname <br>$rating <br>$email <br>$phone ";
-$recipient = "teamtennis@sctennisclub.org";
+$recipient = "rogie@sctennisclub.org";
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
