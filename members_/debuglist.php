@@ -45,10 +45,12 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col" >First Name </th>
     <th scope="col">Last Name </th>
 
+    <th scope="col">NTRP </th>    
+    <th scope="col">MTYPE </th>
     <th scope="col">Address </th>
     <th scope="col">TEAM </th>
     
-    <th scope="col">MTYPE </th>
+ 
     <th scope="col">PAID </th>
     
     <th scope="col">CUSTOM</th>
@@ -58,7 +60,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     
 
 
-    <th scope="col">NTRP </th>
+    
     <th scope="col">Date </th>
     
 
@@ -126,6 +128,15 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
+                    echo($row[GENDER].$row[NTRP]);
+                    echo("</td>");
+
+
+                    echo("<td>");
+                    echo($row[MTYPE]);
+                    echo("</td>");
+
+                    echo("<td>");
                     echo($row[ADDRESS].", ".ABBR( $row[CITY])  );
                     echo("</td>");
 
@@ -133,9 +144,6 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row[TEAM]);
                     echo("</td>");
 
-                    echo("<td>");
-                    echo($row[MTYPE]);
-                    echo("</td>");
 
                     echo("<td>");
                     echo($row[PAYMENT]);
@@ -153,9 +161,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo($row[OPT]);
                     echo("</td>");                    
 
-                    echo("<td>");
-                    echo($row[GENDER].$row[NTRP]);
-                    echo("</td>");
+                   
 
                     echo("<td>");
                     echo( date(" m/d/y",$row[DATE]).$icon );
