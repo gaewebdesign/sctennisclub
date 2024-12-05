@@ -117,8 +117,9 @@ function QTEXT($t){
 }
 
 // Tournament Name
-function NTEXT($t){
-  echo($t);
+function NTEXT($t, $visible=0){
+  if($visible)  echo($t);
+
 }
 
 // Tournament Name

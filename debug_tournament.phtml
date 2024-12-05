@@ -88,7 +88,7 @@
 </style>
    <?php
            include "./library/include.inc";
-           include "./library/tourny.inc";
+
 
            function TEXTER($v){
 
@@ -122,14 +122,14 @@
             include "./tournament_/logger.php";  
 
            } else if($mode == 10 ){
-            $draw="Mx7.5";               //TOURNY_MEN; //"7.5";
-            $TABLE_TOURNY = "tourny_fuyu"; //TABLE_TOURNY;
+            $draw=TOURNY_MEN;
+            $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php";  
            } else if( $mode=11){
-            $draw="Mx6.5";               //TOURNY_MEN; //"7.5";
-            $TABLE_TOURNY = "tourny_fuyu"; //TABLE_TOURNY;
+            $draw=TOURNY_WOMYN;//"Mx6.5";               //TOURNY_MEN; //"7.5";
+            $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php"; 

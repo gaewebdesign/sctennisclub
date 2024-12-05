@@ -51,7 +51,9 @@
       <a class="navbar-brand" href="./signup_debug.phtml">Signup</a>
       <a class="navbar-brand" href="./pending_mixer.phtml">Pending</a>
 
-
+<?php
+     include "./library/tourny.inc";  // Tournament menu items
+?>
       <div class="dropdown" >
           <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Tournament
@@ -64,16 +66,16 @@
               <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws (Mx 6.5)</a></li>
 -->
 
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=0">Reorder (Mx 7.5)</a></li>
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=1">Reorder (Mx 6.5)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=0">Reorder (<?php echo(TOURNY_MEN) ?>)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=1">Reorder (<?php echo(TOURNY_WOMYN) ?>)</a></li>
 
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default (Mx 7.5)</a></li>
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (Mx 6.5)</a></li>              
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default <?php echo(TOURNY_MEN) ?>)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (<?php echo(TOURNY_WOMYN) ?>)</a></li>              
               <hr/>
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=10">Mx7.5</a></li>              
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=11">Mx6.5</a></li>              
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=10">Draw <?php echo(TOURNY_MEN) ?> </a></li>              
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=11">Draw <?php echo(TOURNY_WOMYN) ?> </a></li>              
               
-               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Database</a></li>              
+               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Database <?php echo(TABLE_TOURNY) ?></a></li>              
                <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=5">Logger</a></li>              
 
 
