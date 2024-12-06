@@ -125,12 +125,32 @@
             $draw=TOURNY_MEN;
             $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
+//          $DEBUG="NOPE";
+            $SCORE="NTEXT";
+
+
+            $TEAM="NOPE";
+            $TEAM="NTEXT";
+
+
+            $TEAM = "NTEXT";
+            $DEBUG="DTEXT";
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php";  
            } else if( $mode=11){
             $draw=TOURNY_WOMYN;//"Mx6.5";               //TOURNY_MEN; //"7.5";
             $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
+
+            $TEAM="NOPE";
+            $TEAM="NTEXT";
+
+            $SCORE="NTEXT";
+
+            $DEBUG="NOPE";
+            $DEBUG="DTEXT";
+
+
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php"; 
 

@@ -161,13 +161,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
                  include "./tournament_/tournament_participants.php";
 
-           }else if($v == 2){
+           }else if($v==2){
+
+            $draw=TOURNY_MEN;
+            $TABLE_TOURNY = TABLE_TOURNY;
+            $YEAR=YEAR;
+
+
+            $TEAM="NOPE";
+            $TEAM="NTEXT";
+            $SCORE="NTEXT";
+            $DEBUG="DTEXT";
+
+            echo(" <h3> $YEAR $draw Tournament </h3> ");
+
+            include "./tournament_/draw.php";
+
+          }
+           else if($v == 20){
             include "./tournament_/mens.php";
 
            }else if($v == 3){  
-            include "./tournament_/womens.php";
 
-           }else if($v == 4 ){
+            $draw=TOURNY_WOMYN;
+            $TABLE_TOURNY = TABLE_TOURNY;
+            $YEAR=YEAR;
+
+            $TEAM="NOPE";
+            $TEAM="NTEXT";
+
+            $SCORE="NTEXT";
+
+            $DEBUG="DTEXT";
+            $DEBUG="NOPE";
+
+            
+            echo(" <h3> $YEAR $draw Tournament </h3> ");
+
+            include "./tournament_/draw.php";
+//            include "./tournament_/womens.php";
+
+            }else if($v == 4 ){
             //include "./library/include.inc";
             include "./tournament_/tournament_enter.php";
            } elseif( $v == 5){

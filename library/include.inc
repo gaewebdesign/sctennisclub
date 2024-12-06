@@ -118,7 +118,8 @@ function QTEXT($t){
 
 // Tournament Name
 function NTEXT($t, $visible=0){
-  if($visible)  echo($t);
+//  if($visible)  echo($t);
+  echo($t);
 
 }
 
@@ -127,6 +128,10 @@ function DTEXT($t){
   echo($t);
 }
 
+function NOPE($t){
+  echo("-");
+
+}
 
 define("FNAME1","fname1");
 define("LNAME1","lname1");
