@@ -1,8 +1,8 @@
 <?php
 
 
-//define("TABLE_TOURNY", "tourny_fuyu"); // Mx7.5 , Mx6.5  Winter
-define("TABLE_TOURNY", "tourny_natsu");  // M4.0 , W4.0    Summer
+define("TABLE_TOURNY", "tourny_fuyu"); // Mx7.5 , Mx6.5  Winter
+//define("TABLE_TOURNY", "tourny_natsu");  // M4.0 , W4.0    Summer
 //define("TABLE_TOURNY", "tourny_aki");  // M3.5 , W3.5  Fall
 
 if( TABLE_TOURNY == "tourny_fuyu"){
