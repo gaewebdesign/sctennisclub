@@ -80,7 +80,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
   <div class="container">
 
-    <div class="col-md-5">
+    <div class="col-md-7">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Winning Team</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="winner" required>
@@ -92,7 +92,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_mtype =  $team[$index][3];      // mtype    1-8  position in draw
                 $_custom = $team[$index][4];      // custom    determine round 0,1,2,99 (99 means to disable item)
                 echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
-                echo("$_team ($_id) ($_mtype) ($_custom) ");
+                echo("$_team  ($_mtype)    "); // ($_id) ($_mtype) ($_custom) ");
                 echo("</option>");
 
 
@@ -106,7 +106,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
   </div>
 
 
-  <div class="col-md-5">
+  <div class="col-md-7">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Opponent</label>&nbsp; &nbsp;
         <select class="form-select" id="validationDefault04" name="loser" required>
@@ -119,7 +119,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_custom =  $team[$index][4];
                 
                 echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
-                echo("$_team ($_id) ($_mtype) ($_custom)");
+                echo("$_team   ($_mtype)    ");//($_id) ($_mtype) ($_custom)");
                 echo("</option>");
 //                echo("<option $_disabled");
 //                echo(" value= \"$_id $_mtype  $_custom \" >");
