@@ -28,8 +28,10 @@ function Config()
                 return $con;
  }
 
-
-$theTable = "tourny_aki";
+ $theTable = "tourny_natsu";
+ $theTable = "tourny_aki";
+ $theTable = "tourny_fuyu";
+ 
 
 $con = Config();
 $query = "select * from $theTable  order by _id";
@@ -46,7 +48,8 @@ $qr = mysqli_query($con, $query);
        echo( "$_id $fname $lname $date \n" );
        $date =$row['date'];
        $dt = new DateTime("@$date");
-       $mod = $date - 60*60*24*13;
+       $date = time();
+       $mod = $date - 60*60*24*55;       
        $dt2 = new DateTime("@$mod");
        $actual = ltrim($dt->format('m/d/Y'),0);
        $actual2 = ltrim($dt2->format('m/d/Y'),0);
@@ -54,10 +57,11 @@ $qr = mysqli_query($con, $query);
 //       echo( "$_id $fname $lname $date $actual $actual2 \n" );
 
 
+
        $qchange= "UPDATE $theTable set date=$mod where _id=$_id";
-       echo $qchange;
+       echo(" $qchange ($actual2) \n");
        mysqli_query($con, $qchange );
-       break;
+       
     }
 
 ?>
