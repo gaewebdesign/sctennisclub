@@ -92,7 +92,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_mtype =  $team[$index][3];      // mtype    1-8  position in draw
                 $_custom = $team[$index][4];      // custom    determine round 0,1,2,99 (99 means to disable item)
                 echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
-                echo("$_team  ($_mtype)    "); // ($_id) ($_mtype) ($_custom) ");
+                echo("&nbsp; $_team  ($_mtype)  &nbsp; &nbsp; &nbsp; "); // ($_id) ($_mtype) ($_custom) ");
                 echo("</option>");
 
 
@@ -119,7 +119,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
                 $_custom =  $team[$index][4];
                 
                 echo("<option $_disabled value= \"$_id $_mtype $_custom\" > ");
-                echo("$_team   ($_mtype)    ");//($_id) ($_mtype) ($_custom)");
+                echo("&nbsp; $_team   ($_mtype) &nbsp; &nbsp; &nbsp;");//($_id) ($_mtype) ($_custom)");
                 echo("</option>");
 //                echo("<option $_disabled");
 //                echo(" value= \"$_id $_mtype  $_custom \" >");
