@@ -8,7 +8,22 @@
 
 </style>
 
-<main id="tournament2">
+<main id="headers">
+
+ <ul class="round">
+   Quarter-Finals
+   <div class="small">Finish by <?php QTEXT($QUARTERS) ?> </div>
+  </ul>
+  <ul class="round">
+   Semi-Finals
+   <div class="small">Finish by <?php QTEXT($SEMIS) ?> </div></ul>
+  <ul class="round">
+   Finals
+   <div class="small">Finish by <?php QTEXT($FINALS) ?></div>
+  </ul>
+</main>
+
+<main>
 <?php
 
 $q = [".", ".", ".",".", ".", "." ,".",".","."];

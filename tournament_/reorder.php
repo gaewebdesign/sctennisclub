@@ -60,32 +60,32 @@ if( !empty($_GET['mode']) ){
 // print_r($_GET);
 
 
-if($mode == 0){
+if($mode == 1){
 
     echo("reorder ". TOURNY_MEN);
     reorder( TOURNY_MEN);
 
-}else if($mode==1){
+}else if($mode==2){
 
     echo("reorder ".TOURNY_WOMYN);
     reorder(TOURNY_WOMYN );
 
-}else if($mode==2){
+}else if($mode==3){
 
-
-    setToDefaults( TOURNY_MEN);
+    echo("UNCOMMENT IN ORDER TO RUN ON ".TOURNY_MEN);
+//    setToDefaults( TOURNY_MEN);
     lister( TOURNY_MEN );
 
 
-}else if($mode==3){
-
-
-    setToDefaults( TOURNY_WOMYN );
-    lister( TOURNY_WOMYN );
-
 }else if($mode==4){
 
+    echo("UNCOMMENT IN ORDER TO RUN ON ".TOURNY_WOMYN);
+//  setToDefaults( TOURNY_WOMYN );
+    lister( TOURNY_WOMYN );
 
+}else if($mode==5){
+
+     echo("MODE: $mode");
 }
 
 

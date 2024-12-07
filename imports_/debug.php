@@ -59,24 +59,24 @@
             Tournament
           </a>
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item active" href="./tournament.phtml?draw=0">Info</a></li>
+              <li><a class="dropdown-item active" href="./debug_tournament.phtml?mode=0">Debug Info</a></li>
 <!--
               <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./tournament.phtml?draw=1">Players</a></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=2">Draws (Mx 7.5)</a></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=3">Draws (Mx 6.5)</a></li>
 -->
 
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=0">Reorder (<?php echo(TOURNY_MEN) ?>)</a></li>
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=1">Reorder (<?php echo(TOURNY_WOMYN) ?>)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=1">Reorder (<?php echo(TOURNY_MEN) ?>)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Reorder (<?php echo(TOURNY_WOMYN) ?>)</a></li>
 
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=2">Set to Default <?php echo(TOURNY_MEN) ?>)</a></li>
-              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default (<?php echo(TOURNY_WOMYN) ?>)</a></li>              
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=3">Set to Default <?php echo(TOURNY_MEN) ?>)</a></li>
+              <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Set to Default (<?php echo(TOURNY_WOMYN) ?>)</a></li>              
               <hr/>
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=10">Draw <?php echo(TOURNY_MEN) ?> </a></li>              
               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=11">Draw <?php echo(TOURNY_WOMYN) ?> </a></li>              
               
-               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=4">Database <?php echo(TABLE_TOURNY) ?></a></li>              
-               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=5">Logger</a></li>              
+               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=20">Database <?php echo(TABLE_TOURNY) ?></a></li>              
+               <li><a class="dropdown-item" href="./debug_tournament.phtml?mode=21">Logger</a></li>              
 
 
 <!--

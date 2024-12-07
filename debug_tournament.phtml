@@ -101,30 +101,31 @@
                 $mode=$_GET["mode"];
            }
             
-           if($mode == 0){
-            $_POST["mode"]=0;
-            include "./tournament_/reorder.php";  
-           }else if($mode == 1) {
+
+          if($mode == 0 ){
+              echo("DEBUGGING MODE ");
+
+           }else if($mode == 1){
             $_POST["mode"]=1;
             include "./tournament_/reorder.php";  
-           }else if($mode == 2){
+           }else if($mode == 2) {
             $_POST["mode"]=2;
             include "./tournament_/reorder.php";  
-           }else if($mode == 3){  
+           }else if($mode == 3){
             $_POST["mode"]=3;
             include "./tournament_/reorder.php";  
-           }else if($mode == 4 ){
-
-            include "./tournament_/db.php";  
-
-           } else if($mode == 5){
-
-            include "./tournament_/logger.php";  
+           }else if($mode == 4){  
+            $_POST["mode"]=4;
+            include "./tournament_/reorder.php";  
 
            } else if($mode == 10 ){
             $draw=TOURNY_MEN;
             $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
+
+            $QUARTERS= TOURNY_MEN_QUARTERS;
+            $SEMIS = TOURNY_MEN_SEMIS;
+            $FINALS= TOURNY_MEN_FINALS;
 //          $DEBUG="NOPE";
             $SCORE="NTEXT";
 
@@ -137,10 +138,14 @@
             $DEBUG="DTEXT";
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php";  
-           } else if( $mode=11){
+           } else if( $mode==11){
             $draw=TOURNY_WOMYN;//"Mx6.5";               //TOURNY_MEN; //"7.5";
             $TABLE_TOURNY = TABLE_TOURNY;
             $YEAR=YEAR;
+
+            $QUARTERS= TOURNY_WOMYN_QUARTERS;
+            $SEMIS = TOURNY_WOMYN_SEMIS;
+            $FINALS= TOURNY_WOMYN_FINALS;
 
             $TEAM="NOPE";
             $TEAM="NTEXT";
@@ -154,7 +159,15 @@
             echo(" <h3> $YEAR $draw Tournament </h3> ");
             include "./tournament_/draw.php"; 
 
-           } else if($mode==99){
+           }else if( $mode == 20){
+            
+            include "./tournament_/db.php";  
+   
+           }else if( $mode == 21 ){
+
+            include "./tournament_/logger.php";  
+           
+          } else if($mode==99){
 // do nothing
 
       }
