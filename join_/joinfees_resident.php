@@ -34,7 +34,7 @@
                  of $<?php echo(RES_FEE); ?>.
                  <br/>
                  Proof of Santa Clara residency for family memberships may be required.
-                   Email the club (comm@) for more info.
+                   Email the club (comm@) for more information.
                  <br/>
                  Non-resident applications will open in 2025. <br>
 <!--
