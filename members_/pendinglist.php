@@ -91,7 +91,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
          $con = Configure();
 
-         $query = "select * from ".TABLE_PENDING." where year>=$YEAR order by date";
+         $query = "select * from ".TABLE_PENDING." where year>=$YEAR order by date desc";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 //         TEXT($query);
 
