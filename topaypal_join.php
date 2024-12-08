@@ -130,6 +130,7 @@ $member =$_POST["membership"];
 $event = "Memb".YEAR;//$_POST["event"];
 
 $address = $_POST[ADDRESS];
+$address .= "*#*";
 $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
