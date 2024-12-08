@@ -7,9 +7,13 @@
         <ul class="list-group mb-7">
           <li class="list-group-item d-flex justify-content-between lh-sm Back">
             <div>
-             <h6 class="my-0"><?php echo(YEAR);?>  Membership Fees </h6> 
-
-            </div>
+            <h6 class="my-0"><?php echo(YEAR);?>  Membership Fees</h6> 
+<!--
+            <span class="small">
+              ($25 resident feees before 2025)
+            </span>
+-->
+          </div>
           </li>
       
           <li class="list-group-item d-flex justify-content-between Back">
@@ -28,6 +32,10 @@
           <label> 
                  Santa Clara residents may signup before 2025 for the discount resident fee 
                  of $<?php echo(RES_FEE); ?>.
+                 <br/>
+                 Proof of Santa Clara residency for family memberships may be required.
+                   Email the club (comm@) for more info.
+                 <br/>
                  Non-resident applications will open in 2025. <br>
 <!--
                  Santa Clara Tennis Club must maintain a resident majority. <br> 
