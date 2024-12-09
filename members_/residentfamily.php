@@ -16,7 +16,7 @@ tr {
 
 <p>
 
-<h2>Resident Family </h2>
+<h2>Resident Family Account</h2>
 
 <table class="table table-bordered table-striped table-condensed sortable">
 
