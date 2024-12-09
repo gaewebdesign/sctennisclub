@@ -59,7 +59,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="./email.phtml">Members</a>
       <a class="navbar-brand" href="./email_past.phtml">Last Year</a>
       
-      <a class="navbar-brand" href="./residentfamily.phtml">Resident Fam</a>      
+      <a class="navbar-brand" href="./residentfamily.phtml">Res Fam</a>      
 <!--
       <a class="navbar-brand" href="./email_join.phtml">China Styx</a>
 -->
