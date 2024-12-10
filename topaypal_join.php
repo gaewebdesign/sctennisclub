@@ -79,7 +79,7 @@ $opt="911";
 // only search for address of F(amily) type membership (RF or NRF)
 // Override if address is detected
 if(preg_match( "/F/i",$mtype)){
-			if($epoch=FindAddressFamily( $_POST[ADDRESS], $_POST[CITY])){
+			if($epoch=FindAddress( $_POST[ADDRESS], $_POST[CITY])){
 
 				$paid=ADDITIONAL_MEMBER_FEE;         // discount
         		$mtype .="_";        // append to RF_ or NRF_
