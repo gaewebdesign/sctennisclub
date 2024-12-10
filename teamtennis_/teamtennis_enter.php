@@ -246,7 +246,7 @@ if( $deadlinepassed == true) {
 
 }
 
-if( $n<26 ){
+if( $n<2 ){
   include "button.php";
 }else{
   include "button_disabled.php";

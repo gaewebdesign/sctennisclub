@@ -1,4 +1,4 @@
-<button class="w-500 btn btn-primary btn-lg" name="SubmitButton" > Signup for  late entry - if someone withdraws, you'll be contacted 
+<button class="w-500 btn btn-primary btn-lg" disabled name="SubmitButton" >  
     </button>
 
 
