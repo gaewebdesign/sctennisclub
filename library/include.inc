@@ -282,7 +282,7 @@ function searchResidentFamily($year ,$address,$email){
 $con = DBMembership();
 
 $theTable = "residentfamily";
-$theYear  = $year;
+$theYear  = $year-1;
 
 $query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
 //echo $query;
@@ -291,7 +291,7 @@ $qr=mysqli_query($con,$query);
 $found =0;
 while ($row = mysqli_fetch_assoc($qr) ) {  
 //  echo("\n") ;    
-//  echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"];
+  echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"];
 //  echo("\n") ;    
   $found =1;
 
