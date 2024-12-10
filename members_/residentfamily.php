@@ -22,6 +22,7 @@ tr {
 
       <thead>
         <tr>
+        <th style="width:10%">Sel</th>
         <th style="width:10%">Year</th>
         <th style="width:40%">Name</th>
         <th style="width:15%">Address</th>
@@ -36,10 +37,27 @@ tr {
       </thead>
       <tbody>
            <p>
-<!--           <h4>Mx 7.5 </h4>  -->
-           <p>
+<!--
+           <form class="row g-3" action="./toresidentfamily.php", method="POST">
+           <button class="btn btn-primary" name="SubmitButton" value="S" type="submit" >Set Trust</button>
+          
+           <input type="radio" id="sel1" value="333" name="test" /> 
+           <input type="radio" id="sel2" value="444" name="test" /> 
+           <input type="radio" id="sel3" value="5555" name="test" /> 
 
-           <?php
+          </form>
+-->
+          <form class="row g-3" action="./toresidentfamily.php", method="POST">
+
+           <div class="col-12">
+           <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Set Trust</button>
+           </div>
+            <?php       
+              residentfamily();
+            ?>
+            </form>
+
+<?php
              function residentfamily( ){
 
 
@@ -58,7 +76,13 @@ tr {
 
                 $member ="🎾";
 
+                 $_id = $row["_id"];
                  echo "<tr>";
+                 echo "<td>";
+
+//  <input class="form-check-input"  type="radio" id="chicken" value="chicken" name="dinner"  required   ></input>
+
+                 echo "<input type=\"checkbox\" id=\"sel\" value=\"$_id\" name=\"_id[]\" /> $_id";
                  echo "<td>".$row["year"];
                  echo "<td>";
                  echo "<span class=\"medium\" >";
@@ -82,12 +106,14 @@ tr {
                  echo "</span>";
                  
                  echo "</tr>";
+                 echo "\n";
               }
              }
 
-             residentfamily( );
+//             residentfamily( );
 
 
+            
            ?>
 
 
