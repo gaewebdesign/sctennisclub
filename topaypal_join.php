@@ -139,10 +139,12 @@ $team = $_POST[TEAM];
 // temporary location to test residentfamilyDB function
 $count=0;
 $trust=0;
+/*
 if($mtype == "RF"){
     $trust = searchResidentFamily($year ,$address,$email);
 	residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust);
 }
+*/
 	// *************************************
 //$address .= "*#*";
 
