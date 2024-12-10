@@ -258,6 +258,41 @@ function LOGTEXT($text){
 }
 
 
+function password( ){
+  $date = "".time()-60*60*7;
+  $date = $date * rand(87 , 23123);
+  $pass = substr($date,-3);
+
+  $i=0;
+  for($l='a' ; $l<='z' ; $l++)
+     $letters[$i++] = $l;
+  
+  $p =  $letters[rand(0,25)];
+  $p .=  $letters[rand(0,25)];
+  $p .=  $letters[rand(0,25)];
+
+
+  return strtolower($p).$pass;
+
+}
+
+
+function residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust){
+  $con = LocalConfig();
+  $theTABLE = "residentfamily";
+   
+  $pwd = password();
+  $date = time();
+  $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,address,pwd,mtype,count,trust,date) values';
+  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($pwd).add($mtype).add($count).add($trust).add($date);
+  $query .= ")";
+
+ echo $query.";\n";  
+ $qr=mysqli_query($con,$query);
+
+
+}
+
 function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team, $mtype,$date,$insignia,$payment,$custom,$opt)
 {
   
@@ -357,6 +392,34 @@ function DBMembership() {
   
 
 }
+
+function LocalConfig()
+ {
+          
+        $HOST = "127.0.0.1";
+        $USER = "root";      // on my localhost
+        $PASSWORD = "tomato1349";
+        $DB= "southb56_sctc";
+           
+        $con = mysqli_connect($HOST,$USER, $PASSWORD);
+
+        if (!$con) {
+                    echo("CONNECTION ERROR<br>");
+                    die('Could not connect: ' . mysqli_connect_error());
+                 }else{
+
+                 }
+
+                $ret = mysqli_select_db($con,$DB );
+                if(!$ret){
+                  echo( "mysqli_connect_error() = ");
+                  echo( mysqli_connect_error() );
+                  echo( "<br>");
+                }
+
+                return $con;
+ }
+
 
 function Configure()
  {
