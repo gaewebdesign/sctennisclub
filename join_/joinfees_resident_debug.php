@@ -24,7 +24,7 @@
 
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RF" name="membership" required  >
-          <label> Santa Clara Resident Family &nbsp; $<?php echo("0.01")?></label>
+          <label> Santa Clara Resident Family (debug)&nbsp; $<?php echo("0.01")?></label>
           <br/>
           </li>
 
