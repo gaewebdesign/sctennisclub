@@ -18,22 +18,22 @@
       
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RS" name="membership" required  >
-                    <label> Santa Clara Resident Single &nbsp; $<?php echo(RES_FEE)?></label>
+                    <label> Santa Clara City Resident Single &nbsp; $<?php echo(RES_FEE)?></label>
           <br/>
           </li>
 
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="RF" name="membership" required  >
-          <label> Santa Clara Resident Family &nbsp; $<?php echo(RES_FEE)?></label>
+          <label> Santa Clara City Resident Family &nbsp; $<?php echo(RES_FEE)?></label>
           <br/>
           </li>
 
           <li class="list-group-item d-flex justify-content-between Back">
           <label> 
-                 Santa Clara residents may signup before 2025 for the discount resident fee 
+                 Santa Clara City residents may signup before 2025 for the discount resident fee 
                  of $<?php echo(RES_FEE); ?>.
                  <br/>
-                 Proof of Santa Clara residency for single or family memberships may be required.
+                 Proof of Santa Clara City residency for single or family memberships may be required.
                    Email the club (comm@) for more information.
                  <br/>
                  Non-resident applications will open in 2025. <br>

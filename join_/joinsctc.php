@@ -138,7 +138,7 @@ include "./library/emailer.php";
           include "join_/joinfees_resident.php";
         }
 
-
+         // change
         //   oninvalid="this.setCustomValidity('Please select Waiver CheckBox to proceed')"
            
 ?>
@@ -149,13 +149,14 @@ include "./library/emailer.php";
   <div class = "col-12"> &nbsp;</div>
 
   <div class = "col-12">
-   <span><h4 style="color:rgb(25, 0, 255)">Waiver: </h4></span> 
+   <span><h4 style="color:rgb(25, 0, 255)">Waiver:  </h4></span> 
 
     <p>
         By checking this box, and submitting this application to Santa Clara Tennis Club,
         the signee above hereby agrees to indemnify and hold harmless the City of Santa Clara 
         and the Santa Clara Tennis Club, from and against any and all liabilities for any injury which may be incurred 
         by the undersigned arising out of, or in any way connected in any event sponsored by the aforenamed.
+        <p>
                 
    </div>
 
@@ -172,6 +173,7 @@ include "./library/emailer.php";
   </div>
 
         <!-- div to show reCAPTCHA -->
+        <!-- some change -->
         <p>
          <div class="g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
