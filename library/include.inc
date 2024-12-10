@@ -278,7 +278,7 @@ function password( ){
 
 
 function residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust){
-  $con = LocalConfig();
+  $con = DBMembership();
   $theTABLE = "residentfamily";
    
   $pwd = password();
