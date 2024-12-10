@@ -82,7 +82,7 @@ tr {
 
 //  <input class="form-check-input"  type="radio" id="chicken" value="chicken" name="dinner"  required   ></input>
 
-                 echo "<input type=\"checkbox\" id=\"sel\" value=\"$_id\" name=\"_id[]\" /> $_id";
+                 echo "<input type=\"checkbox\" id=\"sel\" value=\"$_id\" name=\"_id[]\" /> ";
                  echo "<td>".$row["year"];
                  echo "<td>";
                  echo "<span class=\"medium\" >";
