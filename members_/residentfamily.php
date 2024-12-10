@@ -50,7 +50,7 @@ tr {
           <form class="row g-3" action="./toresidentfamily.php", method="POST">
 
            <div class="col-12">
-           <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Set Trust</button>
+           <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Toggle Trust Value</button>
            </div>
             <?php       
               residentfamily();
