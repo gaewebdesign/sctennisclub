@@ -130,11 +130,19 @@ $member =$_POST["membership"];
 $event = "Memb".YEAR;//$_POST["event"];
 
 $address = $_POST[ADDRESS];
-$address .= "*#*";
+
 $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
+
+// temporary location to test residentfamilyDB function
+$count=0;
+$trust=0;
+if($mtype == "RF")
+	residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust);
+// *************************************
+$address .= "*#*";
 
 // ********************************
 // use this to identify person in database

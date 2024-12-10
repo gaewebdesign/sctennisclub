@@ -287,8 +287,8 @@ function residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$tru
   $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($pwd).add($mtype).add($count).add($trust).add($date);
   $query .= ")";
 
- echo $query.";\n";  
- $qr=mysqli_query($con,$query);
+ // echo $query.";\n";  
+  $qr=mysqli_query($con,$query);
 
 
 }
