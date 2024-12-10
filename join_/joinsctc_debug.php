@@ -135,7 +135,7 @@ include "./library/emailer.php";
         if($r_majority){
           include "join_/joinfees.php";
         }else{
-          include "join_/joinfees_resident.php";
+          include "join_/joinfees_resident_debug.php";
         }
 
 
