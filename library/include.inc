@@ -68,7 +68,7 @@ define("NOTIFY_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/notify.p
 define("TEAMTENNIS_MEMBER_FEE" , "5");
 define("TEAMTENNIS_GUEST_FEE" , "10");
 
-
+define("TABLE_FAMILY","family");
 
 define("FNAME", "fname" );
 define("LNAME", "lname" );
@@ -570,7 +570,31 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
   $query_results=mysqli_query($con,$query);
 
 }
+ 
+  function FindAddressFamily($ADDRESS,$CITY){
 
+    $YEAR = YEAR;    // Search in current year
+    $query = "select * from ".TABLE_FAMILY.' where address = "'.trim($ADDRESS).'"';
+    
+    $con = DBMembership();
+    $query_results=mysqli_query($con, $query);
+    $n = mysqli_num_rows($query_results);
+
+    if($n > 0)  {
+      $row = mysqli_fetch_assoc( $query_results);
+      $fname = $row[FNAME];
+      $lname = $row[LNAME];
+//      $epoch = $row[CUSTOM];
+      $mtype = $row[MTYPE];
+//      $insignia = $row[INSIGNIA];
+      $epoch = $row[DATE];
+
+      return 1;
+    }
+
+    return 0;
+
+  }
  function FindAddress($ADDRESS,$CITY)
  {
  
