@@ -891,6 +891,7 @@ function getFamilyTrust( $theYear ,$address,$email){
       $query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
       $qr=mysqli_query($con,$query);
       $trust =0;
+      LOGS($query);
       while ($row = mysqli_fetch_assoc($qr) ) {  
         echo("\n") ;    
         LOGS("include.inc getFamilyTrust: found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust );
