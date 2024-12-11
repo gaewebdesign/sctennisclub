@@ -874,6 +874,7 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count
   $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
   $query .= ")";
 
+  LOGS( "Creating new main family boss for $fname $lname ");
   LOGS( $query);
   $qr=mysqli_query($con,$query);
 
@@ -891,7 +892,7 @@ function getFamilyTrust( $theYear ,$address,$email){
       $query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
       $qr=mysqli_query($con,$query);
       $trust =0;
-      LOGS($query);
+      LOGS("include.inc getFamilyTrust ".$query);
       while ($row = mysqli_fetch_assoc($qr) ) {  
         echo("\n") ;    
         LOGS("include.inc getFamilyTrust: found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust );
