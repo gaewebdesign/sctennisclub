@@ -91,6 +91,21 @@ if(preg_match( "/F/i",$mtype)){
 			}
 }
 
+// Check for a family account using this address 
+// Looks in the current year;
+
+if(preg_match( "/F/i",$mtype)){
+		 if($found = findAddressFamily($_POST[ADDRESS]) ){
+//					$paid="0.98";
+//					$mtype .= "_";   // put this back in when activated
+					LOGS("topaypal_join.php -- found: $found "." address: ".$_POST[ADDRESS]) ;
+				 	LOGS("topaypal_join.php -- fee: $paid  mtype: $mtype ");
+
+		 };
+
+}
+
+
 
 //$date = $custom;
 $payment = $paid;
@@ -136,15 +151,24 @@ $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
 
-// temporary location to test residentfamilyDB function
+// temporary move later to after Paypal payment returns
 $count=0;
 $trust=0;
-/*
-if($mtype == "RF"){
-    $trust = searchResidentFamily($year ,$address,$email);
-	residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust);
+
+
+
+// new account created only if RF or NRF
+// check if a trusted account from previous year
+// insert family account information
+if(($mtype == "RF") or ($mtype == "NRF") ){
+    $trust = getFamilyTrust($year-1 ,$address,$email);
+    echo("inserting into family db");
+	$pwd = Password();
+	toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust);
+
+
 }
-*/
+
 	// *************************************
 //$address .= "*#*";
 

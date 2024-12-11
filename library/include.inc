@@ -222,12 +222,35 @@ function LOGTEXT($text){
 
 }
 
- function LOGGER( $text )
+function LOGS( $text ){
+  $text = SanitizeQuote($text);
+  $query = "insert into logs values (NULL,";
+
+  $query .= "'";
+  $query .= $text;
+  $query .= "'";
+  
+  $query .= ",";
+
+  $query .= "'";
+  $query .= time();
+  $query .= "'";
+
+  $query.= ')';
+ 
+  echo $query; 
+//  $con = LocalConfig();
+  $con = DBMembership();
+  $qr = mysqli_query($con, $query );
+
+}
+
+function LOGGER( $text )
  {
  
- $text = SanitizeQuote($text);
+  $text = SanitizeQuote($text);
  
- $query = "insert into logger values (NULL,";
+  $query = "insert into logger values (NULL,";
  
  $query .= "'";
  $query .= $text;
@@ -276,47 +299,7 @@ function password( ){
 
 }
 
-function searchResidentFamily($year ,$address,$email){
 
-//$con= LocalConfig();
-$con = DBMembership();
-
-$theTable = "residentfamily";
-$theYear  = $year-1;
-
-$query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
-//echo $query;
-
-$qr=mysqli_query($con,$query);
-$found =0;
-while ($row = mysqli_fetch_assoc($qr) ) {  
-//  echo("\n") ;    
-  echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"];
-//  echo("\n") ;    
-  $found =1;
-
-}
-
-
-return $found;
-
-}
-
-function residentfamilyDB($year,$fname,$lname,$email,$address,$mtype,$count,$trust){
-  $con = DBMembership();
-  $theTABLE = "residentfamily";
-   
-  $pwd = password();
-  $date = time();
-  $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,address,pwd,mtype,count,trust,date) values';
-  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($pwd).add($mtype).add($count).add($trust).add($date);
-  $query .= ")";
-
- // echo $query.";\n";  
-  $qr=mysqli_query($con,$query);
-
-
-}
 
 function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team, $mtype,$date,$insignia,$payment,$custom,$opt)
 {
@@ -571,30 +554,6 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
 
 }
  
-  function FindAddressFamily($ADDRESS,$CITY){
-
-    $YEAR = YEAR;    // Search in current year
-    $query = "select * from ".TABLE_FAMILY.' where address = "'.trim($ADDRESS).'"';
-    
-    $con = DBMembership();
-    $query_results=mysqli_query($con, $query);
-    $n = mysqli_num_rows($query_results);
-
-    if($n > 0)  {
-      $row = mysqli_fetch_assoc( $query_results);
-      $fname = $row[FNAME];
-      $lname = $row[LNAME];
-//      $epoch = $row[CUSTOM];
-      $mtype = $row[MTYPE];
-//      $insignia = $row[INSIGNIA];
-      $epoch = $row[DATE];
-
-      return 1;
-    }
-
-    return 0;
-
-  }
  function FindAddress($ADDRESS,$CITY)
  {
  
@@ -624,6 +583,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
               $mtype = $row[MTYPE];
               $insignia = $row[INSIGNIA];
               $epoch = $row[DATE];
+              $opt   = $row[OPT];
 
               // Check if already has a family member
               // applies only to NRF and if $opt has primary member id
@@ -894,6 +854,112 @@ function deadline( $deadline){
 
 }
 
+/*
+   APIs to implement th new TABLE_FAMILY 
+   Place RF or NRF  into family table
+
+    checkForFamilyAccount: Look for a RF or NRF family account
+    residentfamilyDB:      Insert into family database (either a main RF or NRF account)
+    FindAddressFamily:     Look for an address in the family table
+
+*/
+
+function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust){
+  $con = DBMembership();
+  $theTABLE = TABLE_FAMILY;
+   
+  $pwd = password();
+  $date = time();
+  $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,address,city,pwd,mtype,count,trust,date) values';
+  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
+  $query .= ")";
+
+  echo $query.";\n";  
+  $qr=mysqli_query($con,$query);
+
+
+}
+
+// Look for email/address and return trust value
+// This should called on the previous year
+// It could be adjusted to search for more than just the previous year
+function getFamilyTrust( $theYear ,$address,$email){
+
+      $con = DBMembership();
+      $theTable = TABLE_FAMILY;
+      
+      $query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
+      $qr=mysqli_query($con,$query);
+      $trust =0;
+      while ($row = mysqli_fetch_assoc($qr) ) {  
+        echo("\n") ;    
+        echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust;
+        $trust = $row["trust"];
+        echo("\n") ;    
+      
+      }
+
+      return $trust;
+}
+
+
+// Look into family table and match the address
+// If found then return 1 and the membership fee will be discounted
+function FindAddressFamily($ADDRESS){
+
+  $theTable = TABLE_FAMILY;  
+  $theYear = YEAR;
+  $theAddress = trim($ADDRESS);
+  $query = "select * from $theTable where year=$theYear and address = \"$theAddress\" ";
+  
+  $con = DBMembership();
+  $query_results=mysqli_query($con, $query);
+  $n = mysqli_num_rows($query_results);
+
+  if($n > 0)  {
+    $row = mysqli_fetch_assoc( $query_results);
+    $fname = $row[FNAME];
+    $lname = $row[LNAME];
+//      $epoch = $row[CUSTOM];
+    $mtype = $row[MTYPE];
+//      $insignia = $row[INSIGNIA];
+    $epoch = $row[DATE];
+
+    return 1;
+  }
+
+  return 0;
+
+}
+
+
+
+function checkForFamilyAccount($year,$address,$email){
+
+  //$con= LocalConfig();
+  $con = DBMembership();
+  
+  $theTable = TABLE_FAMILY;
+  $theYear  = $year;
+  
+  $query = "select * from $theTable where year>=$theYear and (address = \"$address\" or email=\"$email\") ";
+  //echo $query;
+  
+  $qr=mysqli_query($con,$query);
+  $found =0;
+  while ($row = mysqli_fetch_assoc($qr) ) {  
+  //  echo("\n") ;    
+    echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"];
+  //  echo("\n") ;    
+    $found =1;
+  
+  }
+  
+  
+  return $found;
+  
+  }
+ 
 
 
 
