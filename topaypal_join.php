@@ -162,7 +162,7 @@ $trust=0;
 // insert family account information
 if(($mtype == "RF") or ($mtype == "NRF") ){
     $trust = getFamilyTrust($year-1 ,$address,$email);
-    echo("inserting into family db");
+    LOGS("topaypal_join.php found $mtype so inserting into family db with trust=$trust");
 	$pwd = Password();
 	toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust);
 
