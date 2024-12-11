@@ -874,7 +874,7 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count
   $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
   $query .= ")";
 
-  echo $query.";\n";  
+//  echo $query.";\n";  
   $qr=mysqli_query($con,$query);
 
 
