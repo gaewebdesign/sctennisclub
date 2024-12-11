@@ -98,8 +98,8 @@ if(preg_match( "/F/i",$mtype)){
 		 if($found = findAddressFamily($_POST[ADDRESS]) ){
 //					$paid="0.98";
 //					$mtype .= "_";   // put this back in when activated
-					LOGS("topaypal_join.php -- found: $found "." address: ".$_POST[ADDRESS]) ;
-				 	LOGS("topaypal_join.php -- fee: $paid  mtype: $mtype ");
+					LOGS("topaypal_join.php findAddressFamily -- found: $found "." address: ".$_POST[ADDRESS]) ;
+				 	LOGS("topaypal_join.php findAddressFamily -- fee: $paid  mtype: $mtype ");
 
 		 };
 
