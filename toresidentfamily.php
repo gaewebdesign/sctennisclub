@@ -21,7 +21,7 @@ if( false == isset($_POST["_id"])  ){
 
 //print_r("$_POST");
 $con = DBMembership();
-$theTable="residentfamily";
+$theTable= TABLE_FAMILY;
 foreach ($_POST["_id"] as $key => $value){  
     $query = "select * from $theTable where _id = $value";
     $qr=mysqli_query($con,$query);
