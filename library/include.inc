@@ -893,7 +893,7 @@ function getFamilyTrust( $theYear ,$address,$email){
       $trust =0;
       while ($row = mysqli_fetch_assoc($qr) ) {  
         echo("\n") ;    
-        LOGS("found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust );
+        LOGS("include.inc getFamilyTrust: found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust );
         $trust = $row["trust"];
         echo("\n") ;    
       
