@@ -41,6 +41,8 @@
       <a class="navbar-brand" href="./join_debug.phtml">Join</a>
       <a class="navbar-brand" href="./pending.phtml">Pending</a>
       <a class="navbar-brand" href="./logger.phtml">Logger</a>
+      <a class="navbar-brand" href="./logs.phtml">Logs</a>
+
       <a class="navbar-brand" href="./members_debug.phtml">Members</a>
 <!--
       <a class="navbar-brand" href="./debug_sctccheck.phtml">USTACheck</a>  
