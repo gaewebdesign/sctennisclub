@@ -26,6 +26,9 @@ tr {
         <th style="width:10%">Year</th>
         <th style="width:40%">Name</th>
         <th style="width:15%">Address</th>
+        <th style="width:15%">City</th>
+        <th style="width:15%">TYPE</th>
+
         <th style="width:15%">Email</th>
         <th style="width:5%">Password</th>
         <th style="width:5%">Trust</th>
@@ -53,21 +56,23 @@ tr {
            <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Toggle Trust Value</button>
            </div>
             <?php       
-              residentfamily();
+              residentfamily(YEAR);
+              $y=YEAR-1;
+              echo("<tr> <td>$y  <td> <td> <td> $y <td> <td> <td> $y <td> <td> <td> <td> $y </tr>");
+              residentfamily(YEAR-1);
             ?>
             </form>
 
 <?php
-             function residentfamily( ){
+             function residentfamily($_year ){
 
 
-              $theTable = TABLE_RESIDENTFAMILY;
+              $theTable = TABLE_FAMILY;
 
               $jurassic = strtotime('2024-11-2');
               $cretaceous = strtotime('2024-12-7');
 
-              $YEAR = 2024;
-              $query = "select * from $theTable order by lname asc";
+              $query = "select * from $theTable where year=$_year order by lname asc";
 
               $con = Configure();
  
@@ -90,6 +95,12 @@ tr {
                  echo "</span>";
 
                  echo "<td>".$row["address"];
+                 echo "<td>".$row[CITY];
+                 $m = $row["mtype"];
+                 echo "<td>".$m;
+
+
+
                  echo "<td>".strtolower($row["email"]);
                  echo "<td>".$row["pwd"];
                  echo "<td>".$row["trust"];
