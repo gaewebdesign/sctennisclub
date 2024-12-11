@@ -866,11 +866,11 @@ function deadline( $deadline){
 
 function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust){
   $con = DBMembership();
-  $theTABLE = TABLE_FAMILY;
+  $theTable = TABLE_FAMILY;
    
   $pwd = password();
   $date = time();
-  $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,address,city,pwd,mtype,count,trust,date) values';
+  $query = 'insert into '.$theTable.'(_id,year,fname,lname,email,address,city,pwd,mtype,count,trust,date) values';
   $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
   $query .= ")";
 
