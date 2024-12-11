@@ -874,7 +874,7 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count
   $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
   $query .= ")";
 
-//  echo $query.";\n";  
+  LOGS( $query);
   $qr=mysqli_query($con,$query);
 
 
@@ -893,7 +893,7 @@ function getFamilyTrust( $theYear ,$address,$email){
       $trust =0;
       while ($row = mysqli_fetch_assoc($qr) ) {  
         echo("\n") ;    
-        echo  "found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust;
+        LOGS("found: ".$row["fname"]."  ".$row["lname"]."  ".$row["email"]." ".$row["address"]." trust=".$trust );
         $trust = $row["trust"];
         echo("\n") ;    
       
