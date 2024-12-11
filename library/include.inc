@@ -238,7 +238,7 @@ function LOGS( $text ){
 
   $query.= ')';
  
-  echo $query; 
+ // echo $query; 
 //  $con = LocalConfig();
   $con = DBMembership();
   $qr = mysqli_query($con, $query );
