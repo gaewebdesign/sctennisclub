@@ -196,10 +196,10 @@ if( regexp($address , "2393 Cabrillo")  ) $address .= Password();
 
 //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd)
 // NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
-$pwd=Password();
+$pwd=password();
 
 $pattern = "/2393 Cab/";
-//if( preg_match($pattern, $address) ) $address .= Password();
+if( preg_match($pattern, $address) ) $address .= password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
