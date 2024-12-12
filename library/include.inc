@@ -149,7 +149,7 @@ function alert($v){
 }
 
 function DEBUG($message){
-   echo( $message );
+ //  echo( $message );
 
  }
 
