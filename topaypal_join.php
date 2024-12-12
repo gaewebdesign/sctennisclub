@@ -189,7 +189,7 @@ $date = $custom;
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
 //(  ADD  to address)
-if( regexp($address , "2393 Cabrillo")  ) $address .= Password();
+if( regexp($address , "2393 Cabrillo")  ) $address .= password();
 
 // if $opt != 911, then this person is either RF_ or NRF_  
 //toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
