@@ -189,11 +189,13 @@ $date = $custom;
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
 //(  ADD  to address)
-if( preg_match( "/2893 Cabrillo/", $address)  ) $address = $address."-".password();
-if( preg_match( "/3410 Montgomery/", $address)  ) $address = $address."-".password();
-if( preg_match( "/2868 Chromite/", $address)  ) $address = $address."-".password();
-if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address."-".password();
-if( preg_match( "/2566 Dixon/", $address)  ) $address = $address."-".password();
+$p = password();
+$address2 = "$address - $p";
+if( preg_match( "/2893 Cabrillo/", $address)  ) $address = $address2;
+if( preg_match( "/3410 Montgomery/", $address)  ) $address = $address2;
+if( preg_match( "/2868 Chromite/", $address)  ) $address = $address2;
+if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address2;
+if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 
 
 /*
