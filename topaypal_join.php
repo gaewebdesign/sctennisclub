@@ -199,7 +199,7 @@ if( regexp($address , "2393 Cabrillo")  ) $address .= Password();
 $pwd=Password();
 
 $pattern = "/2393 Cab/";
-if( preg_match($pattern, $address) ) $address .= Password();
+//if( preg_match($pattern, $address) ) $address .= Password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
