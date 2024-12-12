@@ -189,7 +189,57 @@ $date = $custom;
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
 //(  ADD  to address)
-if( preg_match( "/2393 Cabrillo/", $address)  ) $address .= password();
+if( preg_match( "/2893 Cabrillo/", $address)  ) $address = "-".password();
+if( preg_match( "/3410 Montgomery/", $address)  ) $address = "-".password();
+if( preg_match( "/2868 Chromite/", $address)  ) $address = "-".password();
+if( preg_match( "/2988 Via Torino/", $address)  ) $address = "-".password();
+/*
+
+2893 Cabrillo
+Eva Wu              Mt. View    2024 - 18W2.5   FULL Member paid $30
+Lingyu Xu           San Jose    2024 - 18W2.5
+Shiting Jian        San Jose    2024 - 18W2.5
+
+2868 Chromite Dr
+Chang Su    F       Milpitas     2024 - 18W2.5  Full Member paid $30
+Yang Feng   F3.0    Sunnyvale    2024 - 18W2.5
+Mengyang Li  F      Campbell     2024 - 18W2.5
+
+2988 Via Torino
+Jingchu Wu         San Jose
+Shiru Cao          Mt View
+
+W2.5 Captain Xiwen Zhao paid full non-resident fee in 2024 and had
+legitimate Sunnyvale address (Mathilda) and changed in 2025 to 3410 Montgomery
+
+2025 W6.0b players
+Shiru Cao       ----- hasn't signed up San Jose (  2024 @ 2998 Via Torino, Santa Clara)
+Gary Chen       ----- hasn't signed up Sunnyvale ( 2023 @ 3464 Homestead )
+Yurong Chen     2717 Forbes
+Lexi He         3410 Montgomery
+Kuan Hu         2717 Forbes
+Zhen Liu        3410 Montgomery
+Jacob Lu        ----- hasnt signed up (Sunnyvale)
+Weiwei  Meng    ----- hasnt signed up (Sunnyvale)
+Xiaocen Shan    3410 Montgomery
+Lingyu Xu       ---- 2024 @2893 Cabrillo $.99
+Koki Yoshida    2717 Forbes
+Kan Yu          2717 Forbes (Main $25 payer - account disabled)
+Kyle Zhang      3410 Montgomery #321 (Main $25 payer - account disabled)
+Xiwen Zhao      3410 Montgomery #321 (3rd home team)
+Xhaoxia Zhao    3410 Montgomery #321
+
+3410 Montgomery
+Kyle Zhang          Sunnyvale    2025 - Mx6.0b  Full Member ($25)
+Xiwen Zhao          Sunnyvale    2025 - Mx6.0b
+Zhen Liu            San Jose    2025 - Mx6.0b
+Lexi He             Sunnyvale    2025 - Mx6.0b
+Xiacen Shan         Fremont    2025 - Mx6.0b
+
+Fiona Le's  W3.0 team
+Guiting Ye Los Altos      3710 El Camino Real 2024 
+Yunqi Chen Mountain View  3710 El Camino Real
+*/
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
 //toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
