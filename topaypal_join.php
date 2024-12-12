@@ -197,8 +197,18 @@ if( preg_match( "/2868 Chromite/", $address)  ) $address = $address2;
 if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address2;
 if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 
+if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
+
+//if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
+//3238 Scott Blvd, Apt 152
 
 /*
+2717 Forbes (Kan Yu appears legit, $25)
+Kan Yu
+Kuan Wu
+Yuron Chen
+Koki Yoshida
+
 
 2893 Cabrillo
 Eva Wu              Mt. View    2024 - 18W2.5   FULL Member paid $30
@@ -246,11 +256,17 @@ Guiting Ye Los Altos      3710 El Camino Real 2024
 Yunqi Chen Mountain View  3710 El Camino Real
 
 2566 Dixon Dr (Nan Sun main signed up 12/31/2023 )
-Nan Sun   (M3.5)      San Jose    2024 18Mx6.0A , 2025 18Mx6.0b 
+Nan Sun   (M3.5)($25)      San Jose    2024 18Mx6.0A , 2025 18Mx6.0b 
 Lufei Wang  (F)       Sunnyvale   2024  18Mx7.0 , 18Mx6,0
 Minfa Wang (M4.0)     Los Altos   2024 18Mx7.0 , CM7.5A
 Ziwei Wang (F3.0)     Palo Alto   2024 18W3.0
 Xingxin Zhou (F3.0)   Newark      2023 CW5.5A
+
+3238 Scott Blvd, Apt 152
+Xinmeng Qiao ($30)   Mountain View  2024 W2.5a
+Yuhan, Lin (fname)       Palo Alto       2024 W3.0a
+Jiayu Li        Mountain View     2024 W3.0A
+
 
 */
 //echo $address;
