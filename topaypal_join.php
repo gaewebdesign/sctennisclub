@@ -193,6 +193,7 @@ if( preg_match( "/2893 Cabrillo/", $address)  ) $address = "-".password();
 if( preg_match( "/3410 Montgomery/", $address)  ) $address = "-".password();
 if( preg_match( "/2868 Chromite/", $address)  ) $address = "-".password();
 if( preg_match( "/2988 Via Torino/", $address)  ) $address = "-".password();
+if( preg_match( "/2566 Dixon/", $address)  ) $address = "-".password();
 /*
 
 2893 Cabrillo
@@ -239,6 +240,14 @@ Xiacen Shan         Fremont    2025 - Mx6.0b
 Fiona Le's  W3.0 team
 Guiting Ye Los Altos      3710 El Camino Real 2024 
 Yunqi Chen Mountain View  3710 El Camino Real
+
+2566 Dixon Dr (Nan Sun main signed up 12/31/2023 )
+Nan Sun   (M3.5)      San Jose    2024 18Mx6.0A , 2025 18Mx6.0b 
+Lufei Wang  (F)       Sunnyvale   2024  18Mx7.0 , 18Mx6,0
+Minfa Wang (M4.0)     Los Altos   2024 18Mx7.0 , CM7.5A
+Ziwei Wang (F3.0)     Palo Alto   2024 18W3.0
+Xingxin Zhou (F3.0)   Newark      2023 CW5.5A
+
 */
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
@@ -284,7 +293,7 @@ $data = array(
 
 );
 
-SENDER( $data );
+//SENDER( $data );
 //sendemail($fname." ".$lname, $email, "sctennisclub.net signup => $theTABLE ");
 
 // copy to paypal table
