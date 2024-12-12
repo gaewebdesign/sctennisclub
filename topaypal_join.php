@@ -3,7 +3,7 @@
 include "./library/include.inc";
 include "./library/paypal.inc";
 include "./library/emailer.php";
-
+include "./library/email/email.inc";
 /*
 define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
@@ -197,6 +197,14 @@ $date = $custom;
 // NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
 $pwd="*";
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+
+$subject= "2025 Pending Signup( $fname $lname)";
+$message = "PENDING <br> ";
+$message .= "$fname $lname <br>$address<br>$email <br>";
+$message .= "$city <br>";
+$recipient = "tennis.mutt@sctennisclub.org";
+phpemailer($subject,$message , $recipient , "santaclarawebmaster@gmail.com");
 
 
 $data = array(
