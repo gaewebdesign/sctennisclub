@@ -189,8 +189,8 @@ $date = $custom;
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
 //(  ADD  to address)
-if( preg_match($address , "2393 Cabrillo")  ) $address .= password();
-
+if( preg_match( "/2393 Cabrillo/", $address)  ) $address .= password();
+//echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
 //toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
 
@@ -198,8 +198,6 @@ if( preg_match($address , "2393 Cabrillo")  ) $address .= password();
 // NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
 //$pwd=password();
 
-//$pattern = "/2393 Cab/";
-//if( preg_match($pattern, $address) ) $address .= password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
