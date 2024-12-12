@@ -200,6 +200,9 @@ if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
 
 //if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
+//if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
+
+
 //3238 Scott Blvd, Apt 152
 
 /*
@@ -267,7 +270,10 @@ Xinmeng Qiao ($30)   Mountain View  2024 W2.5a
 Yuhan, Lin (fname)       Palo Alto       2024 W3.0a
 Jiayu Li        Mountain View     2024 W3.0A
 
-
+2996 Via Torina 
+Ou Liu           San Jose 2023 CW5.5A  ($30)   3/4/20d24 signup
+Shuyuan Liu      Campbell   2024 Mx7.0a (0.99)  3/4/2024 signup
+Junchao Lin     Santa Clara 2024 CM8.5 (0.99)   3/4/2024 sigunup
 */
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
