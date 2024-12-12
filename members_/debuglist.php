@@ -48,6 +48,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">NTRP </th>    
     <th scope="col">MTYPE </th>
     <th scope="col">Address </th>
+
+    <th scope="col">Email </th>
+
     <th scope="col">TEAM </th>
     
  
@@ -138,6 +141,10 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("<td>");
                     echo($row[ADDRESS].", ".ABBR( $row[CITY])  );
+                    echo("</td>");
+
+                    echo("<td>");
+                    echo($row[EMAIL] );
                     echo("</td>");
 
                     echo("<td>");
