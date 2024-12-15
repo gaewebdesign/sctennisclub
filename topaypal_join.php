@@ -63,6 +63,14 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 }else{
 	DEBUG("error");
 }
+ 
+
+ //if( ($_POST[FNAME] == "Roger") and ( $_POST[LNAME] == "Okamoto")  ) {
+ 
+ if( ($_POST[FNAME] == "Roger" ) and ($_POST[LNAME] == "Okamoto")  ) {
+	$paid="0.01";
+} 
+
 
 //echo("preg_match: ".preg_match("/santa|clara/i",$_POST[CITY] ) );
 
@@ -87,6 +95,13 @@ if(preg_match( "/F/i",$mtype)){
 				LOGGER("topaypal_join.php: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
 				LOGGER("topaypal_join.php: fee: $paid  $mtype $opt ");
 				LOGGER("topaypal_join.php: primary member opt: $opt ");
+
+// For Testing --- additinjal member fee is 0.02 for Roger
+				if( ($_POST[FNAME] == "Roger" ) and ($_POST[LNAME] == "Okamoto")  ) {
+					$paid="0.02";
+					LOGS("Roger pays $paid as RF_");
+				} 
+				
 
 			}
 }
