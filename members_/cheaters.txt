@@ -115,3 +115,21 @@ Oiu Liu      San Jose W5.5A
 Junchao Liu
 Shuyan Liu   Campbell 18Mx7.0A
 
++------+---------+-------+-----------------------+------------------------------+-------+
+| year | fname   | lname | email                 | address                      | mtype |
++------+---------+-------+-----------------------+------------------------------+-------+
+| 2025 | Kyle    | Zhang | kyle.gzhang@gmail.com | 3410 Montgomery Dr #321***** | RF    |
+| 2025 | Xiwen   | Zhao  | zhaoxiwen99@gmail.com | 3410 Montgomery Dr #321      | RF_   |
+| 2025 | Zhen    | Liu   | zhen.ell@gmail.com    | 3410 Montgomery Dr #321      | RF_   |
+| 2025 | Lexi    | He    | hemeiyi0225@gmail.com | 3410 Montgomery Dr #321      | RF_   |
+| 2025 | Xiaocen | Shan  | shan.x.cen@gmail.com  | 3410 Montgomery Dr #321      | RF_   |
++------+---------+-------+-----------------------+------------------------------+-------+
+
++------+--------+---------+--------------------------+----------------------------+-------+
+| year | fname  | lname   | email                    | address                    | mtype |
++------+--------+---------+--------------------------+----------------------------+-------+
+| 2025 | Kan    | Yu      | yukan2163@msn.com        | 2717 Forbes Ave ********** | RF    |
+| 2025 | Kuan   | Hu      | hukuan2016@gmail.com     | 2717 Forbes Ave            | RF_   |
+| 2025 | Yurong | Chen    | yurongchen9527@gmail.com | 2717 Forbes Ave            | RF_   |
+| 2025 | Koki   | Yoshida | kreamkorokke@gmail.com   | 2717 Forbes Ave            | RF_   |
++------+--------+---------+--------------------------+----------------------------+-------+
