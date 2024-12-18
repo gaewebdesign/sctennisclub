@@ -76,7 +76,7 @@ function GetMembers(){
     $lname = trim($row['lname']);
     $MEMBERS[$fname] = $lname;
     $u++;
-//   echo(" $fname -> $MEMBERS[$fname] <br> ");
+//    echo(" $fname -> $MEMBERS[$fname] <br> ");
     
   }
 
@@ -107,6 +107,7 @@ function GetMembersCURL(){
          $lname = trim($row['lname']);
          $MEMBERS[$fname] = $lname;
   
+//         echo( "$fname => $lname" ) ;
          $u++;
 
 } 
@@ -128,7 +129,7 @@ function findMember($fname,$lname)
    $fname =  trim($fname);
    $lname = trim($lname);
 //   $lname = str_replace("'","",$lname);   // apostrophe
- //  echo($fname." ".$lname."<br>");
+   //echo("findMember ".$fname." ".$lname."<br>");
 
 
 // HARD CODED for Jackie Davidson-Fenton
@@ -148,7 +149,7 @@ function findMember($fname,$lname)
    $pattern=  "/^".$lname."/i";
 
    //echo("<br/> searching for $pattern in ". count($MEMBERS)." array <br>");
-
+//   echo($pattern."\n");
    $found = preg_grep( $pattern , $MEMBERS) ;
   // showfound( $found );
          
@@ -165,8 +166,8 @@ function findMember($fname,$lname)
               }
 
               // Look for first name (first 3 characters)
-              $pattern = "/".rtrim(substr($fname,0,2))."/i";
-
+              $pattern = "/".rtrim(substr($fname,0,3))."/i";
+               
 
               foreach ($found as $first => $last){
 
@@ -276,7 +277,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         $find=0;
 
   //      if( $teamid == 100261) $find=FINISH;
-
+//  if( $teamid == 104211) $find=FINISH; // early finish 2024
         if( $teamid == 100261) $find=FINISH; // 2024
         if( $teamid == 101055) $find=SKIP;
         if( $teamid == 96902) $find=FINISH;   // 2023
@@ -385,7 +386,7 @@ global $USTA_RESIDENT, $USTA_NONRESIDENT;
             $s = explode(',',trim($name),2);
             $lname = trim($s[0]);
             $fname = trim($s[1]);
-
+            //echo(" $fname $lname <---");
             $l=$lname;
             $f = $fname;
     //        DEBUG( "TEAM ".$fname." ".$lname."<br>");
