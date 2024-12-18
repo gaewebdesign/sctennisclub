@@ -306,6 +306,7 @@ $subject= "2025 Pending Signup( $fname $lname)";
 $message = "PENDING <br> ";
 $message .= "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
+$message .= "$mtype <br>";
 $recipient = "tennis.mutt@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "santaclarawebmaster@gmail.com");
 
