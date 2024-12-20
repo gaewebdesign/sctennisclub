@@ -33,6 +33,8 @@ tr {
         <th style="width:5%">Password</th>
         <th style="width:5%">Trust</th>
         <th style="width:5%">Count</th>
+        <th style="width:5%">Account</th>
+
         <th style="width:7%">Date</th>
 
 
@@ -105,6 +107,7 @@ tr {
                  echo "<td>".$row["pwd"];
                  echo "<td>".$row["trust"];
                  echo "<td>".$row["count"];
+                 echo "<td>".$row["account"];
 
                  echo "<td>";
                  $custom = $row[DATE];
