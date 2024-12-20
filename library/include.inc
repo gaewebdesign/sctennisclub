@@ -870,13 +870,31 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count
    
   $pwd = password();
   $date = time();
-  $query = 'insert into '.$theTable.'(_id,year,fname,lname,email,address,city,pwd,mtype,count,trust,date) values';
-  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($count).add($trust).add($date);
+  $query = 'insert into '.$theTable.'(_id,year,fname,lname,email,address,city,pwd,mtype,account,count,trust,date) values';
+  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($date).add($count).add($trust).add($date);
   $query .= ")";
 
   LOGS( "Creating new main family boss for $fname $lname ");
   LOGS( $query);
   $qr=mysqli_query($con,$query);
+
+
+}
+
+// for a RF_ or NRF_  increment Family count
+// table column opt value points to main member 
+// go to TABLE_FAMILY and increment count
+// run after Paypal returns (notify.php)
+// C.Bell    1733123110
+function addFamilyCount( $account){
+
+      $theTABLE = TABLE_FAMILY;
+      $con = DBMembership();
+
+      $query = "update $theTABLE set count=count+1 where account=$account";
+      $qr=mysqli_query($con,$query);
+      LOGS("increment count where account=$account ");
+
 
 
 }
