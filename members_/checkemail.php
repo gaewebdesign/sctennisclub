@@ -16,7 +16,6 @@ function checker(){
 
 
 //
-    LOGGER("Westfield Mall looking for POST data" );
     LOGGER("checkemail.php looking for $user /$pw in database " );
 
     $subject = "Membership Check ($user )";
@@ -29,11 +28,11 @@ function checker(){
 
     $user = htmlentities($user);
     if(filter_var($user, FILTER_VALIDATE_EMAIL)) {
-        phpemailer($subject, $message ,$toemail1 , $toemail2);
+        LOGGER("checkemail.php valid format ");
         //Valid email!
    }else{
          $message = "$user  invalid\n";
-         phpemailer($subject, $message ,$toemail1 , $toemail2);
+         LOGGER("checkemail.php invalid format ");
          $user="invalid";
     }
 
@@ -42,8 +41,11 @@ function checker(){
     LOGGER("checkemailphp retv = $retv " );
     if( $retv == true){
         LOGGER("checkemailphp checker  = yes " );
+        phpemailer($subject, $message ,$toemail1 , $toemail2);
         echo "yes";
     }else{
+        $subject .= " invalid";
+        phpemailer($subject, $message ,$toemail1 , $toemail2);
         LOGGER("checkemailphp checker  = no  for $user ");
         echo $user;
 
