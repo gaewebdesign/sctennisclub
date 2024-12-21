@@ -83,7 +83,7 @@ function GetMembers(){
 
 }
 
-function GetMembersCURL(){
+function __GetMembersCURL(){
 
   global $MEMBERS;
   global $KOTOSHI;
