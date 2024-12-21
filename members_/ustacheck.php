@@ -61,7 +61,7 @@ function GetMembers(){
   global $YEAR;
  
 
- $con = Configure();
+  $con = DBMembership();
   $TABLE = "paypal";
   $YEAR =2024;
 
@@ -228,6 +228,7 @@ function GetTeams( )
 
 $url = 'https://ustanorcal.com/organization.asp?id=3483';   // Santa Clara at Central Park
 
+$url = 'https://leagues.ustanorcal.com/organization.asp?id=20';
 
 //$output = file_get_contents($url);
 //echo $output;
@@ -288,7 +289,8 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
 		TripleCell( COLORBLUE ,  $teamlink." <br>Captain ".$captain." " );
 		echo "<tr>";
-		GetTeamPlayers( 'https://ustanorcal.com/teaminfo.asp?id='.$teamid );
+    GetTeamPlayers('https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid);
+//		GetTeamPlayers( 'https://ustanorcal.com/teaminfo.asp?id='.$teamid );
 		EndTable( );
 		echo "<tr>";
 
