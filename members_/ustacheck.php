@@ -62,8 +62,8 @@ function GetMembers(){
  
 
   $con = DBMembership();
-  $TABLE = "paypal";
-  $YEAR =2024;
+  $TABLE = TABLE_PAYPAL;
+  $YEAR =YEAR-1 ;//2024;
 
   
   $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
