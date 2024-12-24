@@ -214,6 +214,10 @@ if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 
 if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
 
+// Dongdong (Billy) Sun
+// xinzhe.y@gmail did a roster chek 12/23
+if(preg_match("/588 El Camino/",$address)) $address = $address2;
+
 //if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
 //if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
 
