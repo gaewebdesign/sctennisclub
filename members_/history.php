@@ -54,7 +54,11 @@
                     echo("</td>");
                     
                     echo("<td>");
-                    echo( date(" m/d/y",$row[DATE]) );
+                    $custom = $row[DATE];
+                    $dt = new DateTime("@$custom");
+                    $date = ltrim($dt->format('m/d/Y H:i:s'),0);
+                    echo($date);
+
                     echo("</td>");
                     echo("</tr> ");
 
