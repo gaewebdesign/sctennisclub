@@ -40,6 +40,7 @@
       <a class="navbar-brand" href="./gmail.phtml">Gmail Import</a> 
       <a class="navbar-brand" href="./join_debug.phtml">Join</a>
       <a class="navbar-brand" href="./pending.phtml">Pending</a>
+      <a class="navbar-brand" href="./history.phtml">History</a>
       <a class="navbar-brand" href="./logger.phtml">Logger</a>
       <a class="navbar-brand" href="./logs.phtml">Logs</a>
 

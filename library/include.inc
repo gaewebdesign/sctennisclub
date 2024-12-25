@@ -68,6 +68,7 @@ define("NOTIFY_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/notify.p
 define("TEAMTENNIS_MEMBER_FEE" , "5");
 define("TEAMTENNIS_GUEST_FEE" , "10");
 
+define("TABLE_HISTORY","history");
 define("TABLE_FAMILY","family");
 
 define("FNAME", "fname" );
