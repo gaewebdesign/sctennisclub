@@ -226,6 +226,10 @@ function LOGTEXT($text){
 function HISTORY($text){
 
   $text = SanitizeQuote($text);
+
+  date_default_timezone_set('America/Los_Angeles');
+
+  
   $query = "insert into history values (NULL,";
 
   $query .= "'";
