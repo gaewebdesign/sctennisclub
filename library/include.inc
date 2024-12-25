@@ -222,7 +222,7 @@ function LOGTEXT($text){
 
 }
  
-function history($text){
+function HISTORY($text){
 
   $text = SanitizeQuote($text);
   $query = "insert into history values (NULL,";

@@ -92,9 +92,9 @@ if(preg_match( "/F/i",$mtype)){
 				$paid=ADDITIONAL_MEMBER_FEE;         // discount
         		$mtype .="_";        // append to RF_ or NRF_
 		        $opt = $epoch;        // primary member  (this person gets INSIGNIA incremnted later in from_done.php )
-				LOGGER("topaypal_join.php: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
-				LOGGER("topaypal_join.php: fee: $paid  $mtype $opt ");
-				LOGGER("topaypal_join.php: primary member opt: $opt ");
+				HISTORY("topaypal_join.php: found: ".$_POST[ADDRESS]." ".$_POST[CITY]	);
+				HISTORY("topaypal_join.php: fee: $paid  $mtype $opt ");
+				HISTORY("topaypal_join.php: primary member opt: $opt ");
 
 // For Testing --- additinjal member fee is 0.02 for Roger
 				if( ($_POST[FNAME] == "Roger" ) and ($_POST[LNAME] == "Okamoto")  ) {
@@ -113,8 +113,8 @@ if(preg_match( "/F/i",$mtype)){
 		 if($found = findAddressFamily($_POST[ADDRESS]) ){
 //					$paid="0.98";
 //					$mtype .= "_";   // put this back in when activated
-					LOGS("topaypal_join.php findAddressFamily -- found: $found "." address: ".$_POST[ADDRESS]) ;
-				 	LOGS("topaypal_join.php findAddressFamily -- fee: $paid  mtype: $mtype ");
+					HISTORY("topaypal_join.php findAddressFamily -- found: $found "." address: ".$_POST[ADDRESS]) ;
+				 	HISTORY("topaypal_join.php findAddressFamily -- fee: $paid  mtype: $mtype ");
 
 		 };
 
@@ -221,79 +221,8 @@ if(preg_match("/588 El Camino/",$address)) $address = $address2;
 //if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
 //if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
 
-
 //3238 Scott Blvd, Apt 152
 
-/*
-2717 Forbes (Kan Yu appears legit, $25)
-Kan Yu
-Kuan Wu
-Yuron Chen
-Koki Yoshida
-
-
-2893 Cabrillo
-Eva Wu              Mt. View    2024 - 18W2.5   FULL Member paid $30
-Lingyu Xu           San Jose    2024 - 18W2.5
-Shiting Jian        San Jose    2024 - 18W2.5
-
-2868 Chromite Dr
-Chang Su    F       Milpitas     2024 - 18W2.5  Full Member paid $30
-Yang Feng   F3.0    Sunnyvale    2024 - 18W2.5
-Mengyang Li  F      Campbell     2024 - 18W2.5
-
-2988 Via Torino
-Jingchu Wu         San Jose
-Shiru Cao          Mt View
-
-W2.5 Captain Xiwen Zhao paid full non-resident fee in 2024 and had
-legitimate Sunnyvale address (Mathilda) and changed in 2025 to 3410 Montgomery
-
-2025 W6.0b players
-Shiru Cao       ----- hasn't signed up San Jose (  2024 @ 2998 Via Torino, Santa Clara)
-Gary Chen       ----- hasn't signed up Sunnyvale ( 2023 @ 3464 Homestead )
-Yurong Chen     2717 Forbes
-Lexi He         3410 Montgomery
-Kuan Hu         2717 Forbes
-Zhen Liu        3410 Montgomery
-Jacob Lu        ----- hasnt signed up (Sunnyvale)
-Weiwei  Meng    ----- hasnt signed up (Sunnyvale)
-Xiaocen Shan    3410 Montgomery
-Lingyu Xu       ---- 2024 @2893 Cabrillo $.99
-Koki Yoshida    2717 Forbes
-Kan Yu          2717 Forbes (Main $25 payer - account disabled)
-Kyle Zhang      3410 Montgomery #321 (Main $25 payer - account disabled)
-Xiwen Zhao      3410 Montgomery #321 (3rd home team)
-Xhaoxia Zhao    3410 Montgomery #321
-
-3410 Montgomery
-Kyle Zhang          Sunnyvale    2025 - Mx6.0b  Full Member ($25)
-Xiwen Zhao          Sunnyvale    2025 - Mx6.0b
-Zhen Liu            San Jose    2025 - Mx6.0b
-Lexi He             Sunnyvale    2025 - Mx6.0b
-Xiacen Shan         Fremont    2025 - Mx6.0b
-
-Fiona Le's  W3.0 team
-Guiting Ye Los Altos      3710 El Camino Real 2024 
-Yunqi Chen Mountain View  3710 El Camino Real
-
-2566 Dixon Dr (Nan Sun main signed up 12/31/2023 )
-Nan Sun   (M3.5)($25)      San Jose    2024 18Mx6.0A , 2025 18Mx6.0b 
-Lufei Wang  (F)       Sunnyvale   2024  18Mx7.0 , 18Mx6,0
-Minfa Wang (M4.0)     Los Altos   2024 18Mx7.0 , CM7.5A
-Ziwei Wang (F3.0)     Palo Alto   2024 18W3.0
-Xingxin Zhou (F3.0)   Newark      2023 CW5.5A
-
-3238 Scott Blvd, Apt 152
-Xinmeng Qiao ($30)   Mountain View  2024 W2.5a
-Yuhan, Lin (fname)       Palo Alto       2024 W3.0a
-Jiayu Li        Mountain View     2024 W3.0A
-
-2996 Via Torina 
-Ou Liu           San Jose 2023 CW5.5A  ($30)   3/4/20d24 signup
-Shuyuan Liu      Campbell   2024 Mx7.0a (0.99)  3/4/2024 signup
-Junchao Lin     Santa Clara 2024 CM8.5 (0.99)   3/4/2024 sigunup
-*/
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
 //toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);

@@ -34,10 +34,10 @@ Xiwen Zhao   Sunnyvale  F2.5
 will be blocked in following seasons
 
 2893 Cabrillo
-plays Adult season
-Eva Wu (main) -- Mt View
-Shiting Jian   -- San Jose
-Lingyu Xu     -- San Jose
+Eva Wu              Mt. View    2024 - 18W2.5   FULL Member paid $30
+Lingyu Xu           San Jose    2024 - 18W2.5
+Shiting Jian        San Jose    2024 - 18W2.5
+
 
 per White Pages 2893 Cabrillo owned by
 Chichang Zhong
@@ -46,11 +46,11 @@ Haitao Zhong
 per fastpeoplesearch
 Hitao Zhong (34) lives at 2893 Cabrillo
 
-2868 Chromite
+2868 Chromite Dr
 2024 W2.5 Adult season
-Chang Su    Milpitas (main)
-Yan Feng    Sunnyvale
-Mengyang Li  Sunnyvale
+Chang Su    F       Milpitas     2024 - 18W2.5  Full Member paid $30
+Yang Feng   F3.0    Sunnyvale    2024 - 18W2.5
+Mengyang Li  F      Campbell     2024 - 18W2.5
 
 per fastpeoplesearch
 Min Zhu (34) lives at 2868 Chromite
@@ -147,6 +147,8 @@ fastpeoplesearch says Xinqi Lyu,Xinzhe Yang former tenants at 1004 Furlong
 @588 el camino Real Apt 235
 fastpeoplesearch says Ruifeng Niu(57) lives here
 
+
+
 2024 W2.5 Team
 Shiru Chao      .99 Via Torino
 Jia Chen         $35 Sunnvale
@@ -188,6 +190,27 @@ Others: Shiru Cao,Puhe Liang, Cheryl Shi, Koki Yoshida
  2025 SCTC 18 Mx6.0b Liangyu Xu (San Jose)   RF_ 2893 Cabrillo, Santa Clara
  2025 SCTC 18 Mx7.0b Captain Zhang Yu (Santa Clara) also 2024 SCTC W3.0a
  2024 SCTC W3.0a  Qiao Zhou  (San Jose)  NRF_ Fremont
+
+
+// INVESTIGATE *********************
+2998 Via Torino
+Jingchu Wu         San Jose
+Shiru Cao          Mt View
+
+238 Scott Blvd, Apt 152
+Xinmeng Qiao ($30)   Mountain View  2024 W2.5a
+Yuhan, Lin (fname)       Palo Alto       2024 W3.0a
+Jiayu Li        Mountain View     2024 W3.0A
+
+TO DO  12/24  copied over from php file
+Fiona Le's  W3.0 team
+Guiting Ye Los Altos      3710 El Camino Real 2024 
+Yunqi Chen Mountain View  3710 El Camino Real
+
+2996 Via Torina 
+Ou Liu           San Jose 2023 CW5.5A  ($30)   3/4/20d24 signup
+Shuyuan Liu      Campbell   2024 Mx7.0a (0.99)  3/4/2024 signup
+Junchao Lin     Santa Clara 2024 CM8.5 (0.99)   3/4/2024 sigunup
 
 
 +------+---------+-------+-----------------------+------------------------------+-------+
