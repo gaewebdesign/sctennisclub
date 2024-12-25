@@ -100,6 +100,7 @@ if(preg_match( "/F/i",$mtype)){
 				if( ($_POST[FNAME] == "Roger" ) and ($_POST[LNAME] == "Okamoto")  ) {
 					$paid="0.02";
 					LOGS("Roger pays $paid as RF_");
+					HISTORY("Roger pays $paid as RF_");
 				} 
 				
 
