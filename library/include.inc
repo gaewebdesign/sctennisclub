@@ -221,6 +221,29 @@ function LOGTEXT($text){
   LOGGER($text);
 
 }
+ 
+function history($text){
+
+  $text = SanitizeQuote($text);
+  $query = "insert into history values (NULL,";
+
+  $query .= "'";
+  $query .= $text;
+  $query .= "'";
+  
+  $query .= ",";
+
+  $query .= "'";
+  $query .= time();
+  $query .= "'";
+  $query.= ')';
+ 
+ // echo $query; 
+//  $con = LocalConfig();
+  $con = DBMembership();
+  $qr = mysqli_query($con, $query ); 
+}
+
 
 function LOGS( $text ){
   $text = SanitizeQuote($text);
