@@ -49,7 +49,10 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 
 		HISTORY("topaypal_join.php!!!!!  ".$login);
 		LOGS("topaypal_join.php!!!!!  ".$login);
-
+		$subject = "RESIDENT signup fail";
+		$recipient = "tennis.mutt@sctennisclub.org";
+		phpemailer($subject,$login , $recipient , "santaclarawebmaster@gmail.com");
+		
 		echo "<script>alert(\"must have Santa Clara address for resident fee \")</script>";
 		echo('
               <script >
