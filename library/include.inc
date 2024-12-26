@@ -223,7 +223,7 @@ function LOGTEXT($text){
 
 }
  
-function HISTORY($text){
+function HISTORY($text ){
 
   $text = SanitizeQuote($text);
 
@@ -245,12 +245,14 @@ function HISTORY($text){
  
  // echo $query; 
 //  $con = LocalConfig();
+
   $con = DBMembership();
   $qr = mysqli_query($con, $query ); 
+
 }
 
 
-function LOGS( $text ){
+function LOGS( $text , $visible=1 ){
   $text = SanitizeQuote($text);
   $query = "insert into logs values (NULL,";
 
@@ -268,8 +270,10 @@ function LOGS( $text ){
  
  // echo $query; 
 //  $con = LocalConfig();
-  $con = DBMembership();
-  $qr = mysqli_query($con, $query );
+   if($visible){
+      $con = DBMembership();
+      $qr = mysqli_query($con, $query );
+   }
 
 }
 

@@ -42,9 +42,7 @@ date_default_timezone_set('America/Los_Angeles');
 // One time - get members and store in global array
 
 $MEMBERS = array();
-//$YEAR=2023;
 $YEAR=2024;
-
 
 function ListMembers()
 {
@@ -156,13 +154,13 @@ function findMember($fname,$lname)
 
    if(empty($found)){
               $retval=0;       // Didn't find last name
-              LOGGER( "cant find ".$lname." < ---");
+//              LOGS( "ustacheck.php cant find ".$lname." < ---");
 
    }else{
-              LOGGER("found $pattern");
+             LOGS("ustacheck.php found $pattern",0);
               if($search){
 
-                LOGGER( "found ".$lname." now looking for ".$fname."<br>");
+                LOGS( "ustacheck.php found ".$lname." now looking for ".$fname."<br>",0);
               }
 
               // Look for first name (first 3 characters)
@@ -173,15 +171,14 @@ function findMember($fname,$lname)
 
 //                 if($search==1)  echo "looking for ".$pattern."<br>";
                    if($search){
-                     LOGGER( "now looking for ".$pattern." in ".$first."<br>");
+                    LOGS( "ustacheck.php now looking for ".$pattern." in ".$first."<br>",0);
                    }
 
 
                   if( preg_match( $pattern, $first,$matches)) {
                             $retval= 1;
                             if($search){
-                             LOGGER( "found ".$pattern." in ".$first."<-------------<br>");
-                             LOGGER( "return ".$retval."<br>");
+                              LOGS( "ustacheck.php found ".$pattern." in ".$first."<-------------<br>",0);
                              return $retval;
                              }                     
 
@@ -204,7 +201,7 @@ function showfound($found){
   
   while (!empty($keys)) {
       $key = array_pop($keys);
-      LOGGER( $key . ' = ' . $assocArray[$key] . '<br />');
+      LOGS( $key . ' = ' . $assocArray[$key] . '<br />',0);
   };
 
 }
