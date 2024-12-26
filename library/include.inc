@@ -282,12 +282,20 @@ function LOGGER( $text )
  
   $text = SanitizeQuote($text);
  
-  $query = "insert into logger values (NULL,";
+   
+  $query = "insert into history values (NULL,";
  
- $query .= "'";
- $query .= $text;
- $query .= "'";
- $query.= ')';
+  $query .= "'";
+  $query .= $text;
+  $query .= "'";
+  
+  $query .= ",";
+
+  $query .= "'";
+  $query .= time();
+  $query .= "'";
+
+  $query.= ')';
  
  ///print("<br>".$query."<br>");
  
