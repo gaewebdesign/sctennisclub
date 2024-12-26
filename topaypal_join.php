@@ -44,6 +44,12 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
     if( RESIDENT_MATCH( $_POST[CITY]) ){
 		 DEBUG("Santa Clara resident" );
 	}else{
+		// Attempt to signup as Santa Clara resident
+        $login = "RESIDENT fail: ".$_POST[FNAME]." ".$_POST[LNAME]." ".$_POST[ADDRESS]." ".$_POST[CITY];
+
+		HISTORY("topaypal_join.php!!!!!  ".$login);
+		LOGS("topaypal_join.php!!!!!  ".$login);
+
 		echo "<script>alert(\"must have Santa Clara address for resident fee \")</script>";
 		echo('
               <script >
