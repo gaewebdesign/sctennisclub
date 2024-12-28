@@ -53,6 +53,7 @@
 
       <a class="navbar-brand" href="./signup_debug.phtml">Signup</a>
       <a class="navbar-brand" href="./pending_mixer.phtml">Pending</a>
+      <a class="navbar-brand" href="./ustacheck.phtml">USTACheck</a>
 
 <?php
      include "./library/tourny.inc";  // Tournament menu items
