@@ -233,7 +233,14 @@ if(preg_match("/588 El Camino/",$address)) $address = $address2;
 //if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
 //if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
 
+// W3.0 Shi Fu, Xingchi Jin, Mengliao Zhang
+if(preg_match("/3413/",$address)) $address = $address2;
+
 //3238 Scott Blvd, Apt 152
+// Jiayu Li, Xinmeng Qiao, Yuhan Lin
+// 2024 W3.0 Fiona Li/ Shiyao Qu
+// blocked pending further investigation
+if(preg_match("/3238 Scott/",$address)) $address = $address2;
 
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
