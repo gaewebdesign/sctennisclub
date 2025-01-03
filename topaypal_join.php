@@ -254,7 +254,7 @@ if(preg_match("/3238 Scott/",$address)) $address = $address2;
 
 //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd)
 // NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
-//$pwd=password();
+$pwd=password();
 
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
