@@ -85,12 +85,14 @@
       if(($mtype == "RF") or ($mtype == "NRF") ){
            // $trust = getFamilyTrust($year-1 ,$address,$email);
 
-            LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
+           LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
+           LOGS("$year , $address , $city , $account, $count, $trust");
             $pwd = Password();
             $account = epoch; // time(); // replace with $_POST value
             $count = 1;
             $trust = 0;
 
+            LOGS("YEAR:$year ADDRESS:$address  CITY: $city ACCOUNT:$account COUNT:$count  TRUST: $trust");
             toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust);
         
         
