@@ -91,7 +91,7 @@
             $count = 1;
             $trust = 0;
 
-            LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
+            LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db ");
             LOGS("YEAR:$year ADDRESS:$address  CITY: $city ACCOUNT:$account COUNT:$count  TRUST: $trust");
             toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust);
         
