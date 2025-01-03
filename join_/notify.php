@@ -87,9 +87,9 @@
 
             LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
             $pwd = Password();
-            $account = 9999; // time(); // replace with $_POST value
+            $account = epoch; // time(); // replace with $_POST value
             $count = 1;
-            $trust = 2;
+            $trust = 0;
 
             toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust);
         
