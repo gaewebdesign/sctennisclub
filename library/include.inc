@@ -904,7 +904,7 @@ function deadline( $deadline){
 
 */
 
-function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust){
+function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust){
   $con = DBMembership();
   $theTable = TABLE_FAMILY;
    
