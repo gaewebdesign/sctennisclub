@@ -57,6 +57,7 @@
         $city = $row[CITY];
         $zip = $row[ZIP];
 
+        $email = $row[EMAIL];
         $lname = $row[LNAME];
 
         $epoch = $row[CUSTOM];
