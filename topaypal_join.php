@@ -227,17 +227,21 @@ if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
 if( preg_match( "/2678 El/", $address)  ) $address = $address2;
 
 // Dongdong (Billy) Sun
-// xinzhe.y@gmail did a roster chek 12/23
+// Xinzhe Yang (Belmont) (xinzhe.y@gmail) 
+// this is where Belmont couple seem to be staying
+// Xinzhe Yang (2024)  and Xinqi Lyu (W3.0, 2023,2024)
+
 if(preg_match("/588 El Camino/",$address)) $address = $address2;
 
 //if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
 //if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
 
-// W3.0 Shi Fu, Xingchi Jin, Mengliao Zhang
+// W3.0 Shi Fu(SJ), Xingchi Jin(SU), Mengliao Zhang (SU) (2024)
+// 550 Moreland Way #3413
 if(preg_match("/3413/",$address)) $address = $address2;
 
 //3238 Scott Blvd, Apt 152
-// Jiayu Li, Xinmeng Qiao, Yuhan Lin
+// Jiayu Li (MV) , Xinmeng Qiao (MV), Yuhan Lin (PA)
 // 2024 W3.0 Fiona Li/ Shiyao Qu
 // blocked pending further investigation
 if(preg_match("/3238 Scott/",$address)) $address = $address2;
