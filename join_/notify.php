@@ -64,6 +64,7 @@
         $insignia = $row[INSIGNIA];
         $epoch = $row[DATE];
         $opt = $row[OPT];
+        $year=$row["year"];
 
         $name = " $fname $lname";
        }
