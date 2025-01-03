@@ -4,7 +4,7 @@
 
 include "../library/include.inc";
 
-$year = 1999;
+$year = 2025;
 $fname = "Kareem";
 $lname = "Abdul-Jabbar";
 $email = "jbbar@gmail.com";
