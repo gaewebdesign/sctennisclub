@@ -84,11 +84,13 @@
       // SAVE to family table
       if(($mtype == "RF") or ($mtype == "NRF") ){
            // $trust = getFamilyTrust($year-1 ,$address,$email);
-            $trust = 311;
-            $count = 44;
+
             LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
             $pwd = Password();
             $account = 9999; // time(); // replace with $_POST value
+            $count = 1;
+            $trust = 2;
+
             toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust);
         
         
