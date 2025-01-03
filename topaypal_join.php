@@ -185,16 +185,18 @@ $trust=0;
 // new account created only if RF or NRF
 // check if a trusted account from previous year
 // insert family account information
+/*
 if(($mtype == "RF") or ($mtype == "NRF") ){
     $trust = getFamilyTrust($year-1 ,$address,$email);
     LOGS("topaypal_join.php found $mtype so creating $fname $lname into family db with trust=$trust");
 	$pwd = Password();
-	toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$count,$trust);
-
+	$account = 33; // time(); // replace with $_POST value
+	toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$account,$count,$trust);
 
 }
+*/
 
-	// *************************************
+// *************************************
 //$address .= "*#*";
 
 // ********************************
