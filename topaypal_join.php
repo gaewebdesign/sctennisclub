@@ -260,8 +260,8 @@ $pwd=password();
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 
-LOGS("increment $address for year $year ");
-incrementFamilyCount( $address , $year);
+//LOGS("increment $address for year $year ");
+//incrementFamilyCount( $address , $year);
 
 $subject= "2025 Pending Signup( $fname $lname)";
 $message = "PENDING <br> ";
