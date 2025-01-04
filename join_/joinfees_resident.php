@@ -30,17 +30,18 @@
 
           <li class="list-group-item d-flex justify-content-between Back">
           <label> 
-                 Santa Clara City residents may signup before 2025 for the discount resident fee 
+<!--
+          Santa Clara City residents may signup before 2025 for the discount resident fee 
                  of $<?php echo(RES_FEE); ?>.
                  <br/>
                  Proof of Santa Clara City residency for single or family memberships may be required.
                    Email the club (comm@) for more information.
                  <br/>
                  Non-resident applications will open in 2025. <br>
-<!--
+-->                 
+
                  Santa Clara Tennis Club must maintain a resident majority. <br> 
--->
-  <!--              Not accepting Non-Residents at this time <br>  -->
+                 Not accepting Non-Residents at this time <br>  
   
 
                   <!--      Currently there are: </b>

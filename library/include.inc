@@ -698,11 +698,12 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
   $res = Residents($_YEAR);
   $mem = Members($_YEAR);
   
-  echo ("*");
+  //echo ("*");
   // return false means non-residents not permitted 
-  return false;      // no non-residents until 2025
+ // return false;      // no non-residents until 2025
  // return true;  
   
+ 
   if( $res>$mem-$res +1 ) return true;
   return false;
 
