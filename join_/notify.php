@@ -99,13 +99,18 @@
         }
 
 
+        if(($mtype == "RF_") or ($mtype == "NRF_") ){
 
+           LOGS("$fname $lname increment count for ADDRESS:$address for YEAR: $year  in family");
+           incrementFamilyCount( $address , $year);
+
+        }
 
 /*
-      Do the adjustment for non-resident here
+      Do the adjustment for resident and non-residents here
       1) Get the opt value
       2) in the paypal table, find primary person by opt
-      3) increment insignia by 1
+      3) increment insignia by 1  (maybe not needed anymore)
       4) change the address by ading * at the end
  */
  
@@ -138,7 +143,7 @@
            $query_results=mysqli_query($con, $query);
 
 //         $query = "update $theTable set address = address + "."'_'"." where custom = $opt";
-           $query = "update $theTable set address= concat( address, '*') where custom = $opt";
+           $query = "update $theTable set address= concat( address, '**&**') where custom = $opt";
 
            LOGTEXT("update address query = $query");
            $query_results=mysqli_query($con, $query);
