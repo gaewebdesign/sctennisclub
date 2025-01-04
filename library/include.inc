@@ -909,9 +909,9 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$accou
   $theTable = TABLE_FAMILY;
    
   $pwd = password();
-  $date = time();
+
   $query = 'insert into '.$theTable.'(_id,year,fname,lname,email,address,city,pwd,mtype,account,count,trust,date) values';
-  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($date).add($count).add($trust).add($date);
+  $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($address).add($city).add($pwd).add($mtype).add($account).add($count).add($trust).add($account);
   $query .= ")";
 
   LOGS( "Creating new main family boss for $fname $lname ");
@@ -921,6 +921,19 @@ function toFamilyDB($year,$fname,$lname,$email,$address,$city,$pwd,$mtype,$accou
 
 }
 
+function incrementFamilyCount( $address,$year){
+
+  $theTable = TABLE_FAMILY;
+
+  $query = "update $theTable set count = count + 1 where address = \"$address\" and year=$year " ;
+
+  $con = DBMembership();
+  $query_results=mysqli_query($con,$query);
+
+}
+
+
+// may no longer be necessary, but this uses the account # , calculated by time()
 // for a RF_ or NRF_  increment Family count
 // table column opt value points to main member 
 // go to TABLE_FAMILY and increment count
