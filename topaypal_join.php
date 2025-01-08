@@ -224,7 +224,7 @@ if( preg_match( "/2868 Chromite/", $address)  ) $address = $address2;
 //if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address2;
 if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 
-if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
+//if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
 
 if( preg_match( "/2678 El/", $address)  ) $address = $address2;
 
