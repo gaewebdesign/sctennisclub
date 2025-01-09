@@ -152,8 +152,8 @@ $message = "$fname1  $lname1  $fname2 $lname2 Signup \n";
 $message .= "$division";
 
 
-$toemail1 = "mnscuo@gmail.com";
-$toemail2 = "santaclarawebmaster@gmail.com";
+$toemail1 = "mutt@sctennisclub.org";
+$toemail2 = "south@sctennisclub.org";
 
 phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
 
