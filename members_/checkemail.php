@@ -40,13 +40,13 @@ function checker(){
 
     LOGGER("checkemailphp retv = $retv " );
     if( $retv == true){
-        LOGGER("checkemailphp checker  = yes " );
+        LOGGER("checkemail.php checker  = yes " );
         phpemailer($subject, $message ,$toemail1 , $toemail2);
         echo "yes";
     }else{
         $subject .= " invalid";
         phpemailer($subject, $message ,$toemail1 , $toemail2);
-        LOGGER("checkemailphp checker  = no  for $user ");
+        LOGGER("checkemail.php checker  = no  for $user ");
         echo $user;
 
     }
