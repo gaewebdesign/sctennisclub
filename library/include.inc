@@ -732,7 +732,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
 function EMAILER($subject, $message, $verbose=false)
 {
 
-   //$to = "santaclarawebmaster@gmail.com";
+   
    $to = "notify@sctennisclub.org";
    $to = "south@sctennisclub.org";
    LOGGER(" EMAILER: to $to ");
