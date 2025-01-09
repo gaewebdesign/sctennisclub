@@ -269,7 +269,7 @@ $message .= "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$mtype <br>";
 $recipient = "mutt@sctennisclub.org";
-phpemailer($subject,$message , $recipient , "sherrya@sctennisclub.org");
+phpemailer($subject,$message , $recipient , "sherry@sctennisclub.org");
 
 
 $data = array(
