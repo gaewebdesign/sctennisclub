@@ -22,7 +22,7 @@ $message .=  "Santa Clara Tennis Club";
 //emailer( $subject, $message );
 
 
-function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mns.mutt@gmail.com", $_TOEMAIL2="santaclarawebmaster@gmail.com"){
+function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mns.mutt@gmail.com", $_TOEMAIL2="south@sctennisclub.org"){
 
     require 'vendor/autoload.php';
 
@@ -32,7 +32,7 @@ try {
 
  //     $mail->SMTPDebug = 2;
       $mail->Username = "webmaster@sctennisclub.org";
-//      $mail->Username = "santaclarawebmaster@gmail.com";
+
       $mail->Password = "webmaster.3722";
       $mail->SMTPSecure = 'tls';
 
@@ -43,8 +43,6 @@ try {
 
 //    $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
 
-      
-//      $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
       $mail->addAddress( $_TOEMAIL ) ; 
       $mail->addAddress( $_TOEMAIL2 ) ; 
 

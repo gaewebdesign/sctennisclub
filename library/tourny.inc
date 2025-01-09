@@ -30,9 +30,9 @@ define("TOURNY_MEN_SEMIS","3/9");
 define("TOURNY_MEN_FINALS","3/23");
 
 
-define("TOURNY_WOMYN_QUARTERS","2/23");
-define("TOURNY_WOMYN_SEMIS","3/9");
-define("TOURNY_WOMYN_FINALS","3/23");
+define("TOURNY_WOMYN_QUARTERS","2/30");
+define("TOURNY_WOMYN_SEMIS","3/16");
+define("TOURNY_WOMYN_FINALS","3/30");
 
 
 

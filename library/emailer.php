@@ -11,7 +11,7 @@ sendemail($NAME, $EMAIL, $msg);
 
 function sendemail( $NAME,$EMAIL,$msg){
 
-$to = "santaclarawebmaster@gmail.com";    
+$to = "south@sctennisclub.org";    
 $to = "notify@sctennisclub.org";
 
 //echo ("SENDING EMAIL: $NAME $EMAIL $msg ");

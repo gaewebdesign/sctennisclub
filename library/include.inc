@@ -734,7 +734,7 @@ function EMAILER($subject, $message, $verbose=false)
 
    //$to = "santaclarawebmaster@gmail.com";
    $to = "notify@sctennisclub.org";
-   $to = "santaclarawebmaster@gmail.com";
+   $to = "south@sctennisclub.org";
    LOGGER(" EMAILER: to $to ");
 
 //   $to = "tennis.mutt@gmail.com";

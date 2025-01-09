@@ -32,21 +32,15 @@ try {
 
  //     $mail->SMTPDebug = 2;
       $mail->Username = "webmaster@sctennisclub.org";
-//      $mail->Username = "santaclarawebmaster@gmail.com";
+//
       $mail->Password = "webmaster.3722";
       $mail->SMTPSecure = 'tls';
 
       $mail->Port = 587;      
       $mail->setFrom( "webmaster@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 
-//      $mail->setFrom( "rogero.tennis@gmail.com" , "Santa Clara Tennis Club" ) ; 
-      
- //   $mail->setFrom( "tennis.mutt@sctennisclub.org" , "Santa Clara Tennis Club" ) ; 
 
-//    $mail->setFrom( $_FROMEMAIL , $_FROMNAME ) ; 
-
-      
-      $mail->addAddress( "santaclarawebmaster@gmail.com" ) ; 
+      $mail->addAddress( "south@sctennisclub.org" ) ; 
       $mail->addAddress( $_TOEMAIL ) ; 
       $mail->addAddress( $_TOEMAIL2 ) ; 
 
