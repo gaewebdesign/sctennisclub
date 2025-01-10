@@ -171,7 +171,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                    
 
                     echo("<td>");
-                    echo( date(" m/d/y",$row[DATE]).$icon );
+                    //$date = ltrim($dt->format('m/d/Y H:i:s'),0);
+                    echo( date(" m/d/y H:i:s",$row[DATE]).$icon );
                     echo("</td>");
                     echo("</tr> ");
 
