@@ -82,7 +82,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
          $con = Configure();
-         $year = $YEAR-1;
+         $year = $YEAR;
 
          $query = "select * from ".TABLE_PAYPAL." where year>=$year order by lname limit 390 ";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
@@ -133,7 +133,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
             }
 
             memberlist(YEAR);
-            //memberlist(YEAR-1);
+            $y = YEAR-1;
+            echo("<tr> <td><td> <td> <td><td> </tr>");
+            memberlist(YEAR-1);
 
       
 ?>
