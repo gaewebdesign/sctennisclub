@@ -133,7 +133,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
             }
 
             memberlist(YEAR);
-            $y = YEAR-1;
+            
             echo("<tr> <td><td> <td> <td><td> </tr>");
             memberlist(YEAR-1);
 
