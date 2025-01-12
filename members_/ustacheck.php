@@ -268,7 +268,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         $fname = $_captain[2][0];
         $captain = $fname." ".$lname;
 
-        $teamlink = '<a style=text-decoration:none href="https://ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
+        $teamlink = '<a style=text-decoration:none href="https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
 
 
 //      Cut off parsing
