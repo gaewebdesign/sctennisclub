@@ -225,7 +225,7 @@ if( preg_match( "/2868 Chromite/", $address)  ) $address = $address2;
 */
 
 //if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address2;
-if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
+//if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
 
 //if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
 
@@ -249,7 +249,7 @@ if(preg_match("/3413/",$address)) $address = $address2;
 // Jiayu Li (MV) , Xinmeng Qiao (MV), Yuhan Lin (PA)
 // 2024 W3.0 Fiona Li/ Shiyao Qu
 // blocked pending further investigation
-if(preg_match("/3238 Scott/",$address)) $address = $address2;
+//if(preg_match("/3238 Scott/",$address)) $address = $address2;
 
 //echo $address;
 // if $opt != 911, then this person is either RF_ or NRF_  
