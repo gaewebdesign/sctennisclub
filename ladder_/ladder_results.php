@@ -33,7 +33,7 @@ tr {
               $YEAR = YEAR-1;
               
               $query = "select * from ".$TABLE_LADDER." where year>=$YEAR and division regexp(\"$draw\") order by date desc limit 25";
-           echo $query;
+           //echo $query;
 
 
               $con = Configure();
