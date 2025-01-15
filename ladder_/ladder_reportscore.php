@@ -246,7 +246,7 @@ function announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points, $w_add
 }
 
 
-
+/*
 
 function password($fname1,$fname2){
     $date = "".time()-60*60*7;
@@ -269,7 +269,7 @@ function password($fname1,$fname2){
     return strtolower($p).$pass;
 
 }
-
+*/
 
 ?>
 
