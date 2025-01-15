@@ -114,6 +114,9 @@ function emailtable($con, $theTABLE,$title,$division){
         echo(" ");
         echo( $row["lname1"]);
         echo("<td>");
+        echo($row["gender1"].$row["ntrp1"]);
+        echo("<td> &nbsp;");
+        echo("<td>");
         echo( $row["email1"] );
 
     }
