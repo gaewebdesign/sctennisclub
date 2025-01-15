@@ -103,7 +103,7 @@ function emailtable($con, $theTABLE,$title,$division){
     echo ('</tr>');
     echo ('</thead>');
 
-    $query = "select * from $theTABLE where division=\"$division\" ";
+    $query = "select * from $theTABLE where division=\"$division\" order by points desc ";
     $qr=mysqli_query($con,$query);
 
 
