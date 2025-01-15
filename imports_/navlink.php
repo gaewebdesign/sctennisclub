@@ -143,7 +143,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
         </div>
 
         <div class="dropdown" >
-          <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                   Ladder
           </a>
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
