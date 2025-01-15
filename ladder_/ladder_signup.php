@@ -135,6 +135,7 @@ function get_mtype($division ){
 
 }
 
+/*
 function password($fname1,$fname2){
     $date = "".time()-60*60*6;
     $pass = substr($date,-3);
@@ -159,6 +160,8 @@ function password($fname1,$fname2){
     return strtolower($p).$pass;
 
 }
+
+*/
 
 function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date){
 
