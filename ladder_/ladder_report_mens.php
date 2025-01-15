@@ -4,7 +4,7 @@
    
 
  <main id="headers">
-   <h3> 2024  Mens's Ladder </h3>
+   <h3> <?php echo YEAR ?>  Mens's Ladder </h3>
 </main>
 
 
@@ -12,8 +12,8 @@
 //include "../library/include.inc";
 //include "../library/email/email.inc";
 
- $TABLE_TOURNY="ladder";
- $YEAR=2024;
+ $TABLE_TOURNY=TABLE_LADDER;
+ $YEAR=YEAR;
  $title = "Mens Ladder";
  $draw="Men";
 
