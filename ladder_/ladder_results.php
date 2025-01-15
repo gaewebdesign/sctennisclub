@@ -30,9 +30,9 @@ tr {
            <?php
              function resultlist($draw){
               $TABLE_LADDER = "ladder_results";
-              $YEAR = YEAR;
+              $YEAR = YEAR-1;
               
-              $query = "select * from ".$TABLE_LADDER." where year=$YEAR and division regexp(\"$draw\") order by date desc ";
+              $query = "select * from ".$TABLE_LADDER." where year>=$YEAR and division regexp(\"$draw\") order by date desc ";
 //           echo $query;
 
 
