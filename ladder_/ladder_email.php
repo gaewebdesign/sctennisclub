@@ -4,7 +4,7 @@
    
 
  <main id="headers">
-   <h3> 2024 Ladder Email Addresses </h3>
+   <h3> <?php echo YEAR ?> Ladder Email Addresses </h3>
 </main>
 
 
@@ -13,7 +13,7 @@
 //include "../library/email/email.inc";
 
  $TABLE_TOURNY="ladder";
- $YEAR=2024;
+ $YEAR=YEAR;
  $title = "Send Email";
  $draw="Men";
 
