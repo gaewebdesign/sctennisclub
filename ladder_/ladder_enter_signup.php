@@ -22,13 +22,17 @@ if(filter_var($email1, FILTER_VALIDATE_EMAIL)) {
 // SANITIZE EMAIL 
 
 
-$retv  = CHECK_EMAIL($email1);
+$retv  = CHECK_EMAIL($email1) ; //|| str_contains($email1,".kitty");
 
 if ( isset($_POST['SubmitButton'])){
       if( $retv == false) {
 
          $message = "Email ($email1) not in membership. ";
          $message .= " Please sign up to SCTC to enter the ladder";
+         $message .= " Email must be unique to enter the  ladder";
+         
+
+
          MESSAGE_ALERT( $message);
          $url = "../ladder.phtml?mode=6";
          REDIRECT_ALERT( $url);
