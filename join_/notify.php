@@ -68,12 +68,14 @@
         $year=$row["year"];
 
         $name = " $fname $lname";
-//
+
+/*
         $message = "PAYPAL Membership Signup\n";
         $message .= "$year \n";
         $message .= "$fname $lame \n";
         $message .= "$email \n ";
         LOGS( $message);
+*/
         //
        }
 
@@ -83,13 +85,13 @@
            }
 
       // copy over from the pending to the paypal directory
-      LOGGER("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
-      TEXT("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+      LOGS("notify.php DEBUG statement ") ;
+      LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
 //      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
       $subject= "Membership Signup ($fname $lname)";
-//    $message calculated above
+      $message = "Paypal signup";
       $recipient= "mutt@sctennisclub.org";
       phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
