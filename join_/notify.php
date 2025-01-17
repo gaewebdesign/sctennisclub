@@ -86,7 +86,7 @@
       LOGGER("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
       TEXT("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+//      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
       $subject= "Membership Signup ($fname $lname)";
 //    $message calculated above
