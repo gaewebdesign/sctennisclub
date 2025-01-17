@@ -90,7 +90,7 @@
 
 //      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
-      $subject= "Membership Signup ($fname $lname)";
+      $subject= "Membership Signup";
       $message = "Paypal signup";
       $recipient= "mutt@sctennisclub.org";
       phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
