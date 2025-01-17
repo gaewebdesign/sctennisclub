@@ -68,6 +68,13 @@
         $year=$row["year"];
 
         $name = " $fname $lname";
+//
+        $message = "PAYPAL Membership Signup\n";
+        $message .= "$year \n";
+        $message .= "$fname $lame \n";
+        $message .= "$email \n ";
+        
+        //
        }
 
        foreach ($row as $key => $value) {
@@ -80,6 +87,11 @@
       TEXT("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
       copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+
+      $subject= "Membership Signup ($fname $lname)";
+//    $message calculated above
+      $recipient= "mutt@sctennisclub.org";
+      phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
       // SAVE to family table
       if(($mtype == "RF") or ($mtype == "NRF") ){
