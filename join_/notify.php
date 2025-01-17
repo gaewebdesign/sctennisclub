@@ -69,13 +69,13 @@
 
         $name = " $fname $lname";
 
-/*
+
         $message = "PAYPAL Membership Signup\n";
         $message .= "$year \n";
         $message .= "$fname $lame \n";
         $message .= "$email \n ";
         LOGS( $message);
-*/
+
         //
        }
 
@@ -94,6 +94,7 @@
       $message = "Paypal signup";
       $recipient= "mutt@sctennisclub.org";
       phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+      LOGS("notify.php email sent ");
 
       // SAVE to family table
       if(($mtype == "RF") or ($mtype == "NRF") ){
