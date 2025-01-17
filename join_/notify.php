@@ -94,7 +94,7 @@
       $message = "Paypal signup";
       $recipient= "mutt@sctennisclub.org";
  //     phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
-      LOGS("notify.php email sent ");
+      LOGS("notify.php email send commented out ");
 
       // SAVE to family table
       if(($mtype == "RF") or ($mtype == "NRF") ){
