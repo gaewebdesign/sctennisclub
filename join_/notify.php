@@ -73,7 +73,7 @@
         $message .= "$year \n";
         $message .= "$fname $lame \n";
         $message .= "$email \n ";
-        
+        LOGS( $message);
         //
        }
 
