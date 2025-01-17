@@ -72,7 +72,7 @@
 
         $message = "PAYPAL Membership Signup\n";
         $message .= "$year \n";
-        $message .= "$fname $lame \n";
+        $message .= "$fname $lname \n";
         $message .= "$email \n ";
         LOGS( $message);
 
@@ -93,7 +93,7 @@
       $subject= "Membership Signup";
       $message = "Paypal signup";
       $recipient= "mutt@sctennisclub.org";
-      phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+ //     phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
       LOGS("notify.php email sent ");
 
       // SAVE to family table
