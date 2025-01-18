@@ -184,6 +184,15 @@ function CHECK_LADDER_EMAIL($_EMAIL,$_G="M"){
 
 }
 
+function CHECK_EXTRA_EMAIL( $_EMAIL){
+
+  
+  $retv = CHECK_EMAIL( $_EMAIL) || ( str_contains($_EMAIL, ".usta") ? 1:0);
+
+  return $retv;
+
+}
+
 function CHECK_EMAIL($_EMAIL ){
 
   $con = DBMembership();
