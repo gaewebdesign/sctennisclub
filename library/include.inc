@@ -163,6 +163,13 @@ function DEBUG($message){
 //define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 define("TABLE_LADDER","ladder");
 
+function CHECK_TOURNAMENT_EMAIL($_EMAIL){
+
+    $retv = 1;
+    return $retv;
+
+ }
+
 function CHECK_LADDER_EMAIL($_EMAIL,$_G="M"){
 
   $con = DBMembership();

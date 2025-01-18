@@ -148,11 +148,20 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 
   <div class="col-md-7 mt-2">
-    <label for="validationDefault05" class="form-label">Enter Keycode</label>
-    <input type="text" class="form-control" id="validationDefault05" name="secretcode" required>
+    <label for="validationDefault05" class="form-label">Enter Email</label>
+    <input type="email" class="form-control" id="validationDefault05" name="secretcode" required>
   </div>
 
+<!--
+  this is from tournament_enter.php
+ <div class="col-sm-3">
+    <label for="validationDefaultUsername" class="form-label">SCTC Email</label>
+    <div class="input-group">
+<input type="email" class="form-control fs-6" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" name="email1" required>
+    </div>
+  </div>
 
+-->
     <hr/>
 
 

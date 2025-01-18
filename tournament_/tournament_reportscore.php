@@ -13,9 +13,12 @@ define("TOURNAMENT_SECRET", "ok");
 
 if ( isset($_POST['Button'])){
 
-    if($_POST["secretcode"] != TOURNAMENT_SECRET ){
 
-        echo "<script>alert(\"Enter correct keyccode \")</script>";
+    $retv = CHECK_TOURNAMENT_EMAIL( $_POST["secretcode"] );
+
+    if($retv != 1 ){
+
+      echo "<script>alert(\"Email address not found in tournament \")</script>";
 		echo('
               <script >
                     window.setTimeout(function() {
@@ -31,7 +34,7 @@ if ( isset($_POST['Button'])){
 
 }
 
-$theTABLE = "tourny";
+$theTABLE = TABLE_TOURNY;
 
 
 $winner = $_POST["winner"];
@@ -353,27 +356,6 @@ function get_custom($_id){
 
 }
 
-function password($fname1,$fname2){
-    $date = "".time()-60*60*7;
-    $pass = substr($date,-3);
-
-    $i=0;
-    for($l='a' ; $l<='z' ; $l++)
-       $letters[$i++] = $l;
-    
-       $p =  $letters[rand(0,25)];
-       $p .=  $letters[rand(0,25)];
-       $p .=  $letters[rand(0,25)];
-    
-    // Override using first names
-       if( strlen($fname1>3 && strlen($fname2)>3 )){
-          $p = rand(25, 313)%2==0 ? $fname1 : $fname2;
-    }
-
-
-    return strtolower($p).$pass;
-
-}
 
 function enterTournament($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,$year,$division,$team,$mtype,$pwd,$date){
 
