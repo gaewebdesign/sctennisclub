@@ -103,7 +103,6 @@ $ntrp1 =$_POST["ntrp1"];
 $division = "Womyn";
 if($_POST["gender1"] == "M") $division = "Men";
 
-$year=YEAR;
 
 $theTABLE = "ladder";
 
@@ -111,7 +110,7 @@ $date = "".time()-60*60*7;
 $pwd = password($fname1,$lname1);
 
 $fname2=$lname2=$email2=$gender2=$ntrp2="-";
-$year=2024;
+$year=YEAR;
 $team="";
 $position=rand(1,20);
 $points=rand(45,75);
