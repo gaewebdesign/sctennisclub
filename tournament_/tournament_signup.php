@@ -8,11 +8,11 @@ include "../library/email/email.inc";
 
 function CHECK_DOUBLES( $email1 , $email2){
 
-   if( CHECK_EMAIL($email1) != true ) {
+   if( CHECK_EXTRA_EMAIL($email1) != true ) {
       LOGGER( "ERR: $email1");
       return -1;
    
-   }elseif ( CHECK_EMAIL( $email2) != true){
+   }elseif ( CHECK_EXTRA_EMAIL( $email2) != true){
       LOGGER( "ERR: $email2");
       return -2;
 

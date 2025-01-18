@@ -4,7 +4,7 @@
 //include "../library/email/email.inc";
 
  $TABLE_TOURNY="tourny";
- $YEAR=2024;
+ $YEAR=YEAR;
  $draw="Mx6.5";
  $team= array(
 
