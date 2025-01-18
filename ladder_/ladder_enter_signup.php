@@ -22,7 +22,7 @@ if(filter_var($email1, FILTER_VALIDATE_EMAIL)) {
 // SANITIZE EMAIL 
 
 
-$retv  = CHECK_EMAIL($email1) ; //|| str_contains($email1,".kitty");
+$retv  = CHECK_EMAIL($email1) || str_contains($email1,".kitty");
 
 if ( isset($_POST['SubmitButton'])){
       if( $retv == false) {
