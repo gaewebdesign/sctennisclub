@@ -103,7 +103,7 @@ $ntrp1 =$_POST["ntrp1"];
 $division = "Womyn";
 if($_POST["gender1"] == "M") $division = "Men";
 
-$year=2024;
+$year=YEAR;
 
 $theTABLE = "ladder";
 
