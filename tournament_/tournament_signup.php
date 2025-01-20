@@ -6,7 +6,7 @@ include "../library/tourny.inc";
 
 include "../library/email/email.inc";
 
-function CHECK_DOUBLES( $email1 , $email2){
+function CHECK_DOUBLES( $email1 , $email2 , $theTable, $division){
 
    if( CHECK_EXTRA_EMAIL($email1) != true ) {
       LOGGER( "ERR: $email1");
@@ -21,7 +21,33 @@ function CHECK_DOUBLES( $email1 , $email2){
       return -3;
    }
    
-   LOGGER("CHECK_DOUBLES returning true");
+   // Check if email address already table ($theTable) for this division ($division)
+   $con = DBMembership();
+
+/*
+      select count(1)  from tourny_fuyu  where email1="joe@gmail.usta";
+*/
+
+   
+   $query = "select email1 from $theTable where ( email1 = \"$email1\" or email2=\"$email1\") and division=\"$division\" ";
+   $qr = mysqli_query($con, $query);
+   $n = mysqli_num_rows($qr);
+   LOGS("tournament_signup: $query");
+   LOGS("tournament_signup: $email1 num_row = $n ");
+   if($n > 0 )   return -4;
+
+   
+// CHECK PLAYER 2
+   $query = "select email2 from $theTable where ( email1 = \"$email2\" or email2=\"$email2\") and division=\"$division\" ";
+
+   $qr = mysqli_query($con, $query);
+   $n = mysqli_num_rows($qr);
+   LOGS("tournament_signup: $query");
+   LOGS("tournament_signup: $email2 num_row = $n ");
+   if($n > 0 )   return -5;   
+      
+
+   LOGS("CHECK_DOUBLES returning true");
    return true;
 
 
@@ -66,7 +92,7 @@ if(filter_var($email2, FILTER_VALIDATE_EMAIL) == false) {
 }
 
 
-    $retv = CHECK_DOUBLES($email1 , $email2 );
+    $retv = CHECK_DOUBLES($email1 , $email2 ,$theTABLE,$division);
 LOGGER("retv = $retv");
 
 $message = "";
@@ -80,7 +106,14 @@ switch( $retv){
       case -3:
             $message = "Emails ($email1) are the same";
             break;
-      default:
+      case -4:
+            $message = "Email ($email1) already in $division draw";
+            break;
+      case -5:
+            $message = "Email ($email2) already in $division draw";
+            break;
+
+     default:
             $retv = 5;
             $message = "good";
 
