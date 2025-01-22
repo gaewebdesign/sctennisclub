@@ -231,7 +231,10 @@ function signedUp( $fname1,$lname1,$email1,$division,$points){
  
    $ladder = "Men's Singles";
    if($division=="Womyn") $ladder = "Women's Singles";
-
+    
+    echo("<!DOCTYPE html>");
+    echo "<html>";
+    echo('<body style="background-color:powderblue;"> ');
     echo("<center>" );
     echo("<h1>Signed Up </h1> " );
     echo("<h2>");
@@ -241,8 +244,10 @@ function signedUp( $fname1,$lname1,$email1,$division,$points){
     echo("Initial Points: $points");
     echo("</h2>");
     echo("</center>" );
+    echo("</body>" );
+    echo "</html>";
 
-}
+   }
 
 ?>
 
