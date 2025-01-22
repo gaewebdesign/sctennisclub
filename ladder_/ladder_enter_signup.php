@@ -143,7 +143,8 @@ if( $retval == 1 ){
 db_ladder($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,
 $year,$division,$team,$position,$points,$score,$pwd,$date,$custom,$opt);
 
-signedUP($fname1,$lname1,$division,$points );
+
+signedUP($fname1,$lname1,$email1,$division,$points );
 
 
 $subject = "Ladder $division Signup ($fname1 $lname1 )";
@@ -226,7 +227,7 @@ function toTournyDB($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$l
 }
 
 
-function signedUp( $fname1,$lname1,$division,$points){
+function signedUp( $fname1,$lname1,$email1,$division,$points){
  
    $ladder = "Men's Singles";
    if($division=="Womyn") $ladder = "Women's Singles";
@@ -235,6 +236,7 @@ function signedUp( $fname1,$lname1,$division,$points){
     echo("<h1>Signed Up </h1> " );
     echo("<h2>");
     echo("$fname1 $lname1 <p> ");
+    echo("$email1  <p> ");
     echo("Division: $ladder<p>");
     echo("Initial Points: $points");
     echo("</h2>");
