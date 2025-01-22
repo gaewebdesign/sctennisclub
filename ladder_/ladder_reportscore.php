@@ -194,6 +194,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
     
     $points=$bonus="";
+    LOGS("ladder_reportscore.php  $fname1 $lname1 vs $fname2 $lname2 reported by $email1");
     announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points,$w_add,$l_add,$score,$w_bonus,$l_bonus,$date );
 
 
