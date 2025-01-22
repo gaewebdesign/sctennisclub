@@ -165,7 +165,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
 
 // RECORD SCORE FOR ALL TO SEE ********
-    $theTABLE= "ladder_results";
+    $theTABLE= TABLE_LADDER_RESULTS; //"ladder_results";
 
     $fname1 =$w_fname;
     $lname1 = $w_lname;
@@ -177,7 +177,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
     $gender1=$ntrp1="";
     $email2=$gender2=$ntrp2="";
-    $year=2024;
+    $year=YEAR;
     $division=$division;
     $team="";
     $position=0;
@@ -194,7 +194,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
     
     $points=$bonus="";
-    LOGS("ladder_reportscore.php  $fname1 $lname1 vs $fname2 $lname2 reported by $email1");
+    LOGS("ladder_reportscore.php  $fname1 $lname1 vs $fname2 $lname2 ($score) reported by $email1");
     announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points,$w_add,$l_add,$score,$w_bonus,$l_bonus,$date );
 
 
