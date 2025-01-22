@@ -121,6 +121,31 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="http://www.racquetstore.com">  <img src="./images/racquet_store_logo.png" width="25px" > Racquet Store </a>
 -->                
 
+
+<div class="dropdown" >
+          <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ladder
+          </a>
+        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item active" href="./ladder.phtml?mode=0">Info</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=1">Ladder </a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Men's Singles Report Score</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Women's Singles Report Score</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=4">Results</a></li>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=5">Contact Players</a></li>
+
+              <hr/>
+              <li><a class="dropdown-item" href="./ladder.phtml?mode=6">Enter Ladder</a></li>
+              
+
+            </ul>
+        </div>
+
+
+
+
+
+
       <div class="dropdown" >
           <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Tournament
@@ -140,25 +165,6 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
               <li><a class="dropdown-item" href="./tournament.phtml?draw=6">Report <?php echo(TOURNY_MEN) ?> Scores</a></li>
               <li><a class="dropdown-item" href="./tournament.phtml?draw=7">Report <?php echo(TOURNY_WOMYN) ?> Scores</a></li>
         </ul>
-        </div>
-
-        <div class="dropdown" >
-          <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                  Ladder
-          </a>
-        <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
-              <li><a class="dropdown-item active" href="./ladder.phtml?mode=0">Info</a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=1">Ladder </a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=2">Men's Singles Report Score</a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=3">Women's Singles Report Score</a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=4">Results</a></li>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=5">Contact Players</a></li>
-
-              <hr/>
-              <li><a class="dropdown-item" href="./ladder.phtml?mode=6">Enter Ladder</a></li>
-              
-
-            </ul>
         </div>
 
 
