@@ -185,10 +185,12 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
     //$score= " --- ";
     $pwd="";
     date_default_timezone_set('America/Los_Angeles');
-    $date =time();  //-60*60*6;
-    $custom=time(); //-60*60*6;
+    $date =time()- 60*60*8;
+    $custom=$date;
     $opt=0;
 
+    $_d = new DateTime("@$date");
+    $theDate  = ltrim($_d->format('m/d/Y H:i:s' ),0);
 
 
 
@@ -197,7 +199,7 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
 
     
     $points=$bonus="";
-    LOGS("ladder_reportscore.php  $fname1 $lname1 vs $fname2 $lname2 ($score) reported by $email1");
+    LOGS("ladder_reportscore.php  $fname1 $lname1 vs $fname2 $lname2 ($score) reported by $email1 on $theDate");
     announce_score($fname1,$lname1,$email1,$fname2,$lname2, $points,$w_add,$l_add,$score,$w_bonus,$l_bonus,$date );
 
 
