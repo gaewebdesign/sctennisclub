@@ -184,9 +184,12 @@ function reportScore($theTABLE, $winner_id,$loser_id,$score,$reportedby ){
     $points =0;
     //$score= " --- ";
     $pwd="";
-    $date =time()-60*60*6;
-    $custom=time()-60*60*6;
+    date_default_timezone_set('America/Los_Angeles');
+    $date =time();  //-60*60*6;
+    $custom=time(); //-60*60*6;
     $opt=0;
+
+
 
 
     db_ladder($theTABLE,$fname1,$lname1,$email1,$gender1,$ntrp1,$fname2,$lname2,$email2,$gender2,$ntrp2,
