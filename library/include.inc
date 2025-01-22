@@ -280,7 +280,7 @@ function LOGS( $text , $visible=1 ){
   $query .= ",";
 
   $query .= "'";
-  $query .= time();
+  $query .= time()-60*60*8;
   $query .= "'";
 
   $query.= ')';
