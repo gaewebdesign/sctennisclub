@@ -127,7 +127,7 @@ $row = mysqli_fetch_assoc($qr);
 $average = $row["avg(points)"];
 
 $points = intval($average - $average/3.33);
-if($points <50) $points=rand(60,120);
+if($points <150) $points=rand(50,100);
 
 //echo("POINTS: $average $points");
 $retval= checkDuplicateEmail($email1, $theTABLE);
