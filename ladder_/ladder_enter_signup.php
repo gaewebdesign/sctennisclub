@@ -107,7 +107,7 @@ if($_POST["gender1"] == "M") $division = "Men";
 
 $theTABLE = "ladder";
 
-$date = "".time()-60*60*7;
+$date = "".time()-60*60*8;
 $pwd = password($fname1,$lname1);
 
 $fname2=$lname2=$email2=$gender2=$ntrp2="-";
@@ -117,7 +117,7 @@ $position=rand(1,20);
 $points=rand(45,75);
 $score="7-5";
 $pwd="-";
-$date=time()-60*60*7;
+$date=time()-60*60*8;
 $custom=$date;
 
 $con = DBMembership();
@@ -145,7 +145,7 @@ $year,$division,$team,$position,$points,$score,$pwd,$date,$custom,$opt);
 
 
 signedUP($fname1,$lname1,$email1,$division,$points );
-
+LOGS("ladder_enter_signup.php  $fname1 $lname1 $email1 $gender1 $ntrp1 LADDER signup");
 
 $subject = "Ladder $division Signup ($fname1 $lname1 )";
 $message = "$fname1  $lname1  Signup \n";
