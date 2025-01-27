@@ -70,14 +70,9 @@
              <hr/>     
             <main>
 
-
-                      <!-- div to show reCAPTCHA -->
+            <!-- div to show reCAPTCHA -->
 
              <?php
-
-                $MEMBER_FEE="10.00";    // "5.00";
-                $ICECREAM_FEE="5.50";  //"5.50";
-                $GUEST_FEE = "10.00";  //"10.00" ;
 
                 include "./library/include.inc";
                 include "./library/paypal.inc";
@@ -85,34 +80,17 @@
 
                 include "./library/free_paypal.inc";
 
+                include "./members_/waitlist.php";
 
-// Change the images and verbiage (this for pigout)
-//               include "./signup_/signup_free.php";
-
-//             switch the tables bewteen MIXER_PAYMENT  and MIXER_PENDING
-               define("TABLE_RESIDENTFAMILY" , "residentfamily");
-//             define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER);
-
-
-        //       include "./teamtennis_/teamtennis_enter.php";
-
-               include "./members_/waitlist.php";
-
-
-                ?>
+            ?>
             </main>
 
              <hr/>     
              </div> 
-      
- 
-
 
            <div class="col-sm-2"> &nbsp;</div> 
 
-
             </div>
-  
   
   </div>
   
@@ -139,9 +117,7 @@
             include "./imports_/footer.php";
           ?>
         
-        
         </div>
-
 
       
 </body>

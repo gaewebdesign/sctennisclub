@@ -16,7 +16,7 @@ tr {
 
 <p>
 
-<h2>Resident Family Account</h2>
+<h2>Non-Resident Waitlist</h2>
 
 <table class="table table-bordered table-striped table-condensed sortable">
 
@@ -28,48 +28,33 @@ tr {
         <th style="width:15%">Address</th>
         <th style="width:15%">City</th>
         <th style="width:15%">TYPE</th>
-
-        <th style="width:15%">Email</th>
-        <th style="width:5%">Password</th>
-        <th style="width:5%">Trust</th>
-        <th style="width:5%">Count</th>
-        <th style="width:5%">Account</th>
-
+        <th style="width:5%">Email</th>
+        <th style="width:5%">Custom</th>
         <th style="width:7%">Date</th>
-
 
         </tr>
       </thead>
       <tbody>
            <p>
-<!--
-           <form class="row g-3" action="./toresidentfamily.php", method="POST">
-           <button class="btn btn-primary" name="SubmitButton" value="S" type="submit" >Set Trust</button>
-          
-           <input type="radio" id="sel1" value="333" name="test" /> 
-           <input type="radio" id="sel2" value="444" name="test" /> 
-           <input type="radio" id="sel3" value="5555" name="test" /> 
 
-          </form>
--->
-          <form class="row g-3" action="./toresidentfamily.php", method="POST">
+       <form class="row g-3" action="./toresidentfamily.php", method="POST">
 
            <div class="col-12">
-           <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Toggle Trust Value</button>
+           <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Copy to Membership</button>
            </div>
             <?php       
-              residentfamily(YEAR);
+              waitlist(YEAR);
               $y=YEAR-1;
-              echo("<tr> <td>$y  <td> <td> <td> $y <td> <td> <td> $y <td> <td> <td> <td> $y </tr>");
-              residentfamily(YEAR-1);
+              echo("<tr> <td>$y  <td> <td> <td> $y <td> <td> <td> $y<td> <td> </tr>");
+              waitlist(YEAR-1);
             ?>
-            </form>
+       </form>
 
 <?php
-             function residentfamily($_year ){
+             function waitlist($_year ){
 
 
-              $theTable = TABLE_FAMILY;
+              $theTable = TABLE_WAITLIST;
 
               $jurassic = strtotime('2024-11-2');
               $cretaceous = strtotime('2024-12-7');
@@ -101,32 +86,26 @@ tr {
                  $m = $row["mtype"];
                  echo "<td>".$m;
 
-
-
                  echo "<td>".strtolower($row["email"]);
-                 echo "<td>".$row["pwd"];
-                 echo "<td>".$row["trust"];
-                 echo "<td>".$row["count"];
-                 echo "<td>".$row["account"];
 
                  echo "<td>";
+                 $custom = $row["custom"];
+                 echo $custom;
+                 echo "<td>";
+
                  $custom = $row[DATE];
                  $dt = new DateTime("@$custom");
                  $date = ltrim($dt->format('m/d/y'),0);
                  echo $date;
 
                  echo "<span class=\"smaller\" >";
-//                echo $member;
+
                  echo "</span>";
                  
                  echo "</tr>";
                  echo "\n";
               }
              }
-
-//             residentfamily( );
-
-
             
            ?>
 
