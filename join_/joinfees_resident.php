@@ -39,26 +39,16 @@
                  <br/>
                  Non-resident applications will open in 2025. <br>
 -->                 
-
-                 Santa Clara Tennis Club must maintain a resident majority. <br> 
+                 Santa Clara Tennis Club must maintain a resident majority. 
                  Not accepting Non-Residents at this time <br>  
-  
-
-                  <!--      Currently there are: </b>
-          <?php print("<b>".Residents(YEAR)."</b> Residents") ?>  
-          <?php print("<b>".NonResidents(YEAR)."</b> Non-Residents") ?>  
--->
-          <br>
-
-<!--  
-          When there are more residents, this page will open to non-residents.
--->
-          </label>
+<!--
+          <li class="list-group-item d-flex justify-content-between Back">
+          <input type="radio" id="member" value="NRSx" name="membership" required  >
+          <label> Non-Resident Single Waitlist &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<?php echo(NONRES_SINGLE_FEE)?></label>
           <br/>
           </li>
-
-      
-
+          </label>
+-->
         </ul>
 
       </div>

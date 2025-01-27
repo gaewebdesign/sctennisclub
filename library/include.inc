@@ -10,6 +10,7 @@
 // FOR MEMBERSHIP 
 define("TABLE_PAYPAL","paypal");  
 define("TABLE_PENDING","pending"); 
+define("TABLE_WAITLIST","waitlist"); 
 
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
