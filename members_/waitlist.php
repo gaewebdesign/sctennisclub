@@ -24,6 +24,7 @@ tr {
         <tr>
         <th style="width:10%">Sel</th>
         <th style="width:10%">Year</th>
+        <th style="width:3%">#</th>
         <th style="width:40%">Name</th>
         <th style="width:15%">Address</th>
         <th style="width:15%">City</th>
@@ -37,7 +38,7 @@ tr {
       <tbody>
            <p>
 
-       <form class="row g-3" action="./toresidentfamily.php", method="POST">
+       <form class="row g-3" action="./tomemb_fromwaitlist.php", method="POST">
 
            <div class="col-12">
            <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Copy to Membership</button>
@@ -59,11 +60,12 @@ tr {
               $jurassic = strtotime('2024-11-2');
               $cretaceous = strtotime('2024-12-7');
 
-              $query = "select * from $theTable where year=$_year order by lname asc";
+              $query = "select * from $theTable where year=$_year order by date desc";
 
               $con = Configure();
  
               $qr=mysqli_query($con,$query);
+              $position =1;
               while ($row = mysqli_fetch_assoc($qr)) {
 
                 $member ="🎾";
@@ -76,6 +78,9 @@ tr {
 
                  echo "<input type=\"checkbox\" id=\"sel\" value=\"$_id\" name=\"_id[]\" /> ";
                  echo "<td>".$row["year"];
+                 echo "<td>";
+                 echo $position;
+                 $position ++;
                  echo "<td>";
                  echo "<span class=\"medium\" >";
                  echo $row["fname"]." ".$row["lname"];
