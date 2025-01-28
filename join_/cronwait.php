@@ -6,7 +6,7 @@ include "../library/email/email.inc";
 
 $fname = "Roger";
 $lname = "Okamoto";
-$address = "380 Santa Cruz Ave";
+$address = "from join _directory";
 $email   = "sctc@sctennisclub.org";
 
 
