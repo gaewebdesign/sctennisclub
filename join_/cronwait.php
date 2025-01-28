@@ -17,5 +17,5 @@ $recipient = "mutt@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
 
-
+echo ("sending $subject");
 ?>
