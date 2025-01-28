@@ -26,8 +26,9 @@ $opt = "test";
 $pwd = password();
 $event="-";
 
-$dest = TABLE_PENDING;
 $dest = TABLE_PAYPAL;
+$dest = TABLE_PENDING;
+
 toDB( $dest ,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 
