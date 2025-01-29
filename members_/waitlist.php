@@ -16,7 +16,11 @@ tr {
 
 <p>
 
-<h2>Non-Resident Waitlist</h2>
+<h2>Non-Resident Waitlist
+<?php
+    echo("(".Residents(YEAR)."/".NonResidents(YEAR).")" );
+?>
+</h2>
 
 <table class="table table-bordered table-striped table-condensed sortable">
 
