@@ -44,16 +44,15 @@ tr {
            <button class="btn btn-primary" name="SubmitButton" value="But" type="submit" >Copy to Membership</button>
            </div>
             <?php       
-              waitlist(YEAR);
+              ShowWaitList(YEAR);
               $y=YEAR-1;
               echo("<tr> <td>$y  <td> <td> <td> $y <td> <td> <td> $y<td> <td> </tr>");
-              waitlist(YEAR-1);
+              ShowWaitList(YEAR-1);
             ?>
        </form>
 
 <?php
-             function waitlist($_year ){
-
+             function ShowWaitList($_year ){
 
               $theTable = TABLE_WAITLIST;
 
