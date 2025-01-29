@@ -542,7 +542,7 @@ function copyto( $src, $dest, $epoch){
   LOGGER( $query);  
   $query_results=mysqli_query($con,$query);
 
-  $query = "update $src set custom='done' where custom=$epoch";
+  $query = "update $src set custom='done' where date=$epoch";
   LOGGER( $query); 
   $query_results=mysqli_query($con,$query);
 
