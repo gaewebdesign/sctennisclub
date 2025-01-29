@@ -699,6 +699,16 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
 
   }
 
+  function Waitlist($_YEAR){
+    $con = DBMembership();
+    $query = "select * from ".TABLE_WAITLIST." where custom!=\"done\" and year = ".$_YEAR;
+    $query_results=mysqli_query($con,$query);
+    $n = mysqli_num_rows($query_results);
+  
+    return $n;
+
+  }
+
   function NonResidents($_YEAR){
     $m = Members($_YEAR);
     $res =  Residents($_YEAR);
