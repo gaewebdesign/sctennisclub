@@ -4,14 +4,13 @@ include "../library/paypal.inc";
 include "../library/emailer.php";
 include "../library/email/email.inc";
 
-
 $src = "waitlist"; //TABLE_WAITLIST;
 $dest = "temporary";
 
 $con = DBMembership();
-$query = "select * from $src where custom != \"done\" order by date asc limit 1";
 
-//echo $query;
+$query = "select * from $src where custom != \"done\" order by date asc limit 1";
+echo $query."<br>";
 
 $qr=mysqli_query($con,$query);
 
@@ -24,11 +23,12 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $address = $row[ADDRESS];
     $mtype = $row[MTYPE];
 
-    echo("COPY $fname $lname $email $mtype   -- @ $epoch \n");
-//    copyto( $src, $dest, $epoch);
+    echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+    LOGS("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+
+ //  copyto( $src, $dest, $epoch);
 
 }
-
 
 $subject= "2025 Waitlist Cron Job ( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
@@ -37,7 +37,7 @@ $message .= "$mtype <br>$epoch <br>";
 $recipient = "mutt@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
-
 echo ("<br>sending $message");
+
 
 ?>
