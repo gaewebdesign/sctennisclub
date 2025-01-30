@@ -57,7 +57,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 		echo('
               <script >
                     window.setTimeout(function() {
-                    window.location.href="./join.html";
+                    window.location.href="./join.phtml";
                  }, 100);
               </script>
                 ');
