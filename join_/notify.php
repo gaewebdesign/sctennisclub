@@ -86,6 +86,7 @@
 
       // copy over from the pending to the paypal directory
       LOGS("notify.php DEBUG statement ") ;
+      LOGS("Is this waitlist: mtype =  $mtype ") ;
       LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
       copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
