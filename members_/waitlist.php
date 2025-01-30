@@ -63,7 +63,7 @@ tr {
               $jurassic = strtotime('2024-11-2');
               $cretaceous = strtotime('2024-12-7');
 
-              $query = "select * from $theTable where year=$_year order by date desc";
+              $query = "select * from $theTable where year=$_year order by date asc";
 
               $con = Configure();
  
