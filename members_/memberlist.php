@@ -155,7 +155,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
             }
             $w =  Waitlist(YEAR);
-            if( $w > 0) {
+            if( $w > 10) {
                 echo ("<tr><td><td><b> Waitlist ($w)</b><td><td><td> </tr>");
                 OnWaitList(YEAR);            
                 echo("<tr> <td><td> <td> <td><td><td><td><td> </tr>");
