@@ -43,13 +43,13 @@
                  Not accepting Non-Residents at this time. <br>  
 
 <!-- **************** -->
-<!--
+
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="NRSx" name="membership" required  >
           <label> Non-Resident Single Waitlist &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<?php echo(NONRES_SINGLE_FEE)?></label>
           <br/>
           </li>
--->
+
 <!-- **************** -->
           </label>
 
