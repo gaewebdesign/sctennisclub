@@ -132,7 +132,8 @@ include "./library/emailer.php";
 
    <?php
         $r_majority=ResidentMajority(YEAR);
-        if($r_majority){
+        $n_waitlist=Waitlist(YEAR);
+        if($r_majority and ($n_waitlist==0) ){
           include "join_/joinfees.php";
         }else{
           include "join_/joinfees_resident.php";
