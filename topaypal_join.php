@@ -225,10 +225,12 @@ $pwd=password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+/*
 if($mtype == "NRSx"){
 	$mwait="NRS";
     toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mwait,$date,$insignia,$payment,$custom,$opt,$pwd);
 }
+*/
 
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
