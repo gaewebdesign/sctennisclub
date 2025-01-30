@@ -220,47 +220,8 @@ $date = $custom;
 //(  ADD  to address)
 $p = password();
 $address2 = "$address - $p";
-/*
-if( preg_match( "/2893 Cabrillo/", $address)  ) $address = $address2;
-if( preg_match( "/3410 Montgomery/", $address)  ) $address = $address2;
-if( preg_match( "/2868 Chromite/", $address)  ) $address = $address2;
-*/
 
-//if( preg_match( "/2988 Via Torino/", $address)  ) $address = $address2;
-//if( preg_match( "/2566 Dixon/", $address)  ) $address = $address2;
-
-//if( preg_match( "/2717 Forbes/", $address)  ) $address = $address2;
-
-//if( preg_match( "/2678 El/", $address)  ) $address = $address2;
-
-// Dongdong (Billy) Sun
-// Xinzhe Yang (Belmont) (xinzhe.y@gmail) 
-// this is where Belmont couple seem to be staying
-// Xinzhe Yang (2024)  and Xinqi Lyu (W3.0, 2023,2024)
-
-//if(preg_match("/588 El Camino/",$address)) $address = $address2;
-
-//if( preg_match( "/3238 Scott Blvd/", $address)  ) $address = $address2;
-//if( preg_match( "/2996 Via Tor/", $address)  ) $address = $address2;
-
-// W3.0 Shi Fu(SJ), Xingchi Jin(SU), Mengliao Zhang (SU) (2024)
-// 550 Moreland Way #3413
-//if(preg_match("/3413/",$address)) $address = $address2;
-
-//3238 Scott Blvd, Apt 152
-// Jiayu Li (MV) , Xinmeng Qiao (MV), Yuhan Lin (PA)
-// 2024 W3.0 Fiona Li/ Shiyao Qu
-// blocked pending further investigation
-//if(preg_match("/3238 Scott/",$address)) $address = $address2;
-
-//echo $address;
-// if $opt != 911, then this person is either RF_ or NRF_  
-//toMemberDB(TABLE_PENDING, $fname,$lname,$email,$gender,$ntrp,$address,$city,$zip,$year,$team,$mtype,$date,$insignia,$payment,$custom,$opt);
-
-//function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd)
-// NOW JUST ONE toDB to handle all tables --- since theyre all the same structure now
 $pwd=password();
-
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
