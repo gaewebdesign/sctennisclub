@@ -207,6 +207,34 @@ function CHECK_EMAIL($_EMAIL ){
   $con = DBMembership();
   $theTABLE = TABLE_PAYPAL;
   $YEAR=YEAR-1;
+  $ret=false;  
+
+  // CHECK THE PAYPAL TABLE
+  $query = "select * from $theTABLE where year>=$YEAR and email=\"$_EMAIL\" ";
+  LOGS("include.inc $query" );
+  $qr=mysqli_query($con,$query);
+  $num = mysqli_num_rows($qr);
+
+  if($num > 0)  $ret=true;
+  
+// CHECK THE WAITLIST TABLE
+  $theTABLE=TABLE_WAITLIST;
+  $query = "select * from $theTABLE where year>=$YEAR and email=\"$_EMAIL\" ";
+  LOGS("include.inc $query" );
+  $qr=mysqli_query($con,$query);
+  $num = mysqli_num_rows($qr);
+  if($num > 0)  $ret=true;
+
+  LOGS("include.inc CHECK_EMAIL $_EMAIL returning $ret " );
+  return $ret;
+
+}
+
+function CHECK_EMAIL_old($_EMAIL ){
+
+  $con = DBMembership();
+  $theTABLE = TABLE_PAYPAL;
+  $YEAR=YEAR-1;
   
   $query = "select * from $theTABLE where year>=$YEAR and email=\"$_EMAIL\" ";
 
