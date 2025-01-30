@@ -89,7 +89,7 @@
 
       LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+//     copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
 //    This moved from topaypal_join.php    ***************
 //    This assures that the Waitlist table is only populated after payment
@@ -97,8 +97,10 @@
 //    The CRON job will copy from the Waitlist table to the Membership table
       LOGS("Is this waitlist: mtype =  $mtype ") ;
       if($mtype == "NRSx"){
-          LOGS("copying $fname $lname $email $mtype into waitlist table");
-          toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mwait,$date,$insignia,$payment,$custom,$opt,$pwd);
+            LOGS("copying $fname $lname $email $mtype into waitlist table");
+            copyto( TABLE_PENDING,  TABLE_WAITLIST, $CUSTOM);
+      }else{
+            LOGS("couldnt copy $fname $lname $email $mtype into waitlist table");
       }
 //    ****************************************************
 
