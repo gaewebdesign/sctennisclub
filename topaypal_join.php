@@ -176,6 +176,8 @@ $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
 
+
+
 // temporary move later to after Paypal payment returns
 $count=0;
 $trust=0;
@@ -262,6 +264,10 @@ $pwd=password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+if($mtype == "NRSx"){
+	$mtype="NRS";
+    toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+}
 
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
