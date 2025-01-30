@@ -265,20 +265,20 @@ $pwd=password();
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 if($mtype == "NRSx"){
-	$mtype="NRS";
-    toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+	$mwait="NRS";
+    toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mwait,$date,$insignia,$payment,$custom,$opt,$pwd);
 }
 
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
 
-$subject= "2025 Pending Signup( $fname $lname)";
-$message = "PENDING <br> ";
+$subject= "2025 Pending Signup($mtype - $fname $lname)";
+$message = "PENDING $mtype <br> ";
 $message .= "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$mtype <br>";
 $recipient = "mutt@sctennisclub.org";
-phpemailer($subject,$message , $recipient , "sherry@sctennisclub.org");
+phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
 
 $data = array(
