@@ -89,7 +89,7 @@
 
       LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-//     copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
 //    This moved from topaypal_join.php    ***************
 //    This assures that the Waitlist table is only populated after payment
