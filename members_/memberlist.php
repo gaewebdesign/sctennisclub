@@ -78,18 +78,40 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
        return $CITY;
 
 }
-    function memberlist($YEAR){
 
+    function _V($n,$vis){
+         if($vis==1)   echo(" (".$n.")");
 
-         $con = Configure();
-         $year = $YEAR;
+    }
 
-         $query = "select * from ".TABLE_PAYPAL." where year=$year order by lname limit 390 ";
- //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
- //      TEXT($query);
+    function OnWaitList($year){
+        
+        $theTable = TABLE_WAITLIST;
+        $query = "select * from $theTable where year=$year and custom!=\"done\" order by date asc limit 30 ";
+
+        LOGS($query);
+        tablelist($year, $query,1);
+
+    }
+
+    function memberlist( $year){
+        $theTable = TABLE_PAYPAL;
+        $query = "select * from $theTable where year=$year order by lname limit 390 ";
+
+        LOGS($query);
+        tablelist( $year, $query,0);
+    }
+
+    function tablelist( $year, $query ,$vis){
+
+         $con = DBMembership();
+
+//         $query = "select * from $theTable where year=$year order by lname limit 390 ";
 
          $icon="";
+         $wait=1;
          $qr=mysqli_query($con,$query);
+         $x=1;
                   while ($row = mysqli_fetch_assoc($qr)) {  
                     
                    if( preg_match("/santa|clara/i",$row[CITY])) {
@@ -124,6 +146,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     $dt = new DateTime("@$custom");
                     $date = ltrim($dt->format('m/d/Y'),0);
                     echo( $date.$icon );
+                    echo( _V($x++,$vis) );
 //                  echo( date(" m/d/Y",$row[CUSTOM]).$icon );
                     echo("</td>");
                     echo("</tr> ");
@@ -131,10 +154,21 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     }
 
             }
+            $w =  Waitlist(YEAR);
+            if( $w > 4) {
+                echo ("<tr><td><td><b> Waitlist ($w)</b><td><td><td> </tr>");
+                OnWaitList(YEAR);            
+                echo("<tr> <td><td> <td> <td><td><td><td><td> </tr>");
+            }
 
+
+            $year=YEAR;
+            echo ("<tr><td><td><b> $year Members</b><td><td><td> </tr>");
             memberlist(YEAR);
             
-            echo("<tr> <td><td> <td> <td><td> </tr>");
+
+            $year=YEAR-1;
+            echo ("<tr><td><td><b> $year Members</b> <td><td><td></tt>");
             memberlist(YEAR-1);
 
       
