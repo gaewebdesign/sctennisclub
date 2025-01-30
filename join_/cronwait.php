@@ -27,6 +27,7 @@ if( mysqli_num_rows($qr) == 0){
     return;
 }
 
+/*
 if(ResidentMajority(YEAR) == false){
     $subject= "2025 Waitlist Cron Job";
     $message = "Unable to move to waitlist";
@@ -35,6 +36,7 @@ if(ResidentMajority(YEAR) == false){
     LOGS("cronwait.php:  not enough space to make member");
     return;
 }
+*/
 
 $fname=$lname=$email=$address=$mtype= $epoch="";
 while ($row = mysqli_fetch_assoc($qr)) {  
