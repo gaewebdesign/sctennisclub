@@ -97,7 +97,7 @@
 //    The CRON job will copy from the Waitlist table to the Membership table
       LOGS("Is this waitlist: mtype =  $mtype ") ;
       if($mtype == "NRSx"){
-          $mwait="NRSw";
+          LOGS("copying $fname $lname $email $mtype into waitlist table");
           toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mwait,$date,$insignia,$payment,$custom,$opt,$pwd);
       }
 //    ****************************************************
