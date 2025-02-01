@@ -57,10 +57,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $address = $row[ADDRESS];
     $mtype = $row[MTYPE];
 
-//  echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+    echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
     LOGS("cronwait.php copy $fname $lname $email $mtype   -- @ $epoch to $dest \n");
 }
 
+   echo("copyto $src $dest $epoch");
    copyto( $src, $dest, $epoch);
 
 
