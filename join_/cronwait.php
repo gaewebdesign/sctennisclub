@@ -85,9 +85,9 @@ function notifyplayer($fname,$lname){
     $retv.=  "<thead>";
     $retv.=  "<tr>";
 
-    $retv.=  "<th style=\"width:20%\" > </th> ";
-    $retv.=  "<th style=\"width:60%\" > </th> ";
-    $retv.=  "<th style=\"width:20%\" > </th> ";
+    $retv.=  "<th style=\"width:10%\" > </th> ";
+    $retv.=  "<th style=\"width:85%\" > </th> ";
+    $retv.=  "<th style=\"width:5%\" > </th> ";
 
     $retv.=  "<tr>";
     $retv.=  "</thead>";
@@ -96,7 +96,7 @@ function notifyplayer($fname,$lname){
     
     $retv.=  "<tr><td><td>";
     $retv.=  "<h3>Welcome to Santa Clara Tennis Club</h3>";
-    $retv.=  "<h4>You are an official SCTC membere</h4>";
+    $retv.=  "<h4>You are an official SCTC member</h4>";
 
     $retv.=  "<h4>You may participate in all activities as a SCTC member</h4>";
     $retv.=  "<td></tr>";
