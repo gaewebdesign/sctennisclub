@@ -562,7 +562,7 @@ function copyto( $src, $dest, $epoch){
   
   $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) ";
   $query .=            "select year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd ";
-  $query .= " from $src where custom=$epoch";
+  $query .= " from $src where date=$epoch";
 
    TEXT($query);
  
