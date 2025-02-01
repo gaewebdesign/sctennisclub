@@ -143,7 +143,7 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
         $theTable = TABLE_PAYPAL;
         $theTable = TABLE_WAITLIST;
 
-        $query = "select * from $theTable where year=$year order by lname limit 4 ";
+        $query = "select * from $theTable where year=$year and custom!=\"done\" order by lname limit 4 ";
         $qr=mysqli_query($con,$query);
         while ($row = mysqli_fetch_assoc($qr)) {  
 
