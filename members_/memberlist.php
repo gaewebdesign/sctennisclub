@@ -1,14 +1,10 @@
 <!--
-Thank you for contacting us today and allowing me to assist you.
 
-Your success is important to us and we value your business. If you have any further questions, please do not hesitate to contact us as we are here 24/7 365 for you.
 
-You should have an option to leave feedback on this chat in the chat window or possibly receive an email, please fill that out, we would really appreciate it.
+php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
 
-Have a great rest of your day!
-<script language="JavaScript" src="members_/javascript/sorttable.js"> </script>
 
-Please Note: Starting May 1st, our phone availability will change from 24/7 to Monday through Friday 9AM to 9PM EST.
+
 -->
 
 <script language="JavaScript" src="library/sorttable.js"> </script>
@@ -35,11 +31,33 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 </div>
 
+<table class="table table-striped sortable">
+<thead>
+<tr>
+    <th scope="col" >Year </th>
+    <th scope="col" >Name </th>
+    <th scope="col">Team </th>
+    
+    <th scope="col">NTRP </th>
+    <th scope="col">Date </th>
+    
 
+</tr>
+</thead>
+   
+<tbody>
+      <?php
+         $year=YEAR;
+         echo ("<tr><td><td><b> $year Waitlist</b><td><td><td> </tr>");
+         playerwaitlist(YEAR);
+    ?>
+</table>
 
 
 <table class="table table-striped sortable">
 <thead>
+<!-- <tr><td><td><b> Waitlist </b><td><td><td> </tr> -->
+
 <tr>
     <th scope="col" >Year </th>
     <th scope="col" >First Name </th>
@@ -51,6 +69,8 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 </tr>
 </thead>
+
+
 
 <tbody>
 <?php
@@ -102,9 +122,79 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
         tablelist( $year, $query,0);
     }
 
+    
+    
+
+    function tablerow( $year, $fname, $lname, $ntrp, $date){
+        echo("<tr>");
+
+        echo("<td>$year </td>");
+        echo("<td>$fname</td>");
+        echo("<td>$lname</td>");
+        echo("<td>$ntrp</td>");
+        echo("<td>$date</td>");
+
+        echo("</tr>");
+
+    }
+
+    function playerwaitlist( $year){
+        $con = DBMembership();
+        $theTable = TABLE_PAYPAL;
+        $theTable = TABLE_WAITLIST;
+
+        $query = "select * from $theTable where year=$year order by lname limit 4 ";
+        $qr=mysqli_query($con,$query);
+        while ($row = mysqli_fetch_assoc($qr)) {  
+
+            $icon = "";            
+            $fname = $row[FNAME]." ".$row[LNAME];
+            $lname = $row[TEAM];
+            $ntrp  = $row[GENDER].$row[NTRP];
+            $custom  = $row[DATE];
+            $dt = new DateTime("@$custom");
+            $date = ltrim($dt->format('m/d/Y'),0);
+            if( preg_match("/santa|clara/i",$row[CITY])) {
+                $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
+            }
+            
+            $date .= $icon;
+            tablerow( $year, $fname, $lname, $ntrp, $date);
+
+        }
+
+    }
+
+    function playerlist( $year ){
+        $con = DBMembership();
+        $theTable = TABLE_PAYPAL;
+        $query = "select * from $theTable where year=$year order by lname limit 390 ";
+
+        $qr=mysqli_query($con,$query);
+        while ($row = mysqli_fetch_assoc($qr)) {  
+            $icon = "";            
+            $fname = $row[FNAME];
+            $lname = $row[LNAME];
+            $ntrp  = $row[GENDER].$row[NTRP];
+            $custom  = $row[DATE];
+            $dt = new DateTime("@$custom");
+            $date = ltrim($dt->format('m/d/Y'),0);
+            if( preg_match("/santa|clara/i",$row[CITY])) {
+                $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
+            }
+             
+            
+            $date .= $icon;
+            tablerow( $year, $fname, $lname, $ntrp, $date);
+
+        }
+    
+    }
+
     function tablelist( $year, $query ,$vis){
 
-         $con = DBMembership();
+
+        $con = DBMembership();
 
 //         $query = "select * from $theTable where year=$year order by lname limit 390 ";
 
@@ -112,7 +202,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
          $wait=1;
          $qr=mysqli_query($con,$query);
          $x=1;
-                  while ($row = mysqli_fetch_assoc($qr)) {  
+         while ($row = mysqli_fetch_assoc($qr)) {  
                     
                    if( preg_match("/santa|clara/i",$row[CITY])) {
                        $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
@@ -154,22 +244,24 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     }
 
             }
+/*
             $w =  Waitlist(YEAR);
+            echo ("<tr><td><td><b> Waitlist ($w)</b><td><td><td> </tr>");
             if( $w > 10) {
-                echo ("<tr><td><td><b> Waitlist ($w)</b><td><td><td> </tr>");
+
                 OnWaitList(YEAR);            
                 echo("<tr> <td><td> <td> <td><td><td><td><td> </tr>");
             }
-
+*/
 
             $year=YEAR;
             echo ("<tr><td><td><b> $year Members</b><td><td><td> </tr>");
-            memberlist(YEAR);
+            playerlist(YEAR);
             
 
             $year=YEAR-1;
             echo ("<tr><td><td><b> $year Members</b> <td><td><td></tt>");
-            memberlist(YEAR-1);
+            playerlist(YEAR-1);
 
       
 ?>

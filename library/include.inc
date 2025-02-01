@@ -11,6 +11,7 @@
 define("TABLE_PAYPAL","paypal");  
 define("TABLE_PENDING","pending"); 
 define("TABLE_WAITLIST","waitlist"); 
+define("WAITLISTLIMIT" , 3);
 
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
@@ -1091,6 +1092,22 @@ function checkForFamilyAccount($year,$address,$email){
   }
  
 
-
+function announce($title, $note ){
+  
+    echo("<style>");
+    echo("</style>");
+    echo("<body bgcolor=\"CAE9F5\" >");
+    echo("<center>");
+    echo("<p><br>");
+    echo("<hr/>");
+    echo("<h1> $title   </h1>");
+    echo("<h3>");
+    echo("$note ");
+    echo("</h3>");
+    echo("<hr/>");
+    echo("</center>");
+    echo("</body>");
+ 
+ }
 
  ?>
