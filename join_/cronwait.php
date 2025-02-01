@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
     LOGS("cronwait.php copy $fname $lname $email $mtype   -- @ $epoch to $dest \n");
 }
 
-   echo("copyto $src $dest $epoch");
+   echo("copyto $src $dest $epoch \n");
    copyto( $src, $dest, $epoch);
 
 
