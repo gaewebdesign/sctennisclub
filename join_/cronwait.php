@@ -60,7 +60,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
     LOGS("cronwait.php copy $fname $lname $email $mtype   -- @ $epoch to $dest \n");
 }
 
- //   copyto( $src, $dest, $epoch);
+   copyto( $src, $dest, $epoch);
 
 
 $subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
