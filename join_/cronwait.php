@@ -16,14 +16,20 @@ $mutt  = "mutt@sctennisclub.org";
 $south = "south@sctennisclub.org";
 
 $qr=mysqli_query($con,$query);
-if( mysqli_num_rows($qr) == 0){
+$nx = mysqli_num_rows($qr);
+if( $nx == 0){
 
     $subject= "2025 Waitlist Cron Job ";
     $message = "No one on waitlist";
     phpemailer($subject,$message , $south , $south );
-//    echo("cronwait.php:  no one on wait list");
+    echo("cronwait.php:  no one on wait list");
     LOGS("cronwait.php:  no one on wait list");
 //    return;
+}else{
+
+    echo("cronwait.php:  $nx on wait list");
+    LOGS("cronwait.php:  $nx on wait list");
+
 }
 
 
@@ -33,6 +39,10 @@ if(ResidentMajority(YEAR) == false){
     phpemailer($subject,$message , $south , $south );
     LOGS("cronwait.php:  not enough space to make member");
 //    return;
+}else{
+
+    LOGS("cronwait.php: space to move from waitlist");    
+
 }
 
 
@@ -52,7 +62,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
  //   copyto( $src, $dest, $epoch);
 
 
-$subject= "2025 Santa Clara Tenni Club( $fname $lname)";
+$subject= "2025 Santa Clara Tennis Club( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
 $message = "-";
 //$message .= "$fname $lname <br>$address<br>$email <br>";
@@ -60,6 +70,8 @@ $message = "-";
 
 $message .= notifyplayer($fname, $lname);
 
+echo($message);
+LOGS("cronwait.php: moving from $src to $dest ");
 phpemailer($subject,$message , $south , $south);
 
 
