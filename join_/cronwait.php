@@ -6,11 +6,12 @@ include "../library/email/email.inc";
 
 $src = "waitlist"; //TABLE_WAITLIST;
 $dest = "temporary";
+$theYear=YEAR;
 
 $con = DBMembership();
 
 $query = "select * from $src where custom != \"done\" order by date asc limit 1";
-echo $query;
+LOGS($query);
 
 $mutt  = "mutt@sctennisclub.org";
 $south = "south@sctennisclub.org";
@@ -19,7 +20,7 @@ $qr=mysqli_query($con,$query);
 $nx = mysqli_num_rows($qr);
 if( $nx == 0){
 
-    $subject= "2025 Waitlist Cron Job ";
+    $subject= "$theYear Waitlist Cron Job ";
     $message = "No one on waitlist";
     phpemailer($subject,$message , $south , $south );
     echo("cronwait.php:  no one on wait list");
@@ -27,14 +28,14 @@ if( $nx == 0){
 //    return;
 }else{
 
-    echo("cronwait.php:  $nx on wait list");
+//   echo("cronwait.php:  $nx on wait list");
     LOGS("cronwait.php:  $nx on wait list");
 
 }
 
 
 if(ResidentMajority(YEAR) == false){
-    $subject= "2025 Waitlist Cron Job";
+    $subject= "$theYear Waitlist Cron Job";
     $message = "Unable to move to waitlist (disabled)";
     phpemailer($subject,$message , $south , $south );
     LOGS("cronwait.php:  not enough space to make member");
@@ -55,14 +56,14 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $address = $row[ADDRESS];
     $mtype = $row[MTYPE];
 
-    echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
-    LOGS("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+//  echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+    LOGS("cronwait.php copy $fname $lname $email $mtype   -- @ $epoch to $dest \n");
 }
 
  //   copyto( $src, $dest, $epoch);
 
 
-$subject= "2025 Santa Clara Tennis Club( $fname $lname)";
+$subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
 $message = "-";
 //$message .= "$fname $lname <br>$address<br>$email <br>";
@@ -71,6 +72,8 @@ $message = "-";
 $message .= notifyplayer($fname, $lname);
 
 echo($message);
+
+
 LOGS("cronwait.php: moving from $src to $dest ");
 phpemailer($subject,$message , $south , $south);
 
