@@ -11,6 +11,7 @@ $theYear=YEAR;
 $con = DBMembership();
 
 $query = "select * from $src where custom != \"done\" order by date asc limit 1";
+echo $query;
 LOGS($query);
 
 $mutt  = "mutt@sctennisclub.org";
@@ -65,7 +66,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 $subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
-$message = "-";
+$message = "";
 //$message .= "$fname $lname <br>$address<br>$email <br>";
 //$message .= "$mtype <br>$epoch <br>";
 
