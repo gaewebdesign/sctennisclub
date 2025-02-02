@@ -11,7 +11,7 @@ $theYear=YEAR;
 $con = DBMembership();
 
 $query = "select * from $src where custom != \"done\" order by date asc limit 1";
-echo $query;
+//echo $query;
 LOGS($query);
 
 $mutt  = "mutt@sctennisclub.org";
@@ -24,7 +24,7 @@ if( $nx == 0){
     $subject= "$theYear Waitlist Cron Job ";
     $message = "No one on waitlist";
     phpemailer($subject,$message , $south , $south );
-    echo("cronwait.php:  no one on wait list");
+//  echo("cronwait.php:  no one on wait list");
     LOGS("cronwait.php:  no one on wait list");
 //    return;
 }else{
@@ -57,11 +57,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $address = $row[ADDRESS];
     $mtype = $row[MTYPE];
 
-    echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
+ //   echo("COPY $fname $lname $email $mtype   -- @ $epoch to $dest \n");
     LOGS("cronwait.php copy $fname $lname $email $mtype   -- @ $epoch to $dest \n");
 }
 
-   echo("copyto $src $dest $epoch \n");
+ //  echo("copyto $src $dest $epoch \n");
    copyto( $src, $dest, $epoch);
 
 
