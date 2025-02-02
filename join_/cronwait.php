@@ -77,7 +77,7 @@ echo($message);
 
 
 LOGS("cronwait.php: moving from $src to $dest ");
-phpemailer($subject,$message , $south , $south);
+phpemailer($subject,$message , $email, $south);
 
 
 function notifyplayer($fname,$lname){
@@ -117,9 +117,13 @@ function notifyplayer($fname,$lname){
     $retv.=  "<h4>Saturday Mixers: including the free Pig-out</h4>";
     $retv.=  "<h4>The club singles ladder for men and women </h4>";
     $retv.=  "<h4>The end of year dinner</h4>";
+    $retv.=  "<h4></h4>";
+    $retv.=  "<h4>Santa Clara Tennis Club</h4>";
     $retv.=  "</tr>";
-
     $retv.=  "</table>";
+
+    $retv.=  "<p>";
+    $retv.=  "<p>";
 
     $retv.=  "</body>";
     $retv.=  "</html>";
