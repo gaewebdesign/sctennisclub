@@ -52,7 +52,7 @@ foreach ($_POST["_id"] as $key => $value){
 
     echo "<p>";
     echo "COPYING from $source to $destination <br/>";
-    echo "$fname $lname $address $mtype $email<br/>";
+    echo "EMAIL: $fname $lname $address $mtype $email<br/>";
     copyto( $source, $destination, $custom);
 
 // SEND EMAIL TO PLAYER  ************************************
