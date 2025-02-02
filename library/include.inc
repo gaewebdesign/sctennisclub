@@ -11,7 +11,9 @@
 define("TABLE_PAYPAL","paypal");  
 define("TABLE_PENDING","pending"); 
 define("TABLE_WAITLIST","waitlist"); 
-define("WAITLISTLIMIT" , 3);
+define("TABLE_TEMPORARY","temporary"); 
+
+define("WAITLISTLIMIT" , 9);
 
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
