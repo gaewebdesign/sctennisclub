@@ -16,6 +16,7 @@ $theYear = YEAR;
 $dest = TABLE_PAYPAL;
 $source = TABLE_WAITLIST;
 $destination = TABLE_TEMPORARY;
+$south = "south@sctennisclub.org";
 
 if( false == isset($_POST["_id"])  ){
     echo("Select someone from waitlist table <br>");
@@ -52,7 +53,7 @@ foreach ($_POST["_id"] as $key => $value){
 
     echo "<p>";
     echo "COPYING from $source to $destination <br/>";
-    echo "EMAIL: $fname $lname $address $mtype $email<br/>";
+    
     copyto( $source, $destination, $custom);
 
 // SEND EMAIL TO PLAYER  ************************************
@@ -60,9 +61,10 @@ foreach ($_POST["_id"] as $key => $value){
     $message = "";
     $message .= notifyplayer($fname, $lname);
 
+    echo "EMAIL: $fname $lname $address $mtype $email  $south <br/>";
     echo($message);
 
-    LOGS("cronwait.php: moving from $src to $dest ");
+    LOGS("cronwait.php: moving from $source to $destination ");
     phpemailer($subject,$message , $email, $south);
 
 // ********************************************************
