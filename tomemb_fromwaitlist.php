@@ -18,13 +18,13 @@ $source = TABLE_WAITLIST;
 $destination = TABLE_TEMPORARY;
 
 if( false == isset($_POST["_id"])  ){
-    echo("Select someone from waitlist table");
+    echo("Select someone from waitlist table <br>");
     return;
 }
    
 
 if ( ResidentMajority(YEAR) != true){
-    echo("ResidentMajority is false cannot add to membership (disabled) ");
+    echo("ResidentMajority is false cannot add to membership (disabled)<br> ");
 //    return;
 
 }
@@ -46,20 +46,17 @@ foreach ($_POST["_id"] as $key => $value){
     $email = $row[EMAIL];
 
     if( $custom == "done" ){
-        echo( "skipping over $fname $lname , already done " );
+        echo( "skipping over $fname $lname , already done <br>" );
         continue;
     }
 
-    //  $query = "update $theTable set trust =$trust where  _id=$_id";
-    $query = "copy query  where  _id=$_id";
-    echo "$fname $lname $address $mtype <br/>";
-        
+    echo "<p>";
     echo "COPYING from $source to $destination <br/>";
+    echo "$fname $lname $address $mtype $email<br/>";
     copyto( $source, $destination, $custom);
 
-// SEND EMAIL TO PLAY  ************************************
+// SEND EMAIL TO PLAYER  ************************************
     $subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
-    $message = "CRON Waitlist Check<br> ";
     $message = "";
     $message .= notifyplayer($fname, $lname);
 
