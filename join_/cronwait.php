@@ -37,7 +37,7 @@ if( $nx == 0){
 
 if(ResidentMajority(YEAR) == false){
     $subject= "$theYear Waitlist Cron Job";
-    $message = "Unable to move from waitlist (active)";
+    $message = " cronwait.php: No resident+ space to move from waitlist (active)";
     phpemailer($subject,$message , $south , $south );
     LOGS("cronwait.php:  not enough space to make member");
     return;
