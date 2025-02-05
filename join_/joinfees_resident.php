@@ -68,14 +68,17 @@ $con = DBMembership();
  -->
 <!-- **************** -->
           </label>
-            <p><br>
+<!--
+          <p><br>
 
             <input type="checkbox" name="TT_sticky_header" id="TT_sticky_header_function" value="{TT_sticky_header}"
              onchange="stickyheaddsadaer(this)"/>
             <label for="view_waitlist"> View Waitlist</label><br><br>
 
           <div id="id_waitlist" style="display:none;" >
-          <table class="table table-sctc table-condensed " width="80%" >
+          <table class="table table-sctc table-condensed " width="80%" 
+          
+-->          
 <!--
           <thead>
          <tr>
@@ -94,7 +97,7 @@ $con = DBMembership();
            $qr=mysqli_query($con,$query);
            $n = mysqli_num_rows($qr);
 
-           if($n==0) echo ("Waitlist empty");
+//           if($n==0) echo ("Waitlist empty");
 
            while ($row = mysqli_fetch_assoc($qr)) {  
             $name = $row[FNAME]." ".$row[LNAME];
