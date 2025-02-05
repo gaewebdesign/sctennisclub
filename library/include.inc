@@ -13,7 +13,7 @@ define("TABLE_PENDING","pending");
 define("TABLE_WAITLIST","waitlist"); 
 define("TABLE_TEMPORARY","temporary"); 
 
-define("WAITLISTLIMIT" , 9);
+define("WAITLISTLIMIT" , 2);
 
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
@@ -564,7 +564,7 @@ function copyto( $src, $dest, $epoch){
   
   $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) ";
   $query .=            "select year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd ";
-  $query .= " from $src where date=$epoch";
+  $query .= " from $src where date=$epoch limit 1";
 
    TEXT($query);
  
