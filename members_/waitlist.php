@@ -22,7 +22,7 @@ tr {
 ?>
 </h2>
 
-<table class="table table-bordered table-striped table-condensed sortable">
+<table class="table table-bordered table-striped sortable">
 
       <thead>
         <tr>
