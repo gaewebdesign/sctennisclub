@@ -3,10 +3,8 @@
 $con = DBMembership();
   $year=YEAR;
   $query = "select * from ".TABLE_WAITLIST." where year=$year and custom!=\"done\" order by date asc limit 3 ";
-  echo $query;
-   $qr=mysqli_query($con,$query);
+  $qr=mysqli_query($con,$query);
   $num_rows = mysqli_num_rows($qr);
-  echo $num_rows;
   
 ?>
 <div class="row g-12">
@@ -61,35 +59,32 @@ $con = DBMembership();
                  Not accepting Non-Residents at this time. <br>  
                 </div>       
 <!-- **************** -->
-
+<!--
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="NRSx" name="membership" required  >
           <label> Non-Resident Single Waitlist &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<?php echo(NONRES_SINGLE_FEE)?></label>
           <br/>
           </li>
-
+ -->
 <!-- **************** -->
           </label>
-          <style>
-           .table-condensed{
-              font-size: .4m;
-            }
+            <p><br>
 
-            .table-condensed tr {line-height: .05em}
-            .table-condensed td {height: .4em}
-            .table-condensed th{ height: .4em; font-weight: normal}
+            <input type="checkbox" name="TT_sticky_header" id="TT_sticky_header_function" value="{TT_sticky_header}"
+             onchange="stickyheaddsadaer(this)"/>
+            <label for="view_waitlist"> View Waitlist</label><br><br>
 
-</style>
-            <p>
-          <table class="table table-condensed" width="80%" >
+          <div id="id_waitlist" style="display:none;" >
+          <table class="table table-sctc table-condensed " width="80%" >
+<!--
           <thead>
          <tr>
-         <th width="30%"> Current Waitlist </th> 
+         <th width="30%"> &nbsp;&nbsp;&nbsp;</th> 
          <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
-<!--     <th width="30%"> &nbsp;&nbsp; &nbsp;&nbsp;</th> -->
          <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
          </tr>
        </thead>
+ -->
        <tbody>
         <?php
 
@@ -97,6 +92,9 @@ $con = DBMembership();
            $year=YEAR;
            $query = "select * from ".TABLE_WAITLIST." where year=$year and custom!=\"done\" order by date asc limit 7 ";
            $qr=mysqli_query($con,$query);
+           $n = mysqli_num_rows($qr);
+
+           if($n==0) echo ("Waitlist empty");
 
            while ($row = mysqli_fetch_assoc($qr)) {  
             $name = $row[FNAME]." ".$row[LNAME];
@@ -113,7 +111,7 @@ $con = DBMembership();
 
  </table>
 
-
+        </div> <!-- waitlist div -->
 
 
         </ul>
