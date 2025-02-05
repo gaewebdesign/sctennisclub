@@ -1,4 +1,14 @@
+<?php
 
+$con = DBMembership();
+  $year=YEAR;
+  $query = "select * from ".TABLE_WAITLIST." where year=$year and custom!=\"done\" order by date asc limit 3 ";
+  echo $query;
+   $qr=mysqli_query($con,$query);
+  $num_rows = mysqli_num_rows($qr);
+  echo $num_rows;
+  
+?>
 <div class="row g-12">
       <div class="col-md-12 col-lg-12 col-xl-12 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -38,20 +48,73 @@
                    Email the club (comm@) for more information.
                  <br/>
                  Non-resident applications will open in 2025. <br>
--->                 
+-->          
+                 <style>
+                  .smallish{
+                    font-family:    Arial, Helvetica, sans-serif
+                    font-size:      4.4em;
+                    font-weight:    normal;
+                  }
+                 </style>
+                <div class="small">       
                  Santa Clara Tennis Club must maintain a resident majority. 
                  Not accepting Non-Residents at this time. <br>  
-
+                </div>       
 <!-- **************** -->
-<!--
+
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="NRSx" name="membership" required  >
           <label> Non-Resident Single Waitlist &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<?php echo(NONRES_SINGLE_FEE)?></label>
           <br/>
           </li>
--->
+
 <!-- **************** -->
           </label>
+          <style>
+           .table-condensed{
+              font-size: .4m;
+            }
+
+            .table-condensed tr {line-height: .05em}
+            .table-condensed td {height: .4em}
+            .table-condensed th{ height: .4em; font-weight: normal}
+
+</style>
+            <p>
+          <table class="table table-condensed" width="80%" >
+          <thead>
+         <tr>
+         <th width="30%"> Current Waitlist </th> 
+         <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
+<!--     <th width="30%"> &nbsp;&nbsp; &nbsp;&nbsp;</th> -->
+         <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
+         </tr>
+       </thead>
+       <tbody>
+        <?php
+
+           $con = DBMembership();
+           $year=YEAR;
+           $query = "select * from ".TABLE_WAITLIST." where year=$year and custom!=\"done\" order by date asc limit 7 ";
+           $qr=mysqli_query($con,$query);
+
+           while ($row = mysqli_fetch_assoc($qr)) {  
+            $name = $row[FNAME]." ".$row[LNAME];
+            $team = $row[TEAM];
+            $ntrp = $row[GENDER].$row[NTRP];
+
+            $custom  = $row[DATE];
+            $dt = new DateTime("@$custom");
+            $date = ltrim($dt->format('m/d/Y'),0);
+            echo("<tr><td>$name<td>$ntrp <td>$date \n");
+
+          }
+?>           
+
+ </table>
+
+
+
 
         </ul>
 
