@@ -104,7 +104,6 @@ $con = DBMembership();
            $qr=mysqli_query($con,$query);
            $n = mysqli_num_rows($qr);
 
-           echo("----> $n");
            if($n==0) echo ("Waitlist empty");
 
            while ($row = mysqli_fetch_assoc($qr)) {  
