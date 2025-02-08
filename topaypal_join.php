@@ -69,6 +69,15 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 	$paid =  NONRES_SINGLE_FEE;
 }else if( $_POST["membership"] == 'NRF'){
 	$paid =  NONRES_FAMILY_FEE;
+}else if( $_POST["membership"] == 'NRSx'){
+	$paid =  NONRES_SINGLE_FEE;
+	if(Waitlist(YEAR) > WAITLISTLIMIT){
+        $title = "Waitlist";
+		$note =  "Limited to ".WAITLISTLIMIT."  players";
+		announce( $title, $note );
+		return;
+	}
+
 }else{
 	DEBUG("error");
 }
@@ -225,12 +234,12 @@ $pwd=password();
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
-/*
+// TAKE OUT FOR PRODUCTION --- KEEP HERE JUST FOR TESTING
 if($mtype == "NRSx"){
-	$mwait="NRS";
-    toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mwait,$date,$insignia,$payment,$custom,$opt,$pwd);
+    LOGS("topaypaljoin_.php to waitlist -- taken out for production");
+//	toDB(TABLE_WAITLIST,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 }
-*/
+// TAKE OUT FOR PRODUCTION --- KEEP HERE JUST FOR TESTING
 
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
