@@ -4,8 +4,8 @@ include "../library/paypal.inc";
 include "../library/emailer.php";
 include "../library/email/email.inc";
 
-$src = "waitlist"; //TABLE_WAITLIST;
-$dest = "temporary";
+$src = TABLE_WAITLIST; //TABLE_WAITLIST;
+$dest = TABLE_PAYPAL;
 $theYear=YEAR;
 
 $con = DBMembership();
