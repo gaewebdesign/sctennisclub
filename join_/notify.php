@@ -87,10 +87,6 @@
       // copy over from the pending to the paypal directory
       LOGS("notify.php DEBUG statement ") ;
 
-      LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
-
-      copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
-
 //    This moved from topaypal_join.php    ***************
 //    This assures that the Waitlist table is only populated after payment
 //    There will be duplicate copies in the pending and waitlist tables
@@ -100,7 +96,12 @@
             LOGS("copying $fname $lname $email $mtype into waitlist table");
             copyto( TABLE_PENDING,  TABLE_WAITLIST, $CUSTOM);
       }else{
-            LOGS("couldnt copy $fname $lname $email $mtype into waitlist table");
+// Has to be here and only executed for non Waitlist (NRSx) players
+// Otherwise custom is set to done before copied to Waitlista
+// This makes the Wailist appear empty because custom is done
+            LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+            copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+
       }
 //    ****************************************************
 
