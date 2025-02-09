@@ -59,9 +59,9 @@ $con = DBMembership();
                  Santa Clara Tennis Club must maintain a resident majority. 
 
 
-                 You may signup to the Wailist. In order to give everyone an equal
+                 You may signup to the Waitlist. In order to give everyone an equal
                  opportunity to join SCTC, each USTA team is limited to one
-                 player on the Waitlist at a time. Click the View Waitlist box
+                 player on the Waitlist at a time. Click the checkbox 
                  below to view the Waitlist. 
 
                 </div>       
