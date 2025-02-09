@@ -90,8 +90,8 @@ $con = DBMembership();
 
           <thead>
          <tr>
-         <th width="30%"> &nbsp;&nbsp;&nbsp;</th> 
-         <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
+         <th width="50%"> &nbsp;&nbsp;&nbsp;</th> 
+         <th width="5%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
          <th width="15%"> &nbsp;&nbsp; &nbsp;&nbsp;</th>
          </tr>
        </thead>
