@@ -22,7 +22,7 @@ $_POST[ADDRESS] = Sanitize( $_POST[ADDRESS] );
 $_POST[CITY] = Sanitize( $_POST[CITY] );
 $_POST[TEAM] = Sanitize( $_POST[TEAM] );
 
-
+$message = $_POST[FNAME]." ".$_POST[LNAME];
 
 
 $paypal = new paypal();
@@ -76,6 +76,10 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 		$note =  "Limited to ".WAITLISTLIMIT."  players";
 		$note = "Waitlist full";
 		announce( $title, $note );
+		$message .= " Waitlist full";
+		$subject = "Waitlist attemp";
+		phpmailer($subject,$message,"mutt@sctennisclub.org","south@sctennisclub.org");
+
 		return;
 	}
 
