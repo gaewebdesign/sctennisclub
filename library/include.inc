@@ -13,7 +13,7 @@ define("TABLE_PENDING","pending");
 define("TABLE_WAITLIST","waitlist"); 
 define("TABLE_TEMPORARY","temporary"); 
 
-define("WAITLISTLIMIT" , 7 );
+define("WAITLISTLIMIT" , 0 );
 
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
