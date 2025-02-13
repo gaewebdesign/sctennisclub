@@ -22,7 +22,8 @@ $_POST[ADDRESS] = Sanitize( $_POST[ADDRESS] );
 $_POST[CITY] = Sanitize( $_POST[CITY] );
 $_POST[TEAM] = Sanitize( $_POST[TEAM] );
 
-$message = $_POST[FNAME]." ".$_POST[LNAME];
+$message = $_POST[FNAME]." ".$_POST[LNAME]."\n";
+$message .= $_POST[ADDRESS]."\n".$_POST[TEAM];
 
 
 $paypal = new paypal();
