@@ -74,6 +74,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 	if(Waitlist(YEAR) > WAITLISTLIMIT){
         $title = "Waitlist";
 		$note =  "Limited to ".WAITLISTLIMIT."  players";
+		$note = "Waitlist full";
 		announce( $title, $note );
 		return;
 	}
