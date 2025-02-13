@@ -78,7 +78,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 		$note = "Waitlist full";
 		announce( $title, $note );
 		$message .= " Waitlist full";
-		$subject = "Waitlist attemp";
+		$subject = "Waitlist attempt";
 		phpemailer($subject,$message,"mutt@sctennisclub.org","south@sctennisclub.org");
 
 		return;
