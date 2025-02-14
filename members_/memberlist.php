@@ -47,9 +47,9 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
    
 <tbody>
       <?php
-         $year=YEAR;
-         echo ("<tr><td><td><b> $year Waitlist</b><td><td><td> </tr>");
-         playerwaitlist(YEAR);
+         //$year=YEAR;
+         //echo ("<tr><td><td><b> $year Waitlist</b><td><td><td> </tr>");
+         //playerwaitlist(YEAR);
     ?>
 </table>
 
