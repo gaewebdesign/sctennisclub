@@ -6,6 +6,7 @@ include "../library/email/email.inc";
 
 $src = TABLE_WAITLIST; //TABLE_WAITLIST;
 $dest = TABLE_PAYPAL;
+$dest = TABLE_TEMPORARY;
 $theYear=YEAR;
 
 $con = DBMembership();
@@ -78,7 +79,7 @@ echo($message);
 
 
 LOGS("cronwait.php: moving from $src to $dest ");
-phpemailer($subject,$message , $email, $south);
+phpemailer($subject,$message , $south,  $south);
 LOGS("cronwait.php: email sent from $src to $dest ");
 
 function notifyplayer($fname,$lname){
