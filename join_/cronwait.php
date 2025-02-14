@@ -63,7 +63,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
  //  echo("copyto $src $dest $epoch \n");
    copyto( $src, $dest, $epoch);
-
+   LOGS("cronwait.php : copyto $src to  $dest at epoch= $epoch");
 
 $subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
@@ -83,7 +83,7 @@ LOGS("cronwait.php: email sent from $src to $dest ");
 function notifyplayer($fname,$lname){
 
     LOGS("cronwait.php notifyplayer $fname $lname");
-    
+
 //    <th style="width:10%">Sel</th>
     $retv = "";
     $retv.= "<!DOCTYPE html>";
