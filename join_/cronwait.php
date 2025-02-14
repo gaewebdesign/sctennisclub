@@ -49,6 +49,7 @@ if(ResidentMajority(YEAR) == false){
 
 
 $fname=$lname=$email=$address=$mtype= $epoch="";
+LOGS("cronwait.php while loop query: $qr");
 while ($row = mysqli_fetch_assoc($qr)) {  
     $epoch = $row[CUSTOM];
     $fname = $row[FNAME];
