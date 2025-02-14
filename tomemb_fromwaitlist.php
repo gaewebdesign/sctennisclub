@@ -16,6 +16,8 @@ $theYear = YEAR;
 $dest = TABLE_PAYPAL;
 $source = TABLE_WAITLIST;
 $destination = TABLE_TEMPORARY;
+$destination = TABLE_PAYPAL;
+
 $south = "south@sctennisclub.org";
 
 if( false == isset($_POST["_id"])  ){
@@ -65,7 +67,7 @@ foreach ($_POST["_id"] as $key => $value){
     echo($message);
 
     LOGS("cronwait.php: moving from $source to $destination ");
-    phpemailer($subject,$message , $email, $south);
+    phpemailer($subject,$message , $south, $south);
 
 // ********************************************************
 
