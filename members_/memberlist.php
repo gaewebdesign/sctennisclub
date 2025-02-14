@@ -30,7 +30,7 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
     NON-RESIDENTS: <?php echo( NonResidents(YEAR-1)) ?>
 
 </div>
-
+<!--
 <table class="table table-striped sortable">
 <thead>
 <tr>
@@ -53,7 +53,7 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
     ?>
 </table>
 
-
+-->
 <table class="table table-striped sortable">
 <thead>
 <!-- <tr><td><td><b> Waitlist </b><td><td><td> </tr> -->
