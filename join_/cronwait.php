@@ -78,10 +78,12 @@ echo($message);
 
 LOGS("cronwait.php: moving from $src to $dest ");
 phpemailer($subject,$message , $email, $south);
-
+LOGS("cronwait.php: email sent from $src to $dest ");
 
 function notifyplayer($fname,$lname){
 
+    LOGS("cronwait.php notifyplayer $fname $lname");
+    
 //    <th style="width:10%">Sel</th>
     $retv = "";
     $retv.= "<!DOCTYPE html>";
