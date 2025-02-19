@@ -117,7 +117,7 @@ include "./library/emailer.php";
 
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7">USTA Team/Captain</span>
- <input type="text" class="form-control BackInput" id="validationDefault07" name="team" >
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="team" >
 </div>
 
 </div>
