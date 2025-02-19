@@ -37,8 +37,9 @@ if( $nx == 0){
 
 }
 
-
-if(ResidentMajority(YEAR) == false){
+$surplus = ResidentMajority(YEAR);
+$s = true;
+if($s == false){
     $subject= "$theYear Waitlist Cron Job";
     $message = " cronwait.php: No resident+ space to move from waitlist (active)";
     phpemailer($subject,$message , $south , $south );
@@ -46,7 +47,7 @@ if(ResidentMajority(YEAR) == false){
     return;
 }else{
 
-    LOGS("cronwait.php: space to move from waitlist");    
+    LOGS("cronwait.php: $surplus space to move from waitlist (override");    
 
 }
 
@@ -71,7 +72,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
 $subject= "$theYear Santa Clara Tennis Club( $fname $lname)";
 $message = "CRON Waitlist Check<br> ";
-$message = "";
+$message = "$surplus surplus\n";
 //$message .= "$fname $lname <br>$address<br>$email <br>";
 //$message .= "$mtype <br>$epoch <br>";
 
