@@ -31,6 +31,8 @@ if( $nx == 0){
 }else{
 
 //   echo("cronwait.php:  $nx on wait list");
+    $message = "$nx on waitlist";
+    phpemailer($subject,$message , $south , $south );
     LOGS("cronwait.php:  $nx on wait list");
 
 }
