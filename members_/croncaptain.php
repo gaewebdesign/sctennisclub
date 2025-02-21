@@ -91,8 +91,10 @@ function AddCaptain($fname, $lname, $team ,$teamid){
 
      $team_ = preg_replace("/\([^)]+\)/","",$team); // 'ABC '
 
-     $initial = substr($fname, -1);
-     $team_ .= "( $initial $lname )";
+     $team_ = trim($team_);
+     $initial = $fname[0].".";
+     $team_ .= " ($initial $lname)";
+
 
      $year=2025;
      $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
@@ -126,10 +128,13 @@ function GetTeams( )
 // http://www.oooff.com/php-scripts/basic-php-scrape-tutorial/basic-php-scraping.php
 
 
+$url = 'https://leagues.ustanorcal.com/organization.asp?id=1590';   // Pleasenton
 
 $url = 'https://ustanorcal.com/organization.asp?id=3483';   // Santa Clara at Central Park
 
 $url = 'https://leagues.ustanorcal.com/organization.asp?id=20';
+
+
 
 //$output = file_get_contents($url);
 //echo $output;
