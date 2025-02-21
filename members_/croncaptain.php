@@ -82,7 +82,7 @@ function _GetMembers(){
 }
 
 
-
+// Database captain is actualy longer
 function AddCaptain($fname, $lname, $team ,$teamid){
 
      $theTable = "captain";
