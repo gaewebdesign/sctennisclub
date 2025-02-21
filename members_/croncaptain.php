@@ -91,7 +91,8 @@ function AddCaptain($fname, $lname, $team ,$teamid){
 
      $team_ = preg_replace("/\([^)]+\)/","",$team); // 'ABC '
 
-     $team_ .= "<";
+     $initial = substr($fname, -1);
+     $team_ .= "( $initial $lname )";
 
      $year=2025;
      $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
