@@ -83,21 +83,21 @@ function _GetMembers(){
 
 
 
-function AddCaptain($fname, $lname, $team ){
+function AddCaptain($fname, $lname, $team ,$teamid){
 
      $theTable = "captain";
      $con= DBMembership();
 
+     $year=2025;
+     $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
 
-     $query = 'insert into '.$theTable.'(_id,fname,lname, team) values';
-
-     $query .= '(NULL'.add($fname).add($lname).add($team);
+     $query .= '(NULL'.add($year).add($fname).add($lname).add($team).add($team).add($teamid);
      $query .= ")";
 
      try{
      $query_results=mysqli_query($con, $query);
      }catch(Exception $e){
-
+          //echo("error $e");
      }
 
 
@@ -168,7 +168,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         $lname = $_captain[1][0];
         $fname = $_captain[2][0];
         $captain = $fname." ".$lname;
-        AddCaptain( $fname, $lname, $teamlink);
+        AddCaptain( $fname, $lname, $teamlink , $teamid);
 
         $teamlink = '<a style=text-decoration:none href="https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
 
@@ -179,7 +179,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
   //      if( $teamid == 100261) $find=FINISH;
 //  if( $teamid == 104211) $find=FINISH; // early finish 2024
 
-
+        if( $teamid == 104521) $find=FINISH; // 2024
         if( $teamid == 103166) $find=FINISH; // 2024
         if( $teamid == 100261) $find=FINISH; // 2024
         if( $teamid == 101055) $find=SKIP;
@@ -207,14 +207,9 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 //        $count ++;
         $find=0;
 
-
-
 }
 
-
 }
-
-
 
 
 
@@ -245,3 +240,30 @@ function TripleCell( $color , $data )
 
 
 ?>
+<!--
+
+DROP TABLE IF EXISTS `captain`;
+
+CREATE TABLE `captain` (
+   `_id` int NOT NULL AUTO_INCREMENT,
+  `year` varchar(40) DEFAULT NULL,
+  `fname` varchar(31) DEFAULT NULL,
+  `lname` varchar(31) DEFAULT NULL,
+  `team` varchar(50) DEFAULT NULL,
+  `team_` varchar(50) DEFAULT NULL,
+  `teamid` varchar(50) DEFAULT NULL,
+  `capt` varchar(31) DEFAULT NULL,
+  `level` varchar(50) DEFAULT NULL,
+  `gender` varchar(50) DEFAULT NULL,
+  `ntrp` varchar(5) DEFAULT NULL,
+  `opt` varchar(31) DEFAULT NULL,
+  `pwd` varchar(31) DEFAULT NULL,
+  `custom` varchar(31) DEFAULT NULL,
+  `date` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`_id`),
+  UNIQUE KEY `team` (`team`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+
+-->
