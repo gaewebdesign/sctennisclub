@@ -29,7 +29,7 @@ include "../library/include.inc";
    echo "<center><b>".date("F d, Y ", time())."</b></center><br>" ;
 
 
-   GetMembers();
+//   GetMembers();
 //   ListMembers();
    GetTeams( );
 
@@ -45,7 +45,7 @@ include "../library/include.inc";
 $MEMBERS = array();
 $YEAR=2024;
 
-function ListMembers()
+function _ListMembers()
 {
    global $MEMBERS;
    
@@ -55,7 +55,7 @@ function ListMembers()
    }
 }
 
-function GetMembers(){
+function _GetMembers(){
   global $MEMBERS;
   global $YEAR;
  
@@ -64,8 +64,7 @@ function GetMembers(){
   $TABLE = TABLE_PAYPAL;
   $YEAR =YEAR;//-1 ;//2024;
 
-  
-  $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
+    $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
 
   $qr=mysqli_query($con,$query);
   $u=1;
@@ -82,32 +81,23 @@ function GetMembers(){
 
 }
 
-function __GetMembersCURL(){
-
-}
 
 
+function AddCaptain($fname, $lname, $team ){
 
-// Search on LNAME, then check for FNAME
-function findMember($fname,$lname)
-{
-
-
-}   
-   
+     $theTable = "captain";
+     $con= DBMembership();
 
 
+     $query = 'insert into '.$theTable.'(_id,fname,lname, team) values';
+
+     $query .= '(NULL'.add($fname).add($lname).add($team);
+     $query .= ")";
+
+     $query_results=mysqli_query($con, $query);
 
 
-function showfound($found){
 
-  $keys = array_keys($found);
-  rsort($keys);
-  
-  while (!empty($keys)) {
-      $key = array_pop($keys);
-      LOGS( $key . ' = ' . $assocArray[$key] . '<br />',0);
-  };
 
 }
 
@@ -175,6 +165,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         $lname = $_captain[1][0];
         $fname = $_captain[2][0];
         $captain = $fname." ".$lname;
+        AddCaptain( $fname, $lname, $teamlink);
 
         $teamlink = '<a style=text-decoration:none href="https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
 
@@ -184,6 +175,9 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
   //      if( $teamid == 100261) $find=FINISH;
 //  if( $teamid == 104211) $find=FINISH; // early finish 2024
+
+
+        if( $teamid == 103166) $find=FINISH; // 2024
         if( $teamid == 100261) $find=FINISH; // 2024
         if( $teamid == 101055) $find=SKIP;
         if( $teamid == 96902) $find=FINISH;   // 2023
@@ -219,104 +213,6 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
 
 
-function GetTeamPlayers( $url )
-{
-
-
-global $USTA_RESIDENT, $USTA_NONRESIDENT;
-
-
-// echo "get playaers from ".$url;
-
-
- $ch = curl_init($url);
- curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
- $curl_scraped_page = curl_exec($ch);
- curl_close($ch);
-
-# Original matcher
-//preg_match_all( '/href=playermatches.asp\?id=([\d]*)>([ -\w]*)[ ,]*([ -\w]*)[ <>\w=#\d\/]*?nowrap>([ \w]*)/', $curl_scraped_page , $_players , PREG_PATTERN_ORDER);
-
-
-/*
-<a href=playermatches.asp?id=114612>Adams, Jennifer A </a></td>
-<td bgcolor=white align=left nowrap>San Jose</td>
-<td bgcolor=white align=center>F</td>
-<td align=center bgcolor=white>4.5C</td>
-<td align=center bgcolor=white></td>
-<td align=center bgcolor=white>3/31/2016</td>
-<td bgcolor=white align=center>2 / 1</td
-*/
-
-  $pattern = "/href=playermatches.asp\?id=([\d]*)>";     // ID
-
-  $pattern .= "([ ,\'\-\w]*)<\/a><\/td>";  //  name
-
-  $pattern .= "<td bgcolor=[#\d\w]* align=left nowrap>([ \w\d]*)<\/td>";   // city
-
-  $pattern .= "<td bgcolor=[#\d\w]* align=center>([MF]{1})<\/td>";   // gender
-
-  $pattern .= "<td align=center bgcolor=[#\d\w]*>([\d\w\.]*)<\/td>";   // rating
-
-  $pattern .= "<td align=center bgcolor=[#\d\w]*>([\w]*)<\/td>";   // national
-
-  $pattern .= "<td align=center bgcolor=[#\d\w]*>([\d\/]*)<\/td>";   // expire
-
-//  $pattern .= "<td bgcolor=[#\d\w]* align=center>([ \d\/\(\)\>\<b]*)<\/td>";   // record
-
-   $pattern .= "<td bgcolor=[#\d\w]* align=center>([ \d\/]*)([\d\w\<\>\/]*)<\/td>";   // record
-
-
-  $pattern .= "/";
-
-  preg_match_all($pattern , $curl_scraped_page, $_player,PREG_PATTERN_ORDER);
-  $players = count( $_player[0] );
-
-  for ( $j = 0 ; $j < $players ; $j++){
-            $id = $_player[1][$j];
-            $name = $_player[2][$j];
-            $city = $_player[3][$j];
-            $gender = $_player[4][$j];
-            $rating = $_player[5][$j];
-            $nat = $_player[6][$j];
-            $expire = $_player[7][$j];
-
-            $record = $_player[8][$j];
-
-            $record = str_replace(' ', '', $record);
-            $record = str_replace('/', ' / ', $record);
-
-   	    $bgColor =  COLORWHITE;
-
-            
-//    SPLIT INTO FIRST AND LAST NAMES
-            $s = explode(',',trim($name),2);
-            $lname = trim($s[0]);
-            $fname = trim($s[1]);
-            //echo(" $fname $lname <---");
-            $l=$lname;
-            $f = $fname;
-    //        DEBUG( "TEAM ".$fname." ".$lname."<br>");
-            $found = findMember($fname,$lname);
-  	    if($found != 0) $bgColor =  COLORMEMBER;
-
-            MCell($bgColor , trim($fname));
-            MCell($bgColor , trim($lname));
-
-//            MCell($bgColor , trim($f));
-//            MCell($bgColor , trim($l));
-
-            MCell($bgColor , $city);
-            MCell($bgColor , "&nbsp;".$record."&nbsp;");
-
-           echo "</tr>\r\n";
-
-  }
-
-
-
-
-}
 
 
 function Center( $color , $data )
