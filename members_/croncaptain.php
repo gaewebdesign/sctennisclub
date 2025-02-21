@@ -94,8 +94,11 @@ function AddCaptain($fname, $lname, $team ){
      $query .= '(NULL'.add($fname).add($lname).add($team);
      $query .= ")";
 
+     try{
      $query_results=mysqli_query($con, $query);
+     }catch(Exception $e){
 
+     }
 
 
 
