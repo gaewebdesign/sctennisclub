@@ -88,10 +88,14 @@ function AddCaptain($fname, $lname, $team ,$teamid){
      $theTable = "captain";
      $con= DBMembership();
 
+
+     $team_ = preg_replace("/\([^)]+\)/","",$team); // 'ABC '
+
+
      $year=2025;
      $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
 
-     $query .= '(NULL'.add($year).add($fname).add($lname).add($team).add($team).add($teamid);
+     $query .= '(NULL'.add($year).add($fname).add($lname).add($team).add($team_).add($teamid);
      $query .= ")";
 
      try{
@@ -161,6 +165,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         $teamlink =  $_teaminfo[2][$j];
 
         $teamlink = str_replace("SANTA CLARA TC/SANTA CLARA TENNIS C","",$teamlink);
+
 
 
 // Extract the Captain from this column
