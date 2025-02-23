@@ -1,6 +1,6 @@
 
 <div align="center">
-<h1>SCTC - USTA Membership Check </h1>
+<h1>SCTC - USTA Captains </h1>
 </div>
 
 <TABLE align="center" class="sortable" BORDER=1 cellpadding=0 cols=8 cellspacing=0  width="500"  bgcolor="linen">
@@ -10,7 +10,6 @@
 <TH width="100"> <font size="2">City </font></TH>
 <TH width="100"> <font size="2">Status </font></TH>
 </tr>
-
 
 <?php
 
@@ -28,9 +27,6 @@ include "../library/include.inc";
 
    echo "<center><b>".date("F d, Y ", time())."</b></center><br>" ;
 
-
-//   GetMembers();
-//   ListMembers();
    GetTeams( );
    AddNobody();
 
@@ -44,43 +40,7 @@ include "../library/include.inc";
 // One time - get members and store in global array
 
 $MEMBERS = array();
-$YEAR=2024;
-
-function _ListMembers()
-{
-   global $MEMBERS;
-   
-   foreach( $MEMBERS as $key => $val){
-        echo $key." ".$val." ";
-
-   }
-}
-
-function _GetMembers(){
-  global $MEMBERS;
-  global $YEAR;
- 
-
-  $con = DBMembership();
-  $TABLE = TABLE_PAYPAL;
-  $YEAR =YEAR;//-1 ;//2024;
-
-    $query = "select * from ".$TABLE." where year=$YEAR order by lname ";
-
-  $qr=mysqli_query($con,$query);
-  $u=1;
-  while ($row = mysqli_fetch_assoc($qr)) {  
-
-    $fname = trim($row['fname'].$u);
-    $lname = trim($row['lname']);
-    $MEMBERS[$fname] = $lname;
-    $u++;
-//    echo(" $fname -> $MEMBERS[$fname] <br> ");
-    
-  }
-
-
-}
+$YEAR=YEAR;
 
 function AddNobody( ){
   //  $theTable= "captain"
@@ -91,7 +51,7 @@ function AddNobody( ){
   $lname = "Dunsel";
   $team = "Nobody";
   $team_="Nobody";
-  $teamid="Nobody";
+  $teamid="No Team";
   
   $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
 
@@ -109,7 +69,7 @@ function AddNobody( ){
 // Database captain is actualy longer
 function AddCaptain($fname, $lname, $team ,$teamid){
 
-     $theTable = "captain";
+     $theTable = TABLE_CAPTAIN;
      $con= DBMembership();
 
 
@@ -120,7 +80,7 @@ function AddCaptain($fname, $lname, $team ,$teamid){
      $team_ .= " ($initial $lname)";
 
 
-     $year=2025;
+     $year=YEAR;
      $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
 
      $query .= '(NULL'.add($year).add($fname).add($lname).add($team).add($team_).add($teamid);
@@ -158,11 +118,6 @@ $url = 'https://ustanorcal.com/organization.asp?id=3483';   // Santa Clara at Ce
 
 $url = 'https://leagues.ustanorcal.com/organization.asp?id=20';
 
-
-
-//$output = file_get_contents($url);
-//echo $output;
-//echo "parsing";
 
 $ch = curl_init($url);
 
@@ -217,10 +172,6 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
         if( $teamid == 104521) $find=FINISH; // 2024
         if( $teamid == 103166) $find=FINISH; // 2024
-        if( $teamid == 100261) $find=FINISH; // 2024
-        if( $teamid == 101055) $find=SKIP;
-        if( $teamid == 96902) $find=FINISH;   // 2023
-        
         
         if( $find == 0 ){
 		Table( );
