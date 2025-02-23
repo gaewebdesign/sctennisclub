@@ -49,11 +49,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
         <select class="form-select" id="validationDefault04" name="captain" required>
         <?php
             
-            $_id=99;
-            echo("<option $_disabled value= \"_id\" > ");
-            echo("No team ($_id)");
-            echo("</option>");
-            for($index=1 ; $index<9 ; $index++){
+            for($index=1 ; $index<count($team) ; $index++){
                 $_id = $team[$index][0];
                 $_team =  $team[$index][1];
                 $_disabled = $team[$index][2];
