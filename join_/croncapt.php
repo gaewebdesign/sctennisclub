@@ -239,7 +239,7 @@ CREATE TABLE `captain` (
   `team` varchar(50) DEFAULT NULL,
   `team_` varchar(50) DEFAULT NULL,
   `teamid` varchar(50) DEFAULT NULL,
-  `capt` varchar(31) DEFAULT NULL,
+  `int` int DEFAULT 0,
   `level` varchar(50) DEFAULT NULL,
   `gender` varchar(50) DEFAULT NULL,
   `ntrp` varchar(5) DEFAULT NULL,

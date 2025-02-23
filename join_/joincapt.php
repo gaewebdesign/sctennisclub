@@ -1,7 +1,37 @@
+<style>
+  #captan {
+    padding: 1px;
+    color: #abcdef;
+    font-size: 14px;
+    background-color: light-blue;
+    -webkit-appearance: none;
+
+}
+
+#captain{
+  font-size: 11px;
+  font-color: light-blue;
+
+}
+<!--
+option:hover {
+  background-color: yellow;
+}
+
+option.red {color: #FF0000;}
+<select><option class="red" value="whatever">Some Red Option Text</option></select>
+
+
+#captain a {
+    color: green !important;
+}
+-->
+
+</style>
 
 <?php
  
- define("TABLE_CAPTAIN", "captain");
+ 
  $YEAR=YEAR;
   $team= array(
 
@@ -30,7 +60,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
 
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
-    if($row["custom"]> 10)   $team[$index][2] = "disabled";
+    if($row["count"]> 0)   $team[$index][2] = "disabled";
     
     $index++;
 }
@@ -46,7 +76,7 @@ while ($row = mysqli_fetch_assoc($qr)) {
     <div class="col-md-12">
         <div class="input-group ">
         <label for="validationDefault04" class="form-label">Select USTA Team/Captain</label>&nbsp; &nbsp;
-        <select class="form-select" id="validationDefault04" name="captain" required>
+        <select id="captain" class="form-select" id="validationDefault04" name="captain" required>
         <?php
             
             for($index=1 ; $index<count($team) ; $index++){
