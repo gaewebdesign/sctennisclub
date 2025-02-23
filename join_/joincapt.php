@@ -9,7 +9,7 @@
 }
 
 #captain{
-  font-size: 11px;
+  font-size: 14px;
   font-color: light-blue;
 
 }
