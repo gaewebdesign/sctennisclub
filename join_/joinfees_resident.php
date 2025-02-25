@@ -55,9 +55,10 @@ $con = DBMembership();
                   }
                  </style>
                 <div class="small">       
-                 Not accepting Non-Residents at this time as 
+                 -Not accepting Non-Residents at this time as 
                  Santa Clara Tennis Club must maintain a resident majority. 
-<!--
+                 
+                 <!--
 
                  You may signup to the Waitlist. In order to give everyone an equal
                  opportunity to join SCTC, each USTA team is limited to one
