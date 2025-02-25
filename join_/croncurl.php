@@ -6,6 +6,15 @@ $url = "https://www.sctennisclub.org/ustacheck.phtml";
 
 $url = "https://www.sctennisclub.org/join_/cronwait.php";
 
+$sel = $_GET["sel"];
+if($sel == 2){
+
+    $url = "https://www.sctennisclub.org/join_/croncapt.php";
+
+    echo $url;
+}
+
+echo $url;
 /*
 CRON JOB 
 php -q /home/southb56/sctennisclub.org/join_/croncurl.php
