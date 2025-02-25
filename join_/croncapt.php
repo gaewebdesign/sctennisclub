@@ -143,7 +143,11 @@ preg_match_all( $regexp, $curl_scraped_page , $_teaminfo , PREG_PATTERN_ORDER);
 
 //print_r($_teaminfo);
 
-
+$n = count($_teaminfo[0]) ;
+$subject = "adding $n captains ";
+$message = "croncapt.php ";
+$to = "south@sctennisclub.org";
+phpemailer( $subject, $message, $to, $to);
 $regCaptain = '/align=left>([^,]*?)[ ,]*([^,]*?)$/i';
 for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
