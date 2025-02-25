@@ -57,27 +57,27 @@ $con = DBMembership();
                 <div class="small">       
                  Not accepting Non-Residents at this time as 
                  Santa Clara Tennis Club must maintain a resident majority. 
-
+<!--
 
                  You may signup to the Waitlist. In order to give everyone an equal
                  opportunity to join SCTC, each USTA team is limited to one
                  player on the Waitlist at a time. Click the checkbox 
                  below to view the Waitlist. 
-
+                -->
                 </div>    
                <?php
-                   include "join_/joincapt.php";
+ //                  include "join_/joincapt.php";
 
 ?>
 
                 <!-- **************** -->
-
+<!--
           <li class="list-group-item d-flex justify-content-between Back">
           <input type="radio" id="member" value="NRSx" name="membership" required  >
           <label> Non-Resident Single Waitlist &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $<?php echo(NONRES_SINGLE_FEE)?></label>
           <br/>
           </li>
-
+-->
 <!-- **************** -->
           </label>
 
