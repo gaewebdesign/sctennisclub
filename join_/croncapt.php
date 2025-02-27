@@ -23,6 +23,8 @@ define("FINISH","2");
 
 date_default_timezone_set('America/Los_Angeles');
 include "../library/include.inc";
+include "../library/emailer.php";
+include "../library/email/email.inc";
 
 
    echo "<center><b>".date("F d, Y ", time())."</b></center><br>" ;
@@ -156,6 +158,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
         $teamlink = str_replace("SANTA CLARA TC/SANTA CLARA TENNIS C","",$teamlink);
 
+        $teamlink = str_replace("SANTA CLARA TENNIS C","",$teamlink);
 
 
 // Extract the Captain from this column
