@@ -193,7 +193,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 	}elseif( $find == SKIP){
 
   }elseif( $find == FINISH ){
-    echo "$message";
+    
     phpemailer( $subject, $message, $to, $to);
     break;
 
