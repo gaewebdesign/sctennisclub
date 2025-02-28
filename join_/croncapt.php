@@ -169,8 +169,8 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         AddCaptain( $fname, $lname, $teamlink , $teamid);
 
         $teamlink = '<a style=text-decoration:none href="https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
-        $e=$j+1;
-        $message .= "$e) $fname $lname $teamlink ($teamid) \n<br>";
+        $y=$j+1;
+        $message .= "$y) $fname $lname $teamlink  \n<br>";
 
 //      Cut off parsing
         $find=0;
