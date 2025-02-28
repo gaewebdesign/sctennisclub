@@ -149,7 +149,7 @@ $n = count($_teaminfo[0]) ;
 $subject = "adding $n captains ";
 $message = "croncapt.php ";
 $to = "south@sctennisclub.org";
-phpemailer( $subject, $message, $to, $to);
+//phpemailer( $subject, $message, $to, $to);
 $regCaptain = '/align=left>([^,]*?)[ ,]*([^,]*?)$/i';
 for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 
@@ -169,7 +169,7 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
         AddCaptain( $fname, $lname, $teamlink , $teamid);
 
         $teamlink = '<a style=text-decoration:none href="https://leagues.ustanorcal.com/teaminfo.asp?id='.$teamid.'">'.$teamlink."</a>";
-
+        $message .= "$fname $lname $teamlink ($teamid) \n<br>";
 
 //      Cut off parsing
         $find=0;
@@ -193,7 +193,8 @@ for($j=0 ; $j < count($_teaminfo[0]) ; $j++){
 	}elseif( $find == SKIP){
 
   }elseif( $find == FINISH ){
-	
+    echo "$message";
+    phpemailer( $subject, $message, $to, $to);
     break;
 
 	}
