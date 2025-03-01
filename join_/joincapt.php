@@ -57,10 +57,12 @@ $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
     $_team = $row["team_"];
+    $_count = $row["count"];
+    
 
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
-    if($row["count"]> 0)   $team[$index][2] = "disabled";
+    if($_count > 0)   $team[$index][2] = "disabled";
     
     $index++;
 }
