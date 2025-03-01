@@ -51,7 +51,7 @@ option.red {color: #FF0000;}
 
   $con = DBMembership();
 
-$query = "select * from ".TABLE_CAPTAIN." where year=$YEAR order by _id";
+$query = "select * from ".TABLE_CAPTAIN." where year=$YEAR order by teamid desc";
 $qr=mysqli_query($con,$query);
 $index=1;
 while ($row = mysqli_fetch_assoc($qr)) {
