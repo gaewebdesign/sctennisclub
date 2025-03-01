@@ -237,6 +237,7 @@ $p = password();
 $address2 = "$address - $p";
 
 $pwd=password();
+$insignia= 2002519;
 
 toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
