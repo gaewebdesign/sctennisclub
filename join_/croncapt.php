@@ -51,9 +51,10 @@ function AddNobody( ){
   $theTable = "captain";
   $fname = "Captain";
   $lname = "Dunsel";
-  $team = "Nobody";
-  $team_="Nobody";
-  $teamid="No Team";
+  $teamid=999000;
+  $team = "--- None ---";
+  $team_="---None--";
+  
   
   $query = 'insert into '.$theTable.'(_id,year,fname,lname, team,team_,teamid ) values';
 
