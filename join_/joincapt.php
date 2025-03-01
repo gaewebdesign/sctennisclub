@@ -58,10 +58,12 @@ while ($row = mysqli_fetch_assoc($qr)) {
     $_id = $row["_id"];
     $_team = $row["team_"];
     $_count = $row["count"];
+    $_teamid = $row["teamid"];
     
 
     $team[$index][0]=$_id;
     $team[$index][1]=$_team;
+    $team[$index][2]=$_teamid;
     if($_count > 0)   $team[$index][2] = "disabled";
     
     $index++;
@@ -84,9 +86,11 @@ while ($row = mysqli_fetch_assoc($qr)) {
             for($index=1 ; $index<count($team) ; $index++){
                 $_id = $team[$index][0];
                 $_team =  $team[$index][1];
+                $_teamid =  $team[$index][2];
+
                 $_disabled = $team[$index][2];
-                echo("<option $_disabled value= \"$_id\" > ");
-                echo("$_team ($_id)");
+                echo("<option $_disabled value= \"$_teamid\" > ");
+                echo("$_team ($_teamid)");
                 echo("</option>");
             }
 
