@@ -853,7 +853,7 @@ function CHECK_CAPTCHA(){
 function CAPTCHA_CHECKOUT() {
 
   
-  LOGGER("CAPTCHA_CHECKOUT");
+//  LOGGER("CAPTCHA_CHECKOUT");
 
   // Checking valid form is submitted or not 
 if (isset($_POST['SubmitButton'])) { 
