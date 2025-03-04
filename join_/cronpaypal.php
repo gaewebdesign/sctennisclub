@@ -19,8 +19,14 @@ $post = [
 //    'username' => 'user1',
 //    'password' => 'passuser1',
     'custom'   => 1,
+    'mc_gross' => 25,
+    'first_name' => 'Roger',
+    'last_name' => "Nakajima'",
+    'payer_email' => "bogut@gmail.com",
+    'receiver_email' => "thetreasuer@sctennisclub.org",
+    'MTYPE' => "NRS",
     'item_name' => "SCTC 2026 Membership",
-    'item_number' => "Ted Cruiz",
+    'item_number' => "Ted Cruz",
     'residence_country' => "US"
     
 
