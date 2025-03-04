@@ -9,7 +9,7 @@
          LOGGER("testpost.php POST: $key -> $value ");
          echo("testpost.php POST: $key -> $value \n<br>");
       }
-      echo("<p");
+      echo("<p>");
 
       echo("join_/notify.php: enumerate _GET array <br>");
       foreach ($_GET as $key => $value) {
