@@ -26,15 +26,19 @@
 
       LOGGER("join_/notify.php: enumerate _POST array");
       TEXT("join_/notify.php: enumerate _POST array");
+      $payer_fname=$payer_lname="---";
       foreach ($_POST as $key => $value) {
-         LOGGER("join_/notify.php $key -> $value ");
+         LOGGER("join_/notify.php - POST $key -> $value ");
          TEXT("join_/notify.php $key -> $value ");
+         if( $key=="first_name") $payer_fname = $value;
+         if( $key=="last_name")  $payer_lname = $value;
+
       }
       
       LOGGER("join_/notify.php: enumerate _GET array");
       TEXT("join_/notify.php: enumerate _GET array");
       foreach ($_GET as $key => $value) {
-         LOGGER("join_/notify.php $key -> $value ");
+         LOGGER("join_/notify.php - GET $key -> $value ");
          TEXT("join_/notify.php $key -> $value ");
       
       }
@@ -108,7 +112,8 @@
 //    ****************************************************
 
       $subject= "Membership Signup $fname $lname";
-      $message = "Paypal signup: $fname $lname";
+      $message = "Paypal signup: $fname $lname \n<br>";
+      $message .= "Paypal payer = $payer_fname $payer_lname";
       $recipient= "mutt@sctennisclub.org";
       phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
       LOGS("notify.php email send commented out ");
