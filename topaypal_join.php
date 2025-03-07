@@ -237,9 +237,17 @@ $p = password();
 $address2 = "$address - $p";
 
 $pwd=password();
-$insignia= 2002519;
+$insignia= "123456788888888";
+$code = "408";
+$phone = "993-9999";
+$state = "CA";
+$capt = "Kirk-Picard";
+$help = "HELP";
+$other = "other";
 
-toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+toDBase(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$code,$phone,$address,$city,$zip,$state,$capt,$team,$mtype,$help,$other,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+//toDB(TABLE_PENDING,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 // TAKE OUT FOR PRODUCTION --- KEEP HERE JUST FOR TESTING
 if($mtype == "NRSx"){
