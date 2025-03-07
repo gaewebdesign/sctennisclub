@@ -419,6 +419,28 @@ function toMemberDB($theTABLE, $fname,$lname,$email,$gender,$ntrp,$address,$city
 
 } 
 
+// replacement for toDB -- add capt value
+function toDBase($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$code,$phone,$address,$city,$zip,$state,$capt,$team,$mtype,$help,$other,$date,$insignia,$payment,$custom,$opt,$pwd){
+
+  $con = DBMembership();
+
+    $zip = substr($zip, 0,5);
+    $insignia = substr($insignia,0,7);
+    
+
+    $query = 'insert into '.$theTABLE.'(_id,year,fname,lname,email,event,gender,ntrp,code,phone,address,city,zip,state,capt,team,mtype,date,help,other,insignia,payment,custom,opt,pwd) values';
+    $query .= '(NULL'.add($year).add($fname).add($lname).add($email).add($event).add($gender).add($ntrp).add($code).add($phone).add($address).add($city).add($zip);
+    $query .= add($state).add($capt).add($team).add($mtype).add($date).add($help).add($other).add($insignia).add($payment).add($custom).add($opt).add($pwd);
+    $query .= ")";
+
+  
+  LOGGER( $query );
+  
+  $query_results=mysqli_query($con, $query);
+
+}
+
+
 
 function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
 

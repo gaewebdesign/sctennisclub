@@ -18,13 +18,14 @@ php -q /home/southb56/sctennisclub.org/join_/croncurl.php
 $post = [
 //    'username' => 'user1',
 //    'password' => 'passuser1',
-    'custom'   => 1,
+     'custom'   => 1741295352,
+     'date'   => 1741295352,
     'mc_gross' => 25,
-    'first_name' => 'Roger',
-    'last_name' => "Nakajima'",
+    'fname' => 'Roger',
+    'lname' => "Nakajima'",
     'payer_email' => "bogut@gmail.com",
     'receiver_email' => "thetreasuer@sctennisclub.org",
-    'MTYPE' => "NRS",
+    'mtype' => "NRS",
     'item_name' => "SCTC 2026 Membership",
     'item_number' => "Ted Cruz",
     'residence_country' => "US"
@@ -46,6 +47,8 @@ curl -v -H "Content-Type: application/x-www-form-urlencoded" -X POST \
 
 //$ch = curl_init();
 $url = 'http://sctennisclub.org/join_/notify.php';
+$url = "http://localhost/~ro/booter/join_/notify.php";
+
 $ch = curl_init($url);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

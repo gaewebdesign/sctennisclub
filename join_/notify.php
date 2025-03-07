@@ -1,6 +1,8 @@
 <?php
 
       include "../library/include.inc";
+      include "../library/emailer.php";
+      include "../library/email/email.inc";
 /*
       PAYPAL return information is a _POST
  */
@@ -105,10 +107,10 @@
       }
 //    ****************************************************
 
-      $subject= "Membership Signup";
-      $message = "Paypal signup";
+      $subject= "Membership Signup $fname $lname";
+      $message = "Paypal signup: $fname $lname";
       $recipient= "mutt@sctennisclub.org";
- //     phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+      phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
       LOGS("notify.php email send commented out ");
 
       // SAVE to family table
@@ -182,7 +184,7 @@
 
        }
 
-          // notify email
+/*          // notify email
       $data = array(
       'year' => YEAR,
       'fname' => "-",
@@ -198,7 +200,7 @@
    );
    
    SENDER( $data );
-      
+  */    
 
 ?>
 
