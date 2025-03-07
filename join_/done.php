@@ -23,12 +23,15 @@
 
     </a></h1>
     <h2>
+<!--
         Players on the Waitlist will receive an email when there is member 
         space and you are added to the membership.   Your signup email address
         will allow you to view the membership player list.
+-->
         <p>
         <?php
-                $n = Waitlist(YEAR);
+/*
+          $n = Waitlist(YEAR);
                 if($n == 0){
                     echo("There are no players on the Waitlist");
                 }else if($n==1){
@@ -36,8 +39,9 @@
                 }else{
                     echo("There are currently $n players on the Waitlist");
                 }
-
+*/
         ?>
+
    </h2>
 
     <h1>Follow the events  on the club's Instagram page! </h1>
