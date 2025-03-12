@@ -11,17 +11,24 @@ $url = "http://www.sctennisclub.org/join_/cronwait.php";
 
 $sel = $_GET["sel"];
 $subject= "croncurl.php sel = $sel";
-$message = "calling croncapt.php \n<br>";
+$message = "from croncurl \n<br>";
 $recipient= "mutt@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 if($sel == 2){
 
     LOGS("croncurl.php  calling croncapt.php ");
     $message = "calling croncapt.php: within sel=$sel if statement \n<br>";
-    phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
     $url = "http://www.sctennisclub.org/join_/croncapt.php";
+    $message .= "calling $url";
+
+    phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
     echo $url;
+}else{
+    $subject= "croncurl.php sel = $sel";
+    $message = "calling $url \n<br>";
+    phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+
 }
 
 echo $url;
