@@ -34,6 +34,12 @@
          if( $key=="last_name")  $payer_lname = $value;
 
       }
+
+      // Update PENDING table with Paypal person *********
+      $payer = $payer_fname." ".$payer_lname;
+      LOGGER("join_/notify.php - $payer Paypal paid  ");
+      updatePaypalPayer(TABLE_PENDING , $payer, $CUSTOM);
+      // *************************************************
       
       LOGGER("join_/notify.php: enumerate _GET array");
       TEXT("join_/notify.php: enumerate _GET array");
