@@ -978,6 +978,18 @@ function deadline( $deadline){
 
 }
 
+// POST Record Paypal  payer
+function updatePaypalPayer($theTable,$payer,$theDate){
+
+  $con = DBMembership();
+
+  $query = "update $theTable set other=\"$payer\" where date=\"$theDate\"";
+  $query_results=mysqli_query($con, $query);
+
+
+}
+
+
 /*
    APIs to implement th new TABLE_FAMILY 
    Place RF or NRF  into family table
