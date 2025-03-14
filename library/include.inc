@@ -207,6 +207,35 @@ function CHECK_EXTRA_EMAIL( $_EMAIL){
 
 }
 
+function CHECK_YEMAIL ($_EMAIL, $_YEAR ){
+
+  $con = DBMembership();
+  $theTABLE = TABLE_PAYPAL;
+  $ret=false; 
+
+  // CHECK THE PAYPAL TABLE
+  $query = "select * from $theTABLE where year>=$_YEAR and email=\"$_EMAIL\" ";
+  LOGS("include.inc $query" );
+  $qr=mysqli_query($con,$query);
+  $num = mysqli_num_rows($qr);
+
+  LOGS("num = $num ");
+  if($num > 0)  $ret=true;
+
+  // CHECK THE WAITLIST TABLE
+  $theTABLE=TABLE_WAITLIST;
+  $query = "select * from $theTABLE where year>=$_YEAR and email=\"$_EMAIL\" ";
+  LOGS("include.inc $query" );
+  $qr=mysqli_query($con,$query);
+  $num = mysqli_num_rows($qr);
+  if($num > 0)  $ret=true;
+
+  LOGS("include.inc CHECK_EMAIL $_EMAIL returning $ret " );
+  return $ret;
+
+
+}
+
 function CHECK_EMAIL($_EMAIL ){
 
   $con = DBMembership();
