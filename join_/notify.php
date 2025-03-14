@@ -120,8 +120,8 @@
       $subject= "Membership Signup $fname $lname";
       $message = "Paypal signup: $fname $lname \n<br>";
       $message .= "Paypal payer = $payer_fname $payer_lname";
-      $recipient= "mutt@sctennisclub.org";
-      phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+      $recipient= "south@sctennisclub.org";
+      phpemailer($subject,$message , $recipient , $recipient );
       LOGS("notify.php email send commented out ");
 
       // SAVE to family table
