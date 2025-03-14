@@ -5,6 +5,7 @@ include "../library/email/email.inc";
 
     LOGS("croncurl2.php  calling croncapt.php ");
     $url = "http://www.sctennisclub.org/join_/croncapt.php";
+    $subject = "croncurl2.php calling $url";
     $message = "croncurl2.php calling $url";
     $recipient = "south@sctennisclub.org";
     phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
