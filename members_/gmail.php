@@ -28,8 +28,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col" >Year </th>
     <th scope="col" >Date </th>
 -->
-    <th scope="col" > Name, </th>
-     <th scope="col">Email </th>
+    <th scope="col" > FName </th>
+    <th scope="col">LName </th>
+    <th scope="col">Email </th>
     
 
 </tr>
