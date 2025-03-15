@@ -23,6 +23,12 @@
 //      $EMAIL = $_POST["payer_email"];
 //      $CUSTOM = $_POST["custom"];
       $CUSTOM = $_POST["custom"];
+      $REFUND = $_POST["reason_code"]; // -> refund
+      if( $REFUND == "refund"){
+            LOGGER("join_/notify.php: REFUND =$REFUND deteted ");
+            return;
+      }
+      
 
       LOGGER("join_/notify.php: enumerate _POST array");
       TEXT("join_/notify.php: enumerate _POST array");
