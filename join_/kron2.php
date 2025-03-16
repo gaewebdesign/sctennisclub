@@ -29,7 +29,7 @@ if($sel == 2){
 }else{
     $subject= "kron2.php sel = $sel";
     $message = "calling $url \n<br>";
-    phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+    phpemailer($subject,$message , $recipient , "mutt@sctennisclub.org");
 
 }
 
