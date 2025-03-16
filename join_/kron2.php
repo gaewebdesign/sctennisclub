@@ -18,7 +18,7 @@ $recipient= "mutt@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 if($sel == 2){
 
-    LOGS("croncurl.php  calling croncapt.php ");
+    LOGS("kron2.php  calling croncapt.php ");
     $message = "calling croncapt.php: within sel=$sel if statement \n<br>";
     $url = "http://www.sctennisclub.org/join_/croncapt.php";
     $message .= "calling $url";
@@ -27,7 +27,7 @@ if($sel == 2){
 
     echo $url;
 }else{
-    $subject= "croncurl.php sel = $sel";
+    $subject= "kron2.php sel = $sel";
     $message = "calling $url \n<br>";
     phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
