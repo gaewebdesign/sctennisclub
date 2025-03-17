@@ -15,7 +15,7 @@ $sel = $_GET["sel"];
 $subject= "croncurl.php sel = $sel";
 $message = "from croncurl \n<br>";
 $recipient= "mutt@sctennisclub.org";
-phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+//phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 if($sel == 2){
 
     LOGS("kron2.php  calling croncapt.php ");
@@ -29,7 +29,7 @@ if($sel == 2){
 }else{
     $subject= "kron2.php sel = $sel";
     $message = "calling $url \n<br>";
-    phpemailer($subject,$message , $recipient , "mutt@sctennisclub.org");
+ //   phpemailer($subject,$message , $recipient , "mutt@sctennisclub.org");
 
 }
 
