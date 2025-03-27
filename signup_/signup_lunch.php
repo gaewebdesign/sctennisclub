@@ -90,16 +90,19 @@
     <img class="mg-fluid img-thumbnail" src="./images/Athenat.png" alt="" >
    https://fatimabazaar.com/ </a>
   -->
-    <img  src="./images/egypt2.png" alt="" class="ResponsiveImage" > 
+<!--
+  <img  src="./images/egypt2.png" alt="" class="ResponsiveImage" > 
+-->
+  <img  src="./images/orale.png" alt="" class="ResponsiveImage" > 
 
 
   </picture> 
      <p>
-      <h2>June Lunch and Tennis Social </h2>
+      <h2>Cinco de Mayo Tennis and  Lunch  Social </h2>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy a special lunch from  <a href="http://www.fatimabazaar.com">Fatima Bazaar</a> and Tennis with your  Santa Clara Tennis Club
-    friends on Saturday June 15 , 9-12 pm. 
+    Enjoy a special lunch from  <a href="http://www.oralebaja.com/">Orale Baja</a> and tennis with your  Santa Clara Tennis Club
+    friends on Saturday May 3  , 9-12 pm. 
 <!--
     Deadline to signup is Monday June 10, 2024.
     Early bird signup price is $10 by Thursday, June 6, 2024.
@@ -124,7 +127,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm BackInput">
             <div>
-             <h6 class="my-0">2024 June Mixer  <img src="./images/bazaar.png"> </h6> 
+             <h6 class="my-0">2025 May 3 Mixer  <img src="./images/bazaar.png"> </h6> 
 
 
     <!--
@@ -239,7 +242,7 @@
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
 
 -->
-<button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button>
+<button class="w-100 btn btn-primary btn-lg" disabled > Upcoming event! </button>
 
         </form>
       </div>
