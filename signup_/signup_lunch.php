@@ -11,9 +11,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 
 
-<link href="./Mixer.css" rel="stylesheet" />
+<!--
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+-->
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -69,7 +69,9 @@
 
     
     <!-- Custom styles for this template -->
+<!--
     <link href="form-validation.css" rel="stylesheet">
+-->    
   </head>
   <body class="bg-light">
     
@@ -242,7 +244,13 @@
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
 
 -->
-<button class="w-100 btn btn-primary btn-lg" disabled > Upcoming event! </button>
+<div class="container" id="LunchDone" >
+    <button class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
+</div>
+
+<div class="container" id="LunchOpen" >
+    <button class="w-100 btn btn-primary btn-lg" disabled > Upcoming event! </button>
+</div>
 
         </form>
       </div>
