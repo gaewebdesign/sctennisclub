@@ -94,7 +94,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 <!--              <li><a class="dropdown-item active" href="./event_past.phtml">Info</a></li>  -->
 <!--          <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./event_past.phtml?draw=1">Players</a></li> -->
 
-              <li><a class="dropdown-item" href="./signup_lunch.phtml">June - Walk like an Egyptian</a></li>
+              <li><a class="dropdown-item" href="./signup_lunch.phtml">May - Cinco de Mayo</a></li>
               <li><a class="dropdown-item" href="./signup_free.phtml">July - Annual Pigout</a></li>
               
               <li><a class="dropdown-item" href="./signup_icecream.phtml">August - Ice Cream Social</a></li>
