@@ -141,9 +141,11 @@
           </li>
 
           <li class="list-group-item d-flex justify-content-between">
-           
+
           <div class="BackInput"> <?php echo("$".$MEMBER_FEE +0 )?> Lunch and Tennis <br/>
-<!--          <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6 -->
+
+
+    <!--    <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6 -->
            
 
             </div>
@@ -156,7 +158,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="./topaypal_lunch.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_fatima.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
