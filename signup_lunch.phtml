@@ -33,9 +33,51 @@ function deadline(){
 
 }
 
+//           ASYNCHRONOUS AJAX to get number of participants
+             function resolver(_data){
+                  console.log( "resolver = " + _data )
+                  if(_data > 296){
+//                 Deactivates button
+                        $("#LunchButton").text('Entries are closed (' + _data + ' )');
+                        $("#LunchButton").prop('disabled', true);
+                  }else{
+//                 Activates button
+//                        $("#LunchButton").text( 'Submit to go to Paypal ');
+//                        $("#LunchButton").prop('disabled', false);
+            }
+
+            }
+
+async function  fetchData( ) {
+                   return new Promise((resolve, reject) => {
+
+                      let user = "tennis.mutt@gmail.com"
+                      let pw  = "password"
+                      $.ajax({
+                        
+                              url: "./signup_/signup_count.php",
+                              type: "post",
+                              data:{ user: user , pw: pw },
+                              dataType: "html",
+                              success: (data) => {
+                                      resolver(data);
+                              },
+                                    error: (error) => {
+                                       console.log(error)
+                                       //   reject(error);
+                                    }
+                });
+              });
+            }
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
     console.log("DOMContentLoaded")
     finished = deadline();
+
+    finished=1
+
     if(finished == 0){
             $("#LunchButton").text('Submit to go to Paypal');
             $("#LunchButton").prop('disabled', false);
@@ -44,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function(){
             $("#LunchButton").prop('disabled', true);
     }
 
+//   If entries exceede (>26) closes entries
+     fetchData();
 });
 
  </script>
