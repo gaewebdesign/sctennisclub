@@ -15,15 +15,33 @@
 
 <script defer>
 
-    $finished =0;
+function deadline(){
 
- document.addEventListener("DOMContentLoaded", function(){
+   final = new Date('2025-03-27T19:31:00');
+   epoch= final.getTime()
+     
+   const date = new Date()
+   current = date.getTime()
+
+   console.log(epoch)
+   console.log(current)
+     
+   finished =0;
+   if ( current > epoch) finished=1
+
+   return finished
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
     console.log("DOMContentLoaded")
-//    $finished =0;
-    if($finished == 0){
-            $("#LunchDone").css("display","none");
-         }else{
-            $("#LunchOpen").css("display","none");
+    finished = deadline();
+    if(finished == 0){
+            $("#LunchButton").text('Submit to go to Paypal');
+            $("#LunchButton").prop('disabled', false);
+      }else{
+            $("#LunchButton").text( 'Upcoming event');
+            $("#LunchButton").prop('disabled', true);
     }
 
 });

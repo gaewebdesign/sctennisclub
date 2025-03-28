@@ -245,11 +245,7 @@
 
 -->
 <div class="container" id="LunchDone" >
-    <button class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
-</div>
-
-<div class="container" id="LunchOpen" >
-    <button class="w-100 btn btn-primary btn-lg" disabled > Upcoming event! </button>
+    <button id="LunchButton" class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
 </div>
 
         </form>
