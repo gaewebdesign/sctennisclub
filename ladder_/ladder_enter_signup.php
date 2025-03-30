@@ -93,8 +93,18 @@ $lname1 = $_POST["lname1"];
 $email1 = $_POST["email1"];
 $event = $gender1 = $ntrp1 = "-";
 $gender2 = $ntrp2 = "-";
+//$shortset =  $_POST["shortset"];
 
-$team=$mtype=$date=$insignia=$payment=$custom=$opt=$pwd="";
+$opt="N";
+if (isset($_POST['shortset'])) {
+   $opt="Y";
+   echo " checked";
+}
+
+//print_r($_POST);
+//echo $shortset;
+
+$team=$mtype=$date=$insignia=$payment=$custom=$pwd="";
 
 //$division = $_POST["division"];
 

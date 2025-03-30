@@ -48,8 +48,8 @@
 
 
 
-    <div class="col-sm-3">
-    <br/>
+   <div class="col-sm-3">
+   <br/>
    <div class="input-group">
     <label for="validationDefault04" class="form-label">NTRP</label> <p>
     <select class="form-select" id="validationDefault04" name="ntrp1" required>
@@ -61,8 +61,18 @@
     </select>
     </div>
    </div>
+   <style>
+        input[type="checkbox"] {
+            width: 1.2em;
+            height: 1.2em;
+        }
+    </style>
 
-   <div class="col-sm-6"> </div>
+   <div class="col-sm-3">
+   <br/>
+   <input class="form-check-input" type="checkbox" value="" name="shortset" id="shortset" > &nbsp;Willing to play short sets
+   </div>
+   <div class="col-sm-1"> </div>
 
 
 <!--

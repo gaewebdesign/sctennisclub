@@ -1,21 +1,22 @@
 <style>
+
 tr {
-    line-height: 14px;
-    min-height: 14px;
-    height: 4px;
+
     color: blue;
  }
- </style>
+
+</style>
 
 <script language="JavaScript" src="library/sorttable.js"> </script>
 
 <p>
-<table class="table table-bordered table-striped table-condensed sortable">
+<table class="table table-bordered table-striped tble-condensed sortable">
 
       <thead>
         <tr>
         <th style="width:20%">Name</th>
         <th style="width:10%">NTRP</th>
+
         <th style="width:10%">Points</th>
         <th style="width:10%">Record</th>
         <th style="width:10%">Last Match</th>
@@ -42,10 +43,10 @@ tr {
               while ($row = mysqli_fetch_assoc($qr)) {
                echo "<tr><td>";
                echo $row["fname1"]." ".$row["lname1"];
-               
+               if($row["opt"] == "Y" ) echo "&check;";
                echo "<td>";
                echo $row["gender1"].$row["ntrp1"];
-
+               
                echo "<td>";
                echo $row["points"];
 
@@ -71,7 +72,7 @@ tr {
       </tbody>
     </table>
 
-    <table class="table table-bordered table-striped table-condensed sortable">
+    <table class="table table-bordered table-striped  sortable">
 
 <thead>
   <tr>
