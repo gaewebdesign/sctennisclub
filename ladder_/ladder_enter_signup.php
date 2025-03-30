@@ -98,8 +98,7 @@ $gender2 = $ntrp2 = "-";
 $opt="N";
 if (isset($_POST['shortset'])) {
    $opt="Y";
-   echo " checked";
-}
+   }
 
 //print_r($_POST);
 //echo $shortset;
