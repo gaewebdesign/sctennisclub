@@ -69,9 +69,11 @@ tr {
 //   echo $date;
            echo '<td style="width:33%">';
            echo $date;
+           $MEMBER_FEE = MAY_MIXER_FEE;
+           if($row['payment'] == $MEMBER_FEE) echo("🎾 ");
 
 /*
-           if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
+
            else if( $row['paid'] == $GUEST_FEE) echo("🧢");
            else if( $row['paid'] == $ICECREAM_FEE) echo ("&#x1F49C");
 */

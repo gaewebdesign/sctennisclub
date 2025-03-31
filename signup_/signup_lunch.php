@@ -151,8 +151,10 @@
 
           <div class="BackInput"> 
 
+<!--          echo("🎾 "); -->
+
           <input type="radio" id="html" name="cinco" value="15" checked="selected">
-             <label for="html"><?php echo "$".$MEMBER_FEE   ?> SCTC Member</label><br>
+             <label for="html"><?php echo "$".$MEMBER_FEE   ?> SCTC Member 🎾  </label><br>
              <input type="radio" id="css" name="cinco" value="20">
              <label for="css"><?php echo "$".$MEMBER_FEE+5   ?> Non-Member</label><br> 
 <!--
