@@ -120,9 +120,9 @@ if($_POST["dinner"] == "chicken" ) {
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
 
 $paid= MAY_MIXER_FEE;
-
+$paid = $_POST["cinco"]; 
 // OVERRIDE PRICE
-if($_POST["lname"]=="Okamoto") $paid="0.11";
+if($_POST["lname"]=="Okamoto") $paid="0.01";
 
 $paypal->price = $paid;
 
@@ -153,9 +153,14 @@ $ntrp   = "-";
 $member = "-";
 
 $opt="N";
-if (isset($_POST['vegan'])) {
-   $opt="Y";
-   }
+if ( isset($_POST['vegan']) ) {
+   $opt="V";
+}
+
+//   echo $_POST["fee"];
+//   print_r($_POST);
+//   print("vegan opt = $opt");
+
 
    // ********************************
 // use this to identify person in database
@@ -169,7 +174,7 @@ $paypal->add("custom", $custom );
 $dt = new DateTime("@$custom");
 $date = ltrim($dt->format('m/d/Y'),0);
 $date = $custom;
-$theTABLE = "mixer_pending";
+
 
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
@@ -196,7 +201,7 @@ toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$
 $data = array(
 	'year' => $year,
 	'fname' => $fname,
-    'lname' => $lname."OOO",
+    'lname' => $lname,
 	'email' => $email,
 	'event' => $event,
 	'gender' => $gender,
@@ -208,7 +213,7 @@ $data = array(
 	'mtype' => $mtype,
 	'date' => $custom, // $date,
 	'insignia' => $insignia,
-	'payment' => 400,//$payment,
+	'payment' => $payment,
 	'custom' => $custom,
     'opt' => $opt,
     'pwd' => $pwd,
