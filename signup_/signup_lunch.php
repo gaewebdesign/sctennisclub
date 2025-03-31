@@ -78,8 +78,9 @@
 
   <?php 
    // include "includes.inc";
-    $MEMBER_FEE=0.01;
-    $MEMBER_FEE = MAY_MIXER_FEE; //$MEMBER_FEE;
+    
+   $MEMBER_FEE=0.01;
+   $MEMBER_FEE = MAY_MIXER_FEE; //$MEMBER_FEE;
 
   ?>
 
@@ -104,9 +105,10 @@
 
     <h3 style="font-size: 1.2em ">
     Enjoy a special lunch from  <a href="http://www.oralebaja.com/">Orale Baja</a> and tennis with your  Santa Clara Tennis Club
-    friends on Saturday May 3  , 9-12 pm at Santa Clara Tennis Center
+    friends on Saturday May 3  , 9-12 pm at Santa Clara Tennis Center.
+    <p>
+    Deadline to signup is Wednesday April 23, 2025.
 <!--
-    Deadline to signup is Monday June 10, 2024.
     Early bird signup price is $10 by Thursday, June 6, 2024.
       <?php echo("$".$MEMBER_FEE+5 )?> afterwards.
     -->
@@ -158,7 +160,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
-        <form class="needs-validation" novalidate name="signup" action="./topaypal_fatima.php", method="post" >
+        <form class="needs-validation" novalidate name="signup" action="./topaypal_lunch.php", method="post" >
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
@@ -176,14 +178,31 @@
               </div>
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-9">
               <label for="email" class="form-label">Email Address</label>
               <input type="email" class="form-control BackInput" id="email" placeholder="" value="" required name="email">
               <div class="invalid-feedback">
                 Valid email address is required.
               </div>
             </div>
+<?php
+//echo("&#1f346;");
+//echo("&check;");
+//echo("&#x1F346");
+//echo("&#x1F96C");
+?>
+            <div class="col-sm-8">
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp; 
+            <input class="form-check-input" type="checkbox" value="" name="vegan" id="vegan" > &nbsp;&#x1F96C; Vegetarian Option
+            </div>
+
 <!--
+             <div class="col-sm-3">
+   <br/>
+   <input class="form-check-input" type="checkbox" value="" name="shortset" id="shortset" > &nbsp;Willing to play short sets
+   </div>
+   <div class="col-sm-1"> </div>
             <div class="my-3">
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span> 
               <label >
@@ -244,10 +263,10 @@
           <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
           <button class="w-100 btn btn-primary btn-lg" disabled >Goto Paypal</button>
 <button class="w-100 btn btn-primary btn-lg" disabled > Signup is Over! </button>
-
+<button id="LunchButton" class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
 -->
 <div class="container" id="LunchDone" >
-    <button id="LunchButton" class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
+<button id="LunchButto" class="w-100 btn btn-primary btn-lg"  > Event done </button>
 </div>
 
         </form>

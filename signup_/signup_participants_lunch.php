@@ -11,7 +11,7 @@ tr {
  </style>
 
 <p>
-<table class="table table-bordered table-striped table-condensed sortable">
+<table class="table table-bordered table-striped tble-condensed sortable">
 
       <thead>
         <tr>
@@ -29,19 +29,19 @@ tr {
            <p>
        <?php
           
-          $jurassic = strtotime('2025-4-1');
+          $jurassic = strtotime('2025-3-1');
           $cretaceous = strtotime('2025-5-1');
           
-          $epoch = strtotime('2024-5-10');
+          $epoch = strtotime('2025-3-25');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
-          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
+
 
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
-
+          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
           $con = Configure();
            
  //        echo( $query );           
@@ -56,8 +56,9 @@ tr {
             echo '<td style="width:33%">';
             echo $row['lname'];
 
-//            echo '<td style="width:33%">';
-//            echo $row['event'];
+//            if( $row['opt']) =="Y")
+//           echo '&check;';
+             echo "&#x1F96C";
 
 
 //   ***************************
