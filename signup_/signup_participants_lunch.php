@@ -32,7 +32,7 @@ tr {
           $jurassic = strtotime('2025-3-1');
           $cretaceous = strtotime('2025-5-1');
           
-          $epoch = strtotime('2025-3-25');
+          $epoch = strtotime('2025-3-29');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
