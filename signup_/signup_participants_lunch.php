@@ -56,9 +56,10 @@ tr {
             echo '<td style="width:33%">';
             echo $row['lname'];
 
-//            if( $row['opt']) =="Y")
+            if( $row['opt'] =="Y")   echo '&#x1F96C';
+//          if( $row['opt'] =="Y")   echo '&check;';
 //           echo '&check;';
-             echo "&#x1F96C";
+//           echo "&#x1F96C";
 
 
 //   ***************************
