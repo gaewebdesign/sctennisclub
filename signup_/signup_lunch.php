@@ -292,7 +292,7 @@
 <button id="LunchButton" class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
 -->
 <div class="container" id="LunchDone" >
-<button id="LunchButto" class="w-100 btn btn-primary btn-lg" > Upcoming Event </button>
+<button id="LunchButto" class="w-100 btn btn-primary btn-lg" > Sign Up!  </button>
 </div>
 
         </form>
