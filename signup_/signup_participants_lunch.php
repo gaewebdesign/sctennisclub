@@ -25,7 +25,7 @@ tr {
       </thead>
       <tbody>
            <p>
-           <h4>Participants </h4> 
+<!--       <h4>Participants </h4>  -->
            <p>
        <?php
           
@@ -46,7 +46,8 @@ tr {
            
  //        echo( $query );           
           $qr=mysqli_query($con,$query);
-
+          $n = mysqli_num_rows($qr);
+          echo("<h4>Participants ($n)</h4> ");
 
           while ($row = mysqli_fetch_assoc($qr)) {  
             echo "<tr>";
