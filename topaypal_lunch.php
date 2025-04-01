@@ -122,7 +122,8 @@ if($_POST["dinner"] == "chicken" ) {
 $paid= MAY_MIXER_FEE;
 $paid = $_POST["cinco"]; 
 // OVERRIDE PRICE
-if($_POST["lname"]=="Okamoto") $paid="0.01";
+
+if( preg_match("/usta.com/i", $_POST["email"] )) $paid="0.01";
 
 $paypal->price = $paid;
 
