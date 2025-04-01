@@ -107,6 +107,8 @@
     Enjoy a special lunch from  <a href="http://www.oralebaja.com/">Orale Baja</a> and tennis with your  Santa Clara Tennis Club
     friends on Saturday May 3  , 9-12 pm at Santa Clara Tennis Center.
     <p>
+     Visit <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a> to signup.
+    <p>
     Deadline to signup is Wednesday April 23, 2025.
 <!--
     Early bird signup price is $10 by Thursday, June 6, 2024.
