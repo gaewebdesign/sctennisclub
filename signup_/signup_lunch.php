@@ -109,7 +109,7 @@
     <p>
      Visit <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a> to signup.
     <p>
-    Deadline to signup is Wednesday April 23, 2025.
+    Deadline to register is Wednesday April 23, 2025.
 <!--
     Early bird signup price is $10 by Thursday, June 6, 2024.
       <?php echo("$".$MEMBER_FEE+5 )?> afterwards.
