@@ -119,8 +119,10 @@
     </h3>
   </div>
 
+<!--
   <form class="needs-validation" novalidate name="signup" action="./topaypal_lunch.php", method="post" >
-
+    -->
+  <form class="row g-3" novvalidate method="POST" action="./topaypal_lunch.php">
 
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
@@ -154,10 +156,12 @@
 <!--          echo("🎾 "); -->
 
           <input type="radio" id="html" name="cinco" value="15" checked="selected">
-             <label for="html"><?php echo "$".$MEMBER_FEE   ?> SCTC Member &check;  </label><br>
+             <label for="html"><?php echo "$".$MEMBER_FEE   ?> Lunch and Tennis</label><br>
+<!--
              <input type="radio" id="css" name="cinco" value="20">
              <label for="css"><?php echo "$".$MEMBER_FEE+5   ?> Non-Member</label><br> 
-<!--
+    -->
+ <!--
         <input type="radio" id="javascript" name="cinco" value="JavaScript">
         <label for="javascript">JavaScript</label>
         <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="paidstuff">
@@ -179,10 +183,11 @@
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Info (one person per entry)</h4>
 
+   
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control BackInput" id="firstName" placeholder="" value="" required name="fname">
+              <label for="valid1" class="form-label">First name</label>
+              <input type="text" class="form-control BackInput" id="valid1" placeholder="" value="" required name="fname">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -287,7 +292,7 @@
 <button id="LunchButton" class="w-100 btn btn-primary btn-lg" disabled > Event done </button>
 -->
 <div class="container" id="LunchDone" >
-<button id="LunchButto" class="w-100 btn btn-primary btn-lg" disabled> Upcoming Event </button>
+<button id="LunchButto" class="w-100 btn btn-primary btn-lg" > Upcoming Event </button>
 </div>
 
         </form>

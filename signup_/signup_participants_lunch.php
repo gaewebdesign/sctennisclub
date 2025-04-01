@@ -70,7 +70,7 @@ tr {
            echo '<td style="width:33%">';
            echo $date;
            $MEMBER_FEE = MAY_MIXER_FEE;
-           if($row['payment'] == $MEMBER_FEE) echo("&check; ");
+//           if($row['payment'] == $MEMBER_FEE) echo("&check; ");
 
 /*
 
