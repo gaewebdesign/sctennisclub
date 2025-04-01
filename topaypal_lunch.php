@@ -200,6 +200,7 @@ phpemailer( $subject, $message, "tennis.mutt@gmail.com" ,$to);
 //function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
 
 $theTABLE = TABLE_MIXER_PENDING;
+//$theTABLE = TABLE_MIXER_PAYPAL;
 toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 

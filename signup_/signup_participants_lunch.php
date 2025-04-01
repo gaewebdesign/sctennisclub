@@ -30,7 +30,7 @@ tr {
        <?php
           
           $jurassic = strtotime('2025-3-1');
-          $cretaceous = strtotime('2025-5-1');
+          $cretaceous = strtotime('2025-5-5');
           
           $epoch = strtotime('2025-3-30');
           // Switch between tables here **************************
@@ -39,9 +39,9 @@ tr {
 
           $query = "select * from ".TABLE_MIXER_OR_PENDING."  where custom>$epoch order by custom desc";
 
-
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
           $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch and custom<$cretaceous order by fname asc";
+
           $con = Configure();
            
  //        echo( $query );           
