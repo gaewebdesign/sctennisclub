@@ -125,6 +125,10 @@ $paid = $_POST["cinco"];
 
 if( preg_match("/usta.com/i", $_POST["email"] )) $paid="0.01";
 
+//echo( $_POST["email"] );
+//echo( preg_match("/usta.com/i", $_POST["email"] ) ) ;
+
+
 $paypal->price = $paid;
 
 $paypal->enable_payment();
