@@ -216,11 +216,11 @@
 ?>
             <div class="col-sm-8">
             <br/>
-            &nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp; 
 <!--
             <input class="form-check-input" type="checkbox" value="" name="vegan" id="vegan" > &nbsp;&#x1F96C; Vegetarian Option
  -->
-            <input type="checkbox" value="V" name="vegan" id="vegan" > &nbsp;&#x1F96C; Vegetarian Option
+            <input type="checkbox" value="V" name="vegan" id="vegan" > &nbsp; Vegetarian Option &#x1F96C;
           </div>
 
 <!--
