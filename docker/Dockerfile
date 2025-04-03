@@ -24,7 +24,7 @@ COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
 
 #Instructions
 # create a image
-# docker build -t <fullstack>
+# docker build -t <fullstack> .
 
 # run with browser at localhost:8080
 # docker run -p 8080:80 <fullstack>
