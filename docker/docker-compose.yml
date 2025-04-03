@@ -1,0 +1,44 @@
+version: '3.1'
+# https://www.youtube.com/watch?v=ThpnqYpvnIM
+# Docker Hub
+
+# docker login --username username
+# docker tag #image dockerkatt/sctc
+# docker push dockerkatt/sctc
+
+
+# docker exec -it <container dockerhub-db-1> /bin/bash
+
+services:
+
+    hubbie:
+
+        build:
+           context: .
+           dockerfile: Dockerfile
+
+        ports:
+         - 8000:80
+#        volumes: 
+#         - ./src:/var/www/html/
+
+    db:
+        build:
+            context: .
+            dockerfile: Dockerfile_db
+        command: ["mysqld", "--mysql-native-password=ON"]
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: dockerdatabasepw
+#       image: mysql
+#       volumes:
+#        - ./mysql:/etc/mysql/conf.d
+#        - ./scripts:/docker-entrypoint-initdb.d/
+
+    phpmyadmin:
+     image: phpmyadmin
+     restart: always
+     ports:
+        - 8081:80
+     environment:
+        - PMA_ARBITRARY-1
