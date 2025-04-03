@@ -29,6 +29,15 @@ COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
 # run with browser at localhost:8080
 # docker run -p 8080:80 <fullstack>
 
+# exec into running Container (debug help)
+# docker exec -it <dockercontainer> /bin/bash
+# docker ps
+# docker container prune
+# docker rm -v -f $(docker ps -qa)
+
+
+
+
 # run nginx with emacs
 # docker run -it nginx /bin/bash
 # apt-get update
