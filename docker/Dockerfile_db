@@ -1,0 +1,21 @@
+FROM mysql
+
+COPY ./mysql /etc/mysql/conf.d
+COPY ./scripts /docker-entrypoint-initdb.d/
+
+
+#COPY ./src /var/www/html/
+#COPY ./apache2/test.txt /etc/apache2/test.txt
+#COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
+
+
+#       image: mysql
+#       volumes:
+#        - ./mysql:/etc/mysql/conf.d
+#        - ./scripts:/docker-entrypoint-initdb.d/
+
+#COPY ./src /var/www/html/
+#COPY ./apache2/test.txt /etc/apache2/test.txt
+#COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
+#RUN apt-get update
+#RUN apt-get install -y emacs
