@@ -161,7 +161,7 @@
              <label for="html"><?php echo "$".$MEMBER_FEE   ?> Lunch and Tennis</label><br>
 
              <input type="radio" id="css" name="cinco" value="5">
-             <label for="css"><?php echo "$".$MEMBER_FEE-10   ?> Lunch Only </label><br> 
+             <label for="css"><?php echo "$".$MEMBER_FEE-10   ?> Tennis Only </label><br> 
 
 <!--
       <input type="radio" id="javascript" name="cinco" value="JavaScript">
