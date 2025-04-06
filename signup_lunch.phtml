@@ -11,14 +11,16 @@
 
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 <script defer>
 
 function deadline(){
 
-   final = new Date('2025-03-27T19:31:00');
-   epoch= final.getTime()
+//   final = new Date('2025-04-23T23:30:00');
+   final = new Date('2025-04-23T23:00:00');
+
+    epoch= final.getTime()
      
    const date = new Date()
    current = date.getTime()
@@ -28,7 +30,9 @@ function deadline(){
      
    finished =0;
    if ( current > epoch) finished=1
-
+   
+   xc =   current  >  epoch
+   console.log( current + " >" + epoch + "(" + xc + ")" )
    return finished
 
 }
@@ -36,7 +40,7 @@ function deadline(){
 //           ASYNCHRONOUS AJAX to get number of participants
              function resolver(_data){
                   console.log( "resolver = " + _data )
-                  if(_data > 296){
+                  if(_data > 120){
 //                 Deactivates button
                         $("#LunchButton").text('Entries are closed (' + _data + ' )');
                         $("#LunchButton").prop('disabled', true);
@@ -75,14 +79,15 @@ async function  fetchData( ) {
 document.addEventListener("DOMContentLoaded", function(){
     console.log("DOMContentLoaded")
     finished = deadline();
-
-    finished=1
+    
+     console.log("finished " + finished)
+    //    finished=1
 
     if(finished == 0){
             $("#LunchButton").text('Submit to go to Paypal');
             $("#LunchButton").prop('disabled', false);
       }else{
-            $("#LunchButton").text( 'Upcoming event');
+            $("#LunchButton").text( 'Entries are closed');
             $("#LunchButton").prop('disabled', true);
     }
 
