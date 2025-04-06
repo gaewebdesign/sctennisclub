@@ -159,16 +159,18 @@
 
           <input type="radio" id="html" name="cinco" value="15" checked="selected">
              <label for="html"><?php echo "$".$MEMBER_FEE   ?> Lunch and Tennis</label><br>
-<!--
-             <input type="radio" id="css" name="cinco" value="20">
-             <label for="css"><?php echo "$".$MEMBER_FEE+5   ?> Non-Member</label><br> 
-    -->
- <!--
-        <input type="radio" id="javascript" name="cinco" value="JavaScript">
-        <label for="javascript">JavaScript</label>
-        <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="paidstuff">
-    -->
 
+<!--
+             <input type="radio" id="css" name="cinco" value="5">
+             <label for="css"><?php echo "$".$MEMBER_FEE-10   ?> Lunch Only </label><br> 
+-->
+
+<!--
+      <input type="radio" id="javascript" name="cinco" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE-10 ?> name="paidstuff">
+
+    -->
 
 
     <!--    <?php echo("$".$MEMBER_FEE+5.00 ) ?> After Thursday June 6 -->
