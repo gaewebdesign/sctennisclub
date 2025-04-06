@@ -160,10 +160,8 @@
           <input type="radio" id="html" name="cinco" value="15" checked="selected">
              <label for="html"><?php echo "$".$MEMBER_FEE   ?> Lunch and Tennis</label><br>
 
-<!--
              <input type="radio" id="css" name="cinco" value="5">
              <label for="css"><?php echo "$".$MEMBER_FEE-10   ?> Lunch Only </label><br> 
--->
 
 <!--
       <input type="radio" id="javascript" name="cinco" value="JavaScript">
