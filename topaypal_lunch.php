@@ -123,7 +123,7 @@ $paid= MAY_MIXER_FEE;
 $paid = $_POST["cinco"]; 
 // OVERRIDE PRICE
 
-//if( preg_match("/usta/i", $_POST["email"] )) $paid="0.01";
+if( preg_match("/usta/i", $_POST["email"] )) $paid="0.01";
 
 //echo( $_POST["email"] );
 //echo( preg_match("/usta.com/i", $_POST["email"] ) ) ;
