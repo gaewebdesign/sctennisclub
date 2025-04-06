@@ -71,7 +71,7 @@ tr {
            echo '<td style="width:33%">';
            echo $date;
            $MEMBER_FEE = MAY_MIXER_FEE;
-           if($row['payment'] == 0.02) echo("&check; ");
+           if($row['payment'] == 0.01) echo("&check; ");
 
 /*
 
