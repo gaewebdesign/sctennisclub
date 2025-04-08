@@ -183,7 +183,7 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
                 $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
             }
             if(  $row["mtype"] == "RF_") {
-                $icon .= "<small>-</small>" ;                                     
+                $icon .= "<small><b>-</b></small>" ;                                     
             }
             
              
