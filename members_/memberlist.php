@@ -182,6 +182,10 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
             if( preg_match("/santa|clara/i",$row[CITY])) {
                 $icon="<small>&nbsp;"."🎾"."</small>" ;                                     
             }
+            if(  $row["mtype"] == "RF_") {
+                $icon .= "<small>-</small>" ;                                     
+            }
+            
              
             
             $date .= $icon;
