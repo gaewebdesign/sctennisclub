@@ -193,7 +193,10 @@ $payment=$paid;
 
 
 $subject = "Orela lunch signup";
-$message = "($fname $lname) tried to signup";
+$message = "($fname $lname) \n";
+$message .= "$email \n";
+$message .= "tried to signup \na";
+
 $to="south@sctennisclub.org";
 phpemailer( $subject, $message, "tennis.mutt@gmail.com" ,$to);
 
