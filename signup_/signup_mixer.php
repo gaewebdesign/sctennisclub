@@ -20,7 +20,7 @@
       
     <h3 style="font-size: 1.2em ">
     Enjoy some  drop-in social tennis  on the courts with fellow members for
-     Santa Clara Tennis Center on
+     Santa Clara Tennis Center on Saturday 
     June 14 2025 , 9-12 noon on courts #6-#8. Sign up ahead of time or pay at the desk
     <br/>
     Signup page is at <a href="http://www.sctennisclub.org/sctcmixer">www.sctennisclub.org/sctcmixer</a>
