@@ -15,13 +15,13 @@
 
 
   </picture>
-      <h2>Santa Clara Tennis Club Monthly Mixerl </h2>
+      <h2>Santa Clara Tennis Club Monthly Mixer </h2>
 
       
     <h3 style="font-size: 1.2em ">
     Enjoy some  drop-in social tennis  on the courts with fellow members for
      Santa Clara Tennis Center on
-    June xx  2025 , 9-12 noon on courts #6-#8. Sign up or pay at the desk
+    June 14 2025 , 9-12 noon on courts #6-#8. Sign up ahead of time or pay at the desk
     <br/>
     Signup page is at <a href="http://www.sctennisclub.org/sctcmixer">www.sctennisclub.org/sctcmixer</a>
   
