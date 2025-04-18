@@ -11,7 +11,7 @@
 
     -->
   
-    <img class="mg-fluid img-thumbnail"  src="./images/mantennisplayer.png" width="89%" alt="-" >
+    <img class="mg-fluid img-thumbnail"  src="./images/womantennisplayer.png" width="89%" alt="-" >
 
 
   </picture>
