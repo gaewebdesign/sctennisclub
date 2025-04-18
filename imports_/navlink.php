@@ -95,11 +95,16 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 <!--          <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./event_past.phtml?draw=1">Players</a></li> -->
 
               <li><a class="dropdown-item" href="./signup_lunch.phtml">May - Cinco de Mayo</a></li>
+
+              <li><a class="dropdown-item" href="./signup_mixer.phtml">June - Monthly Mixer</a></li>              
               <li><a class="dropdown-item" href="./signup_free.phtml">July - Annual Pigout</a></li>
               
               <li><a class="dropdown-item" href="./signup_icecream.phtml">August - Ice Cream Social</a></li>
               <li><a class="dropdown-item" href="./signup_styx.phtml">November - End of year Dinner</a></li>
+<!--
               <li><a class="dropdown-item" href="./teamtennis.phtml">December - Team Tennis</a></li>
+-->              
+
               <li><hr class="dropdown-divider" style="border-color:black;"></li>
 
 <!--
