@@ -25,6 +25,7 @@ tr {
        <?php
           
           $epoch = strtotime('2024-8-19');
+          $fini = strtotime('2024-11-1');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
@@ -36,7 +37,7 @@ tr {
 
           // switch back
 
-          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch  order by custom desc";
+          $query = "select * from ".TABLE_MIXER_PENDING." where custom>$epoch and custom<$fini order by custom desc";
 
           $con = Configure();
            
