@@ -31,6 +31,8 @@ tr {
        <?php
           
           $epoch = strtotime('2024-8-11');
+          $fini = strtotime('2024-11-11');
+
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
@@ -48,7 +50,7 @@ tr {
           $con = Configure();
 
  //        echo( $query );           
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch order by fname asc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$epoch and custom<$fini order by fname asc";
           $qr=mysqli_query($con,$query);
           $n = mysqli_num_rows($qr);
           echo("<h4>Participants  ($n) </h4>"  );         
