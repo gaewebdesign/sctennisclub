@@ -88,7 +88,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
       <div class="dropdown" >
           <a class="dropdown-toggle navbar-brand"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            Past Events
+            Events
           </a>
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
 <!--              <li><a class="dropdown-item active" href="./event_past.phtml">Info</a></li>  -->
