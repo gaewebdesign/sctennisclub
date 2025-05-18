@@ -78,6 +78,9 @@
                 $MEMBER_FEE="10.00";    // "5.00";
                 $ICECREAM_FEE="5.50";  //"5.50";
                 $GUEST_FEE = "10.00";  //"10.00" ;
+                $EVENT = "JuneMixer2025";
+                define( "MEMBER_FEE", "5");
+                define( "GUEST_FEE", "10");
 
                 include "./library/include.inc";
                 include "./library/paypal.inc";
@@ -86,19 +89,12 @@
                 include "./library/free_paypal.inc";
 
 
-// Change the images and verbiage (this for pigout)
-//               include "./signup_/signup_free.php";
-
 //             switch the tables bewteen MIXER_PAYMENT  and MIXER_PENDING
                define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER_PENDING);
 //             define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER);
 
-
-//             include "./signup_/test.php";
                include "./signup_/signup_mixer.php";
-
-               include "./signup_/signup_participants_icecream.php";
-
+               include "./signup_/signup_participants_mixer.php";
 
 
                 ?>

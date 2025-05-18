@@ -62,14 +62,16 @@
               <span><h2 style="color:rgb(25, 0, 255)">Select one: </h2></span>  
               <div class="form-check ">
 
-                <input  class="form-check-input" type="radio" id="icecream" checked="checked" value=<?php echo(ICECREAM_FEE); ?> name="_FEE">
-                <label class="form-check-label" for="member">🎾 &nbsp;SCTC Member &nbsp; $<?php echo(ICECREAM_FEE); ?></label>
-  
+
+                <input  class="form-check-input" type="radio" id="icecream" checked="checked" value=<?php echo(MEMBER_FEE); ?> name="_FEE">
+                <label class="form-check-label" for="member">🎾 &nbsp;SCTC Member &nbsp; $<?php echo(MEMBER_FEE); ?></lab>
+               
+                <input type="hidden" class="form-control" id="eventid" value=<?php echo $EVENT ?> name="_EVENT">
   
   
                 <br/>
-                <input class="form-check-input"  type="radio" id="member" value=<?php echo(TENNIS_ICECREAM_FEE); ?> name="_FEE"    >
-                <label class="form-check-label" for="member">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-Member $<?php echo(TENNIS_ICECREAM_FEE); ?></label>
+                <input class="form-check-input"  type="radio" id="member" value=<?php echo(GUEST_FEE); ?> name="_FEE"    >
+                <label class="form-check-label" for="member">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-Member $<?php echo(GUEST_FEE); ?></label>
          
               </div>
     </div>
