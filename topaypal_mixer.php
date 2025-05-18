@@ -107,7 +107,7 @@ $paypal = new paypal();
 $insignia="-";
 
 
-$event=$_POST["_EVENT"];  // "2024 Fatima";
+$event="June2025"; //$_POST["_EVENT"];  // "2024 Fatima";
 $fee = $_POST["_FEE"];
 /*
 if($_POST["dinner"] == "chicken" ) {
@@ -139,7 +139,9 @@ if($_POST["dinner"] == "chicken" ) {
 
 
 $paid= MAY_MIXER_FEE;
-$paid =  $_POST["mixer"];
+//$paid =  $_POST["mixer"];
+$paid=$_POST["_FEE"];
+
 $paypal->price = $paid;
 
 $paypal->enable_payment();
