@@ -66,6 +66,9 @@ define("CANCEL_URL_SIGNUP","http://www.sctennisclub.org/signup_/cancel.php");
 define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup_/notify.php");
 //define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
+
+define("RETURN_URL_SIGNUP_MIXER","http://www.sctennisclub.org/signup_/done_mx.php");
+
 // Use for teamtennis
 define("RETURN_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/done.php");
 define("CANCEL_URL_TEAMTENNIS","http://www.sctennisclub.org/teamtennis_/cancel.php");

@@ -137,7 +137,9 @@ define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
 */
 
 
-$paypal->add("return",RETURN_URL_SIGNUP);
+//$paypal->add("return",RETURN_URL_SIGNUP);
+
+$paypal->add("return",RETURN_URL_SIGNUP_MIXER);
 $paypal->add("cancel_return",CANCEL_URL_SIGNUP);
 $paypal->add("notify_url",NOTIFY_URL_SIGNUP);
 
