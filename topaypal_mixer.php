@@ -107,40 +107,20 @@ $paypal = new paypal();
 $insignia="-";
 
 
-$event="June2025"; //$_POST["_EVENT"];  // "2024 Fatima";
+$event=$_POST["_EVENT"];  // "2024 Fatima";
 $fee = $_POST["_FEE"];
-/*
-if($_POST["dinner"] == "chicken" ) {
-	$event ="Chicken Souviaki Plate";
-} else if($_POST["dinner"] == "salmon"){
-	$event ="Salmon";
 
-} else if($_POST["dinner"] == "veg"){
-	$event ="Vegetarium Mousaka";
 
-} else if($_POST["dinner"] == "gyro"){
-	$event ="Gyro Plate";
-} else{
-
-	echo "<script>alert(\"Select a dinner \")</script>";
-		echo('
-              <script >
-                    window.setTimeout(function() {
-                    window.location.href="./signup.html";
-                 }, 100);
-              </script>
-                ');
-		return;
-
-}
-*/
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
-
-
 
 $paid= MAY_MIXER_FEE;
 //$paid =  $_POST["mixer"];
 $paid=$_POST["_FEE"];
+
+// Override for testing
+if (str_contains($_POST["email"], "usta")) {
+    $paid = "0.01";
+}
 
 $paypal->price = $paid;
 
@@ -166,6 +146,10 @@ DEBUG("notify:" . NOTIFY_URL);
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
 $email = $_POST["email"];
+
+if (str_contains($email, "usta")) {
+    $paid = "0.01";
+}
 
 $gender = "-";
 $ntrp   = "-";
