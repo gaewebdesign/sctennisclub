@@ -23,9 +23,12 @@
     <iframe src="https://giphy.com/embed/YSsqduWPo7528" width="466" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rice-YSsqduWPo7528"></a></p>    
 ok
         -->
-
+<!--
     <iframe src="https://giphy.com/embed/HxE2bm0SZWqhW" width="480" height="365" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/food-anime-HxE2bm0SZWqhW"></a></p>
-
+ -->
+  <a href="http://www.sctennisclub.org/sctcmixer">
+    <img src="../images/tenor.gif" alt="Girl in a jacket" width="500" height="600">
+   </a>
 
 <!--
         <h1>Follow the action on the club's Instagram page! </h1>
