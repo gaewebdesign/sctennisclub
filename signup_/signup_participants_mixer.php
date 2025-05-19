@@ -47,7 +47,7 @@ tr {
 
 //          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic  order by lname";
 
-//           echo $query;
+ //          echo $query;
 
           $con = Configure();
            
