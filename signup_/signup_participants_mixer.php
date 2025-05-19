@@ -42,7 +42,8 @@ tr {
 */
 
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
-          $query = "select * from ".TABLE_MIXER_PENDING."  where date>$jurassic and date<$cretaceous order by fname asc";
+          $query = "select * from ".TABLE_MIXER_PENDING."  where date>$jurassic and date<$cretaceous ";
+          $query .= " and event='".MIXER_EVENT."' order by fname asc";
 
 //          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic  order by lname";
 
@@ -61,7 +62,7 @@ tr {
 
             echo '<td style="width:33%">';
             echo $row['lname'];
-
+//            echo $row['event'];
 //            echo '<td style="width:33%">';
 //            echo $row['event'];
 
