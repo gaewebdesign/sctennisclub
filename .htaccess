@@ -19,6 +19,7 @@ RewriteRule ^info$  info.phtml  [NC,QSA,L]
 RewriteRule ^join$  join.phtml  [NC,QSA,L]
 
 RewriteRule ^mixers$  mixers.phtml  [NC,QSA,L]
+RewriteRule ^sctcmixer signup_mixer.phtml
 
 
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]

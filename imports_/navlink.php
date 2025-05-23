@@ -96,7 +96,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
               <li><a class="dropdown-item" href="./signup_lunch.phtml">May - Cinco de Mayo</a></li>
 
-              <li><a class="dropdown-item" href="./signup_mixer.phtml">June - Monthly Mixer</a></li>              
+              <li><a class="dropdown-item" href="./sctcmixer">June - Monthly Mixer</a></li>              
               <li><a class="dropdown-item" href="./signup_free.phtml">July - Annual Pigout</a></li>
               
               <li><a class="dropdown-item" href="./signup_icecream.phtml">August - Ice Cream Social</a></li>
