@@ -21,7 +21,7 @@ function checker(){
     $subject = "Membership Check ($user )";
     $message = "$user  check\n";
     
-    $toemail1 = "mutt@sctennisclub.org";
+    $toemail1 = "south@sctennisclub.org";
     $toemail2 = "sherry@sctennisclub.org";
     
 
