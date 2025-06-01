@@ -175,7 +175,7 @@ $theTABLE = "mixer_pending";
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
-$year=2024;
+$year=YEAR ; ///2024;
 //unused fields
 $gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
 $mtype=$phone=$code="-";
