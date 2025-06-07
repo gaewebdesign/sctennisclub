@@ -21,7 +21,7 @@
     social mixed doubles round robin play at Santa Clara Tennis Center on Saturday
     July 12, 2025 , 9-12 noon Courts #6-#8.
     <p>
-      on the menu:  Chicken, pork ribs, hot links, sweet beans, corn bread, and  watermelon.
+      on the menu:  Chicken,  ribs, potato salad ,mac and cheese, corn bread, chips and salsa.
     <p>
     Signup early for this event, as spaces are limited.
     Don't delay! <br>
