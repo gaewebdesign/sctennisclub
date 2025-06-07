@@ -23,7 +23,7 @@
     <p>
       on the menu:  Chicken,  ribs, potato salad ,mac and cheese, corn bread, chips and salsa.
     <p>
-    Signup early for this event, as spaces are limited.
+    Signup early for this event, as spaces are limited. Deadline is July 5
     Don't delay! <br>
     
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
@@ -157,7 +157,7 @@
         </div>         
 
 <!-- <button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button> -->
-          <button class="w-100 btn btn-primary btn-lg"  name = "SubmitButton" type="submit"> Signups Closed! </button>
+          <button class="w-100 btn btn-primary btn-lg" disabled name = "SubmitButton" type="submit"> Signups Closed! </button>
         </form>
 
       </div>
