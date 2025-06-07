@@ -27,6 +27,8 @@ define("TABLE_TEAMTENNIS", "teamtennis");
 define("TABLE_TEAMTENNIS_PENDING", "teamtennis_pending");
 
 
+define("TABLE_PIGOUT","pigout_free");
+define("PIGOUT_EVENT","pig25");
 
 define ("YEAR" , "2025");
 //define("RES_FEE" , "25" );
