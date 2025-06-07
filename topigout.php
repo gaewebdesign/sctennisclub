@@ -95,7 +95,7 @@ echo "inserting into $theTABLE";
 
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
-}catch( \Exception $e){
+}catch( \Throwable $e){
 	
 	$message = "$fname $lname is already signed up ";
 	echo "<script>alert('$message');</script>";
