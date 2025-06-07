@@ -14,7 +14,8 @@ $password = "" ;// $_POST['password'];
 $submitButton = $_POST['SubmitButton'];
 
 // CHECK IF EMAIL MATCH
-$retv= CHECK_EMAIL( $email);
+$retv= CHECK_YEMAIL( $email,YEAR);
+
 
 if($retv == false){
 
@@ -66,12 +67,12 @@ echo('
 */
 
 // This far means passed email and CAPTCHA tests
-$theTABLE = "mixer_free";
+$thePIGTABLE = TABLE_PIGOUT;
 
 //echo ("INSERT $fname $lname $paid $date $custom");
 $gender= $ntrp = $address=$city=$zip=$team=$mtype=$opt=$pwd = "" ;
 
-$year = "2024";
+$year = YEAR;
 $custom = time()-60*60*7;
 $date = $custom;
 //$dt = new DateTime("@$custom");
@@ -81,17 +82,36 @@ $insignia = "~";
 $payment=0;
 $member = "W";
 $paid=0;
-$event="2024Pigout";
+$event= PIGOUT_EVENT;//"Pig25";
 
 
+try{
 
+toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+// if this sucessfull insert to 
+
+$theTABLE = TABLE_MIXER_FREE;
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
+}catch( Exception $e){
+	
+	$message = "$fname $lname is already signed up ";
+	echo "<script>alert('$message');</script>";
+	echo('
+	<script >
+		window.setTimeout(function() {
+					window.location.href="./signup_free.phtml";
+			}, 750);
+	</script>
+	');	
+
+	exit();
+}
 
 
-$subject = "Pigout Signup ($fname $lname) ---";
+$subject = "Pigout 2025 Signup ($fname $lname) ---";
 $email = "santaclarawebmaster@gmail.com";
-$message = "Pigout 2024 $fname $lname signup";
+$message = "Pigout  $fname $lname signup";
 
 
 // Thanks for Signing up!
