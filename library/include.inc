@@ -495,8 +495,8 @@ function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address
   
   // for pigout
     LOGGER("toDB pigout ".$query_results );
-    return -1;
-    //return $query_results;
+    
+    return $query_results;
 
 }
 
