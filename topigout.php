@@ -87,11 +87,13 @@ $event= PIGOUT_EVENT;//"Pig25";
 
 try{
 
-toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-// if this sucessfull insert to 
+$qresult = toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+
+if( $qresult == false ){
+     throw Exception;
+}
 
 $theTABLE = TABLE_MIXER_FREE;
-echo "inserting into $theTABLE";
 
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
