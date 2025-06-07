@@ -99,13 +99,13 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
 
 }catch( \Throwable $e){
 	
-	$message = "$fname $lname is already signed up ";
+	$message = "$email is already signed up ";
 	echo "<script>alert('$message');</script>";
 	echo('
 	<script >
 		window.setTimeout(function() {
 					window.location.href="./signup_free.phtml";
-			}, 750);
+			}, 250);
 	</script>
 	');	
 
@@ -115,7 +115,7 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
 
 $subject = "Pigout 2025 Signup ($fname $lname) ---";
 $email = "santaclarawebmaster@gmail.com";
-$message = "Pigout  $fname $lname signup";
+$message = "$fname $lname signed up for the Pigout";
 
 
 // Thanks for Signing up!
@@ -124,7 +124,7 @@ $message = "Pigout  $fname $lname signup";
 	<script >
 		window.setTimeout(function() {
 					window.location.href="./signup_free.phtml";
-			}, 500);
+			}, 250);
 	</script>
 	');
 
