@@ -489,11 +489,12 @@ function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address
     $query .= ")";
 
   
-  LOGGER( $query );
+  LOGGER("toDB ".$query );
   
   $query_results=mysqli_query($con, $query);
   
-    LOGGER("PIGOUT ".$query_results );
+  // for pigout
+    LOGGER("toDB pigout ".$query_results );
     return -1;
     //return $query_results;
 
