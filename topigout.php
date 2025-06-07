@@ -91,6 +91,8 @@ toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city
 // if this sucessfull insert to 
 
 $theTABLE = TABLE_MIXER_FREE;
+echo "inserting into $theTABLE";
+
 toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }catch( Exception $e){
