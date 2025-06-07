@@ -17,9 +17,9 @@
       <h3>Santa Clara Tennis Club Annual Pigout </h3>
 
     <h3 style="font-size: 1.2em ">
-    Enjoy some <b>barbecue</b> from <a href="https://www.smokedoutbbq.net/">Smoked Out Barbecue</a> and tennis on the courts with fellow members  for
+    Enjoy some <b>barbecue</b> from <a href="https://swinchesterbbq.com/t/">South Winchester Barbecue</a> and tennis on the courts with fellow members  for
     social mixed doubles round robin play at Santa Clara Tennis Center on Saturday
-    July 13, 2024 , 9-12 noon Courts #6-#8.
+    July 12, 2025 , 9-12 noon Courts #6-#8.
     <p>
       on the menu:  Chicken, pork ribs, hot links, sweet beans, corn bread, and  watermelon.
     <p>
@@ -42,7 +42,7 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-             <h6 class="my-0">2024 July Pigout Social </h6> 
+             <h6 class="my-0">2025 July Pigout Social </h6> 
 
               <small class="text-muted"><a href="https://www.google.com/maps/search/santa+clara+tennis+center/@37.3463955,-121.9721728,14z/data=!3m1!4b1">Santa Clara Tennis Center</a></small>
               <br> Signup for <b>free</b>

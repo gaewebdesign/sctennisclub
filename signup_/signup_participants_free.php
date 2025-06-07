@@ -41,9 +41,12 @@ tr {
 
 //          $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by custom desc";
 
-          $query = "select * from ".TABLE_MIXER_FREE."  where custom>$epoch order by fname asc";
+         $event= PIGOUT_EVENT;
 
-          $con = Configure();
+         $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\" order by fname asc";
+
+         //echo $query;
+         $con = Configure();
            
  //        echo( $query );           
           $qr=mysqli_query($con,$query);
