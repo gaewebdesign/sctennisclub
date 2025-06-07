@@ -492,6 +492,10 @@ function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address
   LOGGER( $query );
   
   $query_results=mysqli_query($con, $query);
+  
+    LOGGER("PIGOUT ".$query_results );
+    return -1;
+    //return $query_results;
 
 }
 
