@@ -24,7 +24,7 @@
       on the menu:  Chicken,  ribs, potato salad ,mac and cheese, corn bread, chips and salsa.
     <p>
     Signup early for this event, as spaces are limited. Deadline is July 5
-    Don't delay! <br>
+     <br>
     
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
@@ -45,7 +45,7 @@
              <h6 class="my-0">2025 July Pigout Social </h6> 
 
               <small class="text-muted"><a href="https://www.google.com/maps/search/santa+clara+tennis+center/@37.3463955,-121.9721728,14z/data=!3m1!4b1">Santa Clara Tennis Center</a></small>
-              <br> Signup for <b>free</b>
+              <br> Members signup for <b>free</b>
             </div>
           </li>
 
@@ -157,7 +157,7 @@
         </div>         
 
 <!-- <button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button> -->
-          <button class="w-100 btn btn-primary btn-lg" disabled name = "SubmitButton" type="submit"> Signups Closed! </button>
+          <button class="w-100 btn btn-primary btn-lg"  name = "SubmitButton" type="submit"> Signup Here! </button>
         </form>
 
       </div>
