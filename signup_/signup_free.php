@@ -23,8 +23,10 @@
     <p>
       on the menu:  Chicken,  ribs, potato salad ,mac and cheese, corn bread, chips and salsa.
     <p>
-    Signup early for this event, as spaces are limited. Deadline is July 5
-     <br>
+    Signup early for this event, as spaces are limited. Deadline is July 5. 
+    <br/>
+    If you have questions, email Roy at social @ sctennisclub.org.
+    <br>
     
     Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
