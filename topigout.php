@@ -95,6 +95,8 @@ try{
 $qresult = toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 if( $qresult == false ){
+
+
      throw Exception;
 }
 
@@ -113,6 +115,8 @@ toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$z
 			}, 250);
 	</script>
 	');	
+    $subject=$message;
+	phpemailer($subject, $message , "tennis.mutt@gmail.com","tennis.mutt@gmail.com");
 
 	exit();
 }
