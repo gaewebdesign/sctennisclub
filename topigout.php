@@ -19,14 +19,14 @@ $retv= CHECK_YEMAIL( $email,YEAR);
 
 if($retv == false){
 
-	$subject = "$email tried to signup not in db";
+	$subject = "$fname $lname ($email) tried to signup not in db";
     
 	$message = "Email address ($email) not found in membership. ";
     $message .= "The Pigout is a members only event. ";
 	$message .= "Please signup to Santa Clara Tennis Club";
 
 	$me = "tennis.mutt@gmail.com";
-	phpemailer($subject, $subject , $me,$me);
+	phpemailer($subject, $message , $me,$me);
 
     echo "<script>alert('$message');</script>";
 //		window.location.href="./pigout";
