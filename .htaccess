@@ -34,6 +34,8 @@ RewriteRule ^sctcmixer$ signup_mixer.phtml  [NC,QSA,L]
 RewriteRule ^ustasignup$ register.phtml  [NC,QSA,L]
 
 RewriteRule ^pigout$ signup_free.phtml  [NC,QSA,L]
+RewriteRule ^pigout$ signup_pigout.phtml  [NC,QSA,L]
+
 RewriteRule ^august$ signup_icecream.phtml  [NC,QSA,L]
 RewriteRule ^icecream$ signup_icecream.phtml  [NC,QSA,L]
 
