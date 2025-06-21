@@ -28,7 +28,7 @@
     If you have questions, email Roy at social @ sctennisclub.org.
     <br>
     
-    Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
+    Signup page is at <a href="http://www.sctennisclub.org/pigout">www.sctennisclub.org/pigout</a>
   
     </h3>
   </div>
