@@ -92,13 +92,13 @@ $event= PIGOUT_EVENT;//"Pig25";
 
 try{
 
-$qresult = toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
-
+//$qresult = toDB($thePIGTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
+$qresult=true;
 if( $qresult == false ){
-
-
-     throw Exception;
+// do nothing
+//     throw Exception;
 }
+
 
 $theTABLE = TABLE_MIXER_FREE;
 
