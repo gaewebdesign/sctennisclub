@@ -159,7 +159,7 @@
         </div>         
 
 <!-- <button class="w-100 btn btn-primary btn-lg" disabled > Event is over! - thanks all for signing up! </button> -->
-          <button class="w-100 btn btn-primary btn-lg"  name = "SubmitButton" type="submit"> Signup Here! </button>
+          <button class="w-100 btn btn-primary btn-lg" disabled name = "SubmitButton" type="submit"> Signups Closed! </button>
         </form>
 
       </div>
