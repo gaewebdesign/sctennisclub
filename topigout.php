@@ -139,7 +139,7 @@ $message = "$fname $lname signed up for the Pigout";
 
 // Thanks for Signing up!
 
-phpemailer($subject, $message , "tennis.mutt@gmail.com",$email);
+phpemailer($subject, $message , $email ,$email);
 
 
 
