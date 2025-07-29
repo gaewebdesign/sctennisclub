@@ -25,10 +25,12 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
     RESIDENTS: <?php echo( Residents(YEAR) ); ?>
     NON-RESIDENTS: <?php echo( NonResidents(YEAR)) ?>
     <br>
+
+    <!--
     <b><?php echo( YEAR-1); ?>  </b> &nbsp;
     RESIDENTS: <?php echo( Residents(YEAR-1) ); ?>
     NON-RESIDENTS: <?php echo( NonResidents(YEAR-1)) ?>
-
+-->
 </div>
 <!--
 <table class="table table-striped sortable">
@@ -263,10 +265,11 @@ php -q  /home/southb56/sctennisclub.org/join_/croncurl.php
             playerlist(YEAR);
             
 
+  /*
             $year=YEAR-1;
             echo ("<tr><td><td><b> $year Members</b> <td><td><td></tt>");
             playerlist(YEAR-1);
-
+*/
       
 ?>
  </body>
