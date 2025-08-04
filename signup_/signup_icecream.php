@@ -21,10 +21,10 @@
     <h3 style="font-size: 1.2em ">
     Enjoy some  tennis and <b>ice cream</b>  on the courts with fellow members for
     social mixed doubles round robin play at Santa Clara Tennis Center on
-    August 24, 2024 , 9-12 noon on courts #6-#8. Sign up early before entries close!
+    August 22, 2025 , 9-12 noon on courts #6-#8. Sign up early before entries close!
     If you just &#x1F497; ice cream, you may
     sign up for the ice cream only option! <br/>
-    Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
+    Signup page is at <a href="http://www.sctennisclub.org/icecream">www.sctennisclub.org/icecream</a>
   
     </h3>
   </div>
@@ -90,7 +90,7 @@
 
         <div class="container-fluid mt-2">
       <div class="mb-5 col-12">
-      <button class="btn btn-primary" disabled name="SubmitButton" type="submit">Go to Paypal</button>
+      <button class="btn btn-primary"  name="SubmitButton" type="submit">Go to Paypal</button>
       </div  >
       </div>
 
