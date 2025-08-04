@@ -90,7 +90,7 @@
 
         <div class="container-fluid mt-2">
       <div class="mb-5 col-12">
-      <button class="btn btn-primary"  name="SubmitButton" type="submit">Go to Paypal</button>
+      <button class="btn btn-primary" disabled  name="SubmitButton" type="submit">Go to Paypal</button>
       </div  >
       </div>
 
