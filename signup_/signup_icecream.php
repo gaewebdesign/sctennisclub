@@ -24,7 +24,7 @@
     August 23, 2025 , 9-12 noon on courts #6-#8.
     If you just &#x1F497; ice cream, you may
     sign up for the ice cream only option! <br/>
-    Signup page is at <a href="http://www.sctennisclub.org/icecream">www.sctennisclub.org/icecream</a>
+    Signup page is at <a href="http://www.sctennisclub.org/signup">www.sctennisclub.org/signup</a>
   
     </h3>
   </div>
