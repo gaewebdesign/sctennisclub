@@ -49,7 +49,7 @@ define("ICECREAM_FEE" , "5.00");
 
 //define("TENNIS_ICECREAM_FEE" , "0.02");
 //define("ICECREAM_FEE" , ".01");
-//define("EVENT_ICECREAM" , "2025 ICE");
+define("EVENT_ICECREAM" , "2025 ICE");
 
 /*
 define("RETURN_URL_ICE","http://www.sctennisclub.org/signup_/done.php");
