@@ -29,7 +29,7 @@ tr {
            <p>
        <?php
           
-          $jurassic = strtotime('2025-8-23');
+          $jurassic = strtotime('2025-8-2');
           $cretaceous = strtotime('2025-9-7');
           
           // Switch between tables here **************************
