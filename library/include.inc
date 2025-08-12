@@ -49,9 +49,13 @@ define("MAY_MIXER_FEE", "15" );
 
 define("TENNIS_ICECREAM_FEE" , "0.02");
 define("ICECREAM_FEE" , ".01");
+define("EVENT_ICECREAM" , "2025 ICE");
 
-
-
+/*
+define("RETURN_URL_ICE","http://www.sctennisclub.org/signup_/done.php");
+define("CANCEL_URL_ICE","http://www.sctennisclub.org/signup_/cancel.php");
+define("NOTIFY_URL_ICE","http://www.sctennisclub.org/signup_/notify.php");
+*/
 
 /*
 define("RETURN_URL","http://www.sctennisclub.org/signup/done");
@@ -74,6 +78,7 @@ define("CANCEL_URL_SIGNUP","http://www.sctennisclub.org/signup_/cancel.php");
 define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup_/notify.php");
 //define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.org/signup/redirect.php");
 
+define("ABD","noth");
 
 define("RETURN_URL_SIGNUP_MIXER","http://www.sctennisclub.org/signup_/done_mx.php");
 
