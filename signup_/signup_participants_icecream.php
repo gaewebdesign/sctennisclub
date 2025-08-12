@@ -42,9 +42,9 @@ tr {
 */
           $query = "select * from ".TABLE_MIXER_PENDING."  where date>$jurassic and date<$cretaceous order by fname asc";
           $query = "select * from ".TABLE_MIXER_PAYPAL."  where custom>$jurassic and custom<$cretaceous order by fname asc";
-          $query = "select * from ".TABLE_MIXER_PAYPAL."  where event ='CE 2025' order by date asc";
+          $query = "select * from ".TABLE_MIXER_PAYPAL."  where event ='2025 ICE' order by date asc";
 
-
+//"2025 ICE"
 //          $query = "select * from ".TABLE_MIXER_PENDING." where date>$jurassic  order by lname";
 
 //           echo $query;
