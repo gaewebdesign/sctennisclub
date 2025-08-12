@@ -49,7 +49,7 @@ $email = $_POST["email"];
 
 
 
-$event = "2025 Ice Cream"; //$_POST["event"];
+$event =EVENT_ICECREAM;
 
 
 // ********************************
