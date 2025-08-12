@@ -37,9 +37,9 @@ $paypal->add("business",PAYPAL_MAIL);
 $paypal->add("item_name","Ice cream");
 $paypal->add("quantity",1);
 
-$paypal->add("return",RETURN_URL);
-$paypal->add("cancel_return",CANCEL_URL);
-$paypal->add("notify_url",NOTIFY_URL);
+$paypal->add("return",RETURN_URL_SIGNUP);
+$paypal->add("cancel_return",CANCEL_URL_SIGNUP);
+$paypal->add("notify_url",NOTIFY_URL_SIGNUP);
 
 DEBUG("notify:" . NOTIFY_URL);
 
