@@ -90,14 +90,14 @@ $data = array(
 */
 $subject= "2025 Ice Cream (from topaypal_icecream.php)";
 $message = "$fname $lname signed up";
-$email = "tennis.mutt@gmail.com";
+//$email = "tennis.mutt@gmail.com";
 
 $insignia=$opt=$pwd="";
 
 $res = CHECK_CAPTCHA() ;
 if($res == true) {
     $event = "2025 ICE";
-    phpemailer($subject,$message , $email );
+    phpemailer($subject,$message , "south@sctennisclub.org" );
     toDB ($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd);
 
 }else{
