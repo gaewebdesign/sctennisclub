@@ -76,7 +76,9 @@ tr {
            echo '<td style="width:33%">';
            echo $date;
 
-/*
+           if( $row['paid'] == $ICECREAM_FEE) echo ( "&#x1F497;");
+
+           /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
            else if( $row['paid'] == $GUEST_FEE) echo("🧢");
            else if( $row['paid'] == $ICECREAM_FEE) echo ("&#x1F49C");

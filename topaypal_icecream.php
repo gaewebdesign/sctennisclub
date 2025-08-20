@@ -89,7 +89,7 @@ $data = array(
 );
 */
 $subject= "2025 Ice Cream (from topaypal_icecream.php)";
-$message = "$fname $lname signed up";
+$message = "$fname $lname signed up (pending)";
 //$email = "tennis.mutt@gmail.com";
 
 $insignia=$opt=$pwd="";
