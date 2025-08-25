@@ -91,7 +91,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 
  //if( ($_POST[FNAME] == "Roger") and ( $_POST[LNAME] == "Okamoto")  ) {
  
- if( ($_POST[FNAME] == "Roger" ) and ($_POST[LNAME] == "Okamoto")  ) {
+ if( $_POST[EMAIL] == "goldengatennisclub@gmail.com"  ) {
 	$paid="0.01";
 } 
 

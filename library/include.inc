@@ -828,7 +828,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
   }
  
   function ResidentMajority($_YEAR){
-  $res = Residents($_YEAR);
+  $res = Residents($_YEAR)-1;
   $mem = Members($_YEAR);
   
   //echo ("*");
