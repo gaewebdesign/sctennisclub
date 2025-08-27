@@ -800,7 +800,7 @@ function copyto_teamtennis__deletethis( $src, $dest, $epoch){
 
     }
      
-      return $res-1;
+      return $res;
 
   }
 
