@@ -72,11 +72,12 @@
   <p>
       <h2>Santa Clara Tennis Club Year End Dinner </h2>
 
-    <h3 style="font-size: 1.2em ">
-    Enjoy dinner at <a href="https://www.yelp.com/biz/hokkaido-buffet-san-jose"><b>Hokkaido Buffet</b></a> in West San Jose on Thursday November 13 , 6-8 pm. (dinner available at 6:30)
-     Address is 3830 Stevens Creek Blvd, San Jose, 95117 <br/>
+    <h3 style="font-size: 1.18em ">
+    Enjoy dinner at <a href="https://www.yelp.com/biz/hokkaido-buffet-san-jose"><b>Hokkaido Buffet</b></a> in San Jose on Thursday November 13 , 6-8 pm. (dinner available at 6:30)
+     <br/>Address is 3830 Stevens Creek Blvd, San Jose, 95117 <br/>
      We get a private room! 
-    Registration is $<?php echo("20") ?> 
+    Full Buffet dinner is $<?php echo("20") ?>  <br/>
+    Deadline to register is Nov 9, 2025;
 <!--
     Registration afterwards will be $<?php echo($MEMBER_FEE) ?> until the final deadline of November 4 <br/>
           Signup page is at <a href="./signup">www.sctennisclub.org/signup</a>
