@@ -90,7 +90,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //<label for="myCheckbox">Check this box</label>
           $name = "roger";
           $_v= "234";
-       echo("<input type = \"checkbox\" name=\"opt1\" value=\"$_v\" >");
+       echo("<input type = \"checkbox\" name=\"opt1\" value=\"$id\" >");
 
 
     }
@@ -117,7 +117,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("<tr> ");
                     echo("<td>");
-                         CheckBox( 8 );
+
+
+                         CheckBox( $row["_id"] );
                     echo("<td>");
                     echo( $row['year']);
                     echo("</td>");
@@ -166,6 +168,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //                  echo( date(" m/d/Y",$row[CUSTOM]).$icon );
                     echo("</td>");
                     echo("</tr> ");
+                    echo("\n");
 
                     }
 
