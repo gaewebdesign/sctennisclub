@@ -73,9 +73,18 @@ if( !empty($_POST["custom"])){
 $subject = "Mixer (from signup/notify.php";
 $name = "Mr Spock";
 
-TEXT("EMAILER");
-EMAILER( $subject, $name, $verbose=true);
+//TEXT("EMAILER");
+//EMAILER( $subject, $name, $verbose=true);
+// *************************************************
+$fname = "Mr";
+$lname = "Spock";
+ $subject= "Hokkaido Signup $fname $lname";
+      $message = "Hokkaido Buffet  signup: $fname $lname \n<br>";
+  //    $message .= "Paypal payer = $payer_fname $payer_lname";
+      $recipient= "south@sctennisclub.org";
+      phpemailer($subject,$message , $recipient , $recipient );
 
+// *************************************************
 //emailer(true);
 
 function LOG_EMAIL($to , $message){
