@@ -58,7 +58,7 @@
   <?php 
    // include "includes.inc";
    $MEMBER_FEE=DINNER;
-   $MEMBER_FEE="25";
+   $MEMBER_FEE="20";
   
   ?>
 
@@ -108,7 +108,7 @@
     </div>
 
 
-     <form class="row g-3" action="./topaypal_styx.php" method="POST">
+     <form class="row g-3" action="./topaypal_buffet.php" method="POST">
 
             <div class="col-sm-5">
               <label for="firstName" class="form-label">First name</label>
@@ -135,7 +135,7 @@
 <!--- ******** HIDDEN FEE ****************************** -->
     <div class="col-12" >
               <label type="hidden" for="paid" class="form-label"> <span class="text-muted"></span></label>
-              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_STYX_FEE">
+              <input type="hidden" class="form-control" id="paid" value=<?php echo $MEMBER_FEE ?> name="_BUFFET_FEE">
               <div class="invalid-feedback">
                 Fee Error 
               </div>
@@ -215,7 +215,7 @@
 
 
 
-<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > Club Dinner is Wed Nov Nov 13</button>
+<button class="w-100 btn btn-primary btn-lg"  _disabled name="SubmitButton" > Club Dinner is Wed Nov Nov 13</button>
 
 
 </form>
