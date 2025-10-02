@@ -214,7 +214,7 @@
 
 
 
-<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > Thanks for signing up for Dinner! </button>
+<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > Club Dinner is Wed Nov Nov 13</button>
 
 
 </form>
