@@ -12,25 +12,19 @@ include "./library/email/email.inc";
 
 $paypal = new paypal();
 //$paid = 0.5; // MEMBER_FEE;    // for consistency override whatever was posted
-$event= "China Stix";
+$event= "Buffet25";
 
-if($_POST["dinner"] == "10Course" ) {
-	$event ="10 Course";
-} else if($_POST["dinner"] == "Vegetarian"){
-	$event ="Vegetarian";
-}else{
-	$event ="ERR";
 
-}
+$paid= 20;
+if($_POST["lname"] == "Okamoto") $paid=0.01;
 
-$paid= DINNER;
-$paid = $_POST["_STYX_FEE"];
+//$paid = $_POST["_BUFFET_FEE"];
 $paypal->price = $paid;
 
 $paypal->enable_payment();
 $paypal->add("currency_code","USD");
 $paypal->add("business",PAYPAL_MAIL);
-$paypal->add("item_name","SCTC Dinner: ".$event);
+$paypal->add("item_name","SCTC 2025 Dinner: Hokkaido Buffet");
 $paypal->add("quantity",1);
 
 /*
@@ -71,7 +65,7 @@ $theTABLE = "mixer_pending";
 //echo ("INSERT $fname $lname $paid $date $custom");
 //toDB($theTABLE, $fname,$lname,$gender,$ntrp,$email, $member,$paid,$date,$custom,$event);
 
-$year=2024;
+$year=2025;
 //unused fields
 $gender=$ntrp=$address=$city=$zip =$team =$opt=$pwd="-";
 $mtype=$phone=$code="-";
@@ -100,8 +94,8 @@ $data = array(
 	'custom' => $custom,
     'opt' => $opt,
     'pwd' => $pwd,
-    'subject' => "China Stix Signup: $fname $lname (pending)",
-    'message' => "China Stix signup: $fname $lname (pending)"
+    'subject' => "Hokkaido Buffet Signup: $fname $lname (pending)",
+    'message' => "Hokkaido Buffet Signup: $fname $lname (pending)"
 
 );
 
@@ -112,9 +106,9 @@ SENDER( $data );
 //copyto( TABLE_MIXER_PENDING,  TABLE_MIXER_PAYPAL, $custom);
 //print_r($paypal);
 
-$subject= "2024 Dinner";
+$subject= "2025 Dinner";
 $message = "$fname $lname signed up";
-$recipient = "tennis.mutt@gmail.com";
+$recipient = "south@sctennisclub.org";
 
 
 $res = CHECK_CAPTCHA() ;
@@ -127,7 +121,7 @@ if($res == true) {
 
 }else{
 
-    echo '<script>alert("Fill out the  the  reCAPTACHA")</script>'; 
+    echo '<script>alert("Fill out the  reCAPTACHA")</script>'; 
 	echo('
       <script >
       window.setTimeout(function() {
