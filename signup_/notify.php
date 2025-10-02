@@ -70,8 +70,8 @@ if( !empty($_POST["custom"])){
 // using the 'custom' number (i.e. time() generated)
 // this moves member from pending to mixer table
 // and sends email to santaclarawebmaster@gmail.com
-$subject = "Mixer";
-$name = "Capt Kirk";
+$subject = "Mixer (from signup/notify.php";
+$name = "Mr Spock";
 
 TEXT("EMAILER");
 EMAILER( $subject, $name, $verbose=true);
