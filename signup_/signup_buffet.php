@@ -213,7 +213,7 @@
 
 
 
-<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > Club Dinner is Wed Nov Nov 13</button>
+<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > &nbsp;     Club Dinner is Wed November 13 &nbsp;</button>
 
 
 </form>
