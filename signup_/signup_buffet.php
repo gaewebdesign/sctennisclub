@@ -77,7 +77,7 @@
      <br/>Address is 3830 Stevens Creek Blvd, San Jose, 95117 <br/>
      We get a private room! 
     Full Buffet dinner is $<?php echo("20") ?>  <br/>
-    Deadline to register is Nov 9, 2025; <br/>
+    Deadline to register is Nov 9, 2025 <br/>
     <h3 style="font-size: 1.1em">
     Signup at <a href="https:/www.sctennisclub.org/signup"/> www.sctennisclub.org/signup </a>
       </h3>
