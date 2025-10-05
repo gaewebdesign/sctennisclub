@@ -31,6 +31,23 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
    
 </div>
 
+<table>
+<thead>
+
+</thread>
+<tr>
+<td> 
+<button class="w-100 btn btn-primary btn-lg"   name="toMembership" > To Membership &nbsp;</button>
+
+</td>
+<td>
+<button class="w-100 btn btn-primary btn-lg"   name="delToCaptain" > To Captain &nbsp;</button>
+
+</td>
+
+</tr>
+
+</table>
 
 
 
