@@ -31,20 +31,26 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
    
 </div>
 
-<table>
+<table class="table">
 <thead>
 
 </thread>
 <tr>
+<td></td>
 <td> 
+<form class="row g-3" action="./from_escrow_tomemb.php" method="post">
+
 <button class="w-100 btn btn-primary btn-lg"   name="toMembership" > To Membership &nbsp;</button>
 
 </td>
+<td></td>
+<td></td>
 <td>
 <button class="w-100 btn btn-primary btn-lg"   name="delToCaptain" > To Captain &nbsp;</button>
 
 </td>
-
+<td></td>
+<td></td>
 </tr>
 
 </table>
@@ -107,7 +113,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 //<label for="myCheckbox">Check this box</label>
           $name = "roger";
           $_v= "234";
-       echo("<input type = \"checkbox\" name=\"opt1\" value=\"$id\" >");
+       echo("<input type = \"checkbox\" name=\"escrow[]\" value=\"$id\" >");
 
 
     }
@@ -199,4 +205,4 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
  </body>
 </table>
 
-
+        </form>
