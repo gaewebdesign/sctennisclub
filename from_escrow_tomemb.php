@@ -7,7 +7,6 @@ include "./library/emailer.php";
 
 include "./library/email/email.inc";
 
-
 //print_r($_POST);
 
 
@@ -28,7 +27,7 @@ if (isset($_POST['escrow'])) {
 
     echo "You selected the following options:<br>";
     foreach ($selected as $option) {
-        echo $option . "<br>";
+		copyescrowtopaypal($option);
     }
 } else {
     echo "No options were selected.<br>";
@@ -112,6 +111,21 @@ if($res == true) {
 
 }
 
+function copyescrowtopaypal( $_id){
+
+	$con = Configure();
+          
+    $query = "select * from ".TABLE_ESCROW." where _id=$_id ";
+  
+    $qr=mysqli_query($con,$query);
+    $row = mysqli_fetch_assoc($qr);
+                    
+    echo $row["_id"]." ".$row["fname"]." ".$row["lname"]."<br>";
+
+	$query ="INSERT INTO ".TABLE_PAYPAL." select * from ".TABLE_ESCROW." where  _id=$_id";
+    mysqli_query($con,$query);
+
+}
 
 
 ?>

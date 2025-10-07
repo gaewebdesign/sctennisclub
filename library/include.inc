@@ -17,6 +17,9 @@ define("TABLE_CAPTAIN","captain");
 
 define("WAITLISTLIMIT" , 0 );
 
+
+define("TABLE_ESCROW", "escrow");
+
 // for mixers,
 define("TABLE_MIXER_PAYPAL", "mixer_paypal");
 define("TABLE_MIXER_PENDING", "mixer_pending");
