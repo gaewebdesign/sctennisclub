@@ -31,10 +31,11 @@ if (isset($_POST['escrow'])) {
         echo $option . "<br>";
     }
 } else {
-    echo "No options were selected.";
+    echo "No options were selected.<br>";
 }
 
-
+echo "POST[action]=".$_POST["action"];
+//echo "valaue=".$_POST["value"];
 
 /*
 $fname = $_POST["fname"];

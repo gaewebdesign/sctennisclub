@@ -40,13 +40,16 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <td> 
 <form class="row g-3" action="./from_escrow_tomemb.php" method="post">
 
-<button class="w-100 btn btn-primary btn-lg"   name="toMembership" > To Membership &nbsp;</button>
+<button class="w-100 btn btn-primary btn-lg"  name="action"  value="addRes" > Add Resident &nbsp;</button>
 
 </td>
 <td></td>
-<td></td>
 <td>
-<button class="w-100 btn btn-primary btn-lg"   name="delToCaptain" > To Captain &nbsp;</button>
+    <button class="w-100 btn btn-primary btn-lg"  name="action"  value="addNR" > Add Non-Resident &nbsp;</button>
+
+</td>
+<td>
+<button class="w-100 btn btn-primary btn-lg"   name="action" value="delToCaptain" > To Captain &nbsp;</button>
 
 </td>
 <td></td>
@@ -117,13 +120,14 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 
     }
-    function memberlist($YEAR){
+    define("TABLE_ESCROW", "escrow");
+    function memberlist($YEAR , $R ){
 
 
          $con = Configure();
-          define("TABLE_ESCROW", "escrow");
+          
 
-         $query = "select * from ".TABLE_ESCROW." where year>=$YEAR order by date desc limit 10";
+         $query = "select * from ".TABLE_ESCROW." where year>=$YEAR  and mtype regexp \"^".$R."\" order by date desc limit 10";
  //        $query = "select * from ".TABLE_PENDING." where year=$YEAR order by date desc limit 30 ";
 //         TEXT($query);
 
@@ -197,8 +201,9 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
             }
 
-            memberlist(YEAR);
-//            memberlist(YEAR-1);
+            memberlist(YEAR , "R");
+            echo ("<tr> <td><td><td colspan=\"5\"><b>Non-Resident</b> <td><td><td><td><td</tr>");
+            memberlist(YEAR , "N");
 
       
 ?>
