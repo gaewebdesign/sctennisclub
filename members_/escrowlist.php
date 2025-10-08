@@ -111,18 +111,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
 }
     function CheckBox( $id,$type){
-
-//<input type="checkbox" id="myCheckbox" name="option1" value="yes">
-//<label for="myCheckbox">Check this box</label>
-          $name = "roger";
-          $_v= "234";
+          
           if($type=="R"){
-
             echo("<input type = \"checkbox\" name=\"resident[]\" value=\"$id\" >");
           }else{
-
-            echo("<input type = \"checkbox\" name=\"nonres[]\" value=\"$id\" >");
-
+            echo("<input type = \"radio\" name=\"nonres[]\" value=\"$id\" >");
           }
 
     }

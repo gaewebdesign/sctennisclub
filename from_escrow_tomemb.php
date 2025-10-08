@@ -22,13 +22,22 @@ define("NOTIFY_URL_SIGNUP","http://www.sctennisclub.net/signup_/notify");
 
 
 
-if (isset($_POST['escrow'])) {
-    $selected = $_POST['escrow'];
+if (isset($_POST['resident'])) {
+    $selected = $_POST['resident'];
 
-    echo "You selected the following options:<br>";
+    echo "You selected the following residents :<br>";
     foreach ($selected as $option) {
-		copyescrowtopaypal($option);
+				echo("$option <br>");
+		//copyescrowtopaypal($option);
     }
+}else if( isset( $_POST["nonres"]) ){
+	$selected = $_POST['nonres'];
+   echo "You selected the following non-residents:<br>";
+    foreach ($selected as $option) {
+		echo("$option <br>");
+//		copyescrowtopaypal($option);
+    }
+
 } else {
     echo "No options were selected.<br>";
 }
