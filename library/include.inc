@@ -656,6 +656,32 @@ function copyto( $src, $dest, $epoch){
 
 }
  
+// use to copy from escrow to paypal
+function copyto_byid( $src, $dest, $_id){
+  
+  //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
+  LOGGER("copyto called with $src ----> $dest  for $_id");
+  
+  $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,code,phone,address,city,zip,team,mtype,help,other,date,insignia,payment,custom,opt,pwd) ";
+  $query .=            "select year,fname,lname,email,event,gender,ntrp,code,phone,address,city,zip,team,mtype,help,other,date,insignia,payment,custom,opt,pwd ";
+  $query .= " from $src where _id=$_id limit 1";
+
+   TEXT($query);
+ 
+  $con = DBMembership();
+
+  LOGGER( $query);  
+  $query_results=mysqli_query($con,$query);
+
+  $query = "update $src set custom='done' where _id=$_id"; 
+  echo $query."<br>";
+  LOGGER( $query); 
+  $query_results=mysqli_query($con,$query);
+  
+
+}
+
+
 // mixer has a different table structure than membership
 function copyto_mixer($src,$dest,$epoch){
 
