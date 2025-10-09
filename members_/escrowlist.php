@@ -71,13 +71,13 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">Address </th>
     
     <th scope="col">NTRP </th>
-    <th scope="col">MTYPE </th>
+<!--    <th scope="col">MTYPE </th> -->
     <th scope="col">PAID</th>
     <th scope="col">PAYPAL</th>
-    <th scope="col">CUSTOM</th>
-    <th scope="col">OPT</th>
+   <th scope="col">CUSTOM</th> 
+<!-- <th scope="col">OPT</th> -->
 
-    <th scope="col">Epoch</th>
+    <!--<th scope="col">Epoch</th> -->
     <th scope="col">Date </th>
     
 
@@ -167,11 +167,11 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("<td>");
                     echo($row[GENDER].$row[NTRP]);
                     echo("</td>");
-
+/*
                     echo("<td>");
                     echo($row[MTYPE]);
                     echo("</td>");
-
+*/
                     echo("<td>");
                     echo($row["payment"]);
                     echo("</td>");
@@ -179,17 +179,17 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("<td>");
                     echo($row["other"]);
                     echo("</td>");
-
+  
                     echo("<td>");
                     echo($row[CUSTOM]);
                     echo("</td>");
 
-                    echo("<td>");
+  /*                  echo("<td>");
                     echo($row[OPT]);
                     echo("</td>");
-
-                    echo("<td>");
-                    echo $row[DATE];
+*/
+ //                   echo("<td>");
+  //                  echo $row[DATE];
 
                     echo("<td>");
                     $custom = $row[DATE];
