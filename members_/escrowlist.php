@@ -72,7 +72,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     
     <th scope="col">NTRP </th>
     <th scope="col">MTYPE </th>
-    <th scope="col">INSIGNIA</th>
+    <th scope="col">PAID</th>
 
     <th scope="col">CUSTOM</th>
     <th scope="col">OPT</th>
@@ -148,7 +148,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     CheckBox( $row["_id"],$R );
                     echo("<td>");
-                    echo( $row['year']);
+                    echo( $row['year']." ".$row["_id"]);
                     echo("</td>");
 
                     echo("<td>");
@@ -173,7 +173,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
                     echo("</td>");
 
                     echo("<td>");
-                    echo($row[INSIGNIA]);
+                    echo($row["other"]);
                     echo("</td>");
 
                     echo("<td>");
