@@ -73,7 +73,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
     <th scope="col">NTRP </th>
     <th scope="col">MTYPE </th>
     <th scope="col">PAID</th>
-
+    <th scope="col">PAYPAL</th>
     <th scope="col">CUSTOM</th>
     <th scope="col">OPT</th>
 
@@ -170,6 +170,10 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 
                     echo("<td>");
                     echo($row[MTYPE]);
+                    echo("</td>");
+
+                    echo("<td>");
+                    echo($row["payment"]);
                     echo("</td>");
 
                     echo("<td>");
