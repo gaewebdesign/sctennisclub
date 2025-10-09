@@ -639,8 +639,9 @@ function copyto( $src, $dest, $epoch){
   //function toDB($theTABLE,$year,$fname,$lname,$email,$event,$gender,$ntrp,$address,$city,$zip,$team,$mtype,$date,$insignia,$payment,$custom,$opt,$pwd){
   LOGGER("copyto called with $src ----> $dest  for $epoch");
   
-  $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd) ";
-  $query .=            "select year,fname,lname,email,event,gender,ntrp,address,city,zip,team,mtype,date,insignia,payment,custom,opt,pwd ";
+  
+  $query = "insert into $dest (year,fname,lname,email,event,gender,ntrp,code,phone,address,city,zip,team,mtype,help,other,date,insignia,payment,custom,opt,pwd) ";
+  $query .=            "select year,fname,lname,email,event,gender,ntrp,code,phone,address,city,zip,team,mtype,help,other,date,insignia,payment,custom,opt,pwd ";
   $query .= " from $src where date=$epoch limit 1";
 
    TEXT($query);
