@@ -79,7 +79,7 @@
     Full Buffet dinner is $<?php echo("20") ?>  <br/>
     Deadline to register is Nov 9, 2025 <br/>
     <h3 style="font-size: 1.1em">
-    Signup at <a href="https:/www.sctennisclub.org/signup"> http://www.sctennisclub.org/signup </a>
+    Signup at <a href="https:/www.sctennisclub.org/signup"> www.sctennisclub.org/signup </a>
       </h3>
     <!--
     Registration afterwards will be $<?php echo($MEMBER_FEE) ?> until the final deadline of November 4 <br/>
