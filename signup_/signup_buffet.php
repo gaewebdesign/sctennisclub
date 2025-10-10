@@ -216,7 +216,14 @@
 
 
 
-<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > &nbsp;     Club Dinner is Thursday November 13 &nbsp;</button>
+<button class="w-100 btn btn-primary btn-lg"  disabled name="SubmitButton" > 
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;
+   Submit to pay via Paypal &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;
+
+  
+
+
+</button>
 
 
 </form>
