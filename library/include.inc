@@ -651,10 +651,12 @@ function copyto( $src, $dest, $epoch){
   LOGGER( $query);  
   $query_results=mysqli_query($con,$query);
 
-  if( $dest == TABLE_PAYPAL){
+  /*
+  if( $dest == TABLE_PAYPAL || ($dest == TABLE_MIXER) ){
     $query = "update $src set custom='done' where date=$epoch";
     LOGGER( $query); 
   }
+  */
 
   $query_results=mysqli_query($con,$query);
 
