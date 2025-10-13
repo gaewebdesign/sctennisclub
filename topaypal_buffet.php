@@ -16,7 +16,7 @@ $event= "Buffet25";
 
 
 $paid= 20;
-echo $_POST["email"];
+
 
 if($_POST["email"] == "goldengatennisclub@gmail.com") $paid=0.01;
 
