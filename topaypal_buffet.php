@@ -16,7 +16,9 @@ $event= "Buffet25";
 
 
 $paid= 20;
-if($_POST["email"] == "goldengatennis@gmail.com") $paid=0.01;
+echo $_POST["email"];
+
+if($_POST["email"] == "goldengatennisclub@gmail.com") $paid=0.01;
 
 //$paid = $_POST["_BUFFET_FEE"];
 $paypal->price = $paid;
