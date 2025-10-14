@@ -109,7 +109,7 @@
 //    This assures that the Waitlist table is only populated after payment
 //    There will be duplicate copies in the pending and waitlist tables
 //    The CRON job will copy from the Waitlist table to the Membership table
-      LOGS("Is this waitlist: mtype =  $mtype ") ;
+//     LOGS("Is this waitlist: mtype =  $mtype ") ;
       if($mtype == "NRSx"){
             LOGS("copying $fname $lname $email $mtype into waitlist table");
             copyto( TABLE_PENDING,  TABLE_WAITLIST, $CUSTOM);
@@ -117,15 +117,16 @@
 // Has to be here and only executed for non Waitlist (NRSx) players
 // Otherwise custom is set to done before copied to Waitlista
 // This makes the Wailist appear empty because custom is done
-            LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
-
-            
+           
             // custom  set to done
             // comment this out when ESCCROW implemented
-            copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+//          LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+//          copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
             // copy from pending to ESCROW table
-            // bypass PAYPAL table
+            // bypass PAYPAL 
+            LOGS("copyto ".TABLE_PENDING." to  ".TABLE_ESCROW." $CUSTOM  ") ;
+
             copyto(TABLE_PENDING , TABLE_ESCROW , $CUSTOM);
         
 
