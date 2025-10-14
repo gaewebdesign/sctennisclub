@@ -119,12 +119,13 @@
 // This makes the Wailist appear empty because custom is done
             LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
 
-            // do ESCROW first
-            copyto(TABLE_PENDING , TABLE_ESCROW , $CUSTOM);
             
             // custom  set to done
             copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
+                // do ESCROW first
+            copyto(TABLE_PENDING , TABLE_ESCROW , $CUSTOM);
+        
 
       }
 //    ****************************************************
