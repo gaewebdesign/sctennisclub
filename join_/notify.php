@@ -121,9 +121,11 @@
 
             
             // custom  set to done
+            // comment this out when ESCCROW implemented
             copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
-                // do ESCROW first
+            // copy from pending to ESCROW table
+            // bypass PAYPAL table
             copyto(TABLE_PENDING , TABLE_ESCROW , $CUSTOM);
         
 
