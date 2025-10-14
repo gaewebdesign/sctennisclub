@@ -120,8 +120,8 @@
            
             // custom  set to done
             // comment this out when ESCCROW implemented
-//          LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
-//          copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
+           LOGS("copyto ".TABLE_PENDING." to  ".TABLE_PAYPAL." $CUSTOM  ") ;
+           copyto( TABLE_PENDING,  TABLE_PAYPAL, $CUSTOM);
 
             // copy from pending to ESCROW table
             // bypass PAYPAL 
