@@ -17,10 +17,10 @@ tr {
         <tr>
         <th style="width:30%">First Name</th>
         <th style="width:30%">Last Name</th>
-<!--
+
         <th style="width:30%">Dinner</th>
 <th style="width:25%">Date</th>
-        -->
+        
         
         </tr>
       </thead>
@@ -47,9 +47,9 @@ tr {
          
          $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\"   order by fname asc";
 
-        echo $query;
-        echo $query;
-        
+ //       echo $query;
+ //       echo $query;
+
          $con = Configure();
            
  //        echo( $query );           
@@ -69,12 +69,12 @@ tr {
 
 
 //   ***************************
-            $e = $row['custom']; //-60*60*7;
+            $e = $row['custom']-60*60*24*3;
             $dt = new DateTime("@$e");
             $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
- //         echo '<td style="width:33%">';
- //          echo $date;
+          echo '<td style="width:33%">';
+           echo $date;
 
 /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
