@@ -45,9 +45,9 @@ tr {
          $event= PIGOUT_EVENT;
 
          
-         $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\"  and custom>$epoch order by fname asc";
+         $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\"   order by fname asc";
 
-  //      echo $query;
+        echo $query;
          $con = Configure();
            
  //        echo( $query );           
