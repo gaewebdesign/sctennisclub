@@ -48,6 +48,8 @@ tr {
          $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\"   order by fname asc";
 
         echo $query;
+        echo $query;
+        
          $con = Configure();
            
  //        echo( $query );           
