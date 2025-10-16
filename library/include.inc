@@ -37,6 +37,8 @@ define ("YEAR" , "2025");
 //define("RES_FEE" , "25" );
 define("RES_FEE" , "30" );
 
+
+// ok
 //define("RES_FEE" , "25" );
 
 define("NONRES_SINGLE_FEE" , "35" );
