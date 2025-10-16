@@ -75,7 +75,7 @@
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" maxlength="120" class="form-control" id="firstName" required name="fname">
+              <input type="text" maxlength="1200" class="form-control" id="firstName" required name="fname">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -83,7 +83,7 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" maxlength="120" class="form-control" id="lastName" placeholder="" value="" required name="lname">
+              <input type="text" maxlength="1200" class="form-control" id="lastName" placeholder="" value="" required name="lname">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
