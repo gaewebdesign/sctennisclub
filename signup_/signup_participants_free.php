@@ -18,7 +18,7 @@ tr {
         <th style="width:30%">First Name</th>
         <th style="width:30%">Last Name</th>
 
-        <th style="width:30%">Dinner</th>
+  <!--      <th style="width:30%">Dinner</th> -->
 <th style="width:25%">Date</th>
         
         
@@ -69,7 +69,7 @@ tr {
 
 
 //   ***************************
-            $e = $row['custom']-60*60*24*3;
+            $e = $row['custom']-60*60*24*94;
             $dt = new DateTime("@$e");
             $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
