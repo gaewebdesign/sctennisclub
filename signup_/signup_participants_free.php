@@ -19,7 +19,7 @@ tr {
         <th style="width:30%">Last Name</th>
 
   <!--      <th style="width:30%">Dinner</th> -->
-<th style="width:25%">Date</th>
+<!-- <th style="width:25%">Date</th>-->
         
         
         </tr>
@@ -73,8 +73,9 @@ tr {
             $dt = new DateTime("@$e");
             $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
-          echo '<td style="width:33%">';
-           echo $date;
+ //         echo '<td style="width:33%">';
+
+  //         echo $date;
 
 /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
