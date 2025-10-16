@@ -19,8 +19,9 @@ tr {
         <th style="width:30%">Last Name</th>
 <!--
         <th style="width:30%">Dinner</th>
--->
-        <th style="width:25%">Date</th>
+<th style="width:25%">Date</th>
+        -->
+        
         </tr>
       </thead>
       <tbody>
@@ -29,7 +30,7 @@ tr {
            <p>
        <?php
           
-          $epoch = strtotime('2024-5-10');
+          $epoch = strtotime('2025-10-1');
           // Switch between tables here **************************
           $query = "select * from ".TABLE_MIXER_PENDING." order by custom desc";
           $query = "select * from ".TABLE_MIXER_PENDING."  where custom>$epoch order by custom desc";
@@ -43,9 +44,10 @@ tr {
 
          $event= PIGOUT_EVENT;
 
-         $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\" order by fname asc";
+         
+         $query = "select * from ".TABLE_MIXER_FREE."  where event=\"$event\"  and custom>$epoch order by fname asc";
 
-         //echo $query;
+        echo $query;
          $con = Configure();
            
  //        echo( $query );           
@@ -69,8 +71,8 @@ tr {
             $dt = new DateTime("@$e");
             $date = ltrim($dt->format('m/d/y '),0);
 //   echo $date;
-           echo '<td style="width:33%">';
-           echo $date;
+ //         echo '<td style="width:33%">';
+ //          echo $date;
 
 /*
            if($row['paid'] == $MEMBER_FEE) echo("🎾 ");
