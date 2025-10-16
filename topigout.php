@@ -14,9 +14,9 @@ $password = "" ;// $_POST['password'];
 $submitButton = $_POST['SubmitButton'];
 
 // CHECK IF EMAIL MATCH
-$retv= CHECK_YEMAIL( $email,YEAR);
+//$retv= CHECK_YEMAIL( $email,YEAR);
 
-
+$ret=true;
 if($retv == false){
 
 	$subject = "$fname $lname ($email) tried to signup not in db";
