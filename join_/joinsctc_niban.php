@@ -113,11 +113,17 @@ include "./library/emailer.php";
 
 <div class="col-md-12">&nbsp; </div>
 
-<div class="col-md-8">
+<div class="col-md-9">
+
 
 <div class="input-group">
-<span class="input-group-text" id="inputGroupPrepend7">USTA Team/Captain</span>
- <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="team" >
+<span class="input-group-text" id="inputGroupPrepend7">Family Members</span>
+ <input type="text" maxlength="30" class="form-control BackInput" id="validationDefault07 name="family" >
+</div>
+
+<div class="input-group">
+<span class="input-group-text" id="inputGroupPrepend8">USTA Team/Captain</span>
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault08" name="team" >
 </div>
 
 </div>
