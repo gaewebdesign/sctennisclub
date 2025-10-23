@@ -169,13 +169,14 @@ include "./library/emailer.php";
       >
 
       <label class="form-check-label" for="invalidCheck2">
-        Agree to Waiver terms and conditions.
+        <b> Agree to Waiver terms and conditions. </b>
       </label>
     </div>
   </div>
 
         <!-- div to show reCAPTCHA -->
         <!-- some change -->
+<!--
         <p>
          <div class="g-recaptcha"
           data-sitekey="6LdoCf4pAAAAADq5HgT8Oad1VDgs-KeA9viLIi3F"> 
@@ -183,7 +184,7 @@ include "./library/emailer.php";
         <div>         
         <br><br><p><br>
         </div> 
-
+    -->
 
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
