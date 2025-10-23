@@ -157,17 +157,19 @@ include "./library/emailer.php";
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
 
       <label class="form-check-label" for="invalidCheck2">
-      Agree to Waiver terms and conditions.
+      <b>Agree to Waiver terms and conditions. </b>
       <label>
 
     </div>
   </div>
+        <div style="font-size: .86em;">
     <p>
         By checking this box, and submitting this application to Santa Clara Tennis Club,
         the signee above hereby agrees to indemnify and hold harmless the City of Santa Clara 
         and the Santa Clara Tennis Club, from and against any and all liabilities for any injury which may be incurred 
         by the undersigned arising out of, or in any way connected in any event sponsored by the aforenamed.
         <p>
+      </div>
                 
    </div>
 <!--
