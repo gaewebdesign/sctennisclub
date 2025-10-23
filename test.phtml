@@ -9,23 +9,54 @@
 
       <title>Santa Clara Tennis Club</title>
 
-    <!-- Google reCAPTCHA CDN -->
-    <script src= 
-      "https://www.google.com/recaptcha/api.js" async defer> 
-    </script> 
+   <!-- Google reCAPTCHA CDN -->
+
+   <script src=  "https://www.google.com/recaptcha/api.js" async defer> </script> 
+
+<!--
+    https://stackoverflow.com/questions/40055382/how-to-call-javascript-function-only-when-checkbox-is-checked
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <style>
+            .table-sctc{
+              font-size: .8em;
+              background-color: light-blue;
+
+            }
+
+            .table-sctc tr {line-height: .05em}
+            .table-sctc td {height: .5em}
+            .table-sctc th{ height: .5em; font-weight: normal}
+        </style>
+
+         <script>
+            function stickyheaddsadaer(obj) {
+                  if($(obj).is(":checked")){
+                          document.getElementById("id_waitlist").style.display = "block"
+                  }else{
+                          document.getElementById("id_waitlist").style.display = "none"
+                  }
+            }
+
+           $(document).ready(function() {
+            
+                  document.getElementById("id_waitlist").style.display = "block"
+                  document.getElementById("id_waitlist").style.display = "none"
+
+             });
+
+</script>
 
 </head>
-<body class="Back">
-<p>
+<body class="Back" >
 
+ 
 </p>
 <div class="container-sm ">
       <div class="row">
       <div class="col-sm-1">  </div>            
-            <div class="col-sm-10 ">
-                  <center> <img  class="ResponsiveImage" src="images/banner_main2.png"></center> 
-            </div>
-      </div>
+       <div class="col-sm-10 "><center> <img   class="ResponsiveImage"   src="images/banner_main2.png"></center> </div>
       <div class="col-sm-1">
       </div>
       </div>  
@@ -35,8 +66,9 @@
 <div class="container-sm Title">
     <div class="row">
       <div class="col-sm-12"> 
-            <center>
-            <?php include "./imports_/title.php" ?>
+           <center>
+            Santa Clara Tennis Club
+<!--        <?php include "./imports_/title.php" ?>  -->
         </center>
       </div>
     </div>
@@ -46,73 +78,29 @@
 
 <div class="container-sm ">
       <div class="row">
-            <div class="col-sm-2"> </div> 
-            <div class="col-sm-8 NavLink"> 
+            <div class="col-sm-1"> </div> 
+            <div class="col-sm-10 NavLink"> 
                   <?php include "./imports_/navlink.php" ?>
-            </div>
+             </div>
 
-      <div class="col-sm-2"> </div> 
+      <div class="col-sm-1"> </div> 
       </div>
   
   
   </div>
 
-  <?php 
-    
-  ?>
-
-
   <div class="container-sm ">
       <div class="row">
 
-            <div class="col-sm-2"> &nbsp;</div> 
-            <div class="col-sm-8">
-             <hr/>     
-            <main>
+            <div class="col-sm-12">&nbsp;</div>
+            <div class="col-sm-12">&nbsp;</div>
 
-
-                      <!-- div to show reCAPTCHA -->
-
-             <?php
-
-                $MEMBER_FEE="10.00";    // "5.00";
-                $ICECREAM_FEE="5.50";  //"5.50";
-                $GUEST_FEE = "10.00";  //"10.00" ;
-
-                include "./library/include.inc";
-                include "./library/paypal.inc";
-                include "./library/emailer.php"; 
-
-                include "./library/free_paypal.inc";
-
-
-// Change the images and verbiage (this for pigout)
-//               include "./signup_/signup_free.php";
-
-//             switch the tables bewteen MIXER_PAYMENT  and MIXER_PENDING
-               define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER_PENDING);
-//             define("TABLE_MIXER_OR_PENDING" , TABLE_MIXER);
-
-
-                include "./signup_/test.php";
-
-//               include "./signup_/signup_participants_lunch.php";
-
-
-
-                ?>
-            </main>
-
-             <hr/>     
-             </div> 
-      
- 
-
-
-           <div class="col-sm-2"> &nbsp;</div> 
-
-
-            </div>
+            <div class="col-sm-12 text-center">
+            
+            <img src="./images/SCTCLogot.png">
+            <p>&nbsp;
+      </div> 
+      </div>
   
   
   </div>
@@ -121,18 +109,40 @@
 
 
   <div class="container">
-      <div class="row align-items-start">
-        <div class="col-sm-3 ">
+      <div class="row ">
+        <div class="col-sm-1 ">
+        </div>
+        <div class="col-sm-10">
+
+            <p>Fill out the membership form and send to princess@sctennisclub.org.
+                New resident members must also include proof of residency in the City of Santa Clara
+                for all family members.   Non-resident families must also submit proof of residency.
+                Non-resident singles do not need to submit any documents.
+                Be sure to select the Waiver button or your membership form will not be processed.
+
+                <p>
+                Send membership fee to princess@sctennisclub.org via Paypal.
+                <p>
+                
+
+            </thead>
+   <!--         </h4> -->
+
             <p>
+            <?php
+
+                  include "./library/include.inc";
+                  include "./library/paypal.inc";
+                  include "./library/emailer.php"; 
+ 
+                  include "join_/join_direct.php";
+            ?>
+
+      </div>
+
         </div>
-        <div class="col-sm ">
-        </div>
 
-        <div class="col-sm-1 RightBar">
-
-        </div>
-
-
+        <div class="col-sm-1"></div>
       </div>
 
       <div class="container-sm ">
@@ -142,6 +152,8 @@
         
         
         </div>
+
+
 
 
       
