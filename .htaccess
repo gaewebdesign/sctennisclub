@@ -30,6 +30,9 @@ RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule ^vodka$ escrow.phtml [NC,QSA,L]
 
+RewriteRule ^queen$ test.phtml [NC,QSA,L]
+
+
 RewriteRule ^sctcmixer$ signup_mixer.phtml  [NC,QSA,L]
 
 
