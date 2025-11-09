@@ -131,7 +131,7 @@ include "./library/emailer.php";
    <span><h4 style="color:rgb(25, 0, 255)">Select one: </h4></span> 
 
    <?php
-        $r_majority=0;//ResidentMajority(YEAR);
+        $r_majority=1;//ResidentMajority(YEAR);
         $n_waitlist= 0;//Waitlist(YEAR); 
         $n_waitlist= 0; //  RESTORE WAITLIST
         if($r_majority and ($n_waitlist==0) ){
