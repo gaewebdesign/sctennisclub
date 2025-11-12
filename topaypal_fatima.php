@@ -178,6 +178,7 @@ $sub = "Fatima lunch signup";
 $mess = "Someone ($fname $lname) tried to signup";
 $to="tennis.mutt@gmail.com";
 phpemailer( $sub, $mess, $to );
+phpemailer( "Register " , $fname." ".$lname . " signup" , "register@sctennisclub.org");
 
 //function phpemailer($_SUBJECT, $_MESSAGE ,$_TOEMAIL ="mnscuo.mutt@gmail.com", $_TOEMAIL2="mnscuo.mutt@gmail.com"){
 
