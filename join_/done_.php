@@ -60,7 +60,7 @@
     <?php
 
         LOGS("join_/done_.php nowhere ") ;
-     ?>f
+     ?>
 
 </body>
 </html
