@@ -264,10 +264,10 @@ $message = "PENDING $mtype <br> ";
 $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 //$message .= "$mtype <br>";
-$recipient = "mutt@sctennisclub.org";
+$recipient = "south@sctennisclub.org";
 //$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient );
-echo("sent to recipient@".$subject." ".$message." ".$recipient. "<br>");
+echo("sent to south@".$subject." ".$message." ".$recipient. "<br>");
 
 $subject = "SCTC Register";
 $message = "$fname $lname <br>$address<br>$email <br>";
@@ -276,7 +276,7 @@ $message .= "$mtype <br>";
 
 $recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-echo("sent to south@".$subject." ".$message." ".$recpient. "<br>");
+echo("sent to south@".$subject." ".$message." ".$recipient. "<br>");
 
 $data = array(
 	'year' => $year,
