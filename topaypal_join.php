@@ -166,8 +166,8 @@ $paypal->add("business",PAYPAL_MAIL);
 $paypal->add("item_name","SCTC $year Membership");
 $paypal->add("quantity",1);
 
-$paypal->add("return",RETURN_URL);
-$paypal->add("cancel_return",CANCEL_URL);
+$paypal->add("return",RETURN_URL_NOWHERE);
+$paypal->add("cancel_return",CANCEL_URL_NOWHERE);
 $paypal->add("notify_url",NOTIFY_URL);
 
 //DEBUG("notify:" . NOTIFY_URL);
@@ -190,6 +190,7 @@ $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
+$family = $_POST["family"];
 
 
 
@@ -263,6 +264,8 @@ $subject= " Register Signup( $fname $lname)";
 $message = "PENDING $mtype <br> ";
 $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
+$message .= "$family <br>";
+
 //$message .= "$mtype <br>";
 $recipient = "south@sctennisclub.org";
 //$recipient = "south@sctennisclub.org";
@@ -272,6 +275,7 @@ echo("sent to south@".$subject." ".$message." ".$recipient. "<br>");
 $subject = "SCTC Register";
 $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
+$message .= "$family <br>";
 $message .= "$mtype <br>";
 
 $recipient = "south@sctennisclub.org";
