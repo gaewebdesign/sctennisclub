@@ -184,11 +184,14 @@ $subject = "Tournament (mnscuo) $division Signup ($lname1 $lname2)";
 $message = "$fname1  $lname1  $fname2 $lname2 Signup \n";
 $message .= "$division";
 
-
+$subject = "SCTC Register";
+$message = " ";
 $toemail1 = "mutt@sctennisclub.org";
 $toemail2 = "south@sctennisclub.org";
 
-phpemailer($subject, $message ,$toemail1 ); //, $toemail2);
+$toemail = "register@sctennisclub.org";
+
+phpemailer($subject, $message ,$register); //, $toemail2);
 
 function get_mtype($division ){
 
