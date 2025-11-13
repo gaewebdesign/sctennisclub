@@ -265,7 +265,7 @@ $message .= "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$mtype <br>";
 $recipient = "mutt@sctennisclub.org";
-$recipient = "south@sctennisclub.org";
+//$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient );
 
 $subject = "SCTC Register";
