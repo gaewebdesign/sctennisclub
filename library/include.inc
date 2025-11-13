@@ -33,7 +33,7 @@ define("TABLE_TEAMTENNIS_PENDING", "teamtennis_pending");
 define("TABLE_PIGOUT","pigout_free");
 define("PIGOUT_EVENT","pig26");
 
-define ("YEAR" , "2025");
+define ("YEAR" , "2026");
 //define("RES_FEE" , "25" );
 define("RES_FEE" , "30" );
 
@@ -73,6 +73,10 @@ define("PAYPAL_MAIL","treasurer@sctennisclub.org");
 // URL for membership return
 // this requires .htaccess in each directory
 define("RETURN_URL","http://www.sctennisclub.org/join_/done.php");
+define("CANCEL_URL","http://www.sctennisclub.org/join_/cancel.php");
+define("NOTIFY_URL","http://www.sctennisclub.org/join_/notify.php");
+
+define("RETURN_URL_NOWHERE","http://www.sctennisclub.org/join_/done_nowhere.php");
 define("CANCEL_URL","http://www.sctennisclub.org/join_/cancel.php");
 define("NOTIFY_URL","http://www.sctennisclub.org/join_/notify.php");
 
