@@ -120,7 +120,7 @@ include "./library/emailer.php";
 </div>
 </div>
 
-
+<!--
 <div class="col-md-8">
 
 <div class="input-group">
@@ -129,7 +129,7 @@ include "./library/emailer.php";
 </div>
 
 </div>
-
+-->
    <div class = "col-12" >
     <hr/>
     <p>
