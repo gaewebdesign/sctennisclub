@@ -116,7 +116,7 @@ include "./library/emailer.php";
 <div class="col-md-8">
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7">Family Members</span>
- <input type="text" maxlength="55" class="form-control BackInput" id="validationDefault07 name="family" >
+ <input type="text" maxlength="55" class="form-control BackInput" id="validationDefault07" name="family" >
 </div>
 </div>
 
