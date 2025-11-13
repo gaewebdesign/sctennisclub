@@ -259,11 +259,11 @@ if($mtype == "NRSx"){
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
 
-$subject= "2025 Pending Signup($mtype - $fname $lname)";
+$subject= " Register Signup( $fname $lname)";
 $message = "PENDING $mtype <br> ";
-$message .= "$fname $lname <br>$address<br>$email <br>";
+$message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
-$message .= "$mtype <br>";
+//$message .= "$mtype <br>";
 $recipient = "mutt@sctennisclub.org";
 //$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient );
