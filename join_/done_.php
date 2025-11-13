@@ -15,8 +15,15 @@
    include "../library/include.inc";
 ?>
 <body class="Back">
+    <p><br>
+    <p><br>
+    <p><br>
+    <p><br>
+    <p><br>
+    <p><br>
+
     <center>
-    <h1> Thanks <?php echo( $_GET["item_number"]);?> for signing up!
+    <h1> Thanks  for signing up!
   <!--
     <p>  <br>
     <a href="http://www.sctennisclub.org/members">www.sctennisclub.org/members</a>
@@ -46,18 +53,11 @@
 
    </h2>
 
-    <h1>Follow the events  on the club's Instagram page! </h1>
-
-    <a href="https://www.instagram.com/santaclaratennisclub/"> 
-
-        <img class="RESP_IMAGE" src = "./images/instagram.png">
-
-    </a>
 
     <?php
 
-        LOGS("join_/done.php  player gets info") ;
-     ?>
+        LOGS("join_/done_.php nowhere ") ;
+     ?>f
 
 </body>
-</html>
+</html
