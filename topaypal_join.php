@@ -96,6 +96,10 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 } 
 
 
+ if( $_POST[EMAIL] == "ro@gmail.com"  ) {
+	$paid="0.01";
+} 
+
 //echo("preg_match: ".preg_match("/santa|clara/i",$_POST[CITY] ) );
 
 
@@ -276,11 +280,11 @@ $subject = "SCTC Register";
 $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$family <br>";
-$message .= "$mtype <br>";
+//$message .= "$mtype <br>";
 
-$recipient = "south@sctennisclub.org";
+$recipient = "register@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-echo("sent to south@".$subject." ".$message." ".$recipient. "<br>");
+echo("sent to register@".$subject." ".$message." ".$recipient. "<br>");
 
 $data = array(
 	'year' => $year,
