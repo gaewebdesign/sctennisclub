@@ -25,12 +25,22 @@
     <h1> Thanks  for signing up to Santa Clara Tennis Club!
 
     <p><br>
-  <div class="tenor-gif-embed" data-postid="9736099400704859475" data-share-method="host" data-aspect-ratio="1.2" data-width="85%"><a href="https://tenor.com/view/denis-shapovalov-backhand-tennis-atp-gif-9736099400704859475">Denis Shapovalov Backhand GIF</a>from <a href="https://tenor.com/search/denis+shapovalov-gifs">Denis Shapovalov GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<!--
+    <div class="tenor-gif-embed" data-postid="9736099400704859475" data-share-method="host" data-aspect-ratio="1.2" data-width="85%"><a href="https://tenor.com/view/denis-shapovalov-backhand-tennis-atp-gif-9736099400704859475">Denis Shapovalov Backhand GIF</a>from <a href="https://tenor.com/search/denis+shapovalov-gifs">Denis Shapovalov GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  -->
+    <div class="tenor-gif-embed" 
+    data-postid="9389987509661838636" 
+    data-share-method="host" 
+    data-aspect-ratio="0.975904" 
+    data-width="75%">
+    <a href="https://tenor.com/view/carlos-alcaraz-head-tilt-tennis-carlitos-alcaraz-vamos-gif-9389987509661838636">Carlos Alcaraz Head Tilt GIF</a>
+    from <a href="https://tenor.com/search/carlos+alcaraz-gifs">Carlos Alcaraz GIFs</a>
+    </div> 
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-    <!--
-    <p>  <br>
-    <a href="http://www.sctennisclub.org/members">www.sctennisclub.org/members</a>
--->
+
+
+
 </h1>
 
     </a></h1>
