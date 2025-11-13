@@ -76,8 +76,8 @@ define("RETURN_URL","http://www.sctennisclub.org/join_/done.php");
 define("CANCEL_URL","http://www.sctennisclub.org/join_/cancel.php");
 define("NOTIFY_URL","http://www.sctennisclub.org/join_/notify.php");
 
-define("RETURN_URL_NOWHERE","http://www.sctennisclub.org/join_/done_nowhere.php");
-define("CANCEL_URL","http://www.sctennisclub.org/join_/cancel.php");
+define("RETURN_URL_NOWHERE","http://www.sctennisclub.org/join_/done_.php");
+define("CANCEL_URL_NOWHERE","http://www.sctennisclub.org/join_/cancel.php");
 define("NOTIFY_URL","http://www.sctennisclub.org/join_/notify.php");
 
 // URL for signup_ return  (May Social, Ice Cream , End of year Dinner)
