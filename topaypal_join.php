@@ -274,9 +274,9 @@ $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$mtype <br>";
 
-$recipient = "join@sctennisclub.org";
+$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-echo("sent to join@".$subject." ".$message." ".$recpient. "<br>");
+echo("sent to south@".$subject." ".$message." ".$recpient. "<br>");
 
 $data = array(
 	'year' => $year,
