@@ -267,15 +267,16 @@ $message .= "$mtype <br>";
 $recipient = "mutt@sctennisclub.org";
 //$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient );
+echo("sent to recipient@".$subject." ".$message." ".$recipient. "<br>");
 
 $subject = "SCTC Register";
-$message .= "$fname $lname <br>$address<br>$email <br>";
+$message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
 $message .= "$mtype <br>";
 
 $recipient = "join@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-echo("sent ".$subject." ".$message." ".$recpient );
+echo("sent to join@".$subject." ".$message." ".$recpient. "<br>");
 
 $data = array(
 	'year' => $year,
