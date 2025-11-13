@@ -194,7 +194,7 @@ $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
-$family = $_POST["family"];
+$family = "FAM : ".$_POST["family"];
 
 
 
