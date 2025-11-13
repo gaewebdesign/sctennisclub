@@ -241,7 +241,7 @@ $insignia= "123456788888888";
 $code = "408";
 $phone = "993-9999";
 $state = "CA";
-$capt = "Kirk-Picard";
+$capt = "Capt Kirk";
 $help = "HELP";
 $other = "other";
 
@@ -268,6 +268,14 @@ $recipient = "mutt@sctennisclub.org";
 $recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
 
+$subject = "SCTC Register";
+$message .= "$fname $lname <br>$address<br>$email <br>";
+$message .= "$city <br>";
+$message .= "$mtype <br>";
+
+$recipient = "join@sctennisclub.org";
+phpemailer($subject,$message , $recipient , "south@sctennisclub.org");
+echo("sent ".$subject." ".$message." ".$recpient );
 
 $data = array(
 	'year' => $year,
