@@ -113,12 +113,26 @@ include "./library/emailer.php";
 
 <div class="col-md-12">&nbsp; </div>
 
+<div id="FamilyList">  <!-- Family List -->
+
 <div class="col-md-8">
 <div class="input-group">
-<span class="input-group-text" id="inputGroupPrepend7">Family Members</span>
- <input type="text" maxlength="55" class="form-control BackInput" id="validationDefault07" name="family" >
+<span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
+ <input type="text" maxlength="25" class="form-control BackInput" id="validationDefault07" name="family" >
 </div>
 </div>
+
+</div>  <!-- Family List -->
+
+
+<!--
+<div class="col-md-8">
+<div class="input-group">
+<span class="input-group-text" id="inputGroupPrepend7">Family Member</span>
+ <input type="text" maxlength="25" class="form-control BackInput" id="validationDefault07" name="family" >
+</div>
+</div>
+-->
 
 <!--
 <div class="col-md-8">
@@ -139,7 +153,7 @@ include "./library/emailer.php";
    <span><h4 style="color:rgb(25, 0, 255)">Select one: </h4></span> 
 
    <?php
-        $r_majority=0;//ResidentMajority(YEAR);
+        $r_majority=1;//ResidentMajority(YEAR);
         $n_waitlist= 0;//Waitlist(YEAR); 
         $n_waitlist= 0; //  RESTORE WAITLIST
         if($r_majority and ($n_waitlist==0) ){
