@@ -33,7 +33,7 @@ include "./library/emailer.php";
 
   
   <div class="col-md-12">
-
+<!-- residency -->
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend2b">Address</span>
  <input type="text" class="form-control BackInput" id="validationDefault02ba" name="address" required
