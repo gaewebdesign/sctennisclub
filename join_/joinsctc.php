@@ -114,13 +114,33 @@ include "./library/emailer.php";
 <div class="col-md-12">&nbsp; </div>
 
 <div id="FamilyList">  <!-- Family List -->
+ <div  style="color: red" ><b> Enter Family members here, one per box </b></div>
 
-<div class="col-md-8">
+<div class="col-md-12">
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
- <input type="text" maxlength="25" class="form-control BackInput" id="validationDefault07" name="family" >
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
 </div>
 </div>
+
+
+<div class="col-md-12">
+<div class="input-group">
+<span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
+</div>
+</div>
+
+
+<div class="col-md-12">
+<div class="input-group">
+<span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
+</div>
+</div>
+
+
+
 
 </div>  <!-- Family List -->
 
