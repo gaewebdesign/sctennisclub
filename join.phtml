@@ -42,24 +42,30 @@
 <!--------------------------------------------------- -->
             document.addEventListener("DOMContentLoaded", function() {
             // Your JavaScript code to manipulate the DOM goes here
-            console.log("DOM is ready!");
+             console.log("DOM is ready!");
+             const textBox = document.getElementById('FamilyList');
+             textBox.style.display = 'none';
+
 
              const radioForm = document.getElementById('MemberForm');
              console.log(radioForm)
 
              radioForm.addEventListener('change', function(event) {
                  console.log("DOM addEventListener")
-                 console.log('Selected value:', event.target.value);
+ 
+               
                  switch(event.target.value){
                   
                     case 'RF':
                     case 'NRF':
-                       console.log(" FAMILY ")
-                        break;
+                         console.log(" FAMILY ")
+                         textBox.style.display = 'block';
+                         break;
                     case 'RS':
                     case 'NRS':
-                        console.log("SINGLE ");
-                        break
+                         console.log("SINGLE ");
+                         textBox.style.display = 'none';
+                         break
 
                  }
 
