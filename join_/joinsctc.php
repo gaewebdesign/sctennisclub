@@ -36,7 +36,9 @@ include "./library/emailer.php";
 
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend2b">Address</span>
- <input type="text" class="form-control BackInput" id="validationDefault02ba" name="address" required>
+ <input type="text" class="form-control BackInput" id="validationDefault02ba" name="address" required
+  placeholder="Proof of residency may be reequired"
+ >
 </div>
 
 </div>
