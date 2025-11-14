@@ -37,7 +37,7 @@ function checker(){
     }
 
     $retv= CHECK_EMAIL( $user);
-    $retv=true;
+    //$retv=true;
 
     LOGGER("checkemailphp retv = $retv " );
     if( $retv == true){
