@@ -30,17 +30,28 @@ function checker(){
     if(filter_var($user, FILTER_VALIDATE_EMAIL)) {
         LOGGER("checkemail.php valid format ");
         //Valid email!
+        
+        LOGGER("checkemail.php checker  = yes " );
+        phpemailer($subject, $message ,$toemail1 , $toemail2);
+        echo "yes";
+
    }else{
          $message = "$user  invalid\n";
          LOGGER("checkemail.php invalid format ");
          $user="invalid";
+
+        $subject .= " invalid";
+        phpemailer($subject, $message ,$toemail1 , $toemail2);
+        LOGGER("checkemail.php checker  = no  for $user ");
+        echo $user;
     }
 
+/*
     $retv= CHECK_EMAIL( $user);
-    //$retv=true;
+    
 
     LOGGER("checkemailphp retv = $retv " );
-    if( $retv == true){
+    if( $retv == true)
         LOGGER("checkemail.php checker  = yes " );
         phpemailer($subject, $message ,$toemail1 , $toemail2);
         echo "yes";
@@ -51,7 +62,7 @@ function checker(){
         echo $user;
 
     }
-
+*/
 
 }
 
