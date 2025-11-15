@@ -20,10 +20,11 @@ $_POST[LNAME] = Sanitize( $_POST[LNAME] );
 $_POST[ADDRESS] = Sanitize( $_POST[ADDRESS] );
 
 $_POST[CITY] = Sanitize( $_POST[CITY] );
-$_POST[TEAM] = Sanitize( $_POST[TEAM] );
+//$_POST[TEAM] = Sanitize( $_POST[TEAM] );
 
 $message = $_POST[FNAME]." ".$_POST[LNAME]."\n";
 $message .= $_POST[ADDRESS]."\n".$_POST[TEAM];
+$message .= $_POST[CITY]."\n";
 
 
 $paypal = new paypal();
@@ -91,14 +92,7 @@ if($_POST["membership"] == 'RS' || $_POST["membership"] == "RF") {
 
  //if( ($_POST[FNAME] == "Roger") and ( $_POST[LNAME] == "Okamoto")  ) {
  
- if( $_POST[EMAIL] == "goldengatennisclub@gmail.com"  ) {
-	$paid="0.01";
-} 
 
-
- if( $_POST[EMAIL] == "ro@gmail.com"  ) {
-	$paid="0.01";
-} 
 
 //echo("preg_match: ".preg_match("/santa|clara/i",$_POST[CITY] ) );
 
@@ -160,7 +154,17 @@ $year = YEAR ;      // defined in library/include.inc
 // the primary member identified by opt has insignia incremented
 // and the address is changed if a non-resident primary membere
 
-$paypal->price = $paid;
+
+// ADD TO PAYMENT FOR EACH family person
+$fee=0;
+if( strlen($_POST["family1"] >0)) $fee += 1;
+if( strlen($_POST["family2"] >0)) $fee += 1;
+if( strlen($_POST["family3"] >0)) $fee += 1;
+$paypal->price = $paid + $fee ;
+
+// Override for testing 
+if( $_POST[EMAIL] == "goldengatennisclub@gmail.com"  ) 	$paypal->price="0.01";
+if( $_POST[EMAIL] == "ro@gmail.com"  ) 	$paypal->paid="0.01";
 
 // The price has to be sete before enable_payment
 
@@ -194,9 +198,12 @@ $city = $_POST[CITY];
 $zip = $_POST[ZIP];
 
 $team = $_POST[TEAM];
-$family = "FAM : ".$_POST["family"];
+$family1 = $_POST["family1"];
+$family2 = $_POST["family2"];
+$family3 = $_POST["family3"];
 
 
+// **************************************************
 
 // temporary move later to after Paypal payment returns
 $count=0;
@@ -263,28 +270,36 @@ if($mtype == "NRSx"){
 
 //LOGS("increment $address for year $year ");
 //incrementFamilyCount( $address , $year);
-
+/*
 $subject= " Register Signup( $fname $lname)";
 $message = "PENDING $mtype <br> ";
 $message = "$fname $lname <br>$address<br>$email <br>";
 $message .= "$city <br>";
-$message .= "$family <br>";
+$message .= "$family1 <br>";
+$message .= "$family2 <br>";
+$message .= "$family3 <br>";
 
 //$message .= "$mtype <br>";
 $recipient = "south@sctennisclub.org";
 //$recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient );
 echo("sent to south@".$subject." ".$message." ".$recipient. "<br>");
-
+*/
 $subject = "SCTC Register";
-$message = "$fname $lname <br>$address<br>$email <br>";
+$message = "$fname $lname <br>$address<br>";
 $message .= "$city <br>";
-$message .= "$family <br>";
+$message .= "$email <br>";
+$message .= "$family1 <br>";
+$message .= "$family2 <br>";
+$message .= "$family3 <br>";
+$payment += $fee;
+$message .= "$"."$payment <br>";
+
 //$message .= "$mtype <br>";
 
 $recipient = "register@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-echo("sent to register@".$subject." ".$message." ".$recipient. "<br>");
+echo($subject."<br>".$message."<br>");
 
 $data = array(
 	'year' => $year,
@@ -301,7 +316,7 @@ $data = array(
 	'mtype' => $mtype,
 	'date' => $date,
 	'insignia' => $insignia,
-	'payment' => $payment,
+	'payment' => $payment+$fee,
 	'custom' => $custom,
     'opt' => $opt,
     'pwd' => $pwd,
