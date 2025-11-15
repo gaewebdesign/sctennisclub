@@ -243,6 +243,6 @@ include "./library/emailer.php";
 
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
-    <button class="btn btn-primary" name="SubmitButton" _disabled  type="submit">Go to Paypal</button>
+    <button class="btn btn-primary" name="SubmitButton" disabled  type="submit">Go to Paypal</button>
   </div>
 </form>
