@@ -115,13 +115,25 @@ include "./library/emailer.php";
 
 <div class="col-md-12">&nbsp; </div>
 
+
+<div class="col-md-12">
+<div class="input-group">
+<!-- <span class="input-group-text" id="inputGroupPrepend7f">Team</span> -->
+ <input type="hidden" maxlength="20" class="form-control BackInput" id="validationDefault07a" name="team" >
+</div>
+</div>
+
+
+
+
+
 <div id="FamilyList">  <!-- Family List -->
  <div  style="color: red" ><b> Enter Family members here, one per box </b></div>
 
 <div class="col-md-12">
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
- <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07a" name="family1" >
 </div>
 </div>
 
@@ -129,7 +141,7 @@ include "./library/emailer.php";
 <div class="col-md-12">
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
- <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07b" name="family2" >
 </div>
 </div>
 
@@ -137,7 +149,7 @@ include "./library/emailer.php";
 <div class="col-md-12">
 <div class="input-group">
 <span class="input-group-text" id="inputGroupPrepend7f">Family Member</span>
- <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07" name="family" >
+ <input type="text" maxlength="20" class="form-control BackInput" id="validationDefault07c" name="family3" >
 </div>
 </div>
 
@@ -231,6 +243,6 @@ include "./library/emailer.php";
 
   <div class="col-12"> &nbsp;</div>
   <div class="col-12">
-    <button class="btn btn-primary" name="SubmitButton" disabled  type="submit">Go to Paypal</button>
+    <button class="btn btn-primary" name="SubmitButton" _disabled  type="submit">Go to Paypal</button>
   </div>
 </form>
