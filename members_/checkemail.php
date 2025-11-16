@@ -14,13 +14,16 @@ function checker(){
     $pw = $_POST["pw"];
 //    $state = $_POST["state"];
 
-
+    LOGGER("checker ******************************");
 //
     LOGGER("checkemail.php looking for $user /$pw in database " );
 
     $subject = "Membership Check ($user )";
     $message = "$user  check\n";
+    $message .= $_SERVER['REMOTE_ADDR'];
+    $message .= "\n";
     
+    LOGGER( "IP ADDRESS $message " );
     $toemail1 = "south@sctennisclub.org";
     $toemail2 = "sherry@sctennisclub.org";
     
