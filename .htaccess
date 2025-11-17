@@ -25,7 +25,7 @@ RewriteRule ^sctcmixer signup_mixer.phtml
 RewriteRule ^usta$  usta.phtml  [NC,QSA,L]
 RewriteRule ^ustacheck$ ustacheck.phtml [NC,QSA,L]
 
-RewriteRule ^signup$ signup_buffet.phtml  [NC,QSA,L]
+RewriteRule ^signup$ signup_sheets.phtml  [NC,QSA,L]
 RewriteRule ^members$ members.phtml  [NC,QSA,L]
 
 RewriteRule ^vodka$ escrow.phtml [NC,QSA,L]
