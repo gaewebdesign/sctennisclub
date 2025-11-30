@@ -298,7 +298,7 @@ $message .= "$"."$payment <br>";
 //$message .= "$mtype <br>";
 
 $recipient = "join@sctennisclub.org";
-phpemailer($subject,$message , $recipient , $recipient);
+//phpemailer($subject,$message , $recipient , $recipient);
 echo($subject."<br>".$message."<br>");
 
 $recipient = "south@sctennisclub.org";
