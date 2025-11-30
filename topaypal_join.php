@@ -297,9 +297,13 @@ $message .= "$"."$payment <br>";
 
 //$message .= "$mtype <br>";
 
-$recipient = "register@sctennisclub.org";
+$recipient = "join@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
 echo($subject."<br>".$message."<br>");
+
+$recipient = "south@sctennisclub.org";
+phpemailer($subject,$message , $recipient , $recipient);
+
 
 $data = array(
 	'year' => $year,
