@@ -35,7 +35,7 @@ define("PIGOUT_EVENT","pig26");
 
 define ("YEAR" , "2026");
 //define("RES_FEE" , "25" );
-define("RES_FEE" , "30" );
+define("RES_FEE" , "25" );
 
 
 // ok

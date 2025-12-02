@@ -48,8 +48,10 @@ include "./library/emailer.php";
 
     <div class="input-group">
     <span class="input-group-text" id="inputGroupPrepend3">City</span>
-     <input type="text" class="form-control BackInput" id="validationDefault03" name="city" required>
-   </div>
+     <input type="text" class="form-control BackInput" id="validationDefault03" name="city" required
+     placeholder="Proof of residency may be required"
+     >
+    </div>
 
 </div>
 
