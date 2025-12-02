@@ -44,7 +44,7 @@ include "./library/emailer.php";
 </div>
 
 
-  <div class="col-md-6">
+  <div class="col-md-7">
 
     <div class="input-group">
     <span class="input-group-text" id="inputGroupPrepend3">City</span>
