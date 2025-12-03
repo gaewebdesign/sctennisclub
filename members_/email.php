@@ -39,7 +39,7 @@ Please Note: Starting May 1st, our phone availability will change from 24/7 to M
 <tbody>
 <?php
    // define("TABLE_PAYPAL","paypal");  
-    $y = $theYEAR;
+    $y = $theYEAR-1;
 //    $_y = YEAR-1;
     $m = MEMBERS($y);
 //    $_m = MEMBERS($_y);
