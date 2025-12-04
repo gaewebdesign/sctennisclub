@@ -57,10 +57,11 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.phtml">Home</a> 
       <a class="navbar-brand" href="./email.phtml">Members</a>
-      <a class="navbar-brand" href="./email_past.phtml">Last Year</a>
+ <!--     <a class="navbar-brand" href="./email_past.phtml">Last Year</a>-->
       
-      <a class="navbar-brand" href="./residentfamily.phtml">ResFam</a>      
-      <a class="navbar-brand" href="./waitlist.phtml">Waitlist</a>      
+  <!--    <a class="navbar-brand" href="./residentfamily.phtml">ResFam</a>      
+      <a class="navbar-brand" href="./waitlist.phtml">Waitlist</a>     
+--> 
 <!--
       <a class="navbar-brand" href="./email_join.phtml">China Styx</a>
 -->
@@ -69,11 +70,12 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
       <a class="navbar-brand" href="./email_lunch.phtml">Fatima Lunch</a>
 <!--     <a class="navbar-brand" href="./email_join.phtml">Athena Dinner</a> -->
 
-
+<!--
       <div class="dropdown" >
           <a class="dropdown-toggle"  id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
             Tournament
           </a>
+
         <ul class="dropdown-menu dropdown-menu-dark colorfill" aria-labelledby="dropdownMenuButton2">
               <li><a class="dropdown-item active" href="./tournament.phtml?draw=0">Info</a></li>
               <li><a class="dropdown-item dropdown-menu-dark colorfill" disabled href="./tournament.phtml?draw=1">Players</a></li>
@@ -85,7 +87,7 @@ https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
         </ul>
         </div>
-
+-->
  </p>
       
 </body>
