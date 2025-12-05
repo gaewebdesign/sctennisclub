@@ -303,7 +303,9 @@ echo($subject."<br>".$message."<br>");
 
 $recipient = "south@sctennisclub.org";
 phpemailer($subject,$message , $recipient , $recipient);
-
+//queenb_95051@yahoo.com
+$recipient = "queenb_95051@yahoo.com";
+phpemailer($subject,$message , $recipient , $recipient);
 
 $data = array(
 	'year' => $year,
