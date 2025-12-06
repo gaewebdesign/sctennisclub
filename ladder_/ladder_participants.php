@@ -31,7 +31,7 @@ tr {
            <?php
              function pointlist($draw){
               $TABLE_LADDER = TABLE_LADDER;
-              $YEAR = YEAR;
+              $YEAR = YEAR-3;
               
               $query = "select * from ".$TABLE_LADDER." where year=$YEAR and division regexp(\"$draw\") order by points desc ";
 //           echo $query;
